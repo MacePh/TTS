@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://techtalentsouth.slides.com/techtalentsouth/html-the-basics?token=-T3Bz9tS#/0/1 -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars reveal-is-ready fonts-are-ready" data-account="" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>HTML: The Basics</title>
+    <meta name="description" content="Let&#39;s take a dive into HTML (Hyper Text Markup Language). HTML is the markup language that provides us a structured way to create web pages. When we use the tags available to us through HTML we can control how almost everything is presented to the user via their web browser. Your web browser is what interprets the tags to present what the end user sees.">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta property="og:title" content="HTML: The Basics">
+    <meta property="og:description" content="Let&#39;s take a dive into HTML (Hyper Text Markup Language). HTML is the markup language that provides us a structured way to create web pages. When we use the tags available to us through HTML we can control how almost everything is presented to the user via their web browser. Your web browser is what interprets the tags to present what the end user sees.">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://media.slid.es/thumbnails/03736054509b5ef321e7b70e98f9cb4b/thumb.jpg?1605886588">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/techtalentsouth/html-the-basics?token=-T3Bz9tS">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./HTML_ The Basics_files/css2" onload="this.onload=null;this.removeAttribute(&#39;media&#39;);" rel="stylesheet" data-application-font="inter">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" data-application-font="inter">
+</noscript>
+
+    <link rel="stylesheet" media="all" href="./HTML_ The Basics_files/slides-321f9cf86a0d5f55c789340bfab5578b6c15251bf8ef1c818c6cc78376a0d230.css">
+    <link rel="stylesheet" media="all" href="./HTML_ The Basics_files/deck-consumption-719d4dc49a60f9054a74904223582068baab901bde66427d102bad512498fdae.css">
+    	<link rel="stylesheet" media="all" href="./HTML_ The Basics_files/deck-v2-52b2f07feba210d651a559e960fc8e470003c288daa7750ea49d62784a543e13.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="WQM80tx4qDSM107xthEEsHCvu1AkUBsFESwVJYhE3U82U9pXYHFhB34+xdW6y3eJqq07lHovVYwEzuBUbE3fIA==">
+    <script type="application/javascript" async="" defer="" src="./HTML_ The Basics_files/track.js.download"></script><script type="text/javascript" async="" src="./HTML_ The Basics_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./HTML_ The Basics_files/js"></script>
+<script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    window.slidesMeasurementId = 'G-LWVDH9STBJ';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LWVDH9STBJ', {
+      page_title: 'decks-show'
+    });
+
+  }
+</script>
+
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="HTML: The Basics">
+	<meta name="twitter:description" content="Let&#39;s take a dive into HTML (Hyper Text Markup Language). HTML is the markup language that provides us a structured way to create web pages. When we use the tags available to us through HTML we can control how almost everything is presented to the user via their web browser. Your web browser is what interprets the tags to present what the end user sees.">
+	<meta name="twitter:image" content="https://media.slid.es/thumbnails/03736054509b5ef321e7b70e98f9cb4b/thumb.jpg?1605886588">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./HTML_ The Basics_files/opensans.css"><link rel="stylesheet" href="./HTML_ The Basics_files/css"><style type="text/css" media="screen">.uv-icon{box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon .uv-tooltip-container{position:relative}.uv-icon .uv-tooltip-container .uv-icon-tooltip{display:none;position:absolute;height:20px;padding:4px 8px;background-color:#464653;color:white;font-size:12px;border-radius:4px;line-height:18px;font-family:"Open Sans", sans-serif;white-space:nowrap}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left,.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{top:0;bottom:0;margin:auto 10px}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top,.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{transform:translate(-30%);margin:10px auto}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top{bottom:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{top:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left{right:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{left:100%}.uv-icon .uv-tooltip-container:hover .uv-icon-tooltip{display:block}.uv-icon-trigger{display:block;width:39px;height:39px;border:none;padding:0;cursor:pointer;background:none}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;transition:background 200ms}.uv-bottom .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{transition:none !important}.uv-fade{opacity:1;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{transform:translateY(100%)}.uv-slide-left.uv-is-hidden{transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{transform:translateX(100%)}
+</style><script type="text/javascript" src="./HTML_ The Basics_files/highlight-0adde8531514527653fdb445e29c1cca3687dc50684c4b8f624246a318dc706a.js.download"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style><script type="text/javascript" src="./HTML_ The Basics_files/zoom-e1f94838c054500b9ea32c1cdb27173f7796522bc2af1b0c8efe98c65a4c57b7.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <body style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url(&#39;https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png&#39;)"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue" style="--slide-width:960px; --slide-height:700px; --slide-scale:0.869929;">
+			<div class="reveal slide embedded has-vertical-slides ready focused" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.869929);">
+					<section class="stack present" data-id="45582ca6935a30e5e0860cd5a7ed096d" style="display: block;" data-previous-indexv="0"><section data-background-image="https://media.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpeg" data-id="e5bf4a48b8f3f0c89638a35823d3940b" class="past" style="display: block;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 490px; height: auto;" data-block-id="ad734d646c05678b34db46e28006fd00"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>HTML: The Basics</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 612.681px; height: 490px; left: 173.659px; top: 0px; min-width: 1px; min-height: 1px;" data-block-id="66d47c2547cda8fd1bb4a8002ae583ae"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1688" data-natural-height="1350" style="" data-lazy-loaded="" src="./HTML_ The Basics_files/newTTSLogo.png"></div></div>
+</section><section data-id="f92712c4195525f739397c3baea33ed3" class="present" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="1fe4f1e25a31f6179aa4050279bb8636"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Hyper Text Markup Language</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 152.5px;" data-block-id="d21ab11de440766bebb3fdb298cfa59a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: center; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;" data-gramm_id="e665cf66-67c4-d54d-365c-f60c12e0f18d" data-gramm="true" data-gramm_editor="true">
+<ul>
+	<li>
+	<p><span style="font-size:1.0em"><span style="color:rgb(51, 51, 51)">HTML is a markup language interpreted by the browser. </span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em"><span style="color:rgb(51, 51, 51)">It uses specific tags or elements to tell the browser how things should look when presented visually to the user. </span></span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 266.5px; height: 266.5px; left: 346.75px; top: 310.892px;" data-block-id="34e524a355fa1988258ab5aa50aab81d"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="500" data-natural-height="500" data-lazy-loaded="" src="./HTML_ The Basics_files/html5_logo.png"></div></div>
+</section><section data-id="a247d8b41672d0cbcef30d06c683d66a" class="future" aria-hidden="true" hidden="" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 951px; left: 1px; top: 0px; height: auto;" data-block-id="e444e2f1f8300a178ccfb2b70ed74493"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>HTML and Its Tags</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 947px; left: 3px; top: 522px;" data-block-id="5ab0fdee02ba7f0779e1c6ef5b9a71e1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><span style="font-size:0.7em">*<em>Note: Not all tags in these examples are real HTML tags. They are being used to explain the concepts.</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 955px; left: 5px; top: 150.925px;" data-block-id="797d1d50b26fea6226aa50fcf27bdcca"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>Tags are surrounded by angle brackets.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 959px; left: 1px; top: 280px;" data-block-id="79b223f103d642b3a4724d9add4ae0e3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;" data-gramm_id="a5e22778-4071-e807-ca01-66ea40ded4aa" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(17, 17, 17)">Notice the closing tag has the </span><span style="color:#FF0000">/</span><span style="color:rgb(17, 17, 17)"> character.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 309.714px; height: 46.0327px; left: 323.643px; top: 210px;" data-block-id="d9cb29b3ec3e677a935bc5127fe9f7a3"><div class="sl-block-content notranslate" style="z-index: 18;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">tag</span>&gt;</span>some content<span class="hljs-tag">&lt;/<span class="hljs-name">tag</span>&gt;</span></code></pre></div></div></section><section data-id="cbd2a9947455ece71b0cb4bb3f0dbb5d" class="future" aria-hidden="true" hidden="" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="3854301ed8923a99ae495df000aef3a7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>HTML and Its Tags</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 935px; left: 0px; top: 522px;" data-block-id="50040e0588b1892f08e48619d30256df"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.7em">*<em>Note: Not all tags in these examples are real HTML tags. They are being used to explain the concepts.</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 161.203px;" data-block-id="92b2c61ef14a828c93ac1565df4bc58d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Tags can also be <em>nested</em> inside each other.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 412.404px; height: 149px; left: 261.298px; top: 210px;" data-block-id="ccfde2cd2e15354044b9717de8ef2807"><div class="sl-block-content notranslate" style="z-index: 17;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">pizza</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">topping</span>&gt;</span>pineapple<span class="hljs-tag">&lt;/<span class="hljs-name">topping</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">topping</span>&gt;</span>ham<span class="hljs-tag">&lt;/<span class="hljs-name">topping</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">topping</span>&gt;</span>cheese<span class="hljs-tag">&lt;/<span class="hljs-name">topping</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">pizza</span>&gt;</span></code></pre></div></div></section><section data-id="10d95210186ae417a8200e1100ac6e50" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="17377f28b6da455724cd79c1975b06f4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>HTML and Its Tags</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 953px; left: 7px; top: 118.484px;" data-block-id="45cf21800b0432d5a65db3e7ad809e6a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-gramm_id="04ad7f4b-5070-ecb8-72b9-3236e91cfb57" data-gramm="true" data-gramm_editor="true">
+<ul>
+	<li>Tags use <strong>attributes</strong> to add additional functionality or describe behavior.</li>
+	<li>Each <strong>attribute</strong><em> </em>is paired with a<em> </em><strong>value </strong>
+	<ul>
+		<li>(most often held in quote marks)</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 507.65px; height: 48.6671px; left: 226.175px; top: 325.666px;" data-block-id="83b6e526955180a7b4333cf66cb7ccc9"><div class="sl-block-content notranslate" style="z-index: 17;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">tag</span> <span class="hljs-attr">attribute</span>=<span class="hljs-string">"value"</span>&gt;</span>some content<span class="hljs-tag">&lt;/<span class="hljs-name">tag</span>&gt;</span>
+</code></pre></div></div></section><section data-id="a2cc3cfb1a8a30072cf6fd40b65356a6" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 15px; top: 0px; height: auto;" data-block-id="c6e525f4d4e118a4269a6b68135ecea4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>HTML and Its Tags</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="4210aa5f276261aa091fa9d7d46ec824"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="9f74f763-ead1-a8f2-bf1a-b3937dd8d3e3" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(51, 51, 51); text-align:left">Some tags are <em>self-closing</em>. </span></p>
+
+<ul>
+	<li><span style="color:rgb(51, 51, 51); text-align:left">These tags are usually not intended to wrap content. </span></li>
+	<li>
+<span style="color:rgb(51, 51, 51); text-align:left">The </span><span style="color:#FF0000">&lt;img&gt;</span><span style="color:rgb(51, 51, 51); text-align:left">&nbsp;tag is a common self closing tag. </span>
+</li>
+	<li>
+<span style="color:rgb(51, 51, 51); text-align:left">As you can see there is still a </span><span style="color:#FF0000">/</span><span style="color:rgb(51, 51, 51); text-align:left">&nbsp;at the end of the tag. </span>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 766.744px; height: 47.9787px; left: 96.628px; top: 333.194px;" data-block-id="e5217f86d797734becf3f7cc7ee14b33"><div class="sl-block-content notranslate" style="z-index: 16;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"path/to/image/file.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"image description"</span> /&gt;</span>
+</code></pre></div></div></section><section data-id="1b12bd971886c128453acd8fa63587bf" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 14.5px; top: 0px; height: auto;" data-block-id="288942ecc6c7947f1162e6073fbb6a95"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>HTML Basic Layout</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 377px; height: 320.474px; left: 80px; top: 189.763px;" data-block-id="23da33ee8f0e6f51992a4ea1cea51746"><div class="sl-block-content notranslate" style="z-index: 15;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 455px; left: 479.5px; top: 273px;" data-block-id="91fa06b4e1778474402f4830d7633f0b"><div class="sl-block-style" style="z-index: 16; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-gramm_id="9aacdcb2-e416-5d1f-9f9e-3b0f2fa65ede" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(51, 51, 51); text-align:start">Let's take a look at the<u> structure </u>of an HTML file: the basic tags needed to have a well-formed page for display on the web. </span></p>
+</div></div></div></section><section data-id="fa781542f533e0626bafa197c5162090" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 16.5px; top: 0px; height: auto;" data-block-id="1016c7f512182e87a9e959013e7da376"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Doctype</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 460.867px; left: 460.773px; top: 258.5px;" data-block-id="e43438122dfe2b46db4ee818882bd9eb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="1b204425-950e-8215-6a65-2029b5d3ef63" data-gramm="true" data-gramm_editor="true">
+<ul>
+	<li>
+	<p><span style="font-size:1.0em"><span style="text-align:start">This informs the browser which version of HTML will be used</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">Doctype is special in that it is not really considered a tag, but a <em>declaration</em>&nbsp;</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:1.0em">It should be <strong>present</strong> and <span style="text-align:start">the<strong> first line</strong> in your HTML file</span></span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 196.498px; height: 40px; left: 383.251px; top: 158.72px;" data-block-id="97be702478edd2c9b7dc229fa774fc07"><div class="sl-block-content notranslate" style="z-index: 12;"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 301.668px; height: 312px; left: 98.3315px; top: 248px;" data-block-id="feaa490d39cb7d44a493cd967ae88474" data-name="code-d6cdcc"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre></div></div></section><section data-id="1d8ab80735d5b0c3ae11729fd152fffe" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 15px; top: 0px; height: auto;" data-block-id="c6621f8ac0c2d3051bce5bb40da6bddc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>html</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 533px; left: 400px; top: 293.671px;" data-block-id="3de913ba2997ba5a5f8e9ee81cb8e24a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui" data-gramm_id="2f20bc28-4939-42c0-4512-d318e90e11b9" data-gramm="true" data-gramm_editor="true">
+<ul>
+	<li><span style="color:rgb(51, 51, 51); text-align:start">Referred to as the <em>root element </em>because it represents the root (top-level element) of an HTML document</span></li>
+	<li>All other elements must be descendants of <span style="color:rgb(51, 51, 51); text-align:start">this element</span>
+</li>
+	<li>
+<span style="color:rgb(51, 51, 51); text-align:start">Notice the matching closing</span><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;tag on the last line</span>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 123.085px; height: 109.699px; left: 418.457px; top: 118.409px;" data-block-id="b429944142e5358fea56cfb5aaa7144b"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+...
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 285.468px; height: 304.548px; left: 50.457px; top: 275.897px;" data-name="code-d6cdcc" data-block-id="57197c9cea4c8ff477877c49c781cf5f"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre></div></div></section><section data-id="bb4bcf9d632c6325d1d63a13efffd2a2" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 16.5px; top: 0px; height: auto;" data-block-id="e79d1abfdc21ebecfec1cfa100d14653"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>head</h2>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 233.455px; height: 101.089px; left: 363.273px; top: 108.911px;" data-block-id="2670f4a2216ed5ead2b301574f090079"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 499.821px; left: 424.549px; top: 282.709px;" data-block-id="233897d5fde599ef05d500f1165830f4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="color:rgb(17, 17, 17)"><span style="color:rgb(51, 51, 51); text-align:start">This tag contains descriptive information about your page</span></li>
+	<li style="color:rgb(17, 17, 17)">
+<span style="color:rgb(51, 51, 51); text-align:start">For instance: page's title (</span>&lt;title&gt;)</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p style="color:rgb(17, 17, 17)"><span style="color:rgb(51, 51, 51); text-align:start">This is also where we would include things like</span>&nbsp;&lt;meta&gt; tags<span style="color:rgb(51, 51, 51); text-align:start">&nbsp;and links to stylesheets.</span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 287.856px; height: 316.583px; left: 75.417px; top: 243.417px;" data-name="code-d6cdcc" data-block-id="96a7b027bc875f9f5d20da49900fccdb"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre></div></div></section><section data-id="cf5441f6aae93e01edc514c06f8662ef" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 17px; top: 0px; height: auto;" data-block-id="3c36bfab8ea469c6ea6bed25c1a887d7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2><strong>body</strong></h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 460.866px; left: 444.339px; top: 294.486px;" data-block-id="2ecbed5046299290bea5cff2c176344e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<ul>
+	<li>This tag<span style="color:rgb(51, 51, 51); text-align:start">&nbsp;represents the content of an HTML document.</span>
+</li>
+	<li>
+<span style="color:rgb(51, 51, 51); text-align:start">There can be only one </span>&lt;body&gt;<span style="color:rgb(51, 51, 51); text-align:start">&nbsp;element in an HTML document. </span>
+</li>
+	<li><span style="color:rgb(51, 51, 51); text-align:start">This is where the things you want people to see would go. </span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 163.29px; height: 117.898px; left: 400.355px; top: 116.682px;" data-block-id="08793e86d0ac503f3a281133d0e88bd9"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 303.22px; height: 314.293px; left: 123.305px; top: 271.84px;" data-name="code-d6cdcc" data-block-id="8e8bd980e1dce321d5301146f531639c"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre></div></div></section><section data-id="25524b5c4703b009e232ec16454ac0d1" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="43760e0287941c057bb345f8fcde4d21"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><span class="md-expand md-plain">Getting Organized</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="d77a27250c954df1311da47c74ce9ba2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>There are many opinions on how the files you create should be organized when building web applications. For the purposes of this course, we will focus one of those opinions as outlined in this section. This will help things look familiar as we get into some of the later topics in the course.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 391.84px; height: 238.369px; left: 277.847px; top: 343.481px; min-width: 1px; min-height: 1px;" data-name="image-f0d514" data-block-id="8bcaba6d6020adfae034be4bb4bdfdc8"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="480" data-natural-height="292" style="" data-lazy-loaded="" src="./HTML_ The Basics_files/giphy.gif"></div></div></section><section data-id="cba91dd7be0e390976965aa3c56aee9e" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="389f204985c440549addd20922a8c5b8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><span class="md-expand md-plain">Getting Organized</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 530.174px; left: 411.551px; top: 104.729px;" data-block-id="ed85891e9dbeef559cbb0d45acc8cd37"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li><span style="font-size:0.9em"><strong>root_directory:</strong> Every project has a root directory. This is the top level folder where all files for the project will exist. This is where our .html files will live as well.</span></li>
+	<li><span style="font-size:0.9em"><strong>assets</strong>: assets is a sub-directory under our root directory. This is the spot we save items we will use with our website. This can be images we intend to display, JavaScript we include for added functionality, or stylesheets we include to make things look cleaner.</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-83d2c1" data-block-id="e87ede18a8d595d42a76aeb5c9446608" style="width: 346.665px; height: 480.345px; left: 53.335px; top: 104.729px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="xml" style="font-size: 13px; line-height: 16px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">root_directory</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	|</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	│ index.html</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	│ contact_us.html</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	│ ...</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	|</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	└───assets</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		└───images</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		|</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│ 	image1.jpg</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│ 	image1.png</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│ 	...</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		|</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		javascripts</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		|</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│ 	jquery.js</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│	slideshow.js</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│ 	...</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		|</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		stylesheets</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="22"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		|</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="23"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│ 	bootstrap.css</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="24"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│ 	custom.css</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="25"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		│ 	...</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="47bf49c09ae6fb2d044774a88158b15d" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 302px; height: auto;" data-block-id="5080ad12c35d07231e13923acb756736"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Travel Site Project</h1>
+</div></div>
+
+</section><section data-id="02cd9deccd127cede0b196cb2fd10312" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="78e802b895c681bb941a79b4ab3aa812"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Travel Page Set Up</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 338px; left: 80px; top: 170.043px;" data-block-id="33b9378fd70021aa33817cc895f026f5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="478b384d-3b58-9d28-8543-6d087fe843b3" data-gramm="true" data-gramm_editor="true">
+<ul style="color:rgb(51, 51, 51)">
+	<li>
+<span style="color:rgb(51, 51, 51); text-align:left">Create a folder on your desktop called </span><strong>html_basics</strong>
+</li>
+	<li>Inside, create a file called <strong>travel.html</strong>
+</li>
+	<li>Let's add the following HTML to the file so we have our basic page structure</li>
+</ul>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 403.872px; height: 253.474px; left: 438.064px; top: 236.526px;" data-block-id="d92234e615455164a83ea8f5f1fcc96f"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>My Travel Site<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre></div></div></section><section data-id="9bb4dbd7cbc83e03068fc2cedc0cfd6d" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 16px; top: 0px; height: auto;" data-block-id="a317149a3116aa0e99cb413a985c55e4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Headings</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 953px; left: 3.5px; top: 88px;" data-block-id="ddf343e11a1bf1507c8535419b465ae6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="fd453f0d-f79c-439f-edb8-98d42fc308d6" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(51, 51, 51); text-align:start">The HTML </span><strong>&lt;h1&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;– </span><strong>&lt;h6&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;tags represent six levels of section headings. </span><strong>&lt;h1&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;is the largest and </span><strong>&lt;h6&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;is the smallest.</span></p>
+
+<p><span style="color:rgb(51, 51, 51); text-align:left">Let's add two headings to our site. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 611.972px; height: 105px; left: 175.014px; top: 245px;" data-block-id="fb9c8231b04168a0fb24ed3794752323"><div class="sl-block-content notranslate" style="z-index: 16;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Welcome to my Travel Site<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Here are some places I'd like to visit<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 953px; left: 3.5px; top: 408.634px;" data-block-id="36ac6c98260c9813860dfea75e3d3470"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;" data-gramm_id="93998f2b-af9e-a12a-a3c3-d343941e150f" data-gramm="true" data-gramm_editor="true">
+<p>Remember: these go inside of the &lt;body&gt;!</p>
+</div></div></section><section data-id="31083f6c838fd84d2460cf46d2875db1" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 15px; top: 0px; height: auto;" data-block-id="9112127f117580ec87b019c543c95a0c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Paragraphs</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 86px;" data-block-id="ba7cc1692ace518f95e836e86193bcb8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="a7895f81-1dd5-68b6-8549-63a73431fed5" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(51, 51, 51); text-align:start">The HTML </span><strong>&lt;p&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;tag represents a paragraph of text.</span></p>
+
+<p>Let's add a paragraph below our <strong>&lt;h1&gt;</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 652.745px; height: 121.721px; left: 153.627px; top: 198.366px;" data-block-id="867d6f43f0fdf712896cb197f83f91df"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Welcome to my Travel Site<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This site is all about where I want to travel.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Here are some places I'd like to visit<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="e56b92077990826d0fb52d12e07020e3" style="width: 320px; height: 170px; left: 320px; top: 375.785px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="320" data-natural-height="170" style="" data-lazy-loaded="" src="./HTML_ The Basics_files/giphy(1).gif"></div></div></section><section data-id="71fccb4f9bd1f46d931042054c5632e3" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="1d15fcf1a9144915290a5bfb9cc414fe"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Lists</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 345px; left: 80px; top: 114px;" data-block-id="0b7f918d898b56bd7ec704adc3804b06"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="d4d7daa2-77b3-8f36-a479-3916fd638143" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(51, 51, 51); text-align:start">HTML has the ability to display lists:</span></p>
+
+<ul>
+	<li>
+<strong>&lt;ol&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;represents an ordered list</span>
+</li>
+	<li>
+<strong>&lt;ul&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;represents an unordered list</span>
+</li>
+</ul>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 381px; left: 80px; top: 374.5px;" data-block-id="ecdcb3036485f0ca18e2ff80b96637d6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="f52e51c7-4eb4-e53d-4164-1a7b4856fc0b" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(17, 17, 17)"><span style="color:rgb(51, 51, 51); text-align:start"><strong>List items</strong>&nbsp;are represented by the </span><strong>&lt;li&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;tag in both ordered</span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:rgb(51, 51, 51); text-align:start">and unordered lists.</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="image" data-block-id="4009cd4f15711bb9c062b88154169b4c" style="width: 399px; height: 399px; left: 481px; top: 114px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="540" data-natural-height="540" style="" data-lazy-loaded="" src="./HTML_ The Basics_files/giphy(2).gif"></div></div></section><section data-id="c1fe5dc2e76ca9c57927e99f169d6bfc" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 15.5px; top: 0px; height: auto;" data-block-id="99d36be57c287a340be65257851a03c7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Lists</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 106.774px;" data-block-id="5e45e1a26e622ff150f6cb2426c40452"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="48a7a9cc-7169-180b-f795-2977330b942c" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(51, 51, 51); text-align:left">Go ahead and add either an ordered </span><strong>&lt;ol&gt;</strong><span style="color:rgb(51, 51, 51); text-align:left">&nbsp;or unordered </span><strong>&lt;ul&gt;</strong><span style="color:rgb(51, 51, 51); text-align:left">&nbsp;</span></p>
+
+<p><span style="color:rgb(51, 51, 51); text-align:left">list of places you would like to travel. Add the list below our </span><strong>&lt;h2&gt;</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 673.475px; height: 271.183px; left: 143.762px; top: 214.409px;" data-block-id="b0875584fb7fc306177bc61af85ad660"><div class="sl-block-content notranslate" style="z-index: 16;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Welcome to my Travel Site<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This site is all about where I want to travel.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Here are some places I'd like to visit<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Spain<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Italy<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Aruba<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Alaska<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre></div></div></section><section data-id="85287a0e05dd0f81e31844913827acff" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 16px; top: 0px; height: auto;" data-block-id="1cd7872768d3cea9c7ef8abd6544e7a9"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Links</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 100.344px;" data-block-id="018e53f006328f852a4ca122502603b5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="fe5a18ba-feee-b8ff-2264-a7edacd778ad" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(51, 51, 51); text-align:start">Links are represented by the anchor tag (</span><strong>&lt;a&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">). </span></p>
+
+<p><span style="color:rgb(51, 51, 51); text-align:start">The anchor tag creates a <em>hyperlink</em>: a link from your file to another location, typically activated by clicking on a highlighted word or image on the screen.</span></p>
+
+<p><span style="color:#0000FF"><u>Click Here</u></span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-2f4cc1" data-block-id="d0da1ca89f540088bb5fc72b010ef2e4" style="height: auto; width: 959.556px; left: 0.444px; top: 420px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<ul>
+	<li style="color: rgb(17, 17, 17);"><span style="color:rgb(51, 51, 51); text-align:start">A <em>hyperlink</em>&nbsp;can take the user to other web pages, files, locations on the same page, email addresses, or any other URL.</span></li>
+	<li style="color: rgb(17, 17, 17);">
+<span style="color:rgb(51, 51, 51); text-align:start">The text or element between the opening and closing </span><strong>&lt;a&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;tag is what becomes the link.</span>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-f0d965" data-block-id="d6474a9ad5726982131f1a1af92c58a0" style="width: 444.372px; height: 47.9413px; left: 258.814px; top: 339.614px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"YOUR_URL"</span>&gt;</span>Click Here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></div></td></tr></tbody></table></code></pre></div></div></section><section data-id="be7408eaf03ff7297104d73f8adb50b8" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 15.5px; top: 0px; height: auto;" data-block-id="21325dc6ab3b61bcc15bfe57b4eba1c5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Links</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 91.1935px;" data-block-id="d07914bbd1a06abe2b7a0d050787f7a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-gramm_id="49678dd0-41a0-ab66-1a23-66fa53d37d2e" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(51, 51, 51)">There are several attributes for an <strong>&lt;a&gt;</strong>&nbsp;tag.</p>
+
+<p style="color:rgb(51, 51, 51)">Let's go over a few of the common ones.</p>
+
+<ul style="color:rgb(51, 51, 51)">
+	<li>
+<strong>href</strong>&nbsp;- The URL or destination the <em>hyperlink</em> points to.</li>
+	<li>
+<strong>target</strong>&nbsp;- Specifies where to display the linked URL. Here are the most common values used:
+	<ul>
+		<li>
+<strong>_self:</strong>&nbsp;Load the URL into the same browser window as the current one. This is the default behavior if the <em>target</em> attribute is not used.</li>
+		<li>
+<strong>_blank:</strong>&nbsp;Load the URL into a new browser window or tab based on how the user's browser is configured.</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="e9e8898c5d78fb22db2e6eaf11ed9d66" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 15px; top: 0px; height: auto;" data-block-id="8366622a0e00743694c478e56ced8053"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2><strong>Basic Anchor Examples</strong></h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 441px; left: 0px; top: 104px;" data-block-id="b75411bfd5e4a9dcf4f036f4e49557cf"><div class="sl-block-content notranslate" style="z-index: 15; font-size: 115%;" data-highlight-theme="monokai-sublime"><pre class="xml"><code class="hljs"><span class="hljs-comment">&lt;!-- external hyperlink opens in a new window --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.google.com"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>google.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- external link opens in the same window --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.google.com"</span>&gt;</span>google.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Email link that opens users default email client --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:user@example.com"</span>&gt;</span>Email User<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- link to local another file on the same site --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"my_html_file.html"</span>&gt;</span>go to my_html_file<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- links to element on this page with id="page-section" --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#page-section"</span>&gt;</span>Link to page section<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- External link that opens in a new window/tab using an image instead of text --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://developer.mozilla.org/en-US/"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://mdn.mozillademos.org/files/6851/mdn_logo.png"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div></div></section><section data-id="c8020c2e2374d9c3d5dbf00babcad143" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 16px; top: 0px; height: auto;" data-block-id="f016b751bfe93bd5198c01c3d0baa423"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;">
+<h2>Travel Page: Links</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 101.5px;" data-block-id="b6d1aaf3b1ab656ddeb9b5d4e2451308"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="3b4727af-05d5-8c75-8e99-8067ef916716" data-gramm="true" data-gramm_editor="true">
+<p>Let's add links that open in a new window to the tourism sites for the places we would like to visit.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 720px; height: 287.474px; left: 120px; top: 189.849px;" data-block-id="c4504f1aac983003c405ebd1246a9b3e"><div class="sl-block-content notranslate" style="z-index: 16;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.spain.info/en_US/"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Spain<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.italia.it/en/home.html"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Italy<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.arubatourism.com/"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Aruba<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.travelalaska.com/"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Alaska<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre></div></div></section><section data-id="a23bc6d7c8e8e8aa13bbb636fae84d99" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 16px; top: 0px; height: auto;" data-block-id="ae5b72608cb49df7df7efdcddb5800b7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;" dir="ui">
+<h1>Images</h1>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 120px;" data-block-id="bc01810c2ecdf0aff28d97575640d545"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-gramm_id="ab316244-1a0f-282b-e42d-1947e10938a1" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(51, 51, 51); text-align:start">Images are placed in our HTML document using the </span><strong>&lt;img&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;tag. </span></p>
+
+<p><span style="color:rgb(51, 51, 51); text-align:start">The image tag is a self-closing tag.</span></p>
+
+<p><span style="color:rgb(51, 51, 51)">There are several attributes for an </span><strong>&lt;img&gt;</strong><span style="color:rgb(51, 51, 51)"> tag.</span></p>
+
+<p style="color:rgb(51, 51, 51)">Here are a few of the common ones.</p>
+
+<ul style="color:rgb(51, 51, 51)">
+	<li>
+<strong>src</strong>&nbsp;- The image URL. This attribute is mandatory for the <strong>&lt;img&gt;</strong> element.</li>
+	<li>
+<strong>alt</strong>&nbsp;- This attribute defines the description of the image. Users will see this text displayed if the image URL is wrong, <span style="color:rgb(51, 51, 51); text-align:left">or if </span>the image is not in one of the supported formats or is not yet downloaded.</li>
+	<li>
+<strong>height</strong>&nbsp;- The height of the image in pixels</li>
+	<li>
+<strong>width</strong>&nbsp;- The width of the image in pixels</li>
+</ul>
+</div></div></section><section data-id="dcca1e055ba88b0bed0cea07448ac1f9" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="4020e2ced3e952c9edb63d6bb287d848"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;" dir="ui">
+<h2>
+<strong>Basic </strong>Image<strong>&nbsp;Examples</strong>
+</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 663.67px; height: 210px; left: 148.165px; top: 210px;" data-block-id="df978b4057707a2bc71e6d6e97cff187"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">&lt;!-- image with alt take providing a description --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"some_image.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"TTS"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- image with width and height set --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"some_image.png"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"200"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"200"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Image used as a link --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://developer.mozilla.org/en-US/"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://mdn.mozillademos.org/files/6851/mdn_logo.png"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="c424397c665d683f15ca0d420060eb02" style="width: 148px; height: 46px; left: 406px; top: 483.774px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="148" data-natural-height="46" data-lazy-loaded="" src="./HTML_ The Basics_files/pasted-from-clipboard.png"></div></div></section><section data-id="96c0bfd1dfdeee70d920f37997d2eef9" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 16px; top: 0px; height: auto;" data-block-id="a9f4d31b23fb5d07484d056fc4f4be3a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;" dir="ui">
+<h2>Travel Page: Image<strong>s</strong>
+</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 352.946px; left: 0px; top: 233px;" data-block-id="c769aed99aa4a100122f8d05c06d5048"><div class="sl-block-content notranslate" style="z-index: 15;" data-highlight-theme="monokai-sublime"><pre class="xml"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"50"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.spain.info/en_US/"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Spain<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"50"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.italia.it/en/home.html"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Italy<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Aruba.svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"50"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.arubatourism.com/"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Aruba<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"</span> 
+       <span class="hljs-attr">width</span>=<span class="hljs-string">"50"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.travelalaska.com/"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Alaska<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 107.021px;" data-block-id="93794b757dfbaf1b83283a02808c223b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-gramm_id="8fce11e5-ce8a-040f-3731-37868ed85825" data-gramm="true" data-gramm_editor="true">
+<p>Let's add images of the flags that represent each place you would like to visit. These images came from Wikipedia and the width has been set to 50.</p>
+</div></div></section><section data-id="1d3140857cc3489a6ade9eccea6e9098" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 930px; left: 16px; top: 0px; height: auto;" data-block-id="7d9cd6c50824a8411829df5a6ec0d1f2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;" dir="ui">
+<h2>Table<strong>s</strong>
+</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 953.5px; left: 6.5px; top: 82.5px;" data-block-id="6ea1002d9d6cb9e9fd6679a04c416e05"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="6e094b20-5717-115c-88bf-88f11f62f8bd" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:rgb(51, 51, 51); text-align:start">The </span><strong>&lt;table&gt;</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;element represents tabular data. Think of the way a spreadsheet presents data. Tables allow you to arrange rows and columns to present data to the user.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 953.5px; left: 6.5px; top: 226.366px;" data-block-id="330740753f1fb7dd089eef4819a0905c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-gramm_id="72a0e562-58de-1149-19c1-460ecbd1765d" data-gramm="true" data-gramm_editor="true">
+<p style="color:rgb(51, 51, 51)"><strong>Basic Anatomy</strong><br>
+There several nested tags for the <strong>&lt;table&gt;</strong> tag that helps build the rows and columns. Let's go over a few of the common ones.</p>
+
+<ul style="color:rgb(51, 51, 51)">
+	<li>
+<strong>&lt;tr&gt;</strong>&nbsp;- represents the start of a new row.</li>
+	<li>
+<strong>&lt;td&gt;</strong>&nbsp;- represents the start of a new column within a row.</li>
+	<li>
+<strong>&lt;th&gt;</strong>&nbsp;- represents a special header column. <strong>&lt;th&gt;</strong> should only be used in the first row in place of the standard <strong>&lt;td&gt;</strong>. Headers will appear in bold.</li>
+</ul>
+</div></div></section><section data-id="e27d0df5dd14b61e565bf628df4495e5" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 930px; left: 14px; top: 0px; height: auto;" data-block-id="7fde052bf79d2d00c235f2bb957de6e6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;" dir="ui">
+<h2>
+<strong>Basic </strong>Table<strong>&nbsp;Example</strong>
+</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 492.324px; height: 375.431px; left: 233.838px; top: 140px;" data-block-id="6be72e50ad4b46b6fc81e8919a540a0b"><div class="sl-block-content notranslate" style="z-index: 15;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-comment">&lt;!-- basic table with column headers --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>First name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Last name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>John<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Doe<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Jane<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Doe<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></code></pre></div></div>
+</section><section data-id="0424ce393cfdfa2558640acef485cae4" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="03ab7b0624c1077e3a0f767fad7e198e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;" dir="ui">
+<h2>Travel Page: Tables</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 425.377px; height: 440.152px; left: 267.312px; top: 95.9464px;" data-block-id="78dc9d67519508202ddc67303716d2e1"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">&lt;!-- This is where our list ended --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Destination<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Capital<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Official Language<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Spain<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Madrid<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Spanish<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Italy<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Rome<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Italian<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Aruba<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Oranjestad<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Dutch<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Alaska<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Juneau<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>n/a<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-65a6c1" data-block-id="cc208c34f92a501448382dd938ae6bcd" style="height: auto; width: 960px; left: 0px; top: 547.023px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:0.7em"><em>Scroll down for more code</em></span></p>
+</div></div></section><section data-id="652bade26a36cf2fd212b2c2590e4ef1" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="277f1baa9cbdd4f7415262418d46be2c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Travel Page</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 912.033px; height: 472px; left: 23.9835px; top: 88px;" data-block-id="d006298574ef220c90b5b2011e205b9f"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 11;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">&lt;!DOCTYPE html&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">&lt;html&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">&lt;head&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  &lt;title&gt;My Travel Site&lt;/title&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">&lt;/head&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">&lt;body&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;h1&gt;Welcome to my Travel Site&lt;/h1&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		&lt;p&gt;This site is all about where I want to travel.&lt;/p&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;h2&gt;Here are some places I would like to visit&lt;/h2&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;ul&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;li&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;img src=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg"</span> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">      width=<span class="hljs-string">"50"</span>&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;a href=<span class="hljs-string">"http://www.spain.info/en_US/"</span> target=<span class="hljs-string">"_blank"</span>&gt;Spain&lt;/a&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;/li&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;li&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;img src=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg"</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">      width=<span class="hljs-string">"50"</span>&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;a href=<span class="hljs-string">"http://www.italia.it/en/home.html"</span> target=<span class="hljs-string">"_blank"</span>&gt;Italy&lt;/a&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="22"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;/li&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="23"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;li&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="24"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;img src=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Aruba.svg"</span> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="25"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">      width=<span class="hljs-string">"50"</span>&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="26"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;a href=<span class="hljs-string">"http://www.arubatourism.com/"</span> target=<span class="hljs-string">"_blank"</span>&gt;Aruba&lt;/a&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="27"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;/li&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="28"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;li&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="29"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;img src=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"</span> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="30"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">      width=<span class="hljs-string">"50"</span>&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="31"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;a href=<span class="hljs-string">"https://www.travelalaska.com/"</span> target=<span class="hljs-string">"_blank"</span>&gt;Alaska&lt;/a&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="32"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;/li&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="33"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;/ul&gt;	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="34"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="35"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;table&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="36"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="37"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;th&gt;Destination&lt;/th&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="38"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;th&gt;Capital&lt;/th&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="39"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;th&gt;Official Language&lt;/th&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="40"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;/tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="41"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="42"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Spain&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="43"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Madrid&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="44"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Spanish&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="45"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;/tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="46"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="47"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Italy&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="48"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Rome&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="49"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Italian&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="50"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;/tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="51"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="52"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Aruba&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="53"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Oranjestad&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="54"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Dutch&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="55"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;/tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="56"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="57"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Alaska&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="58"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;Juneau&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="59"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	    &lt;td&gt;n/a&lt;/td&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="60"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	  &lt;/tr&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="61"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	&lt;/table&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="62"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="63"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">&lt;/body&gt;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="64"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">&lt;/html&gt;</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-65a6c1" style="height: auto; width: 960px; left: 0px; top: 570.238px;" data-block-id="580346a5854123f6fab64c4e2a4f1042"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:0.7em"><em>Scroll down for more code</em></span></p>
+</div></div></section><section data-id="62b78f236bbdc62aafbab84b47627852" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="0408f4c61f01e3a3a540f6b981012e50"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>HTML Forms</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-3ee9eb" data-block-id="ca2e39add2d0a53cf3eb30aa0bfcc24c" style="height: auto; width: 905.969px; left: 34.2629px; top: 159.809px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>The html, &lt;form&gt; tag allows you to get information from your users.</p>
+
+<p><span style="color:#FF0000">&lt;form&gt;&lt;/form&gt;</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-479993" data-block-id="8319114a8e2fc805a490ad6de740117d" style="height: auto; width: 887.777px; left: 34.2629px; top: 304px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>There are a number of elements associated with the form tag that help to display and label user input fields. These are the most common.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-a33705" data-block-id="9a64dbd3da41f7dcfb83fdb6f498dd0d" style="height: auto; width: 244.414px; left: 264.775px; top: 443px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li style="color:rgb(17, 17, 17); text-align:left">input</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">label</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">select</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-489818" data-block-id="e5b0a7176e3d0e02e1005b5ccb43c9b7" style="height: auto; width: 211.336px; left: 466.703px; top: 443px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<ul>
+	<li style="color:rgb(17, 17, 17); text-align:left">textarea</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">button</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">option</li>
+</ul>
+</div></div></section><section data-id="7416100655f092b90ee2284fa5c8c7ba" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="9a570c8e65572b1ee36b4cc8e138cc35"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>HTML Forms</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-3ee9eb" style="height: auto; width: 905.969px; left: 27.0155px; top: 140px;" data-block-id="dd13e8f836c92b50c98cd304dac4d848"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Let's practice building a form by adding a form to our Travel Site.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-232414" data-block-id="db7d9fadddffdd5f932cde6c9e775a92" style="width: 602.541px; height: 141.227px; left: 178.729px; top: 408.347px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 12;"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Where do you want to visit?<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"name"</span>&gt;</span>Name: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 905.969px; left: 27.0155px; top: 363px;" data-block-id="b6a2dcf9938254fadeb91d868c87beb3" data-name="text-0221d7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>after your list... add the following code</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 905.969px; left: 17.0922px; top: 560px;" data-block-id="196cac3645e72670c86b5dbdb34a3e5a" data-name="text-84dbb9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>what does it look like?</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 256.617px; height: 144.347px; left: 341.768px; top: 192.379px; min-width: 1px; min-height: 1px;" data-name="image-c1e386" data-block-id="774d104f7a9805ba8c3b454627428867"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="480" data-natural-height="270" style="" data-lazy-loaded="" src="./HTML_ The Basics_files/giphy(3).gif"></div></div></section><section data-id="4cf147ad81943397895202f8ca922347" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="c5c344a9af8b3d69bfe93da60de3077a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>HTML Forms</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-3ee9eb" style="height: auto; width: 905.969px; left: 17.0925px; top: 191.306px;" data-block-id="6421594e1b630047979e6fddbf1fa8bf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li style="text-align:left">
+<strong>&lt;label&gt;&lt;/label&gt;</strong>:&nbsp; label is used to label form inputs
+	<ul>
+		<li style="text-align:left">the "for" attribute in label is how we associate a label with an input; it should match the id of the input.&nbsp;</li>
+	</ul>
+	</li>
+	<li style="text-align:left">
+<strong>&lt;input&gt;&lt;/input&gt;</strong>: is used to build input fields
+	<ul>
+		<li style="text-align:left">Must have a type attribute</li>
+		<li style="text-align:left"><em>Can be: text, radio, checkbox, submit, or button</em></li>
+		<li style="text-align:left">name: (required to be submitted) unique name of the input field</li>
+		<li style="text-align:left">value: allows a form to be pre-populated with default selections</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 719.08px; left: 110.537px; top: 101px;" data-name="text-0221d7" data-block-id="96ea1c7b2d628abaa0eabee1bb59245c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>label and input are likely the most common form elements you will use.</p>
+</div></div></section><section data-id="427b516cc7a4287755583a949f9cfd41" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="a0455bae3f297d3c9ada0d231ab8167c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>HTML Forms</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 719.08px; left: 125.805px; top: 140px;" data-name="text-0221d7" data-block-id="50ccdb84bbf808974a7632703eb22b72"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Let's add some checkboxes to our form.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-80b945" data-block-id="03efd74c8796c496750263973d91d9f0" style="width: 708.39px; height: 340.153px; left: 131.15px; top: 200px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 12;"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"name"</span>&gt;</span>Name: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Select any that apply:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"spain"</span>&gt;</span>Spain<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"spain"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"spain"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"france"</span>&gt;</span>France<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"france"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"france"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"portugal"</span>&gt;</span>Portugal<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"portugal"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"portugal"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"china"</span>&gt;</span>China<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"china"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"china"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></div></td></tr></tbody></table></code></pre></div></div></section><section data-id="c94908ad67d596a88851b18e73ca3944" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="aed49fe7671c4d1d56dc31244a95897c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>HTML Forms</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 866.276px; left: 54.688px; top: 140px;" data-name="text-0221d7" data-block-id="8b27840b7857b8aee3ac37a362218219"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>&lt;select&gt;&lt;/select&gt;</strong> Allows you to create a dropdown list of <strong>&lt;option&gt;&lt;/option&gt;</strong> elements</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-80b945" style="width: 703.428px; height: 141.686px; left: 147.689px; top: 289.31px;" data-block-id="13ef97ed50c7f69620ee004d40a479ed"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 12;"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"type"</span>&gt;</span>What is your favorite type of travel locations?<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"type"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"type"</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"beach"</span>&gt;</span>Beach<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mountains"</span>&gt;</span>Mountains<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"city"</span> <span class="hljs-attr">selected</span>&gt;</span>City<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-f455b8" data-block-id="159d7983ae644bd465eb840e7b9210ff" style="height: auto; width: 600px; left: 183.308px; top: 240.387px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Let's add a dropdown menu!&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-d3d114" data-block-id="4aef000cad1b8064008819eb3447e5af" style="height: auto; width: 703.428px; left: 147.689px; top: 444.618px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;"><strong>&lt;option&gt;&lt;/option&gt;:</strong></p>
+
+<ul>
+	<li style="text-align: left;">
+<strong>value: </strong>the value sent with the form</li>
+	<li style="text-align: left;">
+<strong>selected:</strong>&nbsp; pre-selects an item in the list</li>
+</ul>
+</div></div></section><section data-id="3160acc7387cf9d2129696afc7b4b3a4" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="9124bdbf8ee775dfef609606525da75f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>HTML Forms</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 866.276px; left: 54.688px; top: 140px;" data-name="text-0221d7" data-block-id="32388019237e57274d4dc17119809107"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>&lt;textarea&gt;&lt;/textarea&gt;</strong>&nbsp;This is a multi-line text input field</p>
+
+<ul>
+	<li style="text-align:left">rows and cols allows us to define the size of the text area</li>
+	<li style="text-align:left">Any text we put in the &lt;textarea&gt; tag will be displayed in the text box on the page.&nbsp;
+	<ul>
+		<li style="text-align:left">this is often used to create a 'prompt' for the user</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-80b945" style="width: 703.428px; height: 141.686px; left: 149.343px; top: 458.039px;" data-block-id="dee700512845d12f2160c88f615ec625"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 12;"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"bio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"bio"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"7"</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"50"</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  Tell me a bit more about yourself.</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-f455b8" style="height: auto; width: 700px; left: 149.343px; top: 409.084px;" data-block-id="63c5069a4ea4ed41ed81fc07ff0d5ddf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Add a text area as the last element in your form</p>
+</div></div></section><section data-id="bef113e641ef80b053801f774737909d" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="7c77e5eb71f3869792a414b480a6ef6e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>HTML Forms</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 866.276px; left: 54.688px; top: 140px;" data-name="text-0221d7" data-block-id="0147a9520cf48f1c6c581b612b5565be"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><strong>How will we submit the form though!?</strong></h3>
+
+<p>the <strong>&lt;input&gt;&lt;/input&gt;</strong> tag has a type called "submit"&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-80b945" style="width: 698.466px; height: 57.3376px; left: 150.997px; top: 300.92px;" data-block-id="acc55f7df175d370bb7dbf3d3ab4b683"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 12;"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">submit</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Ok Go!"</span>&gt;</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-f455b8" style="height: auto; width: 700px; left: 137.826px; top: 260.5px;" data-block-id="65ef7a8846d26eef6ce0dc33dc369027"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 86%;">
+<p>Add a submit input</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-b804a9" data-block-id="05297bd9ee51f562a87b3f02c749bb11" style="height: auto; width: 495.805px; left: 276.693px; top: 405.115px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;">Note:&nbsp;</p>
+
+<ul>
+	<li>the <em>type</em>&nbsp;is Submit</li>
+	<li>the <em>value </em>is the text on the button</li>
+</ul>
+</div></div></section><section data-id="8657d81e037bf84fcc4290dcc494796d" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="30884f85d8425f2b6d6a79bb135fbe91"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>HTML Forms</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 866.276px; left: 53.0341px; top: 100.307px;" data-name="text-0221d7" data-block-id="6376c2566a3507a534faa08d1faf96ea"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><strong>What happens when someone clicks the submit button?</strong></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-b804a9" style="height: auto; width: 819.968px; left: 80px; top: 218.226px;" data-block-id="83135aec8fac30d9204f47cd0b2ff74b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Generally, when an html form is submitted, the data is sent to a server to process. </p>
+
+<p>&nbsp;</p>
+
+<p>There are attributes we should apply to the &lt;form&gt;&lt;/form&gt; tag that tell the browser how to submit the form. </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 318.32px; height: 179.055px; left: 351.346px; top: 444.054px;" data-name="image-c311de" data-block-id="439c161465d7a40c5522d36795fdafed"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="480" data-natural-height="270" data-lazy-loaded="" src="./HTML_ The Basics_files/giphy(4).gif"></div></div></section><section data-id="8368b2a409aebcd73293637ab1f6f79a" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="9abc73c49727f5e8d19924a030ccb3b8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>HTML Forms</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 866.276px; left: 53.0341px; top: 100.307px;" data-name="text-0221d7" data-block-id="4616b4eff24f945ed92f0dc1aab84e1b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><strong>What happens when someone clicks the submit button?</strong></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-b804a9" style="height: auto; width: 819.968px; left: 80px; top: 241px;" data-block-id="dd0f6b409eb91a2074a6664dfb3277c6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="color:rgb(17, 17, 17); text-align:left"><span style="font-size:1.0em">The most important of these are: </span></p>
+
+<ul style="color:rgb(17, 17, 17)">
+	<li style="text-align:left"><span style="font-size:1.0em"><strong>action: </strong>the link to the script that will process the form data</span></li>
+	<li style="text-align:left"><span style="font-size:1.0em"><strong>method:</strong>&nbsp;the HTTP method that should be associated with the form</span></li>
+	<li style="text-align:left"><span style="font-size:1.0em"><strong>target:</strong>&nbsp;(like an anchor tag) where the browser should display the response html</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-39f342" data-block-id="d80fe1db82b05b9702e1aa758503d62b" style="height: auto; width: 748.85px; left: 113.845px; top: 532.274px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>For now, we aren't going to worry about making our forms functional.&nbsp;</p>
+</div></div></section><section data-id="5461f8a3d71a4227690055145fd6a967" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="921ae141ea36be9ab3d3232b3a4d5f1e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Other Tags</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="b75bd584cc5e614156bce7d1b3102734"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>There are two more tags that you will often see in this class, but that we did not use in our travel page.</p>
+
+<p>&nbsp;</p>
+
+<p>They are: the &lt;div&gt; and the &lt;span&gt; tags</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 396.565px; height: 283.148px; left: 294.221px; top: 322.544px;" data-name="image-1c3974" data-block-id="36c562949d1056a924eefe4721fa2918"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="500" data-natural-height="357" data-lazy-loaded="" src="./HTML_ The Basics_files/giphy(5).gif"></div></div></section><section data-id="1c2ad51418dc9f8023f82396b013b0c0" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 957px; left: 0px; top: 0px; height: auto;" data-block-id="5e8b187840caf5438ac26d91263dcc2e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;" dir="ui">
+<h2>Divs</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 953px; left: 4px; top: 92px;" data-block-id="626ba3fdb0317152d2f12188e59683e4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="80452e0e-e94b-0174-f4c0-8742b4d31870" data-gramm="true" data-gramm_editor="true">
+<ul>
+	<li style="color: rgb(51, 51, 51);">The <strong>&lt;div&gt;</strong> element is a generic container for content flow.</li>
+	<li style="color: rgb(51, 51, 51);">We are not going to use this in our travel site but you will see it as we go through the curriculum. It is mainly used to group elements for styling and positioning.</li>
+	<li style="color: rgb(51, 51, 51);">The <strong>&lt;div&gt;</strong> is a block-level element. Browsers typically display the block-level element with a new line both before &amp; after the element.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 505.122px; height: 155.226px; left: 225.939px; top: 378.538px;" data-block-id="7787d363564fa5352271d26086e17b77"><div class="sl-block-content notranslate" style="z-index: 16;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">&lt;!-- Basic &lt;div&gt; example --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  Any kind of content here. Such as
+  <span class="hljs-symbol">&amp;lt;</span>p<span class="hljs-symbol">&amp;gt;</span> or <span class="hljs-symbol">&amp;lt;</span>table<span class="hljs-symbol">&amp;gt;</span> tags. You name it!
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div></div></section><section data-id="b194853f4b889ada74dbc9ef4b046dcb" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="1695c15e77f81922ddd0ff11b7cbdabf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALHRFWHRDcmVhdGlvbiBUaW1lAEZyaSAxMiBOb3YgMjAxMCAxOTowNzowMiArMTIwMOGr8p4AAAAHdElNRQfaCwwGBxwduq16AAAACXBIWXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAfJJREFUeNqVkk1vElEUhp87X4CIFhhMG0toMC5K3Lgxbro10bhxY2Jc+CO666Y/oP/DxFVjTKM7l1apTdM0JSU0LSg0WqaUjwE6MDNebGpKBYlndc+55zw5H6/gim2UUd0qs5Uy6VaTa7EYdtOmUN7naHER92q+dtnZ2UFpHTOTXWfuwxrfYlNUHz1lxvdIVyx6MuXHPwFeBLW2z+29Pepr7ziUof7SEq1CibCEmKMAymXH6SD6LrpzRndQPIjNz9P3odu2URlhQ4C+ghcM0JpLEchkzrv7eIDS62JYP2lPBJS2cIMhyrMpwo+fMbW8jLhhc2t3F906pjoK8GcH29vonoenRDk1m5zcvUM6ZuJvZEnmcljT09hbR6iVIuLJw/PxhgAOPOj26Gk1nEQCNWAQ7XS4bxvw8hWuGedeo4iR+/y7+OtfgM1N9OIBwnFQ5SLdZJJ2JML17BdqEuYHgmiahsjnx4zw/i2fslm8dht/YQHx/AWpfI50/ZTKm9d8lykiHkf4/hjA6ipnF++VFRS7T1AoaDejyCEYlHmWNeEKF9YISz30CBkGirxKUIZGamAsQG2hux66BAipi1A6g/5fAM/HkGrUFfmr6wSSiWHJTwQoPrq8hCYEGDoh0xzfwUhyIY9ROkRrNKQ65e1P6uM7+AW+ibcHEM1ixAAAAABJRU5ErkJggg==&quot;); background-position: -16px 0px; background-repeat: no-repeat;" dir="ui">
+<h2>Spans</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 87.6558px;" data-block-id="80e1a685e0098f6390ef864b42a6ef0e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" dir="ui" data-gramm_id="21643ce3-c19b-87b5-47d5-fb73318b9582" data-gramm="true" data-gramm_editor="true">
+<ul>
+	<li style="color: rgb(51, 51, 51);">The <strong>&lt;span&gt;</strong> element is another generic container for content flow.</li>
+	<li style="color: rgb(51, 51, 51);">Just like the <strong>&lt;div&gt;</strong>&nbsp;tag, it is mainly used for styling purposes.</li>
+	<li style="color: rgb(51, 51, 51);">The <strong>&lt;span&gt;</strong> is an inline element. An inline element occupies only the space bounded by the tags that define the inline element. Basically,​ that means you can wrap it around a work or something similar and it won't add new lines above and below the <em>span</em>.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 535.229px; height: 147.42px; left: 212.385px; top: 357.162px;" data-block-id="70ff8f0dd97412c785cc2e514c1b0816"><div class="sl-block-content notranslate" style="z-index: 16;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 20px; line-height: 24px;"><code class="hljs"><span class="hljs-comment">&lt;!-- Basic &lt;span&gt; example --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  Any kind of <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> here.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div></div></section><section data-id="23e5728782eac69cbe53a4ac98a907bd" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 950.442px; left: 4.779px; top: 183px; height: auto;" data-block-id="6c0de6c4e516fafb4b682098c25b5daa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Coding Challenge</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-dca111" data-block-id="1816309152cff3317e468d78c981959e" style="height: auto; width: 950.441px; left: 4.7795px; top: 382px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Can you add a &lt;div&gt; and a &lt;span&gt; to your travel site?&nbsp;</p>
+</div></div></section></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background past" data-background-hash="0https://media.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpegnullnullnullnullnullnullnullnull" data-loaded="true" style="display: block;"><div class="slide-background-content" style="background-image: url(&quot;https://media.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpeg&quot;);"></div></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="slide-number" style="display: block;"><a href="https://techtalentsouth.slides.com/techtalentsouth/html-the-basics?token=-T3Bz9tS#/0/1">
+					<span class="slide-number-a">2</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-up enabled" aria-label="above slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-down enabled" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.0238095);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Hyper Text Markup Language HTML is a markup language interpreted by the browser. It uses specific tags or elements to tell the browser how things should look when presented visually to the user. </div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 362.797px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">HTML: The Basics</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 402px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+			<div class="deck-sharing">
+				<div class="deck-state" data-tooltip="This deck is only visible to people it has been explicitly shared it with" data-tooltip-maxwidth="250">Private</div>
+			</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/techtalentsouth/html-the-basics/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">HTML: The Basics</h1>
+				<p class="description">Let's take a dive into HTML (Hyper Text Markup Language). HTML is the markup language that provides us a structured way to create web pages. When we use the tags available to us through HTML we can control how almost everything is presented to the user via their web browser. Your web browser is what interprets the tags to present what the end user sees.</p>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2017-02-22 18:35:48 UTC">6 years ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/techtalentsouth" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description">Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. </p>
+		<ul class="links">
+			
+			 <li><a href="https://twitter.com/techtalentsouth" target="_blank"><span class="icon i-twitter"></span>techtalentsouth</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="https://help.slides.com/">Help</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2022 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":2,"allow_scripts":false,"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":"","deck_templates_mode":null,"default_internal_role":"viewer"},"deck":{"id":919860,"slug":"html-the-basics","title":"HTML: The Basics","description":"Let's take a dive into HTML (Hyper Text Markup Language). HTML is the markup language that provides us a structured way to create web pages. When we use the tags available to us through HTML we can control how almost everything is presented to the user via their web browser. Your web browser is what interprets the tags to present what the end user sees.","width":960,"height":700,"margin":0.05,"visibility":"self","published_at":"2017-08-22T13:56:57.341Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/03736054509b5ef321e7b70e98f9cb4b/thumb.jpg?1605886588","view_count":5599,"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":44,"rtl":false,"version":2,"collaborative":true,"deck_user_editor_limit":null,"data_updated_at":1633022404066,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2021-12-09T13:13:26.768Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1639055602","sanitize_messages":null,"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="./HTML_ The Basics_files/deck-consumption-1f122eceff490d0c5a77bd5f4380fa6c338b2a881e7cba74a686638faf6a5c4d.js.download" defer="defer"></script>
+    	<script src="./HTML_ The Basics_files/deck-ad5840235506b1ae9f1911eee7c2c085efa010a566481a17970b4c7b3c037af2.js.download" defer="defer"></script>
+	
+
+
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+  
+
+</body></html>
