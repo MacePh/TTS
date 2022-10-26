@@ -1,0 +1,27 @@
+p {
+    background-color: bisque;
+    font-family: serif;
+    font-weight: 300;
+    font-size: large;
+}
+/*.image {
+    background-image: url("https://wallpapercave.com/uwp/uwp151968.jpeg");
+    background-size: contain;
+background-position: center;
+height: 300px;
+
+}*/
+#banner {
+    background-image: url("https://wallpapercave.com/uwp/uwp151968.jpeg");
+    height: 700px;
+    background-size: auto;
+    background-position: center;
+    width 50%;
+}
+#banner .content h1{
+    position: relative;
+  top: 50px;
+  width: 400px;
+  margin: 0 auto;
+  border: solid rgb(143, 54, 54) 3px;
+}
