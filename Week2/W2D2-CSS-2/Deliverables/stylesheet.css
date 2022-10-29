@@ -1,16 +1,19 @@
 
 * {box-sizing: border-box;}
+div.foo { display: inline-block; }
+div.foo.bar { display: block; }
 
 .masthead a {
   float: left;
-  display: block;
+  display: inline-block;
   color: #FFF;
-  padding: 10px;
+  padding: 0px 0px 0px 0px;
   font-family: 'Space Mono', monospace;
 }
 .masthead {
   position: absolute;
-  top: 0;
+  top: 5;
+  bottom: 5;
   width: 100%;
   padding: 20px 0;
   background-color: black;
@@ -23,6 +26,9 @@
 p {
   font-family: 'Poppins', sans-serif;
   
+}
+h1{
+  display: block;
 }
 /* .grid {
    display: grid;
