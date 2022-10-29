@@ -1,58 +1,123 @@
-
 * {box-sizing: border-box;}
-div.foo { display: inline-block; }
-div.foo.bar { display: block; }
 
+/* TOP NAV */
 .masthead a {
   float: left;
-  display: inline-block;
+  display: inline-flexbox;
   color: #FFF;
-  padding: 0px 0px 0px 0px;
+  padding: 1em;
+  padding-top 20px;
   font-family: 'Space Mono', monospace;
 }
 .masthead {
-  position: absolute;
-  top: 5;
-  bottom: 5;
+  width: 700px;
+  overflow: hidden;
+  position: sticky;
+  top: 40;
+  bottom: 10;
   width: 100%;
-  padding: 20px 0;
-  background-color: black;
+  /* padding: 2px 1px; */
+  padding: 1em;
+  background-color: rgba(6, 6, 6, 0.9);
   font-size: 18px;
 }
 .search {
+  width: 700px;
   float: right;
+}
+
+/* CONTENT */
+
+
+  .content {
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+  padding:1em;
+  text-align: center;
+  width: 700px;
 }
 
 p {
   font-family: 'Poppins', sans-serif;
-  
-}
-h1{
-  display: block;
-}
-/* .grid {
-   display: grid;
-  border: 2px blue solid;
-  height: 500px;
-  width:500px;
-  grid-template: repeat(4, 1fr 2fr) / repeat(4, 3fr 2fr);
-  gap: 5px;
-}
-
-.a {
-  grid-row: 5 / 7;
-  grid-column: 1 / span 2;
+  }
+  .bigger p {
+    font-size: 75;
+    color: red
   }
 
-.b {
-grid-row:  2 / span 3;
-grid-column: 2 / span 6;
-font: ;
+h1{
+  font-size: 200%;
+  text-transform: uppercase;
+  display: block;
+  font-family: 'Space Mono';
 }
-*/
-.box {
-  background-color: beige;
-  color: black;
-  border-radius: 5px;
-  border: 2px dodgerblue solid;
+.list h2 {
+  text-transform: uppercase;
+  color: red;
+}
+li {
+  padding: 0.1em;
+  text-align: center;
+}
+/* Bottom Nav */
+.footer{
+  overflow: hidden;
+  width: 700px;
+  overflow: hidden;
+  position: sticky;
+  top: 40;
+  bottom: 10;
+  width: 100%;
+  padding: 1em;
+  background-color: rgba(6, 6, 6, 0.5);
+  font-size: 18px;
+}
+.footer a{
+  color: #fff;
+  text-align: justify;
+  padding: 1em;
+  padding-left: 50px;
+}
+
+/* EXTRA STYLE */
+
+
+/* #3 Animation */
+.animation{
+  width: 100px;
+  height: 40px;
+  background-color: red;
+  position: relative;
+  animation-name: MacePhSlide;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes MacePhSlide {
+  0%   {left:0px;}
+  25%  { left:400px}
+  50%  {left:600px;}
+  75%  {left:400px;}
+  100% {left:0px;}
+}
+/* #4 Shadowy BOX */
+.logo {
+  box-shadow: 3px 3px 2px 1px rgba(0.77, 0.7, 2.555, .9);
+}
+/* Hover */
+.masthead a {
+  
+    border-radius: 3px;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.masthead a:hover {
+  background: white;
+  border: 1px solid red;
+  color: red;
 }

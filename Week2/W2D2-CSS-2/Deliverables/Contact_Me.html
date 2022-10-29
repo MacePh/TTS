@@ -4,31 +4,91 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mace Phillips - Contact Me</title>
+    <title>MacePh - Contact Me</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
+  <!-- Body STARTS HERE -->
   <body>
-    <nav class="masthead">
-        <ul>
-            <li><a class="About_Me" href="About_Me.html">About Me</a></a></li>
-            <li><a class="" href="Projects.html">Projects</a></li>
-            <li><a href="Contact_Me.html">Contact Me</a></li>
-        </ul>
-    </nav>
-    <!-- </ul><div id="About-Me">
-            <img src="https://i.pinimg.com/originals/da/75/68/da7568b1717feb435de9c12b0c5b74f4.png" width="50">
-                <a href="https://www.mainstreetmeatschatt.com/" target="_blank">About Me</a>
-        </div>
-        <div id="Projects"> Projects</div> -->
-        <!-- <div id="Contact-Me">Contact Me</div> -->
-        <!-- <div class="grid">
-      <ul id="Projects">
-        <li>Projects</li>
-        <li>Projects</li>
-        <li>Projects</li>
-      </ul>
-      <div class="box a">BOX A</div>
-      <div class="box b">BOX B</div> -->
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <a class="logo" href="#logo"
+        ><img
+          src="/W2D2-CSS-2/Deliverables/Assets/MacePh.png.png"
+          alt="logo"
+          width="100"
+      /></a>
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="About_Me.html">About Me</a>
+      <a class="link" href="Projects.html">Projects</a>
+      <a class="Active"href="Contact_Me.html">Contact Me</a>
+      <!-- SEARCH BAR -->
+      <div class="search">
+        <form action="/action_page.php">
+          <label for="search"></label>
+          <input type="text" id="Search" placeholder="Input Search Here" />
+          <button type="search">
+            <img
+              src="https://openclipart.org/image/800px/svg_to_png/213239/Search-icon.png"
+              width="13"
+              height="13"
+              Search
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- BODY/MAIN CONTENT OF THE PAGE -->
+    <div class="content">
+      <h1>Contact</h1>
+      <p class="bigger">
+        <br />All the contact details would go here.<br /><br />
+      </p>
+      <p>
+        There would also be a place get in contact with the author:<br />
+        <br />
+      </p>
+      <form>
+        <label for="name">Name:   </label><br>
+        <input type="text" id="name" name="name" placeholder="Your Name"><br><br>
+        <label for="name">Email:   </label><br>
+        <input type="text" id="email" name="email" placeholder="You@example.com"><br><br>
+        <label for="phone#">Phone: </label><br>
+        <input type="text" id="Phone" name="Phone" placeholder="xxx-xxx-xxxx"><br><br>
+        <label for="Addressl1">Address: </label><br>
+        <input type="text" id="AddressL1" name="addressL1" placeholder="Street"><br>
+        <input type="text" id="AddressL2" name="addressL2" placeholder="City, State"><br>
+        <input type="text" id="zip" name="zip" placeholder="Zip Code"><br>
+    </form>
+    <br>
+    <textarea id="bio" name="bio" rows="7" cols="50">
+      Tell me a about yourself.
+    </textarea>
+    <br><br>
+    <input type=submit value="Sign Me UP!">
+   
+
+    <!-- Animation -->
+    <div class="animation">
+      <img
+        src="/W2D2-CSS-2/Deliverables/Assets/MacePh.png.png"
+        alt="logo"
+        width="100"
+      />
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <a class="About_Me" href="index.html">Home</a>
+      <a class="About_Me" href="About_Me.html">About Me</a>
+      <a class="" href="Projects.html">Projects</a>
+      <a href="Contact_Me.html">Contact Me</a>
     </div>
   </body>
 </html>
