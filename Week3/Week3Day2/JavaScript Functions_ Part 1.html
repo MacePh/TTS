@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://techtalentsouth.slides.com/techtalentsouth/js-functions-part-1?token=xQPZDOR6 -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars reveal-is-ready fonts-are-ready" data-account="" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>JavaScript Functions: Part 1</title>
+    <meta name="description" content="Tech Talent South - JS Functions - Part 1">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta property="og:title" content="JavaScript Functions: Part 1">
+    <meta property="og:description" content="Tech Talent South - JS Functions - Part 1">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://media.slid.es/thumbnails/549d4b5f777ef266db4b7647bdc2c7aa/thumb.jpg?1605886704">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/techtalentsouth/js-functions-part-1?token=xQPZDOR6">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./JavaScript Functions_ Part 1_files/css2" onload="this.onload=null;this.removeAttribute(&#39;media&#39;);" rel="stylesheet" data-application-font="inter">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" data-application-font="inter">
+</noscript>
+
+    <link rel="stylesheet" media="all" href="./JavaScript Functions_ Part 1_files/slides-321f9cf86a0d5f55c789340bfab5578b6c15251bf8ef1c818c6cc78376a0d230.css">
+    <link rel="stylesheet" media="all" href="./JavaScript Functions_ Part 1_files/deck-consumption-719d4dc49a60f9054a74904223582068baab901bde66427d102bad512498fdae.css">
+    	<link rel="stylesheet" media="all" href="./JavaScript Functions_ Part 1_files/deck-v2-52b2f07feba210d651a559e960fc8e470003c288daa7750ea49d62784a543e13.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="UnuVsklBx1EWyt4kJfWLXQ5Tmr2Kqfw8SMy3iBK5dJY9K3M39UgOYuQjVQApL/hk1FEaedTWsrVdLkL59rB2+Q==">
+    <script type="application/javascript" async="" defer="" src="./JavaScript Functions_ Part 1_files/track.js.download"></script><script type="text/javascript" async="" src="./JavaScript Functions_ Part 1_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./JavaScript Functions_ Part 1_files/js"></script>
+<script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    window.slidesMeasurementId = 'G-LWVDH9STBJ';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LWVDH9STBJ', {
+      page_title: 'decks-show'
+    });
+
+  }
+</script>
+
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="JavaScript Functions: Part 1">
+	<meta name="twitter:description" content="Tech Talent South - JS Functions - Part 1">
+	<meta name="twitter:image" content="https://media.slid.es/thumbnails/549d4b5f777ef266db4b7647bdc2c7aa/thumb.jpg?1605886704">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./JavaScript Functions_ Part 1_files/opensans.css"><link rel="stylesheet" href="./JavaScript Functions_ Part 1_files/css"><style type="text/css" media="screen">.uv-icon{box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon .uv-tooltip-container{position:relative}.uv-icon .uv-tooltip-container .uv-icon-tooltip{display:none;position:absolute;height:20px;padding:4px 8px;background-color:#464653;color:white;font-size:12px;border-radius:4px;line-height:18px;font-family:"Open Sans", sans-serif;white-space:nowrap}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left,.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{top:0;bottom:0;margin:auto 10px}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top,.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{transform:translate(-30%);margin:10px auto}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top{bottom:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{top:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left{right:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{left:100%}.uv-icon .uv-tooltip-container:hover .uv-icon-tooltip{display:block}.uv-icon-trigger{display:block;width:39px;height:39px;border:none;padding:0;cursor:pointer;background:none}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;transition:background 200ms}.uv-bottom .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{transition:none !important}.uv-fade{opacity:1;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{transform:translateY(100%)}.uv-slide-left.uv-is-hidden{transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{transform:translateX(100%)}
+</style><script type="text/javascript" src="./JavaScript Functions_ Part 1_files/highlight-0adde8531514527653fdb445e29c1cca3687dc50684c4b8f624246a318dc706a.js.download"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style><script type="text/javascript" src="./JavaScript Functions_ Part 1_files/zoom-e1f94838c054500b9ea32c1cdb27173f7796522bc2af1b0c8efe98c65a4c57b7.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <body style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url(&#39;https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png&#39;)"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue" style="--slide-width:960px; --slide-height:700px; --slide-scale:0.591714;">
+			<div class="reveal slide embedded has-vertical-slides ready focused" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.591714);">
+					<section class="stack present" data-id="2d47c9245dd989d38a27d51491e54f7a" style="display: block;"><section data-id="aacfaf9b5b5039b5ef7ad996097fa68a" class="present" style="display: block;">
+<div class="sl-block" data-block-type="image" data-block-id="28d98490cfe45754391378a806e08f95" style="min-width: 1px; min-height: 1px; width: 533.312px; height: 426.523px; left: 213.344px; top: 0px;"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="1688" data-natural-height="1350" style="" data-lazy-loaded="" src="./JavaScript Functions_ Part 1_files/TTS-Identity-FullColor-HorizontalStack.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 490px; height: auto;" data-block-id="4454145e736e6e063b7808b3326b8d16" data-name="text-7cdbff">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+</section><section data-id="39c66600a68e39b214a2e17f2484e5d4" class="future" aria-hidden="true" hidden="" style="display: block;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 115.957px;" data-block-id="ae1826918f75a80ed2be02e2212ee086"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Overview</strong></p>
+
+<p><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">Functions are procedures that take arguments and return values.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">Think of them like a series of steps your program has to execute, except that a function is a reusable set of steps that may need to be run more than once.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">They help us organize our code for later reuse.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-b3f0d4" data-block-id="f424b96f4ba80a04d354e6894571c38c" style="width: 174.441px; height: 173.099px; left: 392.779px; top: 395.368px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1300" data-natural-height="1290" style="" data-lazy-loaded="" src="./JavaScript Functions_ Part 1_files/todo_list.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-f495ae" data-block-id="e0cb0436a5b712f58bfbf0e40713ef74" style="height: auto; width: 600px; left: 180px; top: 521px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:0.5em">source: <a href="http://clipart-library.com/" target="_blank">http://clipart-library.com/</a></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="3317b6ad9f3c30a368ea5cf18c08393e" data-name="text-2ee4f0">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="cfd28c699c011014979cbf0c852effc9" class="future" aria-hidden="true" hidden="" style="display: block;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="187e93691c540b37d3f9a95e3634e709"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em">A function should be declared using the keyword "function" unless it's an anonymous function.</span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em">A function has a name, an argument list, and a body.</span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em">Arguments can be named anything you want, but just like a variable, most of the time begins with a lowercase letter.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 376px; height: 85px; left: 292px; top: 420px;" data-block-id="34b1619c88dc38c5332d62cc6f15e75b"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment">//Define a function</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">saySomething</span>(<span class="hljs-params">something</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(something);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-2ee4f0" data-block-id="20b56e1f11d28f016f57b3ae32e847d6">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="f7b6fcaf50f955bc66b0a5f4ea26636c" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 230.829px;" data-block-id="279d108df4c07b3ca4231b153ed34908"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(17, 17, 17)"><span style="color:rgb(17, 17, 17)">Execute a function by calling it's name with () and passing in arguments.</span><span class="s1" style="color:rgb(17, 17, 17)">&nbsp;Use parenthesis, even if there are no arguments.</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" data-block-id="13b3989813dfa3080083443362bdc0c1" style="width: 596px; height: 32px; left: 182px; top: 360px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">saySomething(<span class="hljs-string">"Hello function!"</span>); <span class="hljs-comment">//logs "Hello function!"</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-2ee4f0" data-block-id="224d8a73831af15d7c41ec693dbc2114">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="d3c1a3e1b3aa7f5acc631ecffe956a8a" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 951.514px; left: 4.243px; top: 129.5px;" data-block-id="bde75380f99d5c74edfbdad7364e48be"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em"><span style="text-align:justify">Functions can return a value we explicitly tell it to return. A function evaluates to its </span>return<span style="text-align:justify">&nbsp;value when run.</span></span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em"><em>The return keyword can also be used strategically to exit a code block as it terminates the blocks execution flow immediately. &nbsp;</em></span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 353.5px; height: 120.681px; left: 46.5px; top: 392.341px;" data-block-id="b29650ccf6c997c5ff2a29ec31bb9193"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">number1, number2</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    number1 + number2;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> sum = add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(sum) <span class="hljs-comment">// undefined</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 365.5px; height: 120.681px; left: 560px; top: 392.341px;" data-block-id="0deeda31fe474c73ebd6c980a7b5d2e4"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">number1, number2</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">     <span class="hljs-keyword">return</span> number1 + number2;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> sum = add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(sum); <span class="hljs-comment">// 3</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 951.514px; left: 4.243px; top: 0px; height: auto;" data-name="text-2ee4f0" data-block-id="6f8d0ce66e86af84234034b46fd2b32a">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-baebd7" data-block-id="148485c96b0374d65e087a7f456a69c5" style="height: auto; width: 395.757px; left: 25.3715px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Wrong</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 362.4px; left: 561.55px; top: 354.341px;" data-block-id="45186120a33f3e01664e94e8ae0e1600" data-name="text-a7fe56"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Right</p>
+</div></div></section><section data-id="e1740174d533c4ed25a3740cbfcbb347" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 86.5429px;" data-block-id="a15ed0a7bf450938c6f3c01d976a4610"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; color: rgb(0, 0, 0);">
+<ul>
+	<li style="color:rgb(17, 17, 17)">Functions take in any number of arguments, regardless of their declared signature</li>
+	<li style="color:rgb(17, 17, 17)">All function arguments are optional (the function will still run even without passing in all the arguments)</li>
+</ul>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<ul>
+	<li style="color:rgb(17, 17, 17)">You can predefine arguments (usually when an argument is important so it can fall back on a default value)</li>
+</ul>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" style="width: 288px; height: 131px; left: 336px; top: 252.871px;" data-block-id="b127c9aea07bebddeec1a737eb2789d1"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a,b</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(a,b)</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">add(<span class="hljs-number">1</span>); <span class="hljs-comment">// '1,undefined'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>) <span class="hljs-comment">// '1,2'</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 288px; height: 110px; left: 336px; top: 482.371px;" data-block-id="eb98db72660aca04e84355efb3031566" data-name="code-c7f57e"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a=<span class="hljs-number">1</span>,b=<span class="hljs-number">2</span></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(a+b)</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">add(); <span class="hljs-comment">// still prints 3</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-2ee4f0" data-block-id="aac9e4fdf8eda88b3261b1b8b51ffc09">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="f81527fcdb3193b58fc716a1351753bb" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 112px;" data-block-id="490ce2c50b910d548ee2a5e75cf7b70f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em"><span style="color:rgb(17, 17, 17)">The arguments array creates variables that reference the arguments in the order they were passed. For functions that take an unknown number of arguments, use the arguments object.</span></span></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" style="width: 547px; height: 186px; left: 206.5px; top: 257px;" data-block-id="20b36af2fa59ff6498a945e28838ad79"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">arguments</span>.length; i++) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		sum += <span class="hljs-built_in">arguments</span>[i];</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">return</span> sum;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>);</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-2ee4f0" data-block-id="20e880b95d0354087edd5911b9ec76d4">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="70eadf2252f72f88f82d9f1267fe9d3d" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 101.022px;" data-block-id="697335d7f0396ab3b5cb344a377f8e90"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em">It's much more common to use "rest parameters" by utilizing the spread operator like so:</span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em">This lets you name the parameters array something more descriptive instead of using the arguments keyword. You can combine this with other parameters as long as the rest parameters are the last argument in the signature.</span></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" style="width: 547px; height: 186px; left: 206.5px; top: 210px;" data-block-id="5f5ab616f9975a67afb99e22a445153b"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">...rest</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; rest.length; i++) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		sum += rest[i];</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">return</span> sum;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>);</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-2ee4f0" data-block-id="cea818055cecdf2f5a4550e7cc24f77b">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="1bcf17606441b500dd257c227174e9ea" data-name="text-d7e4cc">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="fd2388a2da4d77f748043ed6988bd0a5" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="62139663a8630b8769e3a7ae6ec3869f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(17, 17, 17)"><strong>Challenge 1: Gratuity</strong></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:rgb(17, 17, 17)">Calculating gratuity is a repetitive task, so let's create a couple of functions that do the work for us.</span></p>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-d7e4cc" data-block-id="594127ec1f4aecd0c0f7921e867fdada">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="4795ebcc956ea46fe5087ea4635d4b2d" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 94.4143px;" data-block-id="76c27c2d3b35bd18d3e0aafb2831b081"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Create a variable <em>billAmount</em> and store a random number (ie: 100)</span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Create a function <em>gratuity()</em></span></p>
+
+	<ul>
+		<li>
+		<p><span style="font-size:0.9em"><em>gratutity</em> should multiply the value of <em>billAmount</em> by 20% (hint: use 0.2)<em> </em>and<em>&nbsp;</em>return the value</span></p>
+		</li>
+	</ul>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Create a function <em>totalWithGrat()</em></span></p>
+
+	<ul>
+		<li>
+		<p><span style="font-size:0.9em"><em>totalWithGrat</em> should take in the amount as an argument, call the gratutity function, add the returned value to the original bill amount, and return the total bill + gratuity</span></p>
+		</li>
+	</ul>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Append the return value of <em>totalWithGrat</em>&nbsp;to the following phrase: "Your total including gratuity is:" and log it to the console</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">Only invoke the <em>totalWithGrat</em> function when logging the result</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">Bonus: </span>Find a way to fix the decimal point to only 2 places (ie: 120.00)</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-d7e4cc" data-block-id="6831f06c99ccd95e8cdd32ca22b5f7dd">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="acdfacc4d97b043f3d994171e5359c45" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 101px;" data-block-id="478856c298932950fd17d9f07c845025"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Solution:</strong></p>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" data-name="code-038aff" style="width: 532px; height: 280px; left: 214px; top: 139px;" data-block-id="cf46a6ca3c74738044b161df7447a9b0"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> billAmount = <span class="hljs-number">100.58</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">gratuity</span>(<span class="hljs-params"></span>)</span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">return</span> billAmount * <span class="hljs-number">0.2</span>;  </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">totalWithGrat</span>(<span class="hljs-params">amount</span>)</span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-keyword">return</span> gratuity() + amount;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-string"><span class="hljs-string">`your total, including gratutity is:\</span></span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-string">	$<span class="hljs-subst">${totalWithGrat(billAmount).toFixed(<span class="hljs-number">2</span>)}</span>`</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">);</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-d7e4cc" data-block-id="3924dc5d9ba7412e843947d5f4b5d7ed">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="3e4b815f5651128179117a51efd93bcc" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 638px; left: 161px; top: 99.4465px;" data-block-id="4881e72cc40f4113fb18e0dbc8eca4a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:1.0em"><strong>Functions as Objects</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 137.447px;" data-block-id="6a8c0b76bbad2c1a1a05dfefcaad7644"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em">Functions are first-class objects in JavaScript.</span></p>
+
+<p style="color:rgb(17, 17, 17)"><br>
+<span style="font-size:1.0em">This means they can be:</span></p>
+
+<ul style="color:rgb(17, 17, 17)">
+	<li><span style="font-size:1.0em">&nbsp; Instantiated</span></li>
+	<li><span style="font-size:1.0em">&nbsp; Assigned</span></li>
+	<li><span style="font-size:1.0em">&nbsp; Reassigned</span></li>
+	<li><span style="font-size:1.0em">&nbsp; Passed around just like any other variable.</span></li>
+</ul>
+
+<p style="color:rgb(17, 17, 17)"><br>
+<span style="font-size:1.0em">Think of them as a physical piece of paper with a list of steps.</span></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-d7e4cc" data-block-id="8d60a9b39a89555da9d4cba8f2c55e60">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="2b86b1193796c79a25c4fd19aba753dd" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 109px;" data-block-id="14a7fa9d57211b166e907c88faa120d3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">Like other objects, functions can be assigned to variables.</span></span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">The difference between declaring a function this way (Function Assignment) and the other syntax we’ve been using (Function Declaration) is that the latter (Function Declaration) hoists both the declaration and definition. For example:</span></span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">In the above example, we get a TypeError because notHoisted() is declared, but undefined until the assignment expression on line 3</span></span></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" data-name="code-038aff" style="width: 415px; height: 31px; left: 272.5px; top: 158px;" data-block-id="c0068a08ff67d80777c572aa13023780"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> add = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-keyword">return</span> a + b};</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 278px; height: 109px; left: 37px; top: 387px;" data-block-id="0186c31b60c38d07e3dfbf16d0fe6d04" data-name="code-ddb84e"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">hoisted(); <span class="hljs-comment">// logs "foo"</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hoisted</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"foo"</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 587px; height: 109px; left: 346.5px; top: 387px;" data-block-id="eceeda91988712f1310e30dc185df0ca" data-name="code-39e49c"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">notHoisted(); <span class="hljs-comment">// TypeError: notHoisted is not a function</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> notHoisted = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"bar"</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">};</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-f5abc3" data-block-id="418658483b44be2ea2126f4751a04675" style="height: auto; width: 255px; left: 48.5px; top: 336.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.9em">Function Declaration</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 255px; left: 512.5px; top: 336.5px;" data-block-id="554b3fa5d2ea6de67bc4047c8af8c44e" data-name="text-1e2cef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><span style="font-size:0.9em">Function Assignment</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-d7e4cc" data-block-id="7b2f5e457d565f93cb5de97a47d1e3e9">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="f8b57336d3124d4b308ca536e0212cd6" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 109px;" data-block-id="ed4d3ba7dcb9d986dd0f8474d32460de"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em"><strong>Anonymous Functions</strong></span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em"><span class="s1">It's often handy to declare a function on the fly without a name.</span></span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em"><span class="s1">This is VERY common.</span></span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em">Whats the point?</span></p>
+
+<ul>
+	<li style="text-align:left"><span style="font-size:1.0em"><span class="s1">Cleaner code</span></span></li>
+	<li style="text-align:left"><span style="font-size:1.0em"><span class="s1">Scope management (used to create private scope - more on that later)</span></span></li>
+	<li style="text-align:left"><span style="font-size:1.0em"><span class="s1">Super useful with closures (more on that later as well)</span></span></li>
+</ul>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" data-name="code-038aff" style="width: 327px; height: 150px; left: 316.5px; top: 205px;" data-block-id="9e3343b2efc88205c2b1ad63134dcec4"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> calculator = {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-attr">add</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">return</span> a + b;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">calculator.add(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>) <span class="hljs-comment">// 5</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-d7e4cc" data-block-id="9fe94e660dd6d018670c67a64e3d92c6">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="a4ef94013c1bda6ab498f3ad5e42da03" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 886px; left: 37px; top: 107.471px;" data-block-id="c9e4e0fe46289400316d3572b11328e8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="color:rgb(17, 17, 17)">While anonymous functions might look strange, you've actually already been doing this with Arrays and Objects. Functions are no different.</span></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">[ ] creates an array in memory</span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">{ } creates an object in memory</span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">function(){ } creates an object in memory</span></p>
+	</li>
+</ul>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" data-name="code-ce9d00" data-block-id="ccbce1aad0e162e2aedfcd8e49d14b9c" style="width: 596px; height: 186px; left: 182px; top: 242.857px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> arrayOfMystery = [</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    [<span class="hljs-string">'anonymous'</span>,<span class="hljs-string">'array'</span>],</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    { <span class="hljs-attr">name</span>: <span class="hljs-string">'anonymous object'</span> },</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">'Anonymous Function!'</span>}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">];</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(arrayOfMystery[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>]); <span class="hljs-comment">// array</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(arrayOfMystery[<span class="hljs-number">1</span>].name); <span class="hljs-comment">// anonymous object</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(arrayOfMystery[<span class="hljs-number">2</span>]()); <span class="hljs-comment">// anonymous function!</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-d7e4cc" data-block-id="ccb2aac50e28b9f4fa46c5e6327dfc12">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="d1be598e20a43d08143048498605537e" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-15594b" data-block-id="b12570d5de46fd4017688bf948a80f0a" style="height: auto; width: 960px; left: 0px; top: 101px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Challenge 2</strong></p>
+
+<ul>
+	<li><span style="font-size:1.0em">Define a hands array with the values 'rock', 'paper', and 'scissors'</span></li>
+	<li><span style="font-size:1.0em">Define a function <em>getComputerHand()</em> that returns a hand from the array using parseInt(Math.random()*10) % 3)</span></li>
+	<li>
+<span style="font-size:1.0em">Define a function called compare() that</span>
+	<ul>
+		<li><span style="font-size:1.0em">Takes two choices as arguments</span></li>
+		<li><span style="font-size:1.0em">Determines the winner</span></li>
+		<li><span style="font-size:1.0em">Logs the hands played by each</span></li>
+		<li><span style="font-size:1.0em">Returns a string indicating the result</span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:1.0em">Play a game</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-d7e4cc" data-block-id="8f9b34be6ca7d21d1d6c7556919b264f">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="29e8c418dc4c0bdab4638d107ddce4cb" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-15594b" style="height: auto; width: 960px; left: 0px; top: 101px;" data-block-id="09ccda9636373a7c2f88a7974de1cb72"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Solution:</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-d7e4cc" data-block-id="2622fd506e620c07be196556715eb349">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>JavaScript Functions: Part 1</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="code" data-name="code-024588" style="width: 689px; height: 374.085px; left: 140px; top: 139px;" data-block-id="7289c20b94a4192ca8f01509e2960223"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 12;"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> hands = [<span class="hljs-string">'rock'</span>, <span class="hljs-string">'paper'</span>, <span class="hljs-string">'scissors'</span>];</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getComputerHand</span>(<span class="hljs-params"></span>)</span>{ </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">return</span> hands[<span class="hljs-built_in">parseInt</span>(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">10</span>) % <span class="hljs-number">3</span>]</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compare</span>(<span class="hljs-params">choice1, choice2</span>)</span>{ </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Player1: "</span> + choice1);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Player2: "</span> + choice2);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-keyword">if</span> (choice1 == choice2){</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">return</span> <span class="hljs-string">"Tie!"</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-keyword">if</span> (choice1 == <span class="hljs-string">"rock"</span>){</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">if</span> (choice2 == <span class="hljs-string">"paper"</span>){</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    	<span class="hljs-keyword">return</span> <span class="hljs-string">"Player2 Won!"</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">else</span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    	<span class="hljs-keyword">return</span> <span class="hljs-string">"Player1 Won!"</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="22"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (choice1 == <span class="hljs-string">"paper"</span>){</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="23"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  	<span class="hljs-keyword">if</span> (choice2 == <span class="hljs-string">"scissors"</span>){</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="24"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    	<span class="hljs-keyword">return</span> <span class="hljs-string">"Player2 Won!"</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="25"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="26"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">else</span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="27"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    	<span class="hljs-keyword">return</span> <span class="hljs-string">"Player1 Won!"</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="28"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="29"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="30"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (choice1 == <span class="hljs-string">"scissors"</span>){</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="31"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  	<span class="hljs-keyword">if</span> (choice2 == <span class="hljs-string">"rock"</span>){</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="32"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    	<span class="hljs-keyword">return</span> <span class="hljs-string">"Player2 Won!"</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="33"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="34"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">else</span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="35"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    	<span class="hljs-keyword">return</span> <span class="hljs-string">"Player1 Won!"</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="36"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="37"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="38"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="39"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="40"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> choice1 = getComputerHand(); <span class="hljs-comment">// computer's choice</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="41"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> choice2 = hands[<span class="hljs-number">2</span>]; <span class="hljs-comment">// our choice</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="42"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> game_result = compare(choice1, choice2); <span class="hljs-comment">// get the result</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="43"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="44"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(game_result); <span class="hljs-comment">// log the result</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-0c0dc2" data-block-id="419379f82ad7189d86bbbc84888254f7" style="height: auto; width: 960px; left: 0px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><em><span style="font-size:0.7em">Scroll for additional code</span></em></p>
+</div></div></section><section data-id="3a237b81e2607504214b5eb77e07c895" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="063951f44df19b52dc126db640b3d60d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:48px">Scope</span></h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" data-name="code-bbcf37" style="width: 414px; height: 126px; left: 273px; top: 387.757px;" data-block-id="934cd5aaa6d9e2d353f3710fea90408d"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getGreeting</span>(<span class="hljs-params">name</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">let</span> greeting = <span class="hljs-string">"hello "</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">return</span> greeting + name;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">getGreeting(<span class="hljs-string">'Shane'</span>); <span class="hljs-comment">// 'Hello Shane'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(greeting) <span class="hljs-comment">//undefined</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-6c729f" data-block-id="ace149df6698cd5a4000a930b9d36bc2" style="height: auto; width: 835px; left: 62.5px; top: 85px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<ul>
+	<li style="color:rgb(17, 17, 17); text-align:left">
+	<p><span style="font-size:0.9em"><span class="s1">Scope is the set of variables a piece of code has access to.</span></span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">
+	<p><span style="font-size:0.9em"><span class="s1">Functions create a scope</span></span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">
+	<p><span style="font-size:0.9em"><span class="s1">Blocks (if-else, for, try/catch) can have their own scope if using let and const. However, using "var" will raise the scope of a variable to the function level</span></span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">
+	<p><span style="font-size:0.9em"><span class="s1">Parameters and variables declared inside a function are LOCAL to that function's scope</span></span></p>
+	</li>
+</ul>
+
+<p style="color:rgb(17, 17, 17); text-align:left">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">Scope lets you create private variables in a JS program, but be careful, variables defined without the 'let' keyword are global.</span></span></p>
+</div></div></section><section data-id="5e47252d42bb3a62c25619876f60277d" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="3863a92988a2e53d13cb98331d249505"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:1.0em"><span class="s1">Immediately Invoked Function Expressions (IIFE)</span></span></h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" data-name="code-bbcf37" style="width: 539px; height: 150px; left: 210.5px; top: 280px;" data-block-id="58428d0f905e38ec249af88d960b8204"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">let</span> myVar = <span class="hljs-string">"look mom, private variables!"</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-comment">//Do some stuff with myVar...</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">})();</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(myVar); <span class="hljs-comment">//undefined;</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-6c729f" style="height: auto; width: 960px; left: 0px; top: 171px;" data-block-id="6e6468b2f990b5b09c708aeca307be9b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">Sometimes you want to create a scope so that you can have private variables. One way to do that is to create an anonymous function and immediately execute it.</span></span></p>
+</div></div></section><section data-id="4d223ab231b4b51f825a6d3abf00efd2" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="052b768a3c81b9b9a9f8508c4fa6d81b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:48px">Scope Chain and Closures</span></h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-6c729f" style="height: auto; width: 960px; left: 0px; top: 147.286px;" data-block-id="e034274e0238e19068d9102dae8e3d75"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span class="s1">When a scope is created, it is nested inside another scope.</span></span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span class="s1">To resolve a variable, JS looks at the immediate scope, then parent scopes in order.</span></span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span class="s1">A <strong>closure</strong>&nbsp;is an inner function that has access to the outer function’s variables. <span class="s1">Both scopes together are the **scope chain**.</span></span></span></p>
+</div></div>
+</section><section data-id="4c85ef33cb9c78e2858cb2c31d2f0ca8" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="b8c46f36869eb911d33fb02909802308"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:48px">Scope Chain and Closures</span></h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-6c729f" style="height: auto; width: 960px; left: 0px; top: 119px;" data-block-id="a87a9c74b422370f0c1124c95500e39e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span class="s1" style="color:rgb(17, 17, 17)">For example, the `</span><span class="s2" style="color:rgb(17, 17, 17)">city</span><span class="s1" style="color:rgb(17, 17, 17)">` variable is visible inside the `</span><span class="s2" style="color:rgb(17, 17, 17)">greet</span><span class="s1" style="color:rgb(17, 17, 17)">` function because the greet function creates a closure.</span></span></p>
+
+<p style="color:rgb(17, 17, 17); text-align:left">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17); text-align:left"><span style="font-size:0.9em"><span class="s1" style="color:rgb(17, 17, 17)">Accessing `</span><span class="s2" style="color:rgb(17, 17, 17)">city</span><span class="s1" style="color:rgb(17, 17, 17)">` inside the greet function will first look for a variable named `</span><span class="s2" style="color:rgb(17, 17, 17)">city</span><span class="s1" style="color:rgb(17, 17, 17)">` in the greet function, then to the parent scope, and so on up the scope chain.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 402px; height: 130px; left: 279px; top: 228.414px;" data-name="code-89b54e" data-block-id="020ba3604a4c3a08f2d1fbeba00365b5"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> city = <span class="hljs-string">'New Orleans'</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> greet = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hello '</span> + city);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">greet(); <span class="hljs-comment">// Hello New Orleans</span></div></td></tr></tbody></table></code></pre></div></div></section><section data-id="9c247a153a6e802768d31f02b96db942" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="5343ac378694f8d5b93c60e9f90ecc20"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><span style="font-size:48px">Nested Scope</span></h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 623px; height: 183px; left: 168.5px; top: 210px;" data-name="code-89b54e" data-block-id="41d31f82394792cf5a3157327f228262"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">outer</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">let</span> x = <span class="hljs-string">'x'</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">inner</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">let</span> y = <span class="hljs-string">'y'</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">//'x'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 'x'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// ReferenceError: y is not defined</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-d33781" data-block-id="25ffbd5975989c16f52f69f9c0ad62af" style="height: auto; width: 960px; left: 0px; top: 162.814px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Example:</p>
+</div></div></section><section data-id="4fa33a364d2fc11d5a122bad0e967b84" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 545px; height: 470px; left: 33px; top: 115px;" data-name="code-b01586" data-block-id="884e84d4197866605d570baa1ed92feb"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 10;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> landscape = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">let</span> result = <span class="hljs-string">""</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">let</span> flat = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">size</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>; count &lt; size; count++)</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">            result += <span class="hljs-string">" _ "</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    };</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">let</span> mountain = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">size</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        result += <span class="hljs-string">"/"</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>; count &lt; size; count++)</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">            result += <span class="hljs-string">" '"</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        result += <span class="hljs-string">"\\"</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    };</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    flat(<span class="hljs-number">3</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    mountain(<span class="hljs-number">4</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    flat(<span class="hljs-number">6</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    mountain(<span class="hljs-number">1</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    flat(<span class="hljs-number">1</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">return</span> result;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="22"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">};</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="23"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="24"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(landscape());</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-18f784" data-block-id="394f4375f1e810a5dc410b8480d551bf" style="height: auto; width: 328px; left: 599.243px; top: 158.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul style="color:rgb(17, 17, 17)">
+	<li>
+	<p><span style="font-size:0.9em">flat and mountain are functions only available within landscape</span></p>
+	</li>
+</ul>
+
+<p style="color: rgb(17, 17, 17);">&nbsp;</p>
+
+<ul style="color:rgb(17, 17, 17)">
+	<li>
+	<p><span style="font-size:0.9em">The result variable is available inside flat and mountain because they all live within the same scope. </span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="936dd2e6bcf868a360ced9ca0a790d00" data-name="text-e75ced"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><span style="font-size:48px">Nested Scope</span></h2>
+</div></div></section><section data-id="222c63259643ef4e34bc8981eaaf445c" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="7100609095291fab03f29c66ae4c02b7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:48px">Variable Name Conflicts</span></h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 316px; height: 166px; left: 322px; top: 232px;" data-name="code-89b54e" data-block-id="0d47d2e187371d563f6a3c2b44329e23"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre><code data-line-numbers="" class="hljs javascript"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> name = <span class="hljs-string">'David'</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> greet = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">let</span> name = <span class="hljs-string">'Matt'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(name);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">console</span>.log(name); <span class="hljs-comment">// David</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">greet(); <span class="hljs-comment">// Matt</span></div></td></tr></tbody></table></code></pre></div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-8b599f" data-block-id="f12108f3aaa60e5f18277439c96344f5" style="height: auto; width: 960px; left: 0px; top: 155px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">Sometimes parent scopes have variables with the same name.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:0.9em"><span class="s1">Declaring the variable `</span><span class="s2">name</span><span class="s1">` in the inner scope hides the variable with the same name in the outer scope. This is a new variable, so assigning to the inner variable won't affect the outer.</span></span></p>
+</div></div></section><section data-id="04f0f184ca2a7501fb0afb91eccf0717" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 546px; height: 282px; left: 207px; top: 239px;" data-name="code-db8e57" data-block-id="bca18628fa12a1efcafad2d58c34d0c3"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> name = <span class="hljs-string">'David'</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> greet = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(name);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">greet(<span class="hljs-string">'joe'</span>); <span class="hljs-comment">// 'joe'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment">//equivalant to</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> name = <span class="hljs-string">'David'</span>;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> greet = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">mySuperUniqueVariableName</span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">let</span> name = mySuperUniqueVariableName;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(name);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">greet(<span class="hljs-string">'joe'</span>); <span class="hljs-comment">// 'joe'</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-8b599f" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="93132a81f87bcc4065035ecd8b378564"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:0.9em">Sometimes a function defines argument names with the same name as variables in the parent scope. This works the same way as the example above.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="40ae54d421c27716f2f4088f70def827" data-name="text-ada449"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><span style="font-size:48px">Variable Name Conflicts</span></h2>
+</div></div></section><section data-id="00692bc1b0e054b919a9f3f795af0225" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="62eb3a81f890c667f405ab128d4c5c5f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:48px">Challenge 3</span></h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 258px; height: 210px; left: 351px; top: 256.314px;" data-name="code-89b54e" data-block-id="098d56e522e52775ea081cb7ead9bf99"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">outer</span>(<span class="hljs-params"></span>)</span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">inner</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">   </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  inner();</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">outer();</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-8b599f" style="height: auto; width: 960px; left: 0px; top: 161.214px;" data-block-id="bc26b4208d901c1a238f91cc76cfd586"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="color:rgb(17, 17, 17)">Start with the following code template. After each step, run the program and see how the output changes.</span></p>
+</div></div></section><section data-id="33daf6cdac401476d858e7bd607bf80c" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="651d8ef4a96d779e2aca7a227f2ccbe6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:48px">Challenge 3</span></h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-8b599f" style="height: auto; width: 942px; left: 9px; top: 140px;" data-block-id="9d1104e6b6ba992546ee1d6b7779713d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<ol>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Declare two variables, a and b in the outer function's scope and set them to a string and an object respectively. Log their values immediately.</span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Log the values of a and b in the inner function.</span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Update the inner function to take two parameters named a and b.</span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Pass a and b in as arguments when you execute inner().</span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Inside the inner function, assign new values to a and b and log them at the end of the function AND after the execution of inner(a,b).</span></p>
+	</li>
+	<li style="color:rgb(17, 17, 17)">
+	<p><span style="font-size:0.9em">Inside the inner function, update a property of the b object.</span></p>
+	</li>
+</ol>
+</div></div></section><section data-id="93726cde5106260bef4f0f923e94043e" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="9ef70184b47357262d67a1c96991b678"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:48px">This Keyword</span></h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 432px; height: 149px; left: 264px; top: 411px;" data-name="code-db8e57" data-block-id="841ce13092475072b586812e62919377"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> teacher = {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-attr">name</span>: <span class="hljs-string">'Assaf'</span>,</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-attr">sayName</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">teacher.sayName(); <span class="hljs-comment">//'Assaf'</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-8b599f" style="height: auto; width: 942px; left: 9px; top: 140px;" data-block-id="647c39a4955545809f2c84fdf942f67c">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<p><span style="font-size:0.9em">Inside a function, the keyword this refers to the executor of the function.</span></p>
+<p><span style="font-size:0.9em">Again, think of a function as a piece of paper with instructions, a procedure of sorts. One of those instructions might say "touch your nose". But who is this "you" it speaks of? Obviously, the person executing the instructions. </span></p>
+<p><span style="font-size:0.9em">Similarly, the keyword 'this' refers to the object that's executing the function.</span></p>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="7b4b2aa00d711a08963ae75733bf0f1f" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-8b599f" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="bd074c697adc68b64236fc2aec20caa9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:0.9em"><span style="color:rgb(17, 17, 17)">Different objects can execute the same function, can produce different results because "this" is different</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-961ffe" data-block-id="8b0c92849353d4a3df13043652bfa941" style="width: 354px; height: 315px; left: 303px; top: 262.5px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayName</span>(<span class="hljs-params"></span>) </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> teacher1 = {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-attr">name</span>: <span class="hljs-string">'Assaf'</span>,</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-attr">speak</span>: sayName</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">let</span> teacher2 = {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-attr">name</span>: <span class="hljs-string">'Shane'</span>,</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-attr">speak</span>: sayName</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">teacher1.speak(); <span class="hljs-comment">// 'Assaf'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">teacher2.speak(); <span class="hljs-comment">// 'Shane'</span></div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="959053cb05aef272edb3ca3a070135d5" data-name="text-9be8de"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><span style="font-size:48px">This Keyword</span></h2>
+</div></div></section><section data-id="dc053bc5d34589ab286868f6d64de579" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="b23b39692d557c702a1d1927a8b81b63"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:48px">Challenge 4</span></h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-8b599f" style="height: auto; width: 960px; left: 0px; top: 74px;" data-block-id="ca50fe7887b69eace34fd57c0453e33a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="color: rgb(17, 17, 17);"><span style="font-size:0.9em">Create a single object named "slideshow" that represents the data and functionality of a picture slideshow. There should be NO VARIABLES OUTSIDE THE OBJECT. The object should have properties for:</span></p>
+
+<ol style="color:rgb(17, 17, 17)">
+	<li>
+	<p><span style="font-size:0.9em">An array called photoList that contains the names of the photos as strings</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.9em">An integer currentPhotoIndex that represents which photo in the photoList is currently displayed</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.9em">A nextPhoto() function that moves currentPhotoIndex to the next index ifthere is one, and:</span></p>
+
+	<ul>
+		<li>
+		<p><span style="font-size:0.9em">logs the current photo name.</span></p>
+		</li>
+		<li>
+		<p><span style="font-size:0.9em">Otherwise, log "End of slideshow";</span></p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><span style="font-size:0.9em">A prevPhoto() function that does the same thing, but backwards.</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.9em">A function getCurrentPhoto() that returns the current photo from the list.</span></p>
+	</li>
+</ol>
+</div></div>
+</section><section data-id="fd166dd16ad43c83022c1bda9ca8f48f" class="future" aria-hidden="true" hidden="" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="d1e284d8e7dad21d13530157098ba467"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="font-size:48px">Additional Practice</span></h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-8b599f" style="height: auto; width: 960px; left: 0px; top: 210px;" data-block-id="7b5335456f1820031f6af20af8a8188c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Rest Parameters Practice: <a href="http://tddbin.com/#?kata=es6/language/rest/as-parameter" target="_blank">ES6Katas: #18</a></p>
+</div></div>
+</section></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="slide-number" style="display: block;"><a href="https://techtalentsouth.slides.com/techtalentsouth/js-functions-part-1?token=xQPZDOR6#/">
+					<span class="slide-number-a">1</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">JavaScript Functions: Part 1 </div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 620.613px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">JavaScript Functions: Part 1</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 692px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+			<div class="deck-sharing">
+				<div class="deck-state" data-tooltip="This deck is only visible to people it has been explicitly shared it with" data-tooltip-maxwidth="250">Private</div>
+			</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/techtalentsouth/js-functions-part-1/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">JavaScript Functions: Part 1</h1>
+				<p class="description">Tech Talent South - JS Functions - Part 1</p>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2020-06-02 20:17:06 UTC">2 years ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/techtalentsouth" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description">Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. </p>
+		<ul class="links">
+			
+			 <li><a href="https://twitter.com/techtalentsouth" target="_blank"><span class="icon i-twitter"></span>techtalentsouth</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="https://help.slides.com/">Help</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2022 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":2,"allow_scripts":false,"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":"","deck_templates_mode":null,"default_internal_role":"viewer"},"deck":{"id":1805724,"slug":"js-functions-part-1","title":"JavaScript Functions: Part 1","description":"Tech Talent South - JS Functions - Part 1","width":960,"height":700,"margin":0.05,"visibility":"self","published_at":"2020-05-29T15:37:17.266Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/549d4b5f777ef266db4b7647bdc2c7aa/thumb.jpg?1605886704","view_count":1867,"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":32,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1605886704207,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2021-12-09T13:13:26.768Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1639055602","sanitize_messages":null,"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="./JavaScript Functions_ Part 1_files/deck-consumption-1f122eceff490d0c5a77bd5f4380fa6c338b2a881e7cba74a686638faf6a5c4d.js.download" defer="defer"></script>
+    	<script src="./JavaScript Functions_ Part 1_files/deck-ad5840235506b1ae9f1911eee7c2c085efa010a566481a17970b4c7b3c037af2.js.download" defer="defer"></script>
+	
+
+
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+  
+
+</body></html>
