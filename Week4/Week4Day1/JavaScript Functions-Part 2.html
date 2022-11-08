@@ -1,0 +1,3148 @@
+<!DOCTYPE html>
+<html class="sl-root decks show" data-account="" lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>JavaScript Functions: Part 2</title>
+    <meta
+      name="description"
+      content="Tech Talent South - JS Functions - Part 2"
+    />
+    <meta name="viewport" content="initial-scale=1.0" />
+
+    <meta property="og:title" content="JavaScript Functions: Part 2" />
+    <meta
+      property="og:description"
+      content="Tech Talent South - JS Functions - Part 2"
+    />
+    <meta property="og:site_name" content="Slides" />
+    <meta
+      property="og:image"
+      content="https://media.slid.es/thumbnails/1964746341a3ff7a6a06c8ca8ccac418/thumb.jpg?1605886716"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://techtalentsouth.slides.com/techtalentsouth/js-functions-part-2?token=8nikC1CU"
+    />
+    <meta property="fb:app_id" content="146002942236376" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      media="print"
+      onload="this.onload=null;this.removeAttribute('media');"
+      rel="stylesheet"
+      data-application-font="inter"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+        data-application-font="inter"
+      />
+    </noscript>
+
+    <link
+      rel="stylesheet"
+      media="all"
+      href="//assets-v2.slid.es/assets/slides/slides-321f9cf86a0d5f55c789340bfab5578b6c15251bf8ef1c818c6cc78376a0d230.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="//assets-v2.slid.es/assets/deck-consumption-719d4dc49a60f9054a74904223582068baab901bde66427d102bad512498fdae.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="//assets-v2.slid.es/assets/deck-v2-52b2f07feba210d651a559e960fc8e470003c288daa7750ea49d62784a543e13.css"
+    />
+
+    <style id="global-css-output" type="text/css"></style>
+
+    <style id="theme-css-output" type="text/css">
+      .reveal {
+        background-color: #f2f4f4;
+      }
+      .reveal .slides a {
+        color: #f79027;
+      }
+      .reveal .slides {
+        font-family: "Lato";
+        background-image: url("https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png");
+      }
+    </style>
+
+    <style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta
+      name="csrf-token"
+      content="Vd57PNDHBLAzLA9wvS4tH9vlQZHHlFBNy0yJyfgSXKY6jp25bM7Ng8HFhFSx9F4mAefBVZnrHsTerny4HBteyQ=="
+    />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LWVDH9STBJ"
+    ></script>
+    <script type="text/javascript">
+      if (
+        navigator.doNotTrack !== "1" &&
+        !/dnt=1/.test(window.location.search)
+      ) {
+        window.slidesMeasurementId = "G-LWVDH9STBJ";
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-LWVDH9STBJ", {
+          page_title: "decks-show",
+        });
+      }
+    </script>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Slides" />
+    <meta name="twitter:title" content="JavaScript Functions: Part 2" />
+    <meta
+      name="twitter:description"
+      content="Tech Talent South - JS Functions - Part 2"
+    />
+    <meta
+      name="twitter:image"
+      content="https://media.slid.es/thumbnails/1964746341a3ff7a6a06c8ca8ccac418/thumb.jpg?1605886716"
+    />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+        <div class="wrapper">
+          <div class="slides-logo logo-image-or-text">
+            <a href="/">
+              <div
+                class="logo-image"
+                style="
+                  background-image: url('https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png');
+                "
+              ></div>
+            </a>
+          </div>
+          <div class="nav-wrapper">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-item-anchor" href="/users/sign_in">
+                  <span class="nav-item-label">Log in</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div id="main" class="main" role="main">
+        <div class="marquee">
+          <div class="reveal-frame">
+            <div
+              class="reveal-viewport theme-font-opensans theme-color-silver-blue"
+            >
+              <div class="reveal">
+                <div class="slides">
+                  <section
+                    class="stack"
+                    data-id="2d47c9245dd989d38a27d51491e54f7a"
+                  >
+                    <section data-id="aacfaf9b5b5039b5ef7ad996097fa68a">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          width: 960px;
+                          left: 0px;
+                          top: 473.06px;
+                          height: auto;
+                        "
+                        data-block-id="2dc13a27a01a71dcbcb1a67861ab3e79"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="h1"
+                          data-placeholder-text="Title Text"
+                          style="z-index: 10"
+                        >
+                          <h2>JavaScript Functions: Part 2</h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="image"
+                        data-block-id="28d98490cfe45754391378a806e08f95"
+                        style="
+                          min-width: 1px;
+                          min-height: 1px;
+                          width: 591.5px;
+                          height: 473.06px;
+                          left: 184.25px;
+                          top: 0px;
+                        "
+                      >
+                        <div class="sl-block-content" style="z-index: 11">
+                          <img
+                            data-natural-width="1688"
+                            data-natural-height="1350"
+                            style=""
+                            data-lazy-loaded=""
+                            data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/team-299/images/6380927/TTS-Identity-FullColor-HorizontalStack.png"
+                          />
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="8950a1ff064a8fce14579b3230fb0e46">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-block-id="c95d04619beecde87788b6776fe914d9"
+                        style="
+                          height: auto;
+                          min-width: 30px;
+                          min-height: 30px;
+                          width: 960px;
+                          left: 0px;
+                          top: 0px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <h2>
+                            <span style="font-size: 1em">Lesson Overview</span>
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-block-id="007b20a2537a93862aa7984c016e83ec"
+                        style="
+                          height: auto;
+                          min-width: 30px;
+                          min-height: 30px;
+                          width: 960px;
+                          left: 0px;
+                          top: 140px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 13"
+                        >
+                          <ol>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p>
+                                <span style="font-size: 1em"
+                                  >Functions as arguments</span
+                                >
+                              </p>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p>
+                                <span style="font-size: 1em"
+                                  >Array functions</span
+                                >
+                              </p>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p>
+                                <span style="font-size: 1em"
+                                  >Callback patterns</span
+                                >
+                              </p>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p>
+                                <span style="font-size: 1em"
+                                  >Asynchronous Programming</span
+                                >
+                              </p>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p>
+                                <span style="font-size: 1em"
+                                  >Assigning Context</span
+                                >
+                              </p>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="39c66600a68e39b214a2e17f2484e5d4">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="09705c6b412fe720a2749e8c9a69dbd9"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                          dir="ui"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Functions as Arguments</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 140px;
+                        "
+                        data-block-id="ae1826918f75a80ed2be02e2212ee086"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p>
+                            <span style="color: rgb(17, 17, 17)"
+                              >Because functions are objects, they can be passed
+                              in to other functions as arguments.</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-c2d1c6"
+                        data-block-id="ecf4c19ecbac9ddf6cdddbbe863b83cd"
+                        style="
+                          width: 609px;
+                          height: 239px;
+                          left: 175.5px;
+                          top: 240px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">//Declare an add function
+function add(number1, number2) {
+	return number1 + number2;
+}
+
+//Declare a function that takes a function as an argument
+function doMath(operation, number1, number2) {
+	return operation(number1,number2);
+}
+
+//Pass a function into another.
+let sum = doMath(add, 1, 2);</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="cfd28c699c011014979cbf0c852effc9">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 140px;
+                        "
+                        data-block-id="187e93691c540b37d3f9a95e3634e709"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span class="s1">In the previous example, </span
+                              ><span class="s2">doMath()</span
+                              ><span class="s1">
+                                is a higher order function</span
+                              ></span
+                            >
+                          </p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><strong>Higher Order Functions:</strong></span
+                            >
+                          </p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><em
+                                >Take another function as an argument</em
+                              ></span
+                            >
+                          </p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span class="s1">or</span></span
+                            >
+                          </p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><em> Return a function</em></span
+                            >
+                          </p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span class="s1">Additionally, </span
+                              ><span class="s2">add()</span
+                              ><span class="s1">
+                                is considered a <em>callback function</em> (more
+                                on that later), because it has been passed as an
+                                argument to doMath()</span
+                              ></span
+                            >
+                          </p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span class="s1"
+                                >More than likely, in your own development,
+                                you've already been using Higher Order
+                                Functions. Now you have a name for it!</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="293fe27c83e91774c26afd9a6f13f1ed"
+                        data-name="text-515659"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                          dir="ui"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Functions as Arguments</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="f7b6fcaf50f955bc66b0a5f4ea26636c">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="91ff6ed6b2f4e789bbc6c2bf5a4ed99e"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px">Array Functions</span>
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 109.043px;
+                        "
+                        data-block-id="279d108df4c07b3ca4231b153ed34908"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p style="color: rgb(17, 17, 17)">
+                            There are a few built-in functions on Arrays that we
+                            haven't discussed, but we will now:
+                          </p>
+
+                          <p style="color: rgb(17, 17, 17)"></p>
+
+                          <ol>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p><span style="font-size: 1em">filter</span></p>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p><span style="font-size: 1em">find</span></p>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p><span style="font-size: 1em">map</span></p>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p><span style="font-size: 1em">reduce</span></p>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="d3c1a3e1b3aa7f5acc631ecffe956a8a">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="21614a56a897feca718ed0ae55f2ab96"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2><span style="font-size: 48px">Filter</span></h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 102.414px;
+                        "
+                        data-block-id="bde75380f99d5c74edfbdad7364e48be"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p style="color: rgb(17, 17, 17)">
+                            <span style="font-size: 0.9em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >Sometimes you want to filter a data set based
+                                on some criteria. The Array object supports a
+                                .filter function. It takes a filter function
+                                that returns a pass value of true or
+                                false.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 601.5px;
+                          height: 280px;
+                          left: 179.25px;
+                          top: 229.8px;
+                        "
+                        data-block-id="b29650ccf6c997c5ff2a29ec31bb9193"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let students = [
+	{name: 'John Lennon', average: 90},
+	{name: 'Ringo Starr', average: 58},
+	{name: 'Paul McCartney', average: 82}
+];
+
+let passingStudents = students.filter(function(student){
+	return student.average &gt; 60;
+});
+
+passingStudents === [
+	{name: 'John Lennon', average: 90},
+	{name: 'Paul McCartney', average: 82}
+];</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="4435f127c3d391a6d850ff1ab1c4396a">
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 601.5px;
+                          height: 280px;
+                          left: 179.25px;
+                          top: 88.6143px;
+                        "
+                        data-block-id="828ed5f70b487eeccacef3bbf9fd754e"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 10"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let students = [
+	{name: 'John Lennon', average: 90},
+	{name: 'Ringo Starr', average: 58},
+	{name: 'Paul McCartney', average: 82}
+];
+
+let passingStudents = students.filter(function(student){
+	return student.average &gt; 60;
+});
+
+passingStudents === [
+	{name: 'John Lennon', average: 90},
+	{name: 'Paul McCartney', average: 82}
+];</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 368.614px;
+                        "
+                        data-name="text-90b0ed"
+                        data-block-id="1f14a1472e206777ad529537e6e4f446"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p style="color: rgb(17, 17, 17)">
+                            <span style="font-size: 0.9em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >Note that the filter function takes in a
+                                <em>callback</em> function as a parameter. This
+                                callback function is the function used to
+                                determine whether or not to include a given item
+                                in the filtered output array. If the function
+                                returns true, it will include the item.
+                                Otherwise, it won't. Behind the scenes, it is
+                                iterating over the array with a loop and pushing
+                                items for which the function evaluates to
+                                <strong>true</strong> to a new array, and
+                                finally returns the new array.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="4a0b95b3eca80c95f25fc3332d321ef5"
+                        data-name="text-d94392"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 12"
+                        >
+                          <h2><span style="font-size: 48px">Filter</span></h2>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="e1740174d533c4ed25a3740cbfcbb347">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="9439bad7cdd21b3e8e88dbc750fa0dbd"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2><span style="font-size: 48px">Find</span></h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 112px;
+                        "
+                        data-block-id="a15ed0a7bf450938c6f3c01d976a4610"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p style="color: rgb(17, 17, 17)">
+                            <span style="font-size: 1em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >Find works just like filter, except instead of
+                                returning an array of values for which the
+                                function returns true, it returns only the first
+                                element of the array that outputs
+                                <strong>true</strong>.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 587px;
+                          height: 263px;
+                          left: 186.5px;
+                          top: 254.486px;
+                        "
+                        data-block-id="b127c9aea07bebddeec1a737eb2789d1"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let students = [
+	{name: 'John Lennon', average: 90},
+	{name: 'Ringo Starr', average: 58},
+	{name: 'Paul McCartney', average: 82}
+];
+
+let passingStudents = students.find(function(student){
+	return student.average &gt; 50;
+});
+
+passingStudents === [
+	{name: 'John Lennon', average: 90}
+];</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="f81527fcdb3193b58fc716a1351753bb">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 948px; left: 6px; top: 0px"
+                        data-block-id="cc8cf30a75eed34fdde1a995e16675c2"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2><span style="font-size: 1em">Map</span></h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 936px;
+                          left: 12px;
+                          top: 84.143px;
+                        "
+                        data-block-id="490ce2c50b910d548ee2a5e75cf7b70f"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11; text-align: center"
+                        >
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >The Array's Map function lets you iterate over
+                                an array and produce another array with a new
+                                value for each item, essentially transforming
+                                each element in the array. Note that this is a
+                                1:1 transformation, so each element that existed
+                                in the original array will produce some value in
+                                the new array.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 640px;
+                          height: 233px;
+                          left: 160px;
+                          top: 247.1px;
+                        "
+                        data-block-id="20b36af2fa59ff6498a945e28838ad79"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let students = [
+	{firstName: 'Cam', lastName: 'Newton'},
+	{firstName: 'Ted', lastName: 'Ginn'},
+	{firstName: 'Greg', lastName: 'Olsen'}
+]
+
+let fullNames = students.map(function(student){
+	return `${student.firstName} ${student.lastName}`;
+})
+
+fullNames === ["Cam Newton", "Ted Ginn", "Greg Olsen"]</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-0302f2"
+                        data-block-id="f33439fec68b687163b932d7456a3b91"
+                        style="
+                          width: 640px;
+                          height: 113px;
+                          left: 160px;
+                          top: 490px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 13"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">[                                             [
+  {firstName: 'Cam', lastName: 'Newton'},       "Cam Newton"
+  {firstName: 'Ted', lastName: 'Ginn'},   ==&gt;   "Ted Ginn"
+  {firstName: 'Greg', lastName: 'Olsen'}        "Greg Olsen"
+]                                             ]</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="70eadf2252f72f88f82d9f1267fe9d3d">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="a47558cfe8a95b2f3331d2821ba2bd15"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2><span style="font-size: 48px">Reduce</span></h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 95px"
+                        data-block-id="697335d7f0396ab3b5cb344a377f8e90"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p style="color: rgb(17, 17, 17)">
+                            <span style="font-size: 0.9em"
+                              ><span class="s1"
+                                >Sometimes you want to calculate a single value
+                                based on all the items in an array.</span
+                              ></span
+                            >
+                            <span style="font-size: 0.9em"
+                              ><span class="s1"
+                                >The Array's Reduce function lets you iterate
+                                over an array and calculate a value.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 659px;
+                          height: 223px;
+                          left: 150.5px;
+                          top: 267px;
+                        "
+                        data-block-id="5f5ab616f9975a67afb99e22a445153b"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let students = [
+	{name: 'Cam Newton', assignmentsCompleted: 6},
+	{name: 'Ted Ginn', assignmentsCompleted: 10},
+	{name: 'Greg Olsen', assignmentsCompleted: 8}
+]
+
+let totalAssignments = students.reduce(function(sum,current){
+	return sum + current.assignmentsCompleted;
+}, 0);
+
+totalAssignments === 24;</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="497f769d03332846489f703d53094e38">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 92.7px;
+                        "
+                        data-block-id="8566f3f30796895b1f55c4b03bdf1adf"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <p style="color: rgb(17, 17, 17)">
+                            <span style="font-size: 27px"
+                              >Note that after the callback, you also pass in an
+                              initial value for the running "total". The value
+                              you calculate doesn't have to be a sum, but you
+                              may still want to initialize it to a particular
+                              value.</span
+                            >
+                          </p>
+
+                          <p style="color: rgb(17, 17, 17)"></p>
+
+                          <p style="color: rgb(17, 17, 17)"></p>
+
+                          <p style="color: rgb(17, 17, 17)"></p>
+
+                          <p style="color: rgb(17, 17, 17)"></p>
+
+                          <p style="color: rgb(17, 17, 17)"></p>
+
+                          <p style="color: rgb(17, 17, 17)"></p>
+
+                          <p style="color: rgb(17, 17, 17)">
+                            <span style="font-size: 27px"
+                              >The return value becomes the input for the first
+                              parameter of the callback function for the next
+                              iteration of the loop.</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 659px;
+                          height: 223px;
+                          left: 150.5px;
+                          top: 238.5px;
+                        "
+                        data-block-id="49f44f59924617d274127d7bb3aa974f"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 11"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let students = [
+	{name: 'Cam Newton', assignmentsCompleted: 6},
+	{name: 'Ted Ginn', assignmentsCompleted: 10},
+	{name: 'Greg Olsen', assignmentsCompleted: 8}
+]
+
+let totalAssignments = students.reduce(function(sum,current){
+	return sum + current.assignmentsCompleted;
+}, 0);
+
+totalAssignments === 24;</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="08f56135bc5b089bca3086bde45a9a2d"
+                        data-name="text-eb9f9f"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 12"
+                        >
+                          <h2><span style="font-size: 48px">Reduce</span></h2>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="fd2388a2da4d77f748043ed6988bd0a5">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 958px; left: 2px; top: 0px"
+                        data-block-id="3600f5a8e54eb3672c22aaa6a584f4d0"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px">Challenge 1</span>
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 958px;
+                          left: 2px;
+                          top: 201px;
+                        "
+                        data-block-id="b30cd80b44b2994287596db26970cc56"
+                        data-name="text-7ac784"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 12"
+                        >
+                          <ul>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                >Create an Array named
+                                <em>superHeroes </em>shown above</span
+                              >
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                >Create a <em>secretIdentity </em>variable</span
+                              >
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                >Assign <em>superHeroes.map()</em> to the
+                                <em>secretIdentity</em> variable</span
+                              >
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                >Assign an anonymous function to
+                                <em>superheroes.map()</em> as an argument</span
+                              >
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                >Your anonymous function should have one
+                                parameter named <em>revealArray</em></span
+                              >
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                >Inside the block of your anonymous
+                                function:</span
+                              >
+                              <ul>
+                                <li>
+                                  <span style="font-size: 0.9em"
+                                    >You'll be working with
+                                    <em>revealArray</em> as an argument</span
+                                  >
+                                </li>
+                                <li>
+                                  <span style="font-size: 0.9em"
+                                    >Using <em>revealArray, return</em> a string
+                                    that will <em>join</em> the two array
+                                    items.</span
+                                  >
+                                </li>
+                                <li>
+                                  <span style="font-size: 0.9em"
+                                    ><em>join </em>them together with the string
+                                    <em>"is" </em>(<em
+                                      >ie: "Batman is Bruce Wayne")</em
+                                    ></span
+                                  >
+                                </li>
+                              </ul>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                >Log the results to the screen and
+                                <em>join</em> them with a line break.</span
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-5087f9"
+                        data-block-id="f0a48d60d961aaa6fd163f4d25788c85"
+                        style="
+                          width: 358px;
+                          height: 110px;
+                          left: 301px;
+                          top: 85px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 13"
+                        >
+                          <pre class="javascript"><code data-line-numbers="">[
+  ["Batman", "Bruce Wayne"],
+  ["Spiderman", "Peter Parker"],
+  ["The Flash", "Barry Allen"]
+]</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="01a8ed4523d7b3ac6f0d319b4836801c">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="6910c495d3edbce31d4284091da4aacc"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px">Challenge 1</span>
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-5087f9"
+                        style="
+                          width: 622px;
+                          height: 185px;
+                          left: 169px;
+                          top: 235px;
+                        "
+                        data-block-id="6c56f8beb2a8fc8fe7ab3a28698d4e92"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 11"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let superHeroes = [ ["Batman", "Bruce Wayne"],
+                   ["Spiderman", "Peter Parker"],
+                   ["The Flash", "Barry Allen"]];
+
+let secretIdentity = superHeroes.map(function(revealArray){
+  return revealArray.join(" is ");
+});
+
+console.log(secretIdentity.join("\n"));</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-name="text-e2984d"
+                        data-block-id="352889a331b1384b712879b4ae719109"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 172px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 12"
+                        >
+                          <p>Solution:</p>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="4795ebcc956ea46fe5087ea4635d4b2d">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 958px; left: 2px; top: 0px"
+                        data-block-id="bb8d3e7cbe7568d803d44329e2289090"
+                        data-name="text-a18636"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px">Challenge 2</span>
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 324px;
+                        "
+                        data-name="text-7ac784"
+                        data-block-id="9776526f9be789f4ae559240fa59b299"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <ul>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                ><span class="s1"
+                                  >Find a player with the name 'Mike'</span
+                                ></span
+                              >
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                ><span class="s1"
+                                  >Get an array of all players with position
+                                  'RB'</span
+                                ></span
+                              >
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                ><span class="s1"
+                                  >Get an array of all the players
+                                  lastNames</span
+                                ></span
+                              >
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                ><span class="s1"
+                                  >Get an array of the full names of all the
+                                  running backs with more than 5
+                                  touchdowns</span
+                                ></span
+                              >
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <span style="font-size: 0.9em"
+                                ><span class="s1"
+                                  >Get the number of touchdowns scored by
+                                  Running backs</span
+                                ></span
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-5087f9"
+                        style="
+                          width: 877px;
+                          height: 184px;
+                          left: 41.5px;
+                          top: 118px;
+                        "
+                        data-block-id="09c75a5ef2c4c733d90477184eff86be"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let players = [
+	{firstName: 'Cam', lastName: 'Newton', position: 'QB', touchdowns: 32},
+	{firstName: 'Derek', lastName: 'Anderson', position: 'QB', touchdowns: 0},
+	{firstName: 'Jonathan', lastName: 'Stewart', position: 'RB', touchdowns: 12},
+	{firstName: 'Mike', lastName: 'Tolbert', position: 'RB', touchdowns: 8},
+	{firstName: 'Fozzy', lastName: 'Whittaker', position: 'RB', touchdowns: 3},
+	{firstName: 'Ted', lastName: 'Ginn', position: 'WR', touchdowns: 9},
+	{firstName: 'Devin', lastName: 'Funchess', position: 'WR', touchdowns: 2}
+];</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="acdfacc4d97b043f3d994171e5359c45">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="478856c298932950fd17d9f07c845025"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px">Challenge 2</span>
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-038aff"
+                        style="
+                          width: 764px;
+                          height: 412.886px;
+                          left: 98px;
+                          top: 140px;
+                        "
+                        data-block-id="cf46a6ca3c74738044b161df7447a9b0"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 11"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">//Players named 'Mike'
+players.find(function(player){
+	return player.firstName === 'Mike'
+});
+
+//Running backs
+players.filter(function(player){
+	return player.position === 'RB';
+});
+
+//LastNames
+players.map(function(player){
+	return player.lastName;
+});
+
+//Full names of all running backs with more than 5 touchdowns.
+players.filter(function(player){
+		return player.touchdowns &gt; 5 &amp;&amp; player.position == 'RB';
+	}).map(function(player){
+		return `${player.firstName} ${player.lastName}`;
+	});
+	
+//Number of touchdowns by runningbacks
+players.filter(function(player){
+		return player.position =='RB';
+	}).reduce(function(total, player){
+		total += player.touchdowns;
+	},0);</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-name="text-3bf4ce"
+                        data-block-id="2a06c0b3237e0917613bce8a73f1d49f"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 93.5143px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 12"
+                        >
+                          <p>Solution:</p>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-name="text-7c4206"
+                        data-block-id="7f645ac03f0b7d59baa185f5c997a999"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 560px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 13"
+                        >
+                          <p>
+                            <em
+                              ><span style="font-size: 0.7em"
+                                >Scroll for addtional code</span
+                              ></em
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="3e4b815f5651128179117a51efd93bcc">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="4881e72cc40f4113fb18e0dbc8eca4a4"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Asynchronous Programming</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 140px;
+                        "
+                        data-block-id="6a8c0b76bbad2c1a1a05dfefcaad7644"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                          dir="ui"
+                        >
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span class="s1"
+                                >In computer programs, asynchronous operation
+                                means that a process operates independently of
+                                other processes, whereas synchronous operation
+                                means that the process runs only as a result of
+                                some other process being completed or handing
+                                off operation.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                        <grammarly-extension
+                          style="
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            pointer-events: none;
+                            z-index: 11;
+                          "
+                          class="_1KJtL"
+                        ></grammarly-extension>
+                      </div>
+                    </section>
+                    <section data-id="c0ac6fe2cd613dba158292229de63f70">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="e3181dc3cb19247f51bb00c62d1e7063"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Asynchronous Programming</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 140px;
+                        "
+                        data-block-id="e7c29af5acdf2d3a7ccae56f71e24676"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p style="color: rgb(17, 17, 17)">
+                            <strong>Why is this important?</strong>
+                          </p>
+
+                          <p style="color: rgb(17, 17, 17)"></p>
+
+                          <ul style="color: rgb(17, 17, 17)">
+                            <li>
+                              <p>
+                                <span style="font-size: 0.9em"
+                                  >Allows for the user to continue interacting
+                                  with the application while the request is
+                                  being handled</span
+                                >
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                <span style="font-size: 0.9em"
+                                  >Improves efficiency</span
+                                >
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                <span style="font-size: 0.9em"
+                                  >Saves us from expensive full-page
+                                  reloads</span
+                                >
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                <span style="font-size: 0.9em"
+                                  >Allows for multiple requests to be sent and
+                                  fulfilled</span
+                                >
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="2b86b1193796c79a25c4fd19aba753dd">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 953.371px;
+                          left: 0px;
+                          top: 0px;
+                        "
+                        data-block-id="689602c486f4232846296407635b281c"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Callback Pattern</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 109px;
+                        "
+                        data-block-id="14a7fa9d57211b166e907c88faa120d3"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                          dir="ui"
+                        >
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >The passing of a function into another function
+                                to be run at a later time is called the
+                                "callback pattern". It's prominent in event
+                                based programming, which is what UI Development
+                                is all about.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-038aff"
+                        style="
+                          width: 317px;
+                          height: 111px;
+                          left: 58.5px;
+                          top: 295.5px;
+                        "
+                        data-block-id="c0068a08ff67d80777c572aa13023780"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">setTimeout(function(){
+	console.log('later')
+},2000);
+
+console.log('now');</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 434px;
+                          height: 68.5px;
+                          left: 480px;
+                          top: 502.4px;
+                        "
+                        data-block-id="0186c31b60c38d07e3dfbf16d0fe6d04"
+                        data-name="code-ddb84e"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 13"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">getData('/my-api/data', function(data) {
+	console.log('got data', data)
+});</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 474px;
+                          height: 73px;
+                          left: 470.5px;
+                          top: 333.5px;
+                        "
+                        data-block-id="eceeda91988712f1310e30dc185df0ca"
+                        data-name="code-39e49c"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 14"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">button.addEventListener('click', function(){
+	alert('click');
+})</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-name="text-f5abc3"
+                        data-block-id="418658483b44be2ea2126f4751a04675"
+                        style="
+                          height: auto;
+                          width: 255px;
+                          left: 89.5px;
+                          top: 249.5px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 15"
+                        >
+                          <p>
+                            <span style="font-size: 0.9em"
+                              >Do something later</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 382px;
+                          left: 516.5px;
+                          top: 249.5px;
+                        "
+                        data-block-id="554b3fa5d2ea6de67bc4047c8af8c44e"
+                        data-name="text-1e2cef"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 16"
+                        >
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >Do something if a button gets clicked</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 440px;
+                          left: 9.89999px;
+                          top: 479.15px;
+                        "
+                        data-block-id="a6078c613afc2c63f86309134124662a"
+                        data-name="text-3b61ff"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 17"
+                        >
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >Do something when an API request comes back
+                                (getData is a hypothetical function)</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="f8b57336d3124d4b308ca536e0212cd6">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="d694bc253df5e6d234ecbf52abb4850a"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 1em"
+                              ><em>this</em> with asynchronous functions</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-038aff"
+                        style="
+                          width: 829px;
+                          height: 300px;
+                          left: 65.5px;
+                          top: 148.532px;
+                        "
+                        data-block-id="9e3343b2efc88205c2b1ad63134dcec4"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let teacher = {
+	name: 'Shane',
+	speak: function() {
+		
+		//Maybe you're fetching data from an API, or getting user input
+		setTimeout(function(){
+			console.log('later my name is ' + this.name);
+		},1000)
+		
+		//Runs immediately
+		console.log('Now my name is ' + this.name);
+	}
+}
+
+teacher.speak();
+</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 476.014px;
+                        "
+                        data-block-id="09da48a850f2200522748b41bf58cb94"
+                        data-name="text-5b238a"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 13"
+                          dir="ui"
+                        >
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >When you register a function to happen later
+                                using something like </span
+                              ><em>setTimeout()</em
+                              ><span style="color: rgb(17, 17, 17)"
+                                >, the window object ends up running the
+                                function.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="a4ef94013c1bda6ab498f3ad5e42da03">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="254205d71cefae00cc9d1072003a5d15"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Assigning Context</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 886px;
+                          left: 37px;
+                          top: 87.7284px;
+                        "
+                        data-block-id="c9e4e0fe46289400316d3572b11328e8"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p>
+                            <span style="font-size: 1em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >Often times, like the example below, you need
+                                access to the calling scope or want to assign a
+                                specific scope. There are a few different ways
+                                to do this.</span
+                              ></span
+                            >
+                          </p>
+
+                          <p></p>
+
+                          <p><span class="s1">Closure hack</span></p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-ce9d00"
+                        data-block-id="ccbce1aad0e162e2aedfcd8e49d14b9c"
+                        style="
+                          width: 741px;
+                          height: 302px;
+                          left: 109.5px;
+                          top: 293.728px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let teacher = {
+	name: 'Shane',
+	speak: function() {
+		
+		//Save this to a variable
+		let self = this;
+		
+		//self is visible inside function because of closure
+		setTimeout(function(){
+			console.log('later my name is ' + self.name);
+		},1000);
+	}
+}
+
+teacher.speak();</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="966544aa13a8d08e27fd97a583efc12f">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 958px; left: 2px; top: 0px"
+                        data-block-id="575cf9306b774f0e202d8d5491f1f8e3"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Assigning Context</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 958px;
+                          left: 2px;
+                          top: 140px;
+                        "
+                        data-block-id="c3bc8505b3f3b58e52471a9f9b17f125"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p><strong>call() and apply()</strong></p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span class="s1" style="color: rgb(17, 17, 17)"
+                                >Explicitly set the </span
+                              ><em><span class="s2">this</span></em
+                              ><span class="s1" style="color: rgb(17, 17, 17)">
+                                value at execution time.</span
+                              ></span
+                            >
+                          </p>
+
+                          <p></p>
+
+                          <p></p>
+
+                          <p></p>
+
+                          <p></p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span style="color: rgb(17, 17, 17)"
+                                >The only difference is that .apply() takes an
+                                array of arguments to pass to the function.
+                                .call() passes arguments one by one.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-ce9d00"
+                        style="
+                          width: 740px;
+                          height: 170px;
+                          left: 110px;
+                          top: 243px;
+                        "
+                        data-block-id="1b58f26a64de4bce7ed0780b5737979d"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let teacher = {name: 'Shane'};
+
+let speak = function(item1, item2){
+	console.log(this.name, item1, item2);
+}
+
+speak.call(teacher, 'coffee', 'ramen'); //'Shane', 'coffee', 'ramen'
+speak.apply(teacher, ['coffee', 'ramen']); //'Shane', 'coffee', 'ramen'</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="7a60321935cfaa53b0ae2fb456f9bb32">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="592b2d93a4a436ad1116380d7fb2f9f8"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Assigning Context</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 140px;
+                        "
+                        data-block-id="b24132aee46e0dfb1bfe58e239b2b22b"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p><strong>function.bind</strong></p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              ><span class="s1" style="color: rgb(17, 17, 17)"
+                                >Explicitly sets the </span
+                              ><em><span class="s2">this</span></em
+                              ><span class="s1" style="color: rgb(17, 17, 17)"
+                                ><em> </em>value at function definition time.
+                                This was the preferred method until ES6 came
+                                out.</span
+                              ></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-ce9d00"
+                        style="
+                          width: 741px;
+                          height: 302px;
+                          left: 109.5px;
+                          top: 280px;
+                        "
+                        data-block-id="b534dcf1b7dc8232590896152d81a21c"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let teacher = {
+	name: 'Shane',
+	speak: function() {
+		
+		//Bind a function to a specific context
+		var boundFunction = function(){
+			console.log('later my name is ' + this.name);
+		}.bind(this);
+		
+		//boundFunction will always run in bound context
+		setTimeout(boundFunction,1000);
+	}
+}
+
+teacher.speak();</code></pre>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="9cb26afd946c5870e53c2c4e261c00e9">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 114.543px;
+                        "
+                        data-block-id="052246af0ff8c57eed2d162de355b300"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <p><strong>Arrow Functions</strong></p>
+
+                          <p>
+                            <font color="#111111"
+                              ><span style="font-size: 27px"
+                                >A new feature of ES6 was Arrow Functions.</span
+                              ></font
+                            >
+                          </p>
+
+                          <p>
+                            <font color="#111111"
+                              ><span style="font-size: 27px"
+                                >Instead of this:</span
+                              ></font
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-ce9d00"
+                        style="
+                          width: 397px;
+                          height: 70px;
+                          left: 281.5px;
+                          top: 280px;
+                        "
+                        data-block-id="5faef2ccae05368cbfa3a0b2c7d97e40"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 11"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let someFunc = function(...params) {
+	//Some code here
+}</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 397px;
+                          height: 70px;
+                          left: 281.5px;
+                          top: 420px;
+                        "
+                        data-block-id="461ee8f789b325d0a2ab18f0d5d91dd6"
+                        data-name="code-5041b0"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let someFunc = (...params) =&gt; {
+	//Some code here
+}</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 886px;
+                          left: 43px;
+                          top: 369px;
+                        "
+                        data-block-id="84e520886cefaa9feddac60b88c7d106"
+                        data-name="text-dc699e"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 13"
+                        >
+                          <p>We can now do this:</p>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="932e52d990087af08104b7b9c6229622"
+                        data-name="text-e068b7"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 14"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Assigning Context</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="481248c9e44b690a0ca6f4541e308126">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 886px;
+                          left: 37px;
+                          top: 140px;
+                        "
+                        data-block-id="ab842b93edaa0b8d67b3505efbd720f5"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <p><strong>Arrow Functions</strong></p>
+
+                          <p>
+                            <span style="font-size: 27px"
+                              >The main difference (apart from fewer words), is
+                              that arrow functions <em>implicitly</em> bind the
+                              context to the function.</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-ce9d00"
+                        style="
+                          width: 734px;
+                          height: 300px;
+                          left: 113px;
+                          top: 280px;
+                        "
+                        data-block-id="6a22539c073999716ecc5daa66e6a274"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 11"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let teacher = {
+	name: 'Shane',
+	speak: function() {
+		
+		//Bind a function to a specific context
+		var boundFunction = () =&gt; {
+			console.log('later my name is ' + this.name);
+		};
+		
+		//boundFunction will always run in bound context
+		setTimeout(boundFunction,1000);
+	}
+}
+
+teacher.speak();</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="be6fd6be65ff1617f2aca5913e16d725"
+                        data-name="text-7273aa"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 12"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Assigning Context</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="0795712989e1bc67f41c44f816507c8e">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 886px;
+                          left: 37px;
+                          top: 83.2429px;
+                        "
+                        data-block-id="f3a1b1456c972b06838da83de86416be"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <p><strong>Arrow Functions</strong></p>
+
+                          <p>
+                            <span style="font-size: 0.9em">
+                              If your arrow function is only a return statement,
+                              then you can omit brackets and the word
+                              <strong>return</strong>, as well.</span
+                            >
+                          </p>
+
+                          <p></p>
+
+                          <p></p>
+
+                          <p></p>
+
+                          <p></p>
+
+                          <p></p>
+
+                          <p>
+                            <span style="font-size: 0.9em"
+                              >The arrow function here is equivalent to
+                              this:</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-ce9d00"
+                        style="
+                          width: 564px;
+                          height: 202px;
+                          left: 198px;
+                          top: 240.514px;
+                        "
+                        data-block-id="7ed19f643a27549bfea5e5ef1057895f"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 11"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let students = [
+  { name: "Edwin"}, 
+  { name: "Kim"}, 
+  { name: "Skip"}
+];
+
+let names = students.map((student) =&gt; student.name);
+
+console.log(names);
+// ["Edwin","Kim","Skip"]</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        style="
+                          width: 424px;
+                          height: 77px;
+                          left: 268px;
+                          top: 481.243px;
+                        "
+                        data-block-id="b60a6d24e4ccc4401f6235da586890b3"
+                        data-name="code-683b10"
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai-sublime"
+                          data-code-frame="none"
+                          style="z-index: 12"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let names = students.map((student) =&gt; {
+    return student.name
+});</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="c9e4d48397bfb813532d69dad303b4be"
+                        data-name="text-4e4650"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 13"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Assigning Context</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="d1be598e20a43d08143048498605537e">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 959px; left: 1px; top: 0px"
+                        data-block-id="cee015b4a61d2c20f9d6af30072034ed"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px">Challenge 3</span>
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-name="text-15594b"
+                        data-block-id="b12570d5de46fd4017688bf948a80f0a"
+                        style="
+                          height: auto;
+                          width: 959px;
+                          left: 1px;
+                          top: 140px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p style="color: rgb(17, 17, 17)">
+                            <span style="color: rgb(17, 17, 17)"
+                              >Going back to our slideshow object, let's add
+                              some functionality.</span
+                            >
+                          </p>
+
+                          <ul>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p>
+                                <span style="font-size: 0.9em"
+                                  >Create an empty property named
+                                  <em>playInterval</em></span
+                                >
+                              </p>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p>
+                                <span style="font-size: 0.9em"
+                                  >A <em>play()</em> function that moves to the
+                                  next photo ever 2000ms until the end.</span
+                                >
+                              </p>
+
+                              <ul>
+                                <li>
+                                  <p>
+                                    <span style="font-size: 0.9em"
+                                      >Tip - use
+                                      <em>playInterval = setInterval(fn,ms)</em
+                                      >.</span
+                                    >
+                                  </p>
+                                </li>
+                              </ul>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p>
+                                <span style="font-size: 0.9em"
+                                  >A <em>pause()</em> function that stops the
+                                  slideshow</span
+                                >
+                              </p>
+
+                              <ul>
+                                <li>
+                                  <p>
+                                    <span style="font-size: 0.9em">
+                                      Tip - use
+                                      <em>clearInterval(playInterval)</em></span
+                                    >
+                                  </p>
+                                </li>
+                              </ul>
+                            </li>
+                            <li style="color: rgb(17, 17, 17)">
+                              <p>
+                                <span style="font-size: 0.9em"
+                                  >Automatically pause the slideshow if it gets
+                                  to the end of the photolist while
+                                  playing.</span
+                                >
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="1016d9d31517891c91ecc26fa0552431">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="height: auto; width: 960px; left: 0px; top: 0px"
+                        data-block-id="6ae06794981818db5d9ac59087561a16"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px">Challenge 3</span>
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="code"
+                        data-name="code-672af2"
+                        data-block-id="5fab0f7b7392ba1b3051e60949c4439d"
+                        style="
+                          width: 909px;
+                          height: 410.229px;
+                          left: 25.5px;
+                          top: 140px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content notranslate"
+                          data-highlight-theme="monokai"
+                          data-code-frame="none"
+                          style="z-index: 11"
+                        >
+                          <pre
+                            class="javascript"
+                          ><code data-line-numbers="">let slideshow = {
+    photoList: ['birds', 'puppies', 'rainbows', 'kittens', 'babies'],
+
+    currentPhotoIndex: 0,
+
+    nextPhoto: function() {
+        if(this.currentPhotoIndex &lt; this.photoList.length - 1) {
+            this.currentPhotoIndex++;
+            console.log('currentPhoto is: '+ this.photoList[this.currentPhotoIndex]);
+        } else {
+            console.log('End of Slideshow');
+              this.pause();
+        }
+    },
+
+    prevPhoto: function() {
+        if(this.currentPhotoIndex &gt; 0) {
+            this.currentPhotoIndex--;
+            console.log('currentPhoto is: ' + this.photoList[this.currentPhotoIndex]);
+        } else {
+            console.log('Start of Slideshow');
+            
+        }
+    },
+
+    getCurrentPhoto: function() {
+        return this.photoList[this.currentPhotoIndex];  
+    },
+
+    playInterval: null,
+
+    play: function() {
+        let self = this;
+        this.playInterval = setInterval(function(){self.nextPhoto()}, 2000)
+    },
+
+    pause: function() {
+        clearInterval(this.playInterval);
+    }
+
+}
+</code></pre>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-name="text-051242"
+                        data-block-id="10c11d8157506fad781bc433c16367b2"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 102px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 12"
+                        >
+                          <p>Solution:</p>
+                        </div>
+                      </div>
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-name="text-a62d67"
+                        data-block-id="47e700c615320d6630e3feba02d8f5d8"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 560px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 13"
+                        >
+                          <p>
+                            <em
+                              ><span style="font-size: 0.7em"
+                                >Scroll for additional code</span
+                              ></em
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-id="25cccde2853bbff0acd26edc2b225e03">
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        style="
+                          height: auto;
+                          width: 953.157px;
+                          left: 6.843px;
+                          top: 0px;
+                        "
+                        data-block-id="8c99f7fd97b25324e463929a00cdd00d"
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 10"
+                        >
+                          <h2>
+                            <span style="font-size: 48px"
+                              >Additional Practice</span
+                            >
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div
+                        class="sl-block"
+                        data-block-type="text"
+                        data-name="text-884ad8"
+                        data-block-id="d8c4714ee7f6cf17d2c30780fd494c4f"
+                        style="
+                          height: auto;
+                          width: 960px;
+                          left: 0px;
+                          top: 172px;
+                        "
+                      >
+                        <div
+                          class="sl-block-content"
+                          data-placeholder-tag="p"
+                          data-placeholder-text="Text"
+                          style="z-index: 11"
+                        >
+                          <p>
+                            Arrow Function Practice:
+                            <a
+                              href="http://tddbin.com/?#?kata=es6/language/arrow-functions/basics"
+                              target="_blank"
+                              >ES6Katas: #5</a
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </section>
+                </div>
+                <div id="theme-html-output"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pill summary-pill">
+            <div
+              class="pill-picture"
+              style="
+                background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png);
+              "
+            ></div>
+            <div class="pill-content">
+              <h4 class="pill-title">JavaScript Functions: Part 2</h4>
+              <p class="pill-description">By Tech Talent South</p>
+            </div>
+          </div>
+
+          <div class="pill instructions-pill">
+            <div class="pill-picture"></div>
+            <div class="pill-content">
+              <h4 class="pill-title"></h4>
+              <p class="pill-description"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <header class="deck-card">
+            <div class="deck-card-header">
+              <div class="deck-sharing">
+                <div
+                  class="deck-state"
+                  data-tooltip="This deck is only visible to people it has been explicitly shared it with"
+                  data-tooltip-maxwidth="250"
+                >
+                  Private
+                </div>
+              </div>
+
+              <div class="deck-options">
+                <a
+                  class="button white fullscreen-button"
+                  data-tooltip="Fullscreen"
+                  href="/techtalentsouth/js-functions-part-2/fullscreen"
+                  ><span class="icon i-fullscreen"></span
+                ></a>
+              </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="deck-card-body">
+              <div class="deck-info">
+                <h1 class="title">JavaScript Functions: Part 2</h1>
+                <p class="description">
+                  Tech Talent South - JS Functions - Part 2
+                </p>
+                <ul class="deck-meta">
+                  <li data-tooltip="Created date" data-tooltip-delay="500">
+                    <span class="icon i-clock"></span>
+                    <time
+                      class="value ago"
+                      datetime="2020-06-03 13:30:18 UTC"
+                    ></time>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="user-info">
+                <div
+                  class="picture"
+                  style="
+                    background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png);
+                  "
+                ></div>
+                <div class="text">
+                  <h3 class="title">
+                    <a href="/techtalentsouth" class="username"
+                      >Tech Talent South</a
+                    >
+                  </h3>
+                  <p class="description">
+                    Tech Talent South (TTS) is an approachable and inclusive
+                    technical education company which exists to build and
+                    connect local tech and entrepreneurial ecosystems. We offer
+                    experiences for individuals, corporations, and talent
+                    pipeline partners.
+                  </p>
+                  <ul class="links">
+                    <li>
+                      <a
+                        href="https://twitter.com/techtalentsouth"
+                        target="_blank"
+                        ><span class="icon i-twitter"></span>techtalentsouth</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+
+              <div class="clear"></div>
+            </div>
+          </header>
+        </div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+        <div class="legal">
+          <a href="https://help.slides.com">Help</a>
+          &bull;
+          <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+          &bull;
+          <a href="https://techtalentsouth.slides.com/privacy?root=true"
+            >Privacy</a
+          >
+          &bull; <span class="copyright">&copy; 2022 Slides, Inc.</span>
+        </div>
+      </footer>
+    </div>
+    <!--! end of #container -->
+
+    <script>
+      var SLConfig = {
+        team: {
+          id: 299,
+          name: "Tech Talent South",
+          slug: "techtalentsouth",
+          logo: "https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png",
+          default_theme_id: 1458,
+          user_count: 2,
+          allow_scripts: false,
+          beta_new_editor: true,
+          manually_upgraded: false,
+          allow_public_decks: false,
+          google_domain: "",
+          deck_templates_mode: null,
+          default_internal_role: "viewer",
+        },
+        deck: {
+          id: 1806334,
+          slug: "js-functions-part-2",
+          title: "JavaScript Functions: Part 2",
+          description: "Tech Talent South - JS Functions - Part 2",
+          width: 960,
+          height: 700,
+          margin: 0.05,
+          visibility: "self",
+          published_at: "2020-05-29T15:37:46.554Z",
+          sanitize_messages: null,
+          thumbnail_url:
+            "https://s3.amazonaws.com/media-p.slid.es/thumbnails/1964746341a3ff7a6a06c8ca8ccac418/thumb.jpg?1605886716",
+          view_count: 1488,
+          user: {
+            id: 264630,
+            username: "techtalentsouth",
+            name: "Tech Talent South",
+            description:
+              "Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ",
+            thumbnail_url:
+              "https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png",
+            account_type: "enterprise",
+            team_id: 299,
+            settings: {
+              id: 84945,
+              present_controls: true,
+              present_upsizing: true,
+              present_pointer: true,
+              present_notes: true,
+              default_deck_tag_id: null,
+            },
+            membership: { role: "owner", manager: true, activated: true },
+          },
+          background_transition: "zoom",
+          transition: "slide",
+          theme_id: 1458,
+          theme_font: "opensans",
+          theme_color: "silver-blue",
+          auto_slide_interval: 0,
+          comments_enabled: true,
+          forking_enabled: false,
+          rolling_links: false,
+          center: false,
+          shuffle: false,
+          should_loop: false,
+          share_notes: false,
+          slide_number: true,
+          slide_count: 29,
+          rtl: false,
+          version: 2,
+          collaborative: false,
+          deck_user_editor_limit: null,
+          data_updated_at: 1609528390523,
+          font_typekit: null,
+          font_google: null,
+          time_limit: null,
+          navigation_mode: "default",
+          upsizing_enabled: true,
+        },
+        theme: {
+          id: 1458,
+          created_at: "2017-03-26T13:46:57.108Z",
+          updated_at: "2021-12-09T13:13:26.768Z",
+          name: "TTS Default Theme",
+          thumbnail_url:
+            "https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1639055602",
+          sanitize_messages: null,
+          font_typekit: "",
+          font_google: "Lato",
+          width: 960,
+          height: 700,
+        },
+        user: {
+          id: 264630,
+          username: "techtalentsouth",
+          name: "Tech Talent South",
+          description:
+            "Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ",
+          thumbnail_url:
+            "https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png",
+          account_type: "enterprise",
+          team_id: 299,
+          settings: {
+            id: 84945,
+            present_controls: true,
+            present_upsizing: true,
+            present_pointer: true,
+            present_notes: true,
+            default_deck_tag_id: null,
+          },
+          membership: { role: "owner", manager: true, activated: true },
+        },
+      };
+    </script>
+    <script
+      src="//assets-v2.slid.es/assets/deck-consumption-1f122eceff490d0c5a77bd5f4380fa6c338b2a881e7cba74a686638faf6a5c4d.js"
+      defer="defer"
+    ></script>
+    <script
+      src="//assets-v2.slid.es/assets/deck-ad5840235506b1ae9f1911eee7c2c085efa010a566481a17970b4c7b3c037af2.js"
+      defer="defer"
+    ></script>
+
+    <script>
+      UserVoice = window.UserVoice || [];
+      (function () {
+        var uv = document.createElement("script");
+        uv.type = "text/javascript";
+        uv.async = true;
+        uv.src = "//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(uv, s);
+      })();
+
+      UserVoice.push([
+        "set",
+        {
+          accent_color: "#448dd6",
+          trigger_color: "white",
+          trigger_background_color: "rgba(46, 49, 51, 0.6)",
+          position: "automatic",
+        },
+      ]);
+    </script>
+  </body>
+</html>
