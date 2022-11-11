@@ -5,7 +5,7 @@
 	["Batman", "Bruce Wayne"],
 	["Spiderman", "Peter Parker"],
 	["The Flash", "Barry Allen"]
-  ]
+]
 
 //   Create an Array named superHeroes shown above
 // Create a secretIdentity variable
@@ -18,12 +18,12 @@
 // join them together with the string "is" (ie: "Batman is Bruce Wayne")
 // Log the results to the screen and join them with a line break.
 
-let superHeroes = [ ["Batman", "Bruce Wayne"],
-                   ["Spiderman", "Peter Parker"],
-                   ["The Flash", "Barry Allen"]];
+let superHeroes = [["Batman", "Bruce Wayne"],
+["Spiderman", "Peter Parker"],
+["The Flash", "Barry Allen"]];
 
-let secretIdentity = superHeroes.map(function(revealArray){
-  return revealArray.join(" is ");
+let secretIdentity = superHeroes.map(function (revealArray) {
+	return revealArray.join(" is ");
 });
 
 console.log(secretIdentity.join("\n"));
