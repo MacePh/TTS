@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://techtalentsouth.slides.com/techtalentsouth/dom?token=fMiYZNvZ#/0/1 -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars fonts-are-ready reveal-is-ready" data-account="" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>DOM</title>
+    <meta name="description" content="Today we&#39;ll get into some of the more advanced topics regarding the DOM. -- DOM API WITHOUT jQuery">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta property="og:title" content="DOM">
+    <meta property="og:description" content="Today we&#39;ll get into some of the more advanced topics regarding the DOM. -- DOM API WITHOUT jQuery">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://media.slid.es/thumbnails/dfd70188c319e190c818318547261782/thumb.jpg?1605886735">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/techtalentsouth/dom?token=fMiYZNvZ">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./DOM_files/css2" onload="this.onload=null;this.removeAttribute(&#39;media&#39;);" rel="stylesheet" data-application-font="inter">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" data-application-font="inter">
+</noscript>
+
+    <link rel="stylesheet" media="all" href="./DOM_files/slides-321f9cf86a0d5f55c789340bfab5578b6c15251bf8ef1c818c6cc78376a0d230.css">
+    <link rel="stylesheet" media="all" href="./DOM_files/deck-consumption-4f67286e45dbb1cefdb356f50c5dcc554c5ae86f6becd50dd006ac19e26b6d5a.css">
+    	<link rel="stylesheet" media="all" href="./DOM_files/deck-v2-52b2f07feba210d651a559e960fc8e470003c288daa7750ea49d62784a543e13.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="hCwXg+eaBqwyyX8z1YeJWfFnjdvadaP8foXVbIP5XtvrfPEGW5PPn8Ag9BfZXfpgK2UNH4QK7XVrZyAdZ/BctA==">
+    <script type="application/javascript" async="" defer="" src="./DOM_files/track.js.download"></script><script type="text/javascript" async="" src="./DOM_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./DOM_files/js"></script>
+<script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    window.slidesMeasurementId = 'G-LWVDH9STBJ';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LWVDH9STBJ', {
+      page_title: 'decks-show'
+    });
+
+  }
+</script>
+
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="DOM">
+	<meta name="twitter:description" content="Today we&#39;ll get into some of the more advanced topics regarding the DOM. -- DOM API WITHOUT jQuery">
+	<meta name="twitter:image" content="https://media.slid.es/thumbnails/dfd70188c319e190c818318547261782/thumb.jpg?1605886735">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./DOM_files/opensans.css"><link rel="stylesheet" href="./DOM_files/css"><style type="text/css" media="screen">.uv-icon{box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon .uv-tooltip-container{position:relative}.uv-icon .uv-tooltip-container .uv-icon-tooltip{display:none;position:absolute;height:20px;padding:4px 8px;background-color:#464653;color:white;font-size:12px;border-radius:4px;line-height:18px;font-family:"Open Sans", sans-serif;white-space:nowrap}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left,.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{top:0;bottom:0;margin:auto 10px}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top,.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{transform:translate(-30%);margin:10px auto}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top{bottom:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{top:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left{right:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{left:100%}.uv-icon .uv-tooltip-container:hover .uv-icon-tooltip{display:block}.uv-icon-trigger{display:block;width:39px;height:39px;border:none;padding:0;cursor:pointer;background:none}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;transition:background 200ms}.uv-bottom .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{transition:none !important}.uv-fade{opacity:1;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{transform:translateY(100%)}.uv-slide-left.uv-is-hidden{transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{transform:translateX(100%)}
+</style><script type="text/javascript" src="./DOM_files/highlight-0adde8531514527653fdb445e29c1cca3687dc50684c4b8f624246a318dc706a.js.download"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style><script type="text/javascript" src="./DOM_files/zoom-e1f94838c054500b9ea32c1cdb27173f7796522bc2af1b0c8efe98c65a4c57b7.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <body style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url(&#39;https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png&#39;)"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue" style="--slide-width:960px; --slide-height:700px; --slide-scale:0.644643;">
+			<div class="reveal slide embedded has-vertical-slides ready focused" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.644643);">
+					<section class="stack present" data-id="80602a862c157cd6330487e6e1cc05d4" style="display: block;" data-previous-indexv="0"><section data-id="992a17822ad9452bc53e3249c1ff605f" data-background-size="initial" class="past" style="display: block;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="image" data-name="image-461277" data-block-id="5d4b33830171596b05ead388ef801da8" style="width: 510.765px; height: 210px; left: 224.617px; top: 70px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img style="left: -32px; top: -123px; width: 567px; height: 454px;" data-natural-width="1688" data-natural-height="1350" data-crop-x="0.05618" data-crop-y="0.270541" data-crop-width="0.900482" data-crop-height="0.462926" data-lazy-loaded="" src="./DOM_files/TTS-Identity-FullColor-HorizontalStack.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 502.484px; height: auto;" data-block-id="ebe6b1c0bf0a7614a902086f6facde25" data-name="text-3587d0">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>DOM API</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+</section><section data-id="2d55656d5b48f2e3de7305fbfe97ead2" class="present" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="b601011f472b1534fcde515386d0ef0b" data-name="text-b5ad0b">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>Table of Contents</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-a7cbaa" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="8c62c6b567df54e4055dbf39de666e42"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: center;">
+<ul>
+	<li>
+	<p>Recap</p>
+	</li>
+	<li>
+	<p>Selecting Nodes</p>
+	</li>
+	<li>
+	<p>Editing Nodes</p>
+	</li>
+	<li>
+	<p>Events</p>
+	</li>
+</ul>
+</div></div></section><section data-id="9d8bbf122c66100a0ab7ef489ddbd8f3" class="future" aria-hidden="true" hidden="" style="display: block;">
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="ba56be6e3a1a73cebdf16ce2ad2ebdce" data-name="text-bbe745">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="3abc6c2b2a3235d302e39c87e18b99ab"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><strong>Recap</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-d7427a" style="height: auto; width: 960px; left: 0px; top: 167px;" data-block-id="960ddb91bf6cad954b3471b227958d06">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><span style="color:rgb(17, 17, 17)">The Document Object Model (DOM) is a JavaScript representation of the HTML document loaded into the browser. The DOM API lets you:</span></p>
+
+<ul>
+	<li style="color:rgb(17, 17, 17); text-align:left"><span class="s1">Find elements (nodes) in the document</span></li>
+	<li style="color:rgb(17, 17, 17); text-align:left"><span class="s1">Edit, add, or remove nodes</span></li>
+	<li style="color:rgb(17, 17, 17); text-align:left"><span class="s1">Attach event handlers that respond to user input.</span></li>
+</ul>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 15;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="fb885181d71522a9480dccbf8fe00805" class="future" aria-hidden="true" hidden="" style="display: block;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="82841fd6b2da98335680020934b6aedd">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="dad51b109dc06adc3f30fc4826c800ff">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>Working with Nodes</strong></p>
+
+<p>&nbsp;</p>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 19;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 150.074px;" data-block-id="0012b3aeab8833b92ce67bbc9755e0e0" data-name="text-8fd7ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span class="s1">There are a few different ways to get a node or array of nodes from the document.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 254.074px;" data-block-id="14a72ce2e8a037fd1d359be2a2387acb" data-name="text-74088b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span class="s1">getElementById()</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 304.074px;" data-block-id="13bb004b0e3615ba22290756a28768ff" data-name="text-251e9b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span class="s1">Gets a single node based on id attribute</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 300.853px; height: 32.1917px; left: 320px; top: 403.904px;" data-block-id="fa283377696e6d9aaa2f3eb6f9b44c09" data-name="code-fa6626"><div class="sl-block-content notranslate" style="z-index: 15;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"username"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">input</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 98px; left: 421.427px; top: 364.904px;" data-block-id="a8d7eb2412bf2113f93185fc69eafaa2" data-name="text-658952"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 441.492px; height: 49.998px; left: 249.681px; top: 510.002px;" data-block-id="63731b337a8c270ab0229feba35c6660" data-name="code-a778ab"><div class="sl-block-content notranslate" style="z-index: 17;" data-highlight-theme="monokai-sublime"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">//Get a single node</span>
+<span class="hljs-keyword">let</span> el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'username'</span>);</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 154.617px; left: 393.119px; top: 471.002px;" data-block-id="b6be3990846ca0c011a3db6eee25ccb3" data-name="text-17d9f4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;">
+<p>JavaScript</p>
+</div></div></section><section data-id="8ff1f178cbc944a20399361fab4632cd" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="ef07ce66f2bdf18f79975cae87048563" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 98px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong><span class="s1">getElementsByTagName()</span></strong></p>
+
+<p><strong><span class="s1">getElementsByClassName()</span></strong></p>
+
+<p><span class="s1">Gets an 'array' of nodes based on a tag name or className</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="df9141a5a2241b3a7ed14471a04b9756" style="min-width: 30px; min-height: 30px; width: 418.545px; height: 67.4261px; left: 260.217px; top: 289.181px;"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"error"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">input</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">input</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="5ca144c914f6a42c9d03499f3b87b5d6" style="min-width: 30px; min-height: 30px; width: 546.833px; height: 129.405px; left: 206.584px; top: 395.607px;"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">//Get all inputs</span>
+<span class="hljs-keyword">let</span> inputs = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'input'</span>);
+<span class="hljs-keyword">let</span> inError = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">'error'</span>);
+
+<span class="hljs-built_in">console</span>.log(inputs.length); <span class="hljs-comment">//2</span>
+<span class="hljs-built_in">console</span>.log(inError.length); <span class="hljs-comment">//1</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ff2219f22d3a97e4bfc228dc562e5c8d" style="height: auto; min-width: 30px; min-height: 30px; width: 106px; left: 425.25px; top: 250.117px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a9128abd51e83273f07dabdf81f596c0" style="height: auto; min-width: 30px; min-height: 30px; width: 53px; left: 451.75px; top: 356.607px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="702d2798eacc59c9537598dd42742b6a">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="672ca3373c6bdfaf72b8781b6cea5c15" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" data-block-id="150b5957b2c0640507ad034f6a8b60d1" style="min-width: 30px; min-height: 30px; width: 500px; height: 80px; left: 230px; top: 350px;"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"error"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">input</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"password"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">input</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="e313e5d36b2391f7bfe9f4286d20ed6a" style="min-width: 30px; min-height: 30px; width: 623.297px; height: 124.936px; left: 160px; top: 479.1px;"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="javascript"><code class="hljs"><span class="hljs-comment">//Get all inputs</span>
+<span class="hljs-keyword">let</span> firstButton = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'button'</span>);
+<span class="hljs-keyword">let</span> inError = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'input.error'</span>);
+
+<span class="hljs-built_in">console</span>.log(firstButton); <span class="hljs-comment">//single button node</span>
+<span class="hljs-built_in">console</span>.log(inError); <span class="hljs-comment">//Node list of inputs with class 'error'</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f525f28e224c1f819c981ba7052368f0" style="height: auto; min-width: 30px; min-height: 30px; width: 946.714px; left: 6.643px; top: 312px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ed8f8efb112b3c88871e74d71b1dbdaf" style="height: auto; min-width: 30px; min-height: 30px; width: 946.714px; left: 6.643px; top: 441.1px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 89.5143px;" data-block-id="cf9123cca774458a66d8500366aa4b69" data-name="text-3486b9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p><strong>querySelector()</strong></p>
+
+<p><strong>querySelectorAll()</strong></p>
+
+<p><span style="color:rgb(17, 17, 17)">In practice, these are the only DOM selectors you will ever need. They take a CSS selector as an argument, which means you can easily duplicate the functionality from the other DOM selection functions.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="5931aeb67eb994d533e65b54eef26466">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 21;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="37e20c20a4719ba794dec51c18bec00a" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 440.043px; height: 203.341px; left: 259.979px; top: 194.649px;" data-block-id="0657ada41d91a7bce0965855d6aad8bd"><div class="sl-block-content notranslate" style="z-index: 10;" data-highlight-theme="monokai-sublime"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">let</span> links = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'a'</span>);
+
+<span class="hljs-comment">//Works!</span>
+<span class="hljs-keyword">let</span> linkCount = links.length;
+<span class="hljs-keyword">let</span> firstLink = links[<span class="hljs-number">0</span>];
+
+<span class="hljs-comment">//Doesn't work!</span>
+links.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">link</span>)</span>{
+	<span class="hljs-comment">//do something with link</span>
+});
+</code></pre></div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="66763fa6ab96efdb33a44720f37ab14d" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 103.095px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span class="s1">It seems like querySelectorAll should return an Array of elements. In fact, it returns a nodeList, which offers a similar, but not identical API to Array.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b1b8d5af42ca647fb0494dc0e09504aa" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 420px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span class="s1">Array methods like </span><em><span class="s2">forEach</span><span class="s1">, </span><span class="s2">map</span><span class="s1">, </span><span class="s2">reduce</span></em><span class="s1">, and so on, don't work. Luckily, its easy enough to convert a nodeList into an Array.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="05c2ce8e54a80e65258d1d9d2915af8d" style="min-width: 30px; min-height: 30px; width: 425.428px; height: 49.0853px; left: 267.286px; top: 498px;"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">let</span> links = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'a'</span>);
+<span class="hljs-keyword">let</span> arrayOfLinks = <span class="hljs-built_in">Array</span>.from(links);</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="d515e78c3c45933593b0a50073814eb7">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="35027cca97b74062c330adde4e161a7e" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="b62667b685d54e47d60f421e27597a52" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 93px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Traversing the DOM</strong></p>
+
+<p><span class="s1">You can use the children, parent, nextElementSibling, and previousElementSibling attributes to find nodes relative to a node you have. This is called "traversing the DOM".</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="eb640ea743742875b37e6c4c8bb0de58" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 260.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong><span class="s1">Children</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="33775095b1d934b6d43cbeb65b4f01d0" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 305px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span class="s1">Use the children property to gets a <em>nodeList</em>&nbsp;of all the nodes contained in the node.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="4be067385484dd7363958cc1366e0fd3" style="min-width: 30px; min-height: 30px; width: 177.811px; height: 87.3834px; left: 382.189px; top: 420px;"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="f811b59c41a11586fbea138545f39fa1" style="min-width: 30px; min-height: 30px; width: 529.854px; height: 50.4471px; left: 215.073px; top: 553px;"><div class="sl-block-content notranslate" style="z-index: 14;" data-highlight-theme="monokai-sublime"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">let</span> listItems = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'ul'</span>).children;
+<span class="hljs-built_in">console</span>.log(listItems.length); <span class="hljs-comment">//2</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8d1a4cf1a20b5a25856852d9e32b8021" style="height: auto; min-width: 30px; min-height: 30px; width: 96px; left: 432px; top: 381px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="035fc02041178f387b1958e0bfef4ba7" style="height: auto; min-width: 30px; min-height: 30px; width: 30px; left: 465px; top: 514px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="16f108045cd21d8f530aee029c1aadbb">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 17;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="bf0e495ffa3b4b349a17aaedbf16a0ee" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="5b3f22e1fee19ab26b6748708e512b09" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 110.786px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span class="s1">Use parent, nextElementSibling, and previousElementSibling to find nodes up the tree and across it.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="61afde903d20a756906d7832f25c251f" style="min-width: 30px; min-height: 30px; width: 500px; height: 206px; left: 191px; top: 238.1px;"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"first"</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"selected"</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"last"</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+	Hello!
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="2ee711d0bbb016d8f4c26fda63db0bb3" style="min-width: 30px; min-height: 30px; width: 744px; height: 129px; left: 108px; top: 482.1px;"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="javascript"><code class="hljs"><span class="hljs-keyword">let</span> selectedItem = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'li.selected'</span>);
+<span class="hljs-keyword">let</span> first = selectedItem.previousElementSibling;
+<span class="hljs-keyword">let</span> last = selectedItem.nextElementSibling;
+<span class="hljs-keyword">let</span> list = selectedItem.parentElement;
+<span class="hljs-keyword">let</span> header = selectedItem.parentElement.parentElement;
+<span class="hljs-keyword">let</span> section = selectedItem.parentElement.parentElement.nextElementSibling;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5fa664ee7ff099826a23cb5e6972a1b9" style="height: auto; min-width: 30px; min-height: 30px; width: 111.999px; left: 400px; top: 200.1px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ce67071f264f5880dfbec7afe28c21e4" style="height: auto; min-width: 30px; min-height: 30px; width: 30px; left: 441px; top: 444.1px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="6d8628b438c437c63d8f2c3952dec1c9">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="bb41dca1e4b63a3472891eb830773f9b" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" data-block-id="4c80a8287de27c30e8fca7f2b73ae3b7" style="min-width: 30px; min-height: 30px; width: 667.981px; height: 157.086px; left: 146.01px; top: 113px;"><div class="sl-block-content notranslate" style="z-index: 10;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"first"</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"selected"</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"last"</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Section 1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"current"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"highlight"</span>&gt;</span>Section 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Section 2<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="908ca7d77a23134270b12a4d7dc229b4" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 74px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong><span class="s1">Exercise 1: Selecting Nodes</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d5c2c1ab80cd4ef0b86bda3f7500a387" style="height: auto; min-width: 30px; min-height: 30px; width: 947px; left: 6.5px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 70%;">
+<ol>
+	<li style="text-align:left">
+	<p><span style="font-size:1.2em"><span class="s1">Get the header element</span></span></p>
+	</li>
+	<li style="text-align:left">
+	<p><span style="font-size:1.2em"><span class="s1">Get all the section elements</span></span></p>
+	</li>
+	<li style="text-align:left">
+	<p><span style="font-size:1.2em"><span class="s1">Get the section element with class="current"</span></span></p>
+	</li>
+	<li style="text-align:left">
+	<p><span style="font-size:1.2em"><span class="s1">Get the section that comes after the current section</span></span></p>
+	</li>
+	<li style="text-align:left">
+	<p><span style="font-size:1.2em"><span class="s1">Get the h2 node from the section before the 'current' section</span></span></p>
+	</li>
+	<li style="text-align:left">
+	<p><span style="font-size:1.2em"><span class="s1">Get the div that contains the section that has an h2 with a class of 'highlight'</span></span></p>
+	</li>
+	<li style="text-align:left">
+	<p><span style="font-size:1.2em"><span class="s1">Get all the sections that contain an H2 (using a single statement);</span></span></p>
+	</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="4b6a9c4ef9063f6dc97c66fc4d6f4ea6">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-3a77a9" data-block-id="5cfc4646ca92d28f71920fa183b266a8" style="height: auto; width: 960px; left: 0px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><em><span style="font-size:0.7em">Scroll for additional code</span></em></p>
+</div></div></section><section data-id="27c6fbfa35b8f22106bc15da2c6b8685" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="31cbaf39a0234e34cac40045dab8c3e8" style="height: auto; min-width: 30px; min-height: 30px; width: 951.728px; left: 8.272px; top: 109.723px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong><span class="s1">Exercise 1 Solution:</span></strong></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" data-block-id="750a80b4ee464ff755bdf2c773e84e61" style="min-width: 30px; min-height: 30px; width: 548.089px; height: 322.151px; left: 210.091px; top: 156.209px;"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">//Laziness is your friend...</span>
+<span class="hljs-keyword">let</span> q = <span class="hljs-built_in">document</span>.querySelector.bind(<span class="hljs-built_in">document</span>)
+<span class="hljs-keyword">let</span> qa = <span class="hljs-built_in">document</span>.querySelectorAll.bind(<span class="hljs-built_in">document</span>);
+
+
+q(<span class="hljs-string">'header'</span>);
+qa(<span class="hljs-string">'section'</span>);
+q(<span class="hljs-string">'section.current'</span>);
+q(<span class="hljs-string">'section.current'</span>).nextElementSibling;
+q(<span class="hljs-string">'section.current'</span>).previousElementSibling.children[<span class="hljs-number">0</span>];
+q(<span class="hljs-string">'h2.highlight'</span>).parentElement.parentElement;
+
+<span class="hljs-keyword">let</span> foo = <span class="hljs-built_in">Array</span>.from(qa(<span class="hljs-string">'section h2'</span>))
+    .map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">headline</span>)</span>{
+        <span class="hljs-keyword">return</span> headline.parentElement;
+    });
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="4c7fe6e324e0e94dce20fc2a4d43ff55">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="c87239d7c5f940610ee932527bf5bf41" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" data-block-id="674fa4aa188d5c0dc3a941cf1654402b" style="min-width: 30px; min-height: 30px; width: 265.192px; height: 69.2981px; left: 70.7981px; top: 427px;"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="50264977faa35bc6198859d7112adcc5" style="height: auto; min-width: 30px; min-height: 30px; width: 959px; left: 0px; top: 125px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p><strong>Editing a Node</strong></p>
+
+<p><span class="s1">A <strong>Node</strong>&nbsp;object has some useful properties and methods to let you access its contents and edit its appearance and content.</span></p>
+
+<p><strong>innerHTML</strong></p>
+
+<p><span style="color:rgb(17, 17, 17)">The sledgehammer approach - get or set the html text inside a node. This is really simple and sufficient in most cases.</span><strong><span>&nbsp;</span></strong></p>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 12;" class="_1KJtL"></grammarly-extension><grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 12;" class="_1KJtL"></grammarly-extension>
+</div>
+
+
+<div class="sl-block" data-block-type="code" data-block-id="66c12ef3130a9186cc70df170d02cc96" style="min-width: 30px; min-height: 30px; width: 436.937px; height: 181.298px; left: 446.532px; top: 427px;"><div class="sl-block-content notranslate" style="z-index: 15;" data-highlight-theme="monokai-sublime" data-code-wrap="true"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">//Get all inputs</span>
+<span class="hljs-keyword">let</span> div = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'div'</span>);
+<span class="hljs-keyword">let</span> a = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'a'</span>);
+
+<span class="hljs-built_in">console</span>.log(a.innerHTML); <span class="hljs-comment">//"click me"</span>
+<span class="hljs-built_in">console</span>.log(div.innerHTML); <span class="hljs-comment">//'&lt;a href="#"&gt;Click me&lt;/a&gt;'</span>
+
+a.innerHTML = <span class="hljs-string">"Updated link text"</span>;
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="958ab5143ce3c1963219362fc6f53687" style="height: auto; min-width: 30px; min-height: 30px; width: 95.5102px; left: 144.49px; top: 388px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="235a52b8f7209b4e4634b9ee6ee37297" style="height: auto; min-width: 30px; min-height: 30px; width: 30px; left: 635px; top: 388px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="13cb96362f7f0156bce0ebba1c3a77d6">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 18;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="cf9c71976c61c16dabb43e68acaae8cd" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="3be3c9328d83a03e022cba9f851d481d" style="height: auto; min-width: 30px; min-height: 30px; width: 780px; left: 90px; top: 97px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span class="s1">Get and set attributes like object properties</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="793dc270012bd946a76258d634b64ffc" style="min-width: 30px; min-height: 30px; width: 571.664px; height: 42.4045px; left: 194.168px; top: 188.798px;"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://google.com"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"googleLink"</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="e376540879ea341e299829cc67ff271b" style="min-width: 30px; min-height: 30px; width: 366.048px; height: 222.708px; left: 295.954px; top: 293.415px;"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime" data-code-wrap="true"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">var</span> a = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'a'</span>);
+
+<span class="hljs-comment">//Get an attribute</span>
+<span class="hljs-built_in">console</span>.log(a.href); <span class="hljs-comment">//"http://google.com"</span>
+
+<span class="hljs-comment">//Set an attribute</span>
+a.name = <span class="hljs-string">'new link name'</span>;
+
+<span class="hljs-comment">//Add a new attribute</span>
+a.target = <span class="hljs-string">"_blank"</span>;
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bba2591a3df72aa6fb2f3283c2893117" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 149.798px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="fe7ced39107146302fee3c61805c1eaa" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 254.415px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="d2b60dba5e920dc4506f6872444ffc58">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="09ed818cb384bd4429f87477e3a111f6" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="369d69c84226615401356f755497ae17" style="height: auto; min-width: 30px; min-height: 30px; width: 780px; left: 90px; top: 102px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span class="s1">Use <em>remove()</em></span><span class="s1">&nbsp;to remove a node from a document.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="ea7c68dd8955004c63589bcb00e28438" style="min-width: 30px; min-height: 30px; width: 484.386px; height: 206.959px; left: 257.807px; top: 213.041px;"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"first"</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"selected"</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"last"</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+	Hello!
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="e148b8d9e062050796fa6516e6ed1c2f" style="min-width: 30px; min-height: 30px; width: 420.791px; height: 58.3408px; left: 289.605px; top: 501.659px;"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">//Remove the first list item</span>
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.first'</span>).remove();</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ae33f3122f75f60f77a51eca7db21235" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 200px; top: 175.041px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="acea6e63584ed0c47eaa903bc71a91e2" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 200px; top: 463.659px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="e0fc613a750cf015bec66c7db10c5ca7">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 16;" class="_1KJtL"></grammarly-extension>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="2b68813d4fd5655bec6d2f2794ea7e7c" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="ef4853afa3c7377414a89ca4947cc5a4" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 117px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span class="s1">Create a node using </span><em><span class="s2">document.createElement('tagname')</span></em><span class="s1">&nbsp;and </span><em><span class="s2">node.appendChild('variablename)</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="23ba2739c3c2f7c860d3e688844b64e8" style="min-width: 30px; min-height: 30px; width: 240.533px; height: 112.852px; left: 348.734px; top: 249px;"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="b0fcca3c3cd5c0fe453c188fabc7dacd" style="min-width: 30px; min-height: 30px; width: 458.789px; height: 114.49px; left: 239.606px; top: 418.532px;"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">let</span> newLI = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+newLI.innerHTML = <span class="hljs-string">"Item 2"</span>;
+
+<span class="hljs-keyword">let</span> list = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'ul'</span>);
+list.appendChild(newLI); <span class="hljs-comment">//Insert after item 1</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="38c6e3903bf9ed60047d3fd13b96a253" style="height: auto; min-width: 30px; min-height: 30px; width: 98px; left: 420px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="32f39859b871709bd81b2ab4bf66a8bc" style="height: auto; min-width: 30px; min-height: 30px; width: 72px; left: 433px; top: 373.532px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="59a664adc8cfc2bd411a6856ab5fb349">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="13ad387466749453048d984387ad9d77" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" data-block-id="530f39cf32f4c2394e3e3374bbeddfbd" style="min-width: 30px; min-height: 30px; width: 412.087px; height: 238.064px; left: 273.957px; top: 112px;"><div class="sl-block-content notranslate" style="z-index: 10;" data-highlight-theme="monokai-sublime"><pre class="xml" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Shopping List<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"list"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ramen<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Coffee<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Poptarts<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Twinkies<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+	<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="08a2bb99983fc49b01c953f854ff6614" style="height: auto; min-width: 30px; min-height: 30px; width: 951.514px; left: 4.243px; top: 350.064px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:0.9em"><span class="s1">1. Update the 'Coffee' item to say 'Fair Trade Coffee'</span></span></p>
+
+<p><span style="font-size:0.9em"><span class="s1">2. Remove 'Twinkies' from the list</span></span></p>
+
+<p><span style="font-size:0.9em"><span class="s1">3. Add an item 'Cheese Whiz'</span></span></p>
+
+<p><span style="font-size:0.9em"><span class="s1">4. Clear the list and programmatically add items from the array ['protein powder', 'muscle milk', 'power bars']</span></span></p>
+
+<p><span style="font-size:0.9em"><span class="s1">5. Add the class 'important' to the muscle milk item.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 955.757px; left: 0px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="4cd933339b4bbcc35f4ffe61100f40d8">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 947.271px; left: 12.729px; top: 74px;" data-block-id="78464d06e31cedeb02096524a1204ac9" data-name="text-2356cf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><strong><span class="s1">Exercise 2: Selecting Nodes</span></strong></p>
+</div></div></section><section data-id="2d9268b9e505f5ca85b380159182348b" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" data-block-id="d3a8afc44240974404e0074eae3d7b42" style="min-width: 30px; min-height: 30px; width: 763.429px; height: 457px; left: 98.2855px; top: 121.5px;"><div class="sl-block-content notranslate" style="z-index: 10;" data-highlight-theme="monokai-sublime"><pre class="javascript"><code class="hljs"><span class="hljs-keyword">let</span> list = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#list'</span>);
+
+<span class="hljs-comment">//1</span>
+list.children[<span class="hljs-number">1</span>].innerHTML = <span class="hljs-string">"Fair Trade Coffee"</span>;
+
+<span class="hljs-comment">//2</span>
+list.children[<span class="hljs-number">3</span>].remove();
+
+<span class="hljs-comment">//3</span>
+<span class="hljs-keyword">let</span> cheese = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+cheese.innerHTML = <span class="hljs-string">'Cheese Whiz'</span>;
+list.appendChild(cheese);
+
+<span class="hljs-comment">//4</span>
+list.innerHTML = <span class="hljs-string">''</span>;
+[<span class="hljs-string">'protein powder'</span>, <span class="hljs-string">'muscle milk'</span>, <span class="hljs-string">'power bars'</span>].forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">itemText</span>)</span>{
+	<span class="hljs-keyword">var</span> li = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+	li.innerHTML = itemText;
+	list.appendChild(li);
+})
+
+<span class="hljs-comment">//5</span>
+list.children[<span class="hljs-number">1</span>].className = <span class="hljs-string">"important"</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 948.686px; left: 11.314px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="764b05a5858b380d1b9ecb19aca95be4">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 83.5px;" data-name="text-2356cf" data-block-id="fc4cc81842d23546121eb4e34a3c7b1d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><strong><span class="s1">Exercise 2: Answer</span></strong></p>
+</div></div></section><section data-id="177985965c7dc9e9ce5e2e23f83d760f" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" data-block-id="a3b347782570ca03fd245ef079de0dbf" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 140px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 95%;" dir="ui">
+<p><strong>DOM Events</strong></p>
+
+<p><span class="s1">As previously discussed, async programming is important in JS. DOM events allow us to make use of asnyc functions.</span></p>
+
+<p><span class="s1">Elements emit events based on user input. You can run code in response to them. Events include:</span></p>
+
+<ul>
+	<li style="text-align:left"><span class="s1"><strong>Mouse events</strong>- click, mouseover, mouseout</span></li>
+	<li style="text-align:left"><span class="s1"><strong>Keyboard events</strong>&nbsp;- keydown, keyup, etc</span></li>
+	<li style="text-align:left"><span class="s1"><strong>Form events</strong>&nbsp;- submit, blur, focus, change,</span></li>
+	<li style="text-align:left"><span class="s1"><strong>window events</strong>&nbsp;- load, hashchange, etc.</span></li>
+	<li style="text-align:left"><span class="s1"><strong>touch events</strong>&nbsp;- touchstart, touchend, etc.</span></li>
+</ul>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+
+<div class="sl-block" data-block-type="text" style="width: 952.929px; left: 3.5355px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="080f5e4916d5367c0f820e8ff7d7cf64">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="4b42cc854178a40458fb90ab38721526" class="future" aria-hidden="true" hidden="" style="display: none;">
+
+
+<div class="sl-block" data-block-type="text" style="width: 952.929px; left: 3.5355px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="4a81ba8264328fcdcec99475431c4c5e">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 503.513px; height: 184.83px; left: 228.244px; top: 140px;" data-block-id="4c38f7a02006b3ca97ed38d2b658d691" data-name="code-448fc8"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="javascript" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">let</span> el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'myEl'</span>);
+el.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>)</span>{
+	alert(<span class="hljs-string">'clicked!'</span>);
+})
+
+<span class="hljs-comment">//Combine with DOM editing</span>
+el.addEventListener(<span class="hljs-string">'mouseover'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>)</span>{
+	el.innerHTML(<span class="hljs-string">'over'</span>);
+})</code></pre></div></div></section><section data-id="e8ac88d4ab5cf9566fdc42322f8fe240" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" data-block-id="4d30840d74b642cd838efac3db1c6c3e" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 121.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Event Object</strong></p>
+
+<p><span class="s1">You may be wondering what that event parameter is...</span></p>
+
+<p><span class="s1"><em>An event object is passed to the event handler that describes what happened.</em> The event object is different depending on the type of event.</span></p>
+
+<p>&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="4765f29a913a87c78b6c6c8310c4f0d5" style="height: auto; min-width: 30px; min-height: 30px; width: 956.465px; left: 3.535px; top: 335.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span class="s1">Events include: </span></p>
+
+<ul>
+	<li style="text-align: left;"><span class="s1">target - element where event occurred</span></li>
+	<li style="text-align: left;"><span class="s1">Mouse: clientX, clientY</span></li>
+	<li style="text-align: left;"><span class="s1">Keyboard: keyCode, shiftKey</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 952.929px; left: 3.5355px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="2c684b9eb53c0f37d157276f6365d066">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="fc1cec9135905075a5f3e5dfa1deb4a5" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" data-block-id="3c6f8582d5f05a50ef4fd19b03e32bc3" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 88.2714px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Event Bubbling</strong></p>
+
+<p><span class="s1">When an event is triggered on an element, it then gets fired on that element's parents, all the way to the top.</span></p>
+
+<ul>
+	<li><span class="s1">event.target is the element where the event originally occurred</span></li>
+	<li><span class="s1">event.currentTarget is the element running the event handler (this!).</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="89ed88d471ee83da85023ef2788c0dc7" style="min-width: 30px; min-height: 30px; width: 500px; height: 73px; left: 230px; top: 350px;"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="javascript"><code class="hljs">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"outer"</span>&gt;
+	<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inner"</span>&gt;</span>click me<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;/div&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="b0ed6d6cc7300e57cf345b77350dc805" style="min-width: 30px; min-height: 30px; width: 720px; height: 104px; left: 120px; top: 462.743px;"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="javascript"><code class="hljs"><span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.outer'</span>).addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+        <span class="hljs-comment">// e represents the event (element that has been clicked)</span>
+	<span class="hljs-built_in">console</span>.log(e.target, e.currentTarget);
+	<span class="hljs-comment">//inner, outer</span>
+})</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="13a8decde59260b7adfe4942ce78424c" style="height: auto; min-width: 30px; min-height: 30px; width: 952.928px; left: 3.536px; top: 320px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 70%;">
+<p>HTML</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6d708861b3104f2fc00702fa391d73e4" style="height: auto; min-width: 30px; min-height: 30px; width: 952.928px; left: 3.536px; top: 432.743px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%;">
+<p>JS</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 952.929px; left: 3.5355px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="6b30e923717388a93cf9abe6f024ae84">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 15;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="0ad5323b76600cd99ce62e805af7c022" class="future" aria-hidden="true" hidden="" style="display: none;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 88.2714px;" data-block-id="7ef27e4c153b0329f7b3a53da06843d9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Event Bubbling</strong></p>
+
+<p><span class="s1">When an event is triggered on an element, it then gets fired on that element's parents, all the way to the top.</span></p>
+
+<ul>
+	<li><span class="s1">event.target is the element where the event originally occurred</span></li>
+	<li><span class="s1">event.currentTarget is the element running the event handler (this!).</span></li>
+</ul>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 952.929px; left: 3.5355px; top: 0px; height: auto;" data-name="text-bbe745" data-block-id="4681b7c57d9f31c39324983f1c28c47a">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 15;" dir="ui">
+<h2>Intro to DOM</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background past" data-background-size="initial" data-loaded="true" style="display: block;"><div class="slide-background-content" style="background-size: initial;"></div></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="slide-number" style="display: block;"><a href="https://techtalentsouth.slides.com/techtalentsouth/dom?token=fMiYZNvZ#/0/1">
+					<span class="slide-number-a">2</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-up enabled" aria-label="above slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-down enabled" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.047619);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Table of Contents Recap Selecting Nodes Editing Nodes Events </div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 652.794px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">DOM</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 692px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+			<div class="deck-sharing">
+				<div class="deck-state" data-tooltip="This deck is only visible to people it has been explicitly shared it with" data-tooltip-maxwidth="250">Private</div>
+			</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/techtalentsouth/dom/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">DOM</h1>
+				<p class="description">Today we'll get into some of the more advanced topics regarding the DOM. -- DOM API WITHOUT jQuery</p>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2017-06-28 19:28:58 UTC">5 years ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/techtalentsouth" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description">Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. </p>
+		<ul class="links">
+			
+			 <li><a href="https://twitter.com/techtalentsouth" target="_blank"><span class="icon i-twitter"></span>techtalentsouth</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="https://help.slides.com/">Help</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2022 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":2,"allow_scripts":false,"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":"","deck_templates_mode":null,"default_internal_role":"viewer"},"deck":{"id":1033657,"slug":"dom","title":"DOM","description":"Today we'll get into some of the more advanced topics regarding the DOM. -- DOM API WITHOUT jQuery","width":960,"height":700,"margin":0.05,"visibility":"self","published_at":"2015-01-12T22:20:03.091Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/dfd70188c319e190c818318547261782/thumb.jpg?1605886735","view_count":1713,"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":23,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1610388337568,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2021-12-09T13:13:26.768Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1639055602","sanitize_messages":null,"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="./DOM_files/deck-consumption-52d59a79d8d7c049a3f6477b5434d5c0b65ed1ad401b9d91fa122de7cd772e7d.js.download" defer="defer"></script>
+    	<script src="./DOM_files/deck-ad5840235506b1ae9f1911eee7c2c085efa010a566481a17970b4c7b3c037af2.js.download" defer="defer"></script>
+	
+
+
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+  <style>a[href^="//wagerprocuratorantiterrorist.com/"],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"],a[href^="http://www.mrskin.com/tour"],img[src^="https://images.purevpnaffiliates.com"],a[href^="https://www.kingsoffetish.com/tour?partner_id="],[href^="https://go.4rabettraff.com/"],div[id^="ad_position_"],iframe[src^="http://www.adpeepshosted.com/"],a[href^="https://awentw.com/"],a[href^="https://go.xlirdr.com"],a[href^="https://loboclick.com"],a[href^="https://see.kmisln.com/"],[data-ad-width],div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"],a[href^="http://www.FriendlyDuck.com/"],a[href^="https://chaturbate.com/in/?track="],[href^="https://zstacklife.com/"] img,[href^="http://join.ts-dominopresley.com/"],a[href^="https://adsrv4k.com/"],a[href^="https://traffic.bannerator.com/"],a[href^="https://a.bestcontentfood.top/"],div[data-native_ad],div[id^="ads300_100-widget-"],a[href^="https://fleshlight.sjv.io/"],[href^="https://mypatriotsupply.com/"] > img,a[href^="https://camfapr.com/landing/click/"],div[data-adname],a[data-url^="http://paid.outbrain.com/network/redir?"] + .author,[href^="https://go.xlrdr.com"],[data-ad-cls],a[href^="https://as.sexad.net/"],div[id^="advads_"],a[href^="https://dianches-inchor.com/"],a[href^="https://bongacams2.com/track?"],a[href^="https://cagothie.net/"],[href^="https://affiliate.fastcomet.com/"] > img,a[href^="https://go.hpyrdr.com/"],a[href^="https://datingbests.life/"],a[href^="https://s.zlink2.com/"],[id^="chp_ads_block"],a[href^="https://ak.hetaruwg.com/"],[data-role="tile-ads-module"],a[href^="https://torguard.net/aff.php"] > img,[href^="https://istlnkcl.com/"],a[href^="http://intent.bingads.com/"],a[href^="http://partners.etoro.com/"],a[href^="https://ad.atdmt.com/"],[href^="https://noqreport.com/"] > img,a[href^="https://www.arthrozene.com/"][href*="?tid="],a[href^="https://go.strpjmp.com/"],a[href*=".trust.zone"],a[href^="https://creacdn.top-convert.com/"],a[href^="https://leg.xyz/?track="],a[href^="http://googleads.g.doubleclick.net/pcs/click"],a[href^="https://go.julrdr.com/"],[href^="https://go.affiliatexe.com/"],a[href^="https://reinstandpointdumbest.com/"],a[href^="https://track.wg-aff.com"],a[href^="https://tracking.trackcasino.co/"],a[href^="https://aj1070.online/"],[data-css-class="dfp-inarticle"],a[href^="https://aweptjmp.com/"],a[href^="https://syndication.optimizesrv.com/"],a[href^="https://www.camsoda.com/enter.php?id="],a[href^="http://ad.doubleclick.net/"],a[href^="https://go.skinstrip.net"][href*="?campaignId="],a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="],[href^="https://shrugartisticelder.com"],a[href^="https://track.bruceads.com/"],a[href^="https://porngames.adult/?SID="],a[href^="https://maymooth-stopic.com/"],display-ad-component,[data-template-type="nativead"],[data-ad-module],a[data-url^="http://paid.outbrain.com/network/redir?"],div[data-mpu1],[href^="https://antiagingbed.com/discount/"] > img,a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="],a[href^="https://go.xlivrdr.com"],a[href^="https://waisheph.com/"],a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"],a[href^="https://incisivetrk.cvtr.io/click?"],[onclick^="location.href='http://www.reimageplus.com"],[href^="https://zone.gotrackier.com/"],a[href^="http://pubads.g.doubleclick.net/"],a[href^="https://promo-bc.com/"],a[href^="http://go.xtbaffiliates.com/"],a[href^="https://affiliate.rusvpn.com/click.php?"],[id^="ad_sky"],[href^="https://traffserve.com/"],a[href^="https://landing1.brazzersnetwork.com"],[href="https://www.masstortfinancing.com/"] > img,[href^="http://join.shemalepornstar.com/"],[href^="https://engine.gettopple.com/"],a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"],a[href^="https://wittered-mainging.com/"],a[href^="https://uncensored.game/"],a[href^="https://pl.premium4kflix.website/"],[href^="https://www.avantlink.com/click.php"] img,a[href^="http://betahit.click/"],a[href^="https://t.mobtya.com/"],[href^="https://turtlebids.irauctions.com/"] img,a[href*="//lkstrck2.com/"],[id^="ad_slider"],a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="],[href="https://masstortfinancing.com"] img,[href^="http://globsads.com/"],div[id^="ezoic-pub-ad-"],a[href^="http://adultgames.xxx/"],a[href^="https://juicyads.in/"],a[href^="https://trappist-1d.com/"],iframe[id^="google_ads_frame"],a[href^="https://prf.hn/click/"][href*="/camref:"] > img,[href^="https://www.restoro.com/"],bottomadblock,[class^="chp_ads_block"],a[href^="https://galaxyroms.net/?scr="],[data-desktop-ad-id],topadblock,[class^="s2nPlayer"],a[href^="http://enter.anabolic.com/track/"],[href^="https://join.girlsoutwest.com/"],aside[id^="adrotate_widgets-"],[href^="https://goldcometals.com/clk.trk"],[href^="http://join.michelle-austin.com/"],a[href^="https://t.grtyi.com/"],a[href^="https://a.adtng.com/"],[href^="https://shiftnetwork.infusionsoft.com/go/"] > img,div[data-alias="300x250 Ad 2"],[href^="https://kingered-banctours.com/"],a[href^="https://dialling-abutory.com/"],a[href^="https://go.cmrdr.com/"],a[href^="https://meet-sexhere.com/"],a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img,a[href^="https://awptjmp.com/"],a[href^="https://www.highperformancegate.com/"],a[href^="https://billing.purevpn.com/aff.php"] > img,[href^="http://www.pingperfect.com/aff.php"],a[href^="//pubads.g.doubleclick.net/"],a[href^="https://t.aslnk.link/"],a[data-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://go.xxxiijmp.com"],a[href^="https://tracking.avapartner.com/"],a[href^="https://go.xxxjmp.com"],a[href^="http://go.fpmarkets.com/"],a[href^="https://nutrientassumptionclaims.com/"],a[href^="http://click.payserve.com/"],app-ad,a[href^="https://ovb.im/"],[href^="https://glersakr.com/"],a[href^="https://www.awin1.com/cread.php?awinaffid="],a[href^="https://iactrivago.ampxdirect.com/"],a[href^="https://movie.download-file.org/"],[href^="https://cipledecline.buzz/"],[href^="http://join.rodneymoore.com/"],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,a[href^="https://engine.blueistheneworanges.com/"],a[href^="http://www.onclickmega.com/jump/next.php?"],div[data-spotim-slot],a[href^="https://adjoincomprise.com/"],ad-desktop-sidebar,[href^="https://ilovemyfreedoms.com/landing-"],a[href^="https://go.nordvpn.net/aff"] > img,a[href^="//go.xlviiirdr.com"],a[href^="https://www.adsexse.com/x/"],a[href^="https://meet-to-fuck.com/"],a[href^="http://deloplen.com/"],a[href^="https://www.rabbits.webcam/?id="],a[href^="https://my-movie.club/"],[href^="http://www.fleshlightgirls.com/"],a[href^="https://a2.adform.net/"],[data-advadstrackid],a[href^="http://adserver.adreactor.com/"],[href^="http://www.mypillow.com/"] > img,a[href^="https://financeads.net/tc.php?"],a[href^="https://www.get-express-vpn.com/offer/"],a[href^="https://queersodadults.com/"],[href^="https://cpa.10kfreesilver.com/"],a[href^="https://earandmarketing.com/"],div[data-dfp-id],[href^="https://rapidgator.net/article/premium/ref/"],a[href^="https://azpresearch.club/"],a[href^="https://explore.findanswersnow.net/"],a[href^="https://www.passeura.com/"],a[href^="https://delivery.porn.com/"],a[href^="https://go.xlvirdr.com"],a[href^="https://clicks.pipaffiliates.com/"],div[id^="zergnet-widget"],a[data-obtrack^="http://paid.outbrain.com/network/redir?"],a[href^="https://awecrptjmp.com/"],a[href^="https://s.zlink1.com/"],[href^="https://www.brighteonstore.com/products/"] img,[href^="https://v.investologic.co.uk/"],a[href^="https://partners.fxoro.com/click.php?"],a[href^="https://track.ultravpn.com/"],article.ad,a[href^="https://webroutetrk.com/"],a[href^="https://tm-offers.gamingadult.com/"],a[href^="http://https://www.get-express-vpn.com/offer/"],a[href^="https://itubego.com/video-downloader/?affid="],a[href^="https://track.interactivegf.com/"],a[href^="https://americafirstpolls.com/"],a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"],[data-mobile-ad-id],a[href^="https://static.fleshlight.com/images/banners/"],a[href^="https://geniusdexchange.com/"],div[data-google-query-id],a[href^="http://affiliates.thrixxx.com/"],a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img,a[href^="https://go.xtbaffiliates.com/"],a[href^="https://a.montangop.top/"],a[href^="https://tupitea.co/"],a[href^="https://banners.livepartners.com/"],[name^="google_ads_iframe"],a[href^="https://get2nesoft1.ru/"],a[href^="https://speedsupermarketdonut.com/"],a[href^="https://pongidsrunback.com/"],[href^="https://freecourseweb.com/"] > .sitefriend,a[href^="//benoopto.com/"],gpt-ad,div[id^="gpt-ad-hor"],ark-top-ad,a[href*="http://MyPillow.com"] > img,[href^="https://secure.bmtmicro.com/servlets/"],a[href^="https://a.bestcontentweb.top/"],a[href^="https://thaudray.com/"],[href^="https://mylead.global/stl/"] > img,[data-ad-manager-id],div[id^="ad_bnr_"],a[href^="https://lobimax.com/"],a[href^="https://refpazkjixes.top/"],ADS-RIGHT,a[href^="https://affcpatrk.com/"],a[href^="https://www.clicktraceclick.com/"],a[href^="https://gghf.mobi/"],div[data-alias="300x250 Ad 1"],iframe[src^="http://ad.yieldmanager.com/"],a[href^="https://track.healthtrader.com/"],div[class^="Display_displayAd"],div[id^="gtm-ad-"],a[href^="https://go.currency.com/"],a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"],a[href^="https://www.googleadservices.com/pagead/aclk?"],div[id^="crt-"][style],display-ads,a[href^="https://vlnk.me/"],a[data-oburl^="https://paid.outbrain.com/network/redir?"],a[href^="https://adultfriendfinder.com/go/page/landing"],a[href^="https://go.xlviirdr.com"],div[id*="MarketGid"],[class^="amp-ad-"],a[href^="https://mob1ledev1ces.com/"],a[href^="https://www.bebi.com"],a[href^="https://tour.mrskin.com/"],[onclick*="content.ad/"],[data-name="adaptiveConstructorAd"],a[href^="https://a.bestcontentoperation.top/"],a[href^="https://traffdaq.com/"],a[href^="https://ads.leovegas.com/redirect.aspx?"],[data-adblockkey],a[href^="https://landing.brazzersnetwork.com/"],div[id^="adfox_"],a[href^="https://avtub.click/assets/link.php"],a[href^="http://tour.mrskin.com/"],div[id^="adngin-"],a[href^="https://www.jackery.com?aff="] > img,a[href^="https://go.admjmp.com/"],div[data-content="Advertisement"],div[id^="lazyad-"],a[href^="https://spygasm.com/track?"],a[href^="https://pb-track.com/"],a[href^="https://ads.cdn.live/"],a[href^="https://aaucwbe.com/"],a[href^="https://albionsoftwares.com/"],div[id^="yandex_ad"],DFP-AD,a[href^="https://pcm.bannerator.com/"],a[href^="https://click.a-ads.com/"],[data-ez-name],a[href^="https://trk.moviesflix4k.xyz/"],div[id^="sticky_ad_"],div.fadeInDown[id$="____equal"][class$="____equal"],a[href^="http://bc.vc/?r="],a[href^="//thaudray.com/"],[href^="https://www.cloudways.com/en/?id"],a[href^="https://www.iyalc.com/"],a[href^="http://ads2.williamhill.com/redirect.aspx?"],a[href^="https://www.mrskin.com/account/"],div[id^="gpt_ad_"],a[href^="https://www.mypornstarcams.com/landing/click/"],[href^="http://clicks.totemcash.com/"],[href^="https://infinitytrk.com/"],a[data-redirect^="https://paid.outbrain.com/network/redir?"],a[href^="https://www.nutaku.net/signup/landing/"],a[href^="http://hotcandyland.com/partner/"],a[href^="https://as.conjectwatson.com/"],span[id^="ezoic-pub-ad-placeholder-"],AD-SLOT,[href="https://jdrucker.com/gold"] > img,a[href^="https://black77854.com/"],a[href^="//voyeurhit.com/cs/"],[href^="https://goldforyourfuture.com/clk.trk"] img,a[href^="//go.eabids.com/"],a[href^="https://www.healthrangerstore.com/"] > img,a[href^="https://track.effiliation.com/servlet/effi.click?"] > img,a[href^="https://wantopticalfreelance.com/"],a[href^="https://paid.outbrain.com/network/redir?"],a[href^="http://rs-stripe.wsj.com/stripe/redirect"],a[href^="https://go.tmrjmp.com"],a[href^="https://cpartner.bdswiss.com/"],a[href^="https://ndt5.net/"],div[id*="ScriptRoot"],a[href^="https://engine.trackingdesks.com/"],[href^="https://www.reimageplus.com/"],a[href^="https://losingoldfry.com/"],a[href^="https://go.ebrokerserve.com/"],a[href^="https://intenseaffiliates.com/redirect/"],a[href*="https://www.sweetdeals.com/"] img,a[href^="https://deliver.tf2www.com/"],a[href^="https://twinrdsyn.com/"],div[id^="div-gpt-"],a[href^="https://ad.kubiccomps.icu/"],a[href^="http://www.advcashpro.com/aff/"],amp-fx-flying-carpet,div[data-role="sidebarAd"],a[href^="https://frameworkdeserve.com/"],a[href^="https://chaturbate.jjgirls.com/?track="],a[href^="https://fast-redirecting.com/"],a[href^="https://www.adultempire.com/"][href*="?partner_id="],a[href^="https://ads-for-free.com/click.php?"],div[data-insertion],div[id^="ad-gpt-"],a[href^="https://vo2.qrlsx.com/"],a[href^="https://medleyads.com/"],app-advertisement,a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"],[href^="https://awbbjmp.com/"],a[href^="https://iac.ampxdirect.com/"],div[class^="s-dfp-"],a[href^="https://1startfiledownload1.com/"],a[href*=".zlink9.com/"],a[href^="https://landing.brazzersplus.com/"],a[href^="https://aff-ads.stickywilds.com/"],[href^="https://track.fiverr.com/visit/"] > img,a[href^="https://syndication.exoclick.com/"],[href^="//ngeoziadiyc4hi2e.com/"],div[id^="vuukle-ad-"],a[href*=".zlinkm.com/"],a[href^="https://go.alxbgo.com/"],a[href^="https://1free33style.com/"],a[href^="https://iqbroker.com/"][href*="?aff="],[href^="https://trackfin.asia/"],[href^="https://routewebtk.com/"],[href^="https://stvkr.com/"],[href^="https://wct.link/"],a-ad,a[href^="https://engine.phn.doublepimp.com/"],div[id^="ad-div-"],div[class^="kiwi-ad-wrapper"],a[href^="http://www.coiwqe.site/"],a[href^="https://join.virtualtaboo.com/track/"],[data-m-ad-id],a[href^="https://trk.watchlivesports4k.club/"],a[href^="https://www.sweetdeals.com"],[href^="http://trafficare.net/"],a[href^="http://trk.mdrtrck.com/"],a[href^="https://moneynow.one/"],a[href^="https://mmwebhandler.aff-online.com/"],a[href^="https://transfer.xe.com/signup/track/redirect?"],a[href^="https://lead1.pl/"],a[href^="https://track.themadtrcker.com/"],a[href^="https://www.bang.com/?aff="],[id^="section-ad-banner"],div[id^="ads300_250-widget-"],a[href^="https://natour.naughtyamerica.com/track/"],a[href^="https://bs.serving-sys.com"],a[href^="https://affpa.top/"],div[data-adunit-path],a[href^="http://traffic.tc-clicks.com/"],[href^="http://join.shemalesfromhell.com/"],a[href^="https://click.dtiserv2.com/"],zeus-ad,[href^="http://join.shemale.xxx/"],a[href^="https://bongacams10.com/track?"],hl-adsense,a[href^="https://join.dreamsexworld.com/"],[href^="https://detachedbates.com/"],a[href*=".flndmyiove.net/"],a[href^="https://www.adskeeper.com"],AMP-AD,a[href^="https://misspkl.com/"],a[href^="https://taghaugh.com/"],div[id^="adspot-"],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,div[id^="dfp-slot-"],a[href^="https://ptapjmp.com/"],a[href^="https://reachtrgt.com/"],a[href^="https://bestcond1tions.com/"],a[href^="http://adf.ly/?id="],a[href^="https://www.sugarinstant.com/?partner_id="],[data-d-ad-id],a[href^="https://go.trackitalltheway.com/"],a[href^="http://secure.vivid.com/track/"],[href^="http://go.cm-trk2.com/"],[href^="https://www.mystore.com/"] > img,a[href^="https://adserver.adreactor.com/"],a[href^="http://www.onwebcam.com/random?t_link="],[data-freestar-ad],a[href^="https://go.xxxijmp.com"],a[href^="http://static.fleshlight.com/images/banners/"],a[href^="https://ismlks.com/"],a[href*=".engine.adglare.net/"],a[href^="https://www.bet365.com/"][href*="affiliate="],[href^="https://optimizedelite.com/"] > img,[href^="https://go.astutelinks.com/"],a[href^="https://track.totalav.com/"],a[href^="https://googleads.g.doubleclick.net/pcs/click"],a[href^="https://msecure117.com/"],a[href^="https://track.adform.net/"],a[href^="https://fertilitycommand.com/"],a[href^="https://torrentsafeguard.com/?aid="],a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"],a[href^="https://trf.bannerator.com/"],a[href^="https://scurewall.co/"],div[id^="advads-"],guj-ad,a[href^="https://tracking.gitads.io/"],div[id^="js-dfp-"],a[href^="https://www.vfreecams.com/in/?track="],a[href^="https://click.hoolig.app/"],a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"],div[id^="google_dfp_"],[href^="https://totlnkcl.com/"],div[data-id-advertdfpconf],[href^="https://mypillow.com/"] > img,div[id^="ads250_250-widget-"],a[href^="https://bluedelivery.pro/"],div[id^="ad-position-"],a[href^="https://bngpt.com/"],a[href^="https://offers.refchamp.com/"],AD-TRIPLE-BOX,div[id^="rc-widget-"],a[href^="https://www.oboom.com/ref/"],a[href^="http://go.247traffic.com/"],a[href^="https://adnetwrk.com/"],[class^="div-gpt-ad"],a[href^="https://tracking.comfortclick.eu/"],a[href^="https://t.hrtye.com/"],a[href^="https://adclick.g.doubleclick.net/"],a[href^="https://go.markets.com/visit/?bta="],a[href^="http://www.gfrevenge.com/landing/"],div[data-adzone],a[href^="https://t.adating.link/"],a[href^="http://pityhostngco2.xyz/"],a[href^="https://thechleads.pro/"],a[href^="https://trusted-click-host.com/"],a[href^="https://go.gldrdr.com/"],[href^="https://affect3dnetwork.com/track/"],div[id^="taboola-stream-"],[href="https://ourgoldguy.com/contact/"] img,a[href^="https://axdsz.pro/"],a[href^="https://deliver.ptgncdn.com/"],div[data-contentexchange-widget],[id^="google_ads_iframe"],a[href^="https://ttf.trmobc.com/"],a[href^="https://serve.awmdelivery.com/"],ad-shield-ads,a[href^="https://t.hrtyj.com/"],a[href^="https://look.utndln.com/"],a[href^="https://track.clickmoi.xyz/"],a[href^="https://tragency-clesburg.icu/"],div[id^="ad_script_"],a[href^="https://www.oneclickroot.com/?tap_a="] > img,a[href^="https://meet-sex-here.com/"],[data-dynamic-ads],a[href^="http://wct.link/"],div[id^="div-ads-"],[href^="https://click2cvs.com/"],a[href^="https://oackoubs.com/"],a[href="//rufflycouncil.com/"],[href^="http://misslinkvocation.com/"],a[href^="https://track.afftck.com/"],a[href^="https://chaturbate.com/in/?tour="],div[id^="_vdo_ads_player_ai_"],a[href^="https://www.privateinternetaccess.com/"] > img,div[class^="gpt-ad-hor"],[href^="http://homemoviestube.com/"],a[href^="http://cam4com.go2cloud.org/aff_c?"],a[href^="https://fakelay.com/"],[id^="div-gpt-ad"],a[href^="https://go.goasrv.com/"],a[href^="https://adswick.com/"],div[id^="ad-inserter-"],a[href^="https://click.linksynergy.com/fs-bin/"],a[href^="https://cpmspace.com/"],amp-embed[type="taboola"],a[href^="https://go.goaserv.com/"],a[href^="https://clickadilla.com/"],a[href^="https://topoffers.com/"][href*="/?pid="],a[href^="https://ads.betfair.com/redirect.aspx?"],a[href^="https://dooloust.net/"],a[href^="https://tc.tradetracker.net/"] > img,a[href^="//chrif8kdstie.com/"],[href^="https://www.hostg.xyz/"] > img,a[href^="https://land.brazzersnetwork.com/landing/"],a[href^="https://m.do.co/c/"] > img,a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="],[href^="https://mystore.com/"] > img,a[href^="https://a-ads.com/"],div[data-ad-wrapper],[href^="http://join.trannies-fuck.com/"],a[href^="https://www.brazzersnetwork.com/landing/"],amp-ad-custom,app-large-ad,a[href^="https://dfsdkkka.com/"],a[href^="https://go.zybrdr.com"],[href^="https://join3.bannedsextapes.com"],a[href^="https://clixtrac.com/"],a[href^="https://uncensored3d.com/"],a[href^="https://www.chngtrack.com/"],a[href^="https://k2s.cc/pr/"],a[href^="https://www.sheetmusicplus.com/?aff_id="],a[href^="http://d2.zedo.com/"],div[data-adunit],a[href^="https://www.nudeidols.com/cams/"],[href^="https://www.herbanomic.com/"] > img,[href^="https://join.playboyplus.com/track/"],[href^="https://www.targetingpartner.com/"],a[href^="https://join.virtuallust3d.com/"],[href^="https://clk.right-wing-health.com/"],a[href^="https://cams.imagetwist.com/in/?track="],a[href^="https://streamate.com/landing/click/"],a[href^="https://claring-loccelkin.com/"],div[data-ad-targeting],a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"],a[href^="https://lnkxt.bannerator.com/"],div[id^="dfp-ad-"],a[href^="//lambingsyddir.com/"],a[href^="https://burpee.xyz/"],aside[id^="advads_ad_widget-"],a[href^="https://join.sexworld3d.com/track/"],a[href^="//syndication.dynsrvtbg.com/"],div[id^="ad-server-"],div[class^="native-ad-"],a[href^="https://bestdatinghere.life/"],div[data-ad-placeholder],a[href^="http://paid.outbrain.com/network/redir?"],[href^="https://ad.admitad.com/"],amp-connatix-player,a[href^="https://www.financeads.net/tc.php?"],a[href^="https://go.247traffic.com/"],iframe[src^="https://pagead2.googlesyndication.com/"],a[href^="https://odnxe.lncredlbiedate.com/"],a[href^="http://bodelen.com/"],a[href^="https://ad.doubleclick.net/"],a[href^="https://www.profitablecpmgate.com/"],a[href^="https://5hjdbfjfd5.monster/"],a[href^="https://takeallsoft.ru/"],[href^="https://www.mypatriotsupply.com/"] > img,a[href^="https://agacelebir.com/"],a[href^="https://gohere.pl/"],[data-revive-zoneid],a[href^="https://syndication.dynsrvtbg.com/"],[href^="https://www.mypillow.com/"] > img,a[data-oburl^="http://paid.outbrain.com/network/redir?"],div[data-native-ad],a[href^="https://ausoafab.net/"],[id^="ad-wrap-"],div[class^="Adstyled__AdWrapper-"],a[href^="http://adultfriendfinder.com/go/page/landing"],[href^="http://residenceseeingstanding.com/"],a[href^="https://mk-cdn.net/"],a[href^="https://www.infowarsstore.com/"] > img,a[href^="http://allaptair.club/"],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"],div[id^="adrotate_widgets-"],a[href^="https://ad.zanox.com/ppc/"] > img,a[href^="https://prf.hn/click/"][href*="/adref:"] > img,div[aria-label="Ads"],a[href^="//agacelebir.com/"],a[href^="https://someperceptionparade.com/"],[href^="http://mypillow.com/"] > img,a[href^="https://go.etoro.com/"] > img,a[href^="https://cam4com.go2cloud.org/"],a[href^="https://go.cmtaffiliates.com/"],[href^="https://r.kraken.com/"],a[href^="https://ads.ad4game.com/"],a[href^="https://track.afcpatrk.com/"],a[href^="https://www.onlineusershielder.com/torrent-guard/?"],a[href^="https://playuhd.host/"],a[href^="http://tc.tradetracker.net/"] > img,[href^="http://join.hardcoreshemalevideo.com/"],a[href^="https://myusenet.xyz/"],a[href^="http://affiliate.glbtracker.com/"],a[href^="https://porntubemate.com/"],a[href^="https://watchmygirlfriend.tv/"],a[href^="//coarsewary.com/"],a[href^="https://www.mrskin.com/tour"] { display: none !important }</style>
+
+</body></html>
