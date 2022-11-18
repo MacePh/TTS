@@ -1,0 +1,43 @@
+
+ 
+.addBtn {
+  background: #bff5d1;
+  color: rgb(0, 0, 0);
+  /* width: 100px;
+  height: 40px; */
+  /* float: right; */
+  text-align: center;
+  /* font-size: 16px; */
+  position:relative
+  cursor pointer;
+  transition: 0.3s;
+  border-radius: 3;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+.inputArea{
+  width:50%;
+}
+.textBox{
+  width: 50%;
+  height: 30px;
+}
+.itemButton{
+  border:0;
+  background: #fff;
+  width:20rem;
+}
+.itemButton:hover {
+  text-decoration-line: line-through;
+  background-color: #bbb;
+}
+.hvrBtn{
+  border:0;
+  color: #fff;
+  background-color: #fff;
+}
+.hvrBtn:hover {
+  background-color: #bbb;
+}
