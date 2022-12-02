@@ -60,15 +60,19 @@ public class Grinch {
 			 System.out.println("Hello, "+name +"!");
 		 }
 		 public void heartSize() {
-			 System.out.println(name+ "'s heart is"+age +" sizes compared to the average Who in Whoville!");
+			 System.out.println(name+ "'s heart is"+heartSize +" sizes compared to the average Who in Whoville!");
+		 }
+		 public void getFeels() {
+			 System.out.println("When asked how he feels about Christmas, "+name+" will tell you "+feelsForXmas+"!");
 		 }
 		 public void getPlans() {
-			 System.out.println("When asked how he feels about Christmas, "name+" will tell you "+feelsForXmas+"!");
+			 System.out.println("The "+name+" plans to "+plansForXmas+"! Stuff like: ");
 		 }
 		 public void runIt() {
-			 this.greetPet();
-			 this.agePet();
-			 this.typePet();
+			 this.greetGrinchy();
+			 this.heartSize();
+			 this.getFeels();
+			 this.getPlans();
 		 }
 		
 //		Boolean
@@ -93,11 +97,11 @@ public class Grinch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+	
+		Grinch grinch = new Grinch("Grinch", -2, "hates it.", "steal xmas from the Whos down in Whoville");
 		
-		Grinch grinch = new Grinch("Grinch", -2, "hates it.", "steal xmas from the who's in Who-ville");
-//		System.out.println(grinch.stealPresents("Stockings", "Roast Beast", "trees"));
-		
-		
+		grinch.runIt();
+		System.out.print(grinch.stealPresents("Stockings, Roast Beast, & trees!"));
 		//String list = "pizza";
 	}
 
