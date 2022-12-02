@@ -2,6 +2,8 @@ package controlFlowMP;
 
 import java.util.Scanner;
 
+//import java.util.Scanner;
+static Scanner scanner = null;
 public class Test {
 
 	public static void main(String[] args) {
@@ -21,19 +23,25 @@ public class Test {
 	}
 
 	public static void userChoices() {
-		Scanner scanner = new Scanner(System.in);
+		
+		try {
+			scanner = new Scanner(System.in);
 
-		String choice = scanner.next();
+			String choice = scanner.next();
 
-		if (choice.equals("1")) {
-			System.out.println(" you chose number 1,silly!");
-		} else if (choice.equals("2")) {
-			System.out.println(" you chose number 2!");
-		} else if (choice.equals("3")) {
-			System.out.println(" you chose number 3!");
-		} else if (choice.equalsIgnoreCase("q")) {
-			System.out.println("the game will end now!");
-			System.exit(0);
+			if (choice.equals("1")) {
+				System.out.println(" you chose number 1,silly!");
+			} else if (choice.equals("2")) {
+				System.out.println(" you chose number 2!");
+			} else if (choice.equals("3")) {
+				System.out.println(" you chose number 3!");
+			} else if (choice.equalsIgnoreCase("q")) {
+				System.out.println("the game will end now!");
+				System.exit(0);
+			}
+		} finally {
+			if (scanner != null)
+				scanner.close();
 		}
 	}
 
