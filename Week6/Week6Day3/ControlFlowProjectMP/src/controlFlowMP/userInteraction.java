@@ -67,12 +67,23 @@ public class userInteraction {
 		String q6 = "What is the name of your favorite pet? (alphabetic inputs)";
 		String q7 = "Name of the your favorite actor or actress? (alphabetic inputs)";
 		String[] question1 = { q0, q1, q2, q3, q4, q5, q6, q7 };
-
+		String questionAnswer = "";
 		for (int i = 0; i < 5; i++) { // loops through question[] up to q5 where the answers become strings and adds
-										// user repsonse to int answer1[]
-			System.out.println(question1[i]);
-			int a = qScan.nextInt();
-			answer1.add(i, a);
+			Boolean invalidInput = true; // user repsonse to int answer1[]
+			while (invalidInput == true) {
+
+				try {
+					System.out.println(question1[i]);
+					questionAnswer = qScan.nextLine(); // if it works
+					Integer questionAnswerInt = Integer.parseInt(questionAnswer);
+					answer1.add(i, questionAnswerInt);
+					invalidInput = false;
+				} catch (Exception e) {
+					System.out.println("Incorrect, only enter valid inputss");
+				}
+
+			}
+
 		}
 //		System.out.println(answer1); // loops through question[] from q5 - q7 and add the strings responses string
 		// answer2[]

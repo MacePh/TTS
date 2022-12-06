@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://techtalentsouth.slides.com/techtalentsouth/oop-principles?token=XSi8_tuf#/0/11 -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars reveal-is-ready fonts-are-ready" data-account="" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>OOP Principles</title>
+    <meta name="description" content="A presentation created with Slides.">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta property="og:title" content="OOP Principles">
+    <meta property="og:description" content="A presentation created with Slides.">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://media.slid.es/thumbnails/e46ec9f59ecc754a031cf7855cc35f2e/thumb.jpg?1605886747">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/techtalentsouth/oop-principles?token=XSi8_tuf">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./OOP Principles_files/css2" onload="this.onload=null;this.removeAttribute(&#39;media&#39;);" rel="stylesheet" data-application-font="inter">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" data-application-font="inter">
+</noscript>
+
+    <link rel="stylesheet" media="all" href="./OOP Principles_files/slides-321f9cf86a0d5f55c789340bfab5578b6c15251bf8ef1c818c6cc78376a0d230.css">
+    <link rel="stylesheet" media="all" href="./OOP Principles_files/deck-consumption-4f67286e45dbb1cefdb356f50c5dcc554c5ae86f6becd50dd006ac19e26b6d5a.css">
+    	<link rel="stylesheet" media="all" href="./OOP Principles_files/deck-v2-52b2f07feba210d651a559e960fc8e470003c288daa7750ea49d62784a543e13.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="7GYknBPVC872BNdjmUTEglx965JC6HAkox1fJ1AsP3uDNsIZr9zC/QTtXEeVnre7hn9rVhyXPq22/6pWtCU9FA==">
+    <script type="application/javascript" async="" defer="" src="./OOP Principles_files/track.js.download"></script><script type="text/javascript" async="" src="./OOP Principles_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./OOP Principles_files/js"></script>
+<script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    window.slidesMeasurementId = 'G-LWVDH9STBJ';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LWVDH9STBJ', {
+      page_title: 'decks-show'
+    });
+
+  }
+</script>
+
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="OOP Principles">
+	<meta name="twitter:description" content="A presentation created with Slides.">
+	<meta name="twitter:image" content="https://media.slid.es/thumbnails/e46ec9f59ecc754a031cf7855cc35f2e/thumb.jpg?1605886747">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./OOP Principles_files/opensans.css"><link rel="stylesheet" href="./OOP Principles_files/css"><style type="text/css" media="screen">.uv-icon{box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon .uv-tooltip-container{position:relative}.uv-icon .uv-tooltip-container .uv-icon-tooltip{display:none;position:absolute;height:20px;padding:4px 8px;background-color:#464653;color:white;font-size:12px;border-radius:4px;line-height:18px;font-family:"Open Sans", sans-serif;white-space:nowrap}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left,.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{top:0;bottom:0;margin:auto 10px}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top,.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{transform:translate(-30%);margin:10px auto}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top{bottom:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{top:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left{right:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{left:100%}.uv-icon .uv-tooltip-container:hover .uv-icon-tooltip{display:block}.uv-icon-trigger{display:block;width:39px;height:39px;border:none;padding:0;cursor:pointer;background:none}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;transition:background 200ms}.uv-bottom .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{transition:none !important}.uv-fade{opacity:1;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{transform:translateY(100%)}.uv-slide-left.uv-is-hidden{transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{transform:translateX(100%)}
+</style><script type="text/javascript" src="./OOP Principles_files/zoom-e1f94838c054500b9ea32c1cdb27173f7796522bc2af1b0c8efe98c65a4c57b7.js.download"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style></head>
+  <body style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url(&#39;https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png&#39;)"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue" style="--slide-width:960px; --slide-height:700px; --slide-scale:0.644643;">
+			<div class="reveal slide embedded has-vertical-slides ready focused" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.644643);">
+					<section class="stack present" data-id="f431dfb80dd3d104d831182c584e8297" style="display: block;" data-previous-indexv="10"><section data-id="2b20f773eccb8804f9fe5ed3153e18df" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 490px; height: auto;" data-block-id="a5d8eb66eec5c53a6ece0f5ed7454fcf" data-name="text-2ba989">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="image" data-name="image-64b11b" style="width: 612.681px; height: 490px; left: 173.659px; top: 0px; min-width: 1px; min-height: 1px;" data-block-id="b93a7aa4aceb2fc6600433c80846c202"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1688" data-natural-height="1350" style="" data-lazy-loaded="" src="./OOP Principles_files/TTS-Identity-FullColor-HorizontalStack.png"></div></div>
+</section><section data-id="393c01acebe8fb56759b8e4b6534a6c6" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="7e90ca8400c6b89ab590c98f273b8e7c" data-name="text-9057d8">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>Table of Contents</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-a7cbaa" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="e9c0ab7707e336988f6488f397cd11cf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: center;">
+<ul>
+	<li>
+	<p>Overview</p>
+	</li>
+	<li>
+	<p>Abstraction</p>
+	</li>
+	<li>
+	<p>Encapsulation</p>
+	</li>
+	<li>
+	<p>Inheritance</p>
+	</li>
+	<li>
+	<p>Polymorphism</p>
+	</li>
+</ul>
+</div></div></section><section data-id="c812443db64a5c4095987a0459e39b33" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="47625c77d61aa2eac44a7819e4f11ed7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Overview</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-65a392" style="height: auto; width: 960px; left: 0px; top: 164px;" data-block-id="b4d5f862f9d4542cf3e6458a8f5ad035"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>These slides will give an overview of OOP without diving into language-specific details. Examples specific to your course's language will be covered next.</p>
+
+<p>&nbsp;</p>
+
+<p>Object-Oriented Programming is a computer programming model (a way of structuring and designing an application).</p>
+
+<p>&nbsp;</p>
+
+<p>Fundamentally, OOP is based on the idea that the world can be represented through templates that define the properties and possible actions associated with real world things.</p>
+
+<p>&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="e1140796d4550db7a3a10e8b83ab7e45">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="01e1d26350138146f241847636b125d3" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="d67238948bcad9562ad0f88f9e3bf5bd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Overview: Example</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-65a392" style="height: auto; width: 960px; left: 0px; top: 158.207px;" data-block-id="f7afcbf5506cd71da3017ea4e97611ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%; text-align: left;">
+<p style="text-align:center">For instance: Imagine if you were trying to explain what an <strong>animal </strong>is.&nbsp;</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left">You might start with saying:&nbsp;</p>
+
+<ul>
+	<li>an animal has legs (or not)&nbsp;</li>
+	<li>an animal has a type of brain</li>
+	<li>an animal eats&nbsp;</li>
+	<li>an animal sleeps</li>
+</ul>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:center">The number of legs or type of brain an animal has would be <strong>properties </strong>of that animal, while the actions (eating and sleeping) would be <strong>methods</strong> an animal can carry out.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="a0b3a8b333c0065b2dab6b1e02f18a4a">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 403.2px; height: 227.136px; left: 492.744px; top: 236.432px; min-width: 1px; min-height: 1px;" data-name="image-63b699" data-block-id="a5155b6cf35b4d2b8bb3faaaf5da12e1"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="300" data-natural-height="169" data-lazy-loaded="" src="./OOP Principles_files/giphy.gif"></div></div></section><section data-id="3b18543fd7124bedcca0139bf9c84ee0" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="15b5411c2e1f0c3c0d9bda8b79f2f084"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Overview</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-65a392" style="height: auto; width: 960px; left: 0px; top: 158.207px;" data-block-id="f79357bcb6c21eda0615855931da6b42"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%; text-align: center;">
+<p style="color:rgb(17, 17, 17)">OOP is focused on creating objects that contain data and functions.</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">This allows us to abstract a lot of the nitty-gritty details of the code from the user, making code easier to use and execute.&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">By grouping data and functions into well-defined areas, OOP makes <strong>code clearly structured</strong>, and <strong>helps to reduce the repetition of code</strong>.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="4418f3bd48f6c861ba03bbc16ec0528b">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 172.263px; height: 172.263px; left: 393.868px; top: 446.816px; min-width: 1px; min-height: 1px;" data-name="image-ce96dc" data-block-id="0fad88c30ae2c54e6f0065b4e2514b7c"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="800" data-natural-height="800" data-lazy-loaded="" src="./OOP Principles_files/giphy(1).gif"></div></div></section><section data-id="2f2d4af6b309996d435f5f973e222ab2" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="3550b751e20961e62360e94342acea00"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Overview</strong></p>
+
+<p>OOP compartmentalizes code as <em>classes</em>&nbsp;and <em>objects</em>.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="de35147065eb30128016d07d3de03278">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="image" data-name="image-f30df3" style="width: 806.4px; height: 338.35px; left: 76.8px; top: 210px; min-width: 1px; min-height: 1px;" data-block-id="a5a2b55d937754a38b388e7454c35da5"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1144" data-natural-height="480" data-lazy-loaded="" src="./OOP Principles_files/Screen_Shot_2020-10-15_at_12.01.37_PM.png"></div></div></section><section data-id="4ef8624c481afdeaa696a7149ef0050d" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 81.5px;" data-block-id="eb474d38902c94a6a45b3dcf1ab4e1fe">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 93%;" dir="ui">
+<p><strong>Abstraction</strong></p>
+
+<p>One of the key features of OOP is that it abstracts data. In other words, only necessary data is shown to a user and we can use methods of an object without actually knowing how they work behind the scenes.</p>
+
+<p>&nbsp;</p>
+
+<p>As a real-world example of abstraction, think of the volume button on your phone! All you need to know is pressing the button will adjust your volume. You don't need to understand any of the mechanical components of the button or the programming behind the feature.</p>
+
+<p>&nbsp;</p>
+
+<p>In programming, this happens with a lot of object functions. In many languages, strings have some sort of "length" property. You know that it returns the length of the string, but you don't need to know how it calculates it.</p>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="da1b92b3f557d28045da947b1e2748b1">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="1e1381bb3b7a461a4e14e5534ad2defc" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="818ee0bdbe3e7c0cd79f5c63185993e7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: center;">
+<p><strong>Encapsulation</strong></p>
+
+<p>Encapsulation is another fundamental tenet of OOP.&nbsp;</p>
+
+<ul>
+	<li>refers to wrapping data and functions together</li>
+	<li>also refers to the ability to hide certain properties of an object.&nbsp;
+	<ul>
+		<li>ensures that users cannot break the functionality of the object</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="7ad97d9ff7158a4b708e0cb0206bfce8">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 336.798px; height: 189.449px; left: 311.601px; top: 370.551px; min-width: 1px; min-height: 1px;" data-name="image-150269" data-block-id="90fdfab7bfb59cb200ec09e7c22e25d1"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="480" data-natural-height="270" data-lazy-loaded="" src="./OOP Principles_files/giphy(2).gif"></div></div></section><section data-id="aa433b6a3be5184947f481e17a9b95b6" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="40793998e661d5a1428c1c5b75eee358"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 90%;">
+<p><strong>Inheritance</strong></p>
+
+<p>To avoid repeating code, classes in OOP can inherit from other classes. This allows you to utilize features from a <em><strong>super class</strong></em> in a more specific <strong><em>subclass</em></strong>.</p>
+
+<p>&nbsp;</p>
+
+<p>For example, you have have a <strong>super class <em>V</em></strong><em><strong>ehicle</strong> </em>that contains features common to all vehicles, such as: <strong>a speed, name, and gas mileage</strong>.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="73d2142950ed7089e8928b87a1b512fe">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 322.473px; height: 241.592px; left: 609.423px; top: 350px; min-width: 1px; min-height: 1px;" data-name="image-e6127b" data-block-id="0643958500e3ec93369b8f056d1e589d"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="307" data-natural-height="230" data-lazy-loaded="" src="./OOP Principles_files/giphy(3).gif"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-b09273" data-block-id="266a659d114b9b954acfce11bceaa3c8" style="height: auto; width: 536.279px; left: 44.0252px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 90%;">
+<p style="color:rgb(17, 17, 17); text-align:center">Then... you could make <strong>subclasses </strong>that inherit those traits.</p>
+
+<ul style="color:rgb(17, 17, 17)">
+	<li>A <em>truck</em>&nbsp;still has the properties of a vehicle, but might contain more data for bed storage.</li>
+	<li>A <em>Motorcycle</em>&nbsp;could also contain data for the motorcycle-specific safety features.</li>
+</ul>
+</div></div></section><section data-id="a683f3800c774221aaf3799b955f9a30" class="past" style="display: block;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="07f7cf3fb3e307d895aae6a507da8b34"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Polymorphism</strong></p>
+
+<p>Polymorphism allows subclasses to redefine methods from their parent class. This can allow for further customization within subclasses.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="2bbc4e0525e723c8e7669de33ebbb37f">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 563.361px; height: 316.89px; left: 212.351px; top: 261.555px; min-width: 1px; min-height: 1px;" data-name="image-11c162" data-block-id="c0da22f82e17825aa588e308227f870d"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="480" data-natural-height="270" data-lazy-loaded="" src="./OOP Principles_files/giphy(4).gif"></div></div></section><section data-id="bb6e64c985b78a6c9c6e551d4f208662" class="past" style="display: block;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="b5d1a5daf4e20ca836f333abdcf4695a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Polymorphism: example</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="2e19bb2eaa395315311bc5e0ca1fc4cf">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-b174d2" style="height: auto; width: 493.413px; left: 20px; top: 160.854px;" data-block-id="ea8bcd3913af0d6687ab978481925fd2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p style="color:rgb(17, 17, 17)">For example, the vehicle class may have a function calculates the MPG&nbsp; using a basic formula. However, if a Prius subclass of vehicle needs to alter this calculation based on its specific energy-saving features, it can alter the functionality of its parent class's MPG calculator.</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">This would only change the original function for the Prius class, but other cars derived from vehicles could still use the default MPG calculator.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 283.5px; height: 189px; left: 615.168px; top: 371px; min-width: 1px; min-height: 1px;" data-name="image-d22447" data-block-id="cd18d0eb329b1a9f3e9d24d00f11b5be"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="480" data-natural-height="320" data-lazy-loaded="" src="./OOP Principles_files/giphy(5).gif"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 283.5px; height: 159.6px; left: 615.168px; top: 190.4px; min-width: 1px; min-height: 1px;" data-name="image-6076c4" data-block-id="24d217eaabf3295ccbb270da8ed4bba3"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="540" data-natural-height="304" data-lazy-loaded="" src="./OOP Principles_files/giphy(6).gif"></div></div></section><section data-id="bc2917e30c5c2da5bf9779af4b547e48" class="present" style="display: block;"><div class="sl-block" data-block-type="text" data-name="text-fbf461" style="height: auto; width: 960px; left: 0px; top: 102px;" data-block-id="2f3062f3758cfffdb53a85a3489d84af"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong>Summary</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-name="text-5b763c" data-block-id="4cfdc166dd14d7e5e0a5e00ca26b2fc8">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
+<h2>OOP Principles</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-b174d2" style="height: auto; width: 931.347px; left: 20px; top: 160.854px;" data-block-id="2eb969e916c3943b2b3e9000b22a11ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p style="color:rgb(17, 17, 17)">Object-Oriented Programming is a way to organize computer programs so that data and their associated methods can be grouped together and re-used across instances.&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">The four principles of OOP are:&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><strong>Abstraction</strong>: Abstracts object methods for ease of use</p>
+
+<p style="color:rgb(17, 17, 17)"><strong>Encapsulation</strong>: Classes group object properties with methods. Properties can be shielded from a user's direct access. &nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><strong>Inheritance</strong>: Objects can access methods of their class and any super classes&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><strong>Polymorphism</strong>: Methods can be modified/redefined to fit the particularities of a specific sub-class</p>
+</div></div></section></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div></div><div class="slide-number" style="display: block;"><a href="https://techtalentsouth.slides.com/techtalentsouth/oop-principles?token=XSi8_tuf#/0/11">
+					<span class="slide-number-a">12</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-up enabled" aria-label="above slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(1);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Summary OOP Principles Object-Oriented Programming is a way to organize computer programs so that data and their associated methods can be grouped together and re-used across instances. The four principles of OOP are: Abstraction : Abstracts object methods for ease of use Encapsulation : Classes group object properties with methods. Properties can be shielded from a user's direct access. Inheritance : Objects can access methods of their class and any super classes Polymorphism : Methods can be modified/redefined to fit the particularities of a specific sub-class </div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 652.794px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">OOP Principles</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 692px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+			<div class="deck-sharing">
+				<div class="deck-state" data-tooltip="This deck is only visible to people it has been explicitly shared it with" data-tooltip-maxwidth="250">Private</div>
+			</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/techtalentsouth/oop-principles/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">OOP Principles</h1>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2020-10-15 15:33:45 UTC">2 years ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/techtalentsouth" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description">Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. </p>
+		<ul class="links">
+			
+			 <li><a href="https://twitter.com/techtalentsouth" target="_blank"><span class="icon i-twitter"></span>techtalentsouth</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="https://help.slides.com/">Help</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2022 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":2,"allow_scripts":false,"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":"","deck_templates_mode":null,"default_internal_role":"viewer"},"deck":{"id":1948249,"slug":"oop-principles","title":"OOP Principles","description":"","width":960,"height":700,"margin":0.05,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/e46ec9f59ecc754a031cf7855cc35f2e/thumb.jpg?1605886747","view_count":1898,"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":13,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1618178743283,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2021-12-09T13:13:26.768Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1639055602","sanitize_messages":null,"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="./OOP Principles_files/deck-consumption-52d59a79d8d7c049a3f6477b5434d5c0b65ed1ad401b9d91fa122de7cd772e7d.js.download" defer="defer"></script>
+    	<script src="./OOP Principles_files/deck-ad5840235506b1ae9f1911eee7c2c085efa010a566481a17970b4c7b3c037af2.js.download" defer="defer"></script>
+	
+
+
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+  <style>a[href^="https://ads-for-free.com/click.php?"],[href="https://masstortfinancing.com"] img,a[href^="https://syndication.optimizesrv.com/"],a[href^="http://www.mrskin.com/tour"],a[href^="https://ovb.im/"],a[href^="https://a-ads.com/"],a[href^="http://d2.zedo.com/"],div[data-role="sidebarAd"],[data-adblockkey],[href^="https://traffserve.com/"],div[class^="native-ad-"],a[href^="https://track.wg-aff.com"],a[href^="https://www.camsoda.com/enter.php?id="],div[data-native_ad],a[href^="https://clixtrac.com/"],a[href^="https://reinstandpointdumbest.com/"],AMP-AD,a[href^="https://syndication.exoclick.com/"],a[href^="https://lnkxt.bannerator.com/"],[href^="http://www.mypillow.com/"] > img,a[href^="https://www.rabbits.webcam/?id="],div[data-adzone],[href^="https://optimizedelite.com/"] > img,a[href^="https://a.bestcontentoperation.top/"],a[href^="https://burpee.xyz/"],a[href^="http://www.FriendlyDuck.com/"],[href^="https://affect3dnetwork.com/track/"],div[class^="gpt-ad-hor"],[href^="http://join.trannies-fuck.com/"],a[href^="https://leg.xyz/?track="],a[href^="https://iqbroker.com/"][href*="?aff="],a[href^="http://betahit.click/"],a[href^="https://t.adating.link/"],a[href^="https://www.kingsoffetish.com/tour?partner_id="],a[href^="https://a2.adform.net/"],a[href^="http://https://www.get-express-vpn.com/offer/"],div[data-contentexchange-widget],div[id^="rc-widget-"],a[href^="https://go.cmrdr.com/"],[href^="http://join.ts-dominopresley.com/"],a[href^="https://go.tmrjmp.com"],a[href^="https://www.brazzersnetwork.com/landing/"],[href^="https://wct.link/"],a[href^="http://wct.link/"],div[data-native-ad],div[id^="gpt_ad_"],div[id^="ezoic-pub-ad-"],a[href^="https://wantopticalfreelance.com/"],a[href^="https://gohere.pl/"],a[href^="https://static.fleshlight.com/images/banners/"],a[href^="https://go.xlivrdr.com"],a[href^="https://ak.hetaruwg.com/"],a[href^="https://go.hpyrdr.com/"],[href^="https://www.mypillow.com/"] > img,a[href^="//go.xlviiirdr.com"],div[id^="ads300_100-widget-"],[data-css-class="dfp-inarticle"],a[href^="https://s.zlink2.com/"],[href^="https://www.hostg.xyz/"] > img,a[href^="https://iactrivago.ampxdirect.com/"],[href^="https://go.affiliatexe.com/"],[href^="https://rapidgator.net/article/premium/ref/"],[href^="http://misslinkvocation.com/"],[class^="chp_ads_block"],a[data-redirect^="https://paid.outbrain.com/network/redir?"],[data-ad-manager-id],a[href^="https://www.passeura.com/"],a[href^="https://tracking.trackcasino.co/"],a[href^="https://ads.cdn.live/"],[name^="google_ads_iframe"],a[href^="https://tupitea.co/"],[href^="https://r.kraken.com/"],a[href^="https://pongidsrunback.com/"],a[href^="https://waisheph.com/"],a[href^="https://www.adskeeper.com"],a[href^="https://topoffers.com/"][href*="/?pid="],a[href^="https://spygasm.com/track?"],a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"],a[href^="https://dooloust.net/"],a[href^="https://track.bruceads.com/"],a[href^="https://itubego.com/video-downloader/?affid="],a[href^="https://tragency-clesburg.icu/"],[href^="https://shrugartisticelder.com"],[href^="https://join.playboyplus.com/track/"],a[href^="https://go.skinstrip.net"][href*="?campaignId="],a[href^="https://go.xlviiirdr.com"],[href^="https://kingered-banctours.com/"],a[href^="https://twinrdsyn.com/"],a[href^="https://go.247traffic.com/"],a[href^="https://tm-offers.gamingadult.com/"],div[id^="ads250_250-widget-"],a[href^="https://a.bestcontentweb.top/"],a[href^="http://deloplen.com/"],[data-dynamic-ads],AD-SLOT,[href^="http://homemoviestube.com/"],a[href^="https://go.etoro.com/"] > img,a[href^="http://static.fleshlight.com/images/banners/"],div[id^="crt-"][style],amp-connatix-player,div[id^="adfox_"],a[href^="https://ad.kubiccomps.icu/"],a[href^="https://avtub.click/assets/link.php"],a[href^="https://clicks.pipaffiliates.com/"],a[href^="https://adserver.adreactor.com/"],a[href^="https://go.goasrv.com/"],[href^="https://zone.gotrackier.com/"],a[href^="https://5hjdbfjfd5.monster/"],a[href^="http://traffic.tc-clicks.com/"],a[href^="https://playuhd.host/"],a[href^="https://taghaugh.com/"],a[href^="https://chaturbate.com/in/?track="],a[href^="https://engine.phn.doublepimp.com/"],[href^="https://mypillow.com/"] > img,[href^="https://totlnkcl.com/"],a[href^="https://misspkl.com/"],a[href^="https://go.ebrokerserve.com/"],a[href^="https://serve.awmdelivery.com/"],a[href^="http://paid.outbrain.com/network/redir?"],amp-embed[type="taboola"],a[href^="https://join.virtuallust3d.com/"],div[id*="MarketGid"],[href^="https://v.investologic.co.uk/"],bottomadblock,[class^="amp-ad-"],a[href^="https://www.highperformancegate.com/"],[href^="http://join.shemale.xxx/"],a[href="//rufflycouncil.com/"],a[href^="https://earandmarketing.com/"],a[href^="http://www.coiwqe.site/"],topadblock,div[id^="ad-div-"],a[href^="https://juicyads.in/"],div[id^="zergnet-widget"],a[href^="http://bc.vc/?r="],a[href^="https://chaturbate.com/in/?tour="],[href^="https://engine.gettopple.com/"],a[href^="https://www.nutaku.net/signup/landing/"],a[href*="http://MyPillow.com"] > img,[href^="http://mypillow.com/"] > img,[href^="http://join.rodneymoore.com/"],[data-name="adaptiveConstructorAd"],[id^="ad_sky"],a[href^="https://www.sugarinstant.com/?partner_id="],a[href^="https://www.mypornstarcams.com/landing/click/"],a[href^="https://k2s.cc/pr/"],a[href^="https://aaucwbe.com/"],div[data-adunit-path],aside[id^="advads_ad_widget-"],a[href^="https://porntubemate.com/"],[href^="https://infinitytrk.com/"],[data-m-ad-id],div[id^="adspot-"],a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"],a[href^="https://refpazkjixes.top/"],a[href^="https://track.totalav.com/"],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"],a[href^="https://track.ultravpn.com/"],a[href^="http://pityhostngco2.xyz/"],a[href^="https://trk.watchlivesports4k.club/"],a[href^="https://thechleads.pro/"],div[id^="taboola-stream-"],[href^="https://track.fiverr.com/visit/"] > img,a[href*=".trust.zone"],a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"],[href^="http://residenceseeingstanding.com/"],a[href*=".zlink9.com/"],a[href^="https://www.clicktraceclick.com/"],ad-desktop-sidebar,a[href^="http://click.payserve.com/"],a[href^="https://landing.brazzersplus.com/"],[id^="section-ad-banner"],[href^="http://trafficare.net/"],a[href^="https://landing1.brazzersnetwork.com"],[href^="https://www.targetingpartner.com/"],a[href^="https://bongacams2.com/track?"],a[href^="//lambingsyddir.com/"],div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"],div[id^="div-ads-"],a[href^="//go.eabids.com/"],a[href^="https://cagothie.net/"],div[id^="advads-"],a[href^="https://mmwebhandler.aff-online.com/"],a[href^="https://myusenet.xyz/"],div[id^="ad-server-"],[data-template-type="nativead"],a[href^="https://track.healthtrader.com/"],[data-role="tile-ads-module"],[href^="http://globsads.com/"],a[href^="http://tc.tradetracker.net/"] > img,div[data-dfp-id],div[id^="gtm-ad-"],a[href^="https://clickadilla.com/"],[href^="http://join.shemalepornstar.com/"],a[href^="https://t.grtyi.com/"],a[href^="https://vlnk.me/"],a[href^="https://partners.fxoro.com/click.php?"],a[href^="https://chaturbate.jjgirls.com/?track="],iframe[src^="http://www.adpeepshosted.com/"],a[href^="https://ttf.trmobc.com/"],[data-mobile-ad-id],a[href^="https://americafirstpolls.com/"],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://click.hoolig.app/"],a[href^="https://track.effiliation.com/servlet/effi.click?"] > img,div[aria-label="Ads"],[data-freestar-ad],div[id^="ad-inserter-"],a[href^="https://delivery.porn.com/"],div[id^="advads_"],[href^="http://go.cm-trk2.com/"],div[data-adunit],a[href^="https://pl.premium4kflix.website/"],a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="],a[href^="https://cpmspace.com/"],[href^="http://www.pingperfect.com/aff.php"],DFP-AD,div[id^="adrotate_widgets-"],div[data-alias="300x250 Ad 1"],a[href^="https://bestcond1tions.com/"],a[href^="http://adserver.adreactor.com/"],amp-fx-flying-carpet,a[href^="https://click.a-ads.com/"],a[href^="https://ad.doubleclick.net/"],a[href^="https://www.jackery.com?aff="] > img,a[href^="https://fertilitycommand.com/"],a[href^="https://pcm.bannerator.com/"],a[href^="https://www.get-express-vpn.com/offer/"],a[href^="https://a.bestcontentfood.top/"],a[href^="https://adultfriendfinder.com/go/page/landing"],a[href^="https://tracking.comfortclick.eu/"],a[href^="https://go.xxxiijmp.com"],a[href^="https://www.infowarsstore.com/"] > img,a[href^="https://dialling-abutory.com/"],a[href^="https://ausoafab.net/"],a[href^="http://allaptair.club/"],a[href^="http://www.onwebcam.com/random?t_link="],a[href^="https://fakelay.com/"],aside[id^="adrotate_widgets-"],a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"],a[href^="https://azpresearch.club/"],div[id^="dfp-ad-"],a[href^="https://gghf.mobi/"],a[href^="https://trk.moviesflix4k.xyz/"],a[href^="http://www.advcashpro.com/aff/"],a[href^="https://awecrptjmp.com/"],a[href^="http://trk.mdrtrck.com/"],[href^="https://mystore.com/"] > img,[href^="https://zstacklife.com/"] img,a[href^="https://ads.betfair.com/redirect.aspx?"],[href^="https://join3.bannedsextapes.com"],[class^="div-gpt-ad"],a[href^="http://adf.ly/?id="],a[href^="https://track.afftck.com/"],[onclick*="content.ad/"],[data-d-ad-id],a[href^="https://www.vfreecams.com/in/?track="],[data-ad-module],[id^="google_ads_iframe"],article.ad,a[href^="//pubads.g.doubleclick.net/"],div[id^="vuukle-ad-"],a[href^="https://someperceptionparade.com/"],[href^="http://join.michelle-austin.com/"],a[href*=".flndmyiove.net/"],a[href^="https://go.trackitalltheway.com/"],amp-ad-custom,a[href^="http://rs-stripe.wsj.com/stripe/redirect"],div[data-adname],a[href^="https://click.linksynergy.com/fs-bin/"],a[href^="http://cam4com.go2cloud.org/aff_c?"],a[href^="https://tracking.gitads.io/"],iframe[id^="google_ads_frame"],[href^="https://mylead.global/stl/"] > img,[href^="https://ad.admitad.com/"],a[href^="https://t.hrtye.com/"],a[href^="https://googleads.g.doubleclick.net/pcs/click"],a[href^="https://track.afcpatrk.com/"],a[href^="https://fast-redirecting.com/"],img[src^="https://images.purevpnaffiliates.com"],[href^="https://www.mypatriotsupply.com/"] > img,a[href^="https://go.goaserv.com/"],a[href^="https://www.onlineusershielder.com/torrent-guard/?"],a[href^="https://www.oboom.com/ref/"],[id^="div-gpt-ad"],div[id^="ad-gpt-"],a[href^="https://ismlks.com/"],[href^="https://go.4rabettraff.com/"],a[href^="https://torguard.net/aff.php"] > img,a[href*="https://www.sweetdeals.com/"] img,a[href^="https://financeads.net/tc.php?"],a[href^="https://mob1ledev1ces.com/"],a[href^="https://uncensored3d.com/"],a[href^="https://www.privateinternetaccess.com/"] > img,a[href^="https://moneynow.one/"],a[href^="//voyeurhit.com/cs/"],[id^="ad_slider"],a[data-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://go.alxbgo.com/"],AD-TRIPLE-BOX,a[href^="https://porngames.adult/?SID="],div[id^="ad_bnr_"],a[href^="https://track.adform.net/"],a[href^="https://www.healthrangerstore.com/"] > img,a-ad,a[href^="https://go.gldrdr.com/"],a[href^="https://axdsz.pro/"],a[href^="https://ptapjmp.com/"],a[href^="https://iac.ampxdirect.com/"],a[href^="https://www.mrskin.com/account/"],div[id^="lazyad-"],a[href^="http://go.xtbaffiliates.com/"],[href^="https://awbbjmp.com/"],a[href^="https://adnetwrk.com/"],a[href^="http://pubads.g.doubleclick.net/"],div[data-ad-placeholder],a[href^="https://www.arthrozene.com/"][href*="?tid="],a[href^="https://streamate.com/landing/click/"],a[href^="https://traffdaq.com/"],a[href^="https://creacdn.top-convert.com/"],a[href^="https://banners.livepartners.com/"],[href^="https://mypatriotsupply.com/"] > img,a[href^="//agacelebir.com/"],a[href^="https://deliver.tf2www.com/"],ADS-RIGHT,[href^="https://freecourseweb.com/"] > .sitefriend,a[href^="https://t.aslnk.link/"],[href^="http://clicks.totemcash.com/"],a[href^="https://intenseaffiliates.com/redirect/"],a[href^="https://bluedelivery.pro/"],a[href^="http://affiliate.glbtracker.com/"],a[href^="http://adultgames.xxx/"],a[href^="https://ndt5.net/"],a[href^="https://syndication.dynsrvtbg.com/"],div[class^="kiwi-ad-wrapper"],a[href^="https://scurewall.co/"],a[href^="https://reachtrgt.com/"],a[href^="http://hotcandyland.com/partner/"],a[href^="https://go.nordvpn.net/aff"] > img,[href^="https://secure.bmtmicro.com/servlets/"],a[href^="https://t.hrtyj.com/"],[href^="https://affiliate.fastcomet.com/"] > img,a[href^="https://datingbests.life/"],a[href^="https://watchmygirlfriend.tv/"],a[href^="https://lead1.pl/"],a[href^="https://medleyads.com/"],a[href^="https://aff-ads.stickywilds.com/"],a[href^="https://msecure117.com/"],a[href^="https://tour.mrskin.com/"],a[href^="https://aweptjmp.com/"],a[href^="https://go.xlirdr.com"],a[href^="https://cam4com.go2cloud.org/"],a[href^="https://bongacams10.com/track?"],[href^="https://routewebtk.com/"],div[id^="google_dfp_"],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,a[href^="https://prf.hn/click/"][href*="/adref:"] > img,a[href^="https://go.currency.com/"],a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="],a[href^="https://dfsdkkka.com/"],a[href^="https://go.markets.com/visit/?bta="],div[id^="div-gpt-"],iframe[src^="http://ad.yieldmanager.com/"],a[href^="http://www.gfrevenge.com/landing/"],a[href^="https://join.sexworld3d.com/track/"],a[href^="https://traffic.bannerator.com/"],[href^="https://www.cloudways.com/en/?id"],a[href^="https://galaxyroms.net/?scr="],a[href^="https://odnxe.lncredlbiedate.com/"],a[href^="https://losingoldfry.com/"],a[href^="https://1startfiledownload1.com/"],a[href^="https://go.xtbaffiliates.com/"],a[href^="https://incisivetrk.cvtr.io/click?"],a[href^="https://track.themadtrcker.com/"],ark-top-ad,div[data-alias="300x250 Ad 2"],a[href^="https://uncensored.game/"],a[href^="https://www.iyalc.com/"],a[data-oburl^="https://paid.outbrain.com/network/redir?"],a[href^="https://www.profitablecpmgate.com/"],a[href^="http://secure.vivid.com/track/"],a[href^="http://tour.mrskin.com/"],a[href^="https://cpartner.bdswiss.com/"],a[href^="https://wittered-mainging.com/"],a[href^="http://intent.bingads.com/"],a[href^="https://tracking.avapartner.com/"],a[href^="https://www.awin1.com/cread.php?awinaffid="],a[href^="https://affpa.top/"],a[href^="//syndication.dynsrvtbg.com/"],a[href^="https://www.mrskin.com/tour"],a[href^="https://meet-to-fuck.com/"],a[href^="https://affcpatrk.com/"],[href^="https://www.herbanomic.com/"] > img,[href^="https://join.girlsoutwest.com/"],a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="],a[href^="https://loboclick.com"],a[href^="https://awentw.com/"],a[href^="https://awptjmp.com/"],div[id^="adngin-"],a[href^="https://www.oneclickroot.com/?tap_a="] > img,div[class^="s-dfp-"],a[href^="https://as.sexad.net/"],a[href^="https://look.utndln.com/"],a[href^="https://agacelebir.com/"],div[data-mpu1],a[href^="https://adjoincomprise.com/"],[href^="http://join.shemalesfromhell.com/"],a[href^="https://a.montangop.top/"],[href^="https://go.xlrdr.com"],a[href^="https://adswick.com/"],[data-advadstrackid],a[href^="https://join.dreamsexworld.com/"],[href^="https://www.reimageplus.com/"],a[href^="https://ad.atdmt.com/"],a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"],a[data-url^="http://paid.outbrain.com/network/redir?"],[href^="https://ilovemyfreedoms.com/landing-"],a[href^="https://get2nesoft1.ru/"],[href^="https://stvkr.com/"],a[href^="https://ads.leovegas.com/redirect.aspx?"],[href^="http://www.fleshlightgirls.com/"],a[href*=".engine.adglare.net/"],[href^="https://go.astutelinks.com/"],[href^="https://click2cvs.com/"],[href^="https://cpa.10kfreesilver.com/"],div[id^="ads300_250-widget-"],[href="https://www.masstortfinancing.com/"] > img,a[href^="https://frameworkdeserve.com/"],[href^="https://www.restoro.com/"],a[href^="https://landing.brazzersnetwork.com/"],display-ads,[data-desktop-ad-id],div[data-google-query-id],a[href^="//wagerprocuratorantiterrorist.com/"],a[href^="https://tc.tradetracker.net/"] > img,a[href^="https://engine.blueistheneworanges.com/"],[data-ad-width],a[href^="https://track.clickmoi.xyz/"],a[href^="https://lobimax.com/"],a[href^="https://aj1070.online/"],app-ad,a[href^="http://ads2.williamhill.com/redirect.aspx?"],a[href^="https://meet-sex-here.com/"],a[href^="https://www.sweetdeals.com"],div[id^="gpt-ad-hor"],a[href^="https://go.strpjmp.com/"],a[href^="//thaudray.com/"],div[id^="ad_position_"],[href^="https://www.brighteonstore.com/products/"] img,a[href^="http://ad.doubleclick.net/"],a[href^="http://enter.anabolic.com/track/"],a[href^="https://affiliate.rusvpn.com/click.php?"],a[href^="https://www.nudeidols.com/cams/"],a[href^="https://go.xxxjmp.com"],a[href^="https://meet-sexhere.com/"],[href^="https://www.avantlink.com/click.php"] img,a[href^="https://queersodadults.com/"],a[href^="https://paid.outbrain.com/network/redir?"],[href^="http://join.hardcoreshemalevideo.com/"],[id^="chp_ads_block"],a[href^="https://adclick.g.doubleclick.net/"],[data-revive-zoneid],ad-shield-ads,a[href^="https://webroutetrk.com/"],a[href^="https://ads.ad4game.com/"],a[href^="https://t.mobtya.com/"],a[href^="https://movie.download-file.org/"],div[id^="sticky_ad_"],[class^="s2nPlayer"],[href^="https://turtlebids.irauctions.com/"] img,div[data-ad-wrapper],a[href^="https://m.do.co/c/"] > img,[href^="https://glersakr.com/"],a[href^="https://go.julrdr.com/"],[id^="ad-wrap-"],div[id^="ad_script_"],a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"],a[href^="https://my-movie.club/"],a[href^="https://www.adultempire.com/"][href*="?partner_id="],a[href^="https://mk-cdn.net/"],gpt-ad,a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"],a[href^="http://googleads.g.doubleclick.net/pcs/click"],a[href^="https://nutrientassumptionclaims.com/"],a[href^="https://transfer.xe.com/signup/track/redirect?"],div[data-content="Advertisement"],a[href^="https://explore.findanswersnow.net/"],a[href^="//coarsewary.com/"],display-ad-component,a[href^="https://www.adsexse.com/x/"],[href^="https://istlnkcl.com/"],a[href^="https://promo-bc.com/"],a[href^="https://pb-track.com/"],a[href^="https://torrentsafeguard.com/?aid="],a[href^="https://oackoubs.com/"],a[href^="https://speedsupermarketdonut.com/"],guj-ad,a[href^="http://partners.etoro.com/"],a[href^="https://1free33style.com/"],[href^="https://trackfin.asia/"],a[href^="https://bestdatinghere.life/"],a[href^="https://www.financeads.net/tc.php?"],div[data-ad-targeting],a[href^="https://camfapr.com/landing/click/"],a[href^="https://deliver.ptgncdn.com/"],a[href^="https://dianches-inchor.com/"],a[href^="https://bs.serving-sys.com"],div[class^="Adstyled__AdWrapper-"],a[data-url^="http://paid.outbrain.com/network/redir?"] + .author,a[href^="https://land.brazzersnetwork.com/landing/"],div[id^="_vdo_ads_player_ai_"],zeus-ad,iframe[src^="https://pagead2.googlesyndication.com/"],a[href^="https://go.xxxijmp.com"],a[href^="https://black77854.com/"],a[href^="https://click.dtiserv2.com/"],div[id*="ScriptRoot"],a[href^="https://www.bang.com/?aff="],a[href^="http://www.onclickmega.com/jump/next.php?"],a[href^="https://albionsoftwares.com/"],a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="],[href^="https://antiagingbed.com/discount/"] > img,div[data-insertion],a[href^="http://go.247traffic.com/"],a[href^="https://trusted-click-host.com/"],app-large-ad,[href^="https://goldcometals.com/clk.trk"],a[href^="https://offers.refchamp.com/"],[href^="https://shiftnetwork.infusionsoft.com/go/"] > img,[href="https://ourgoldguy.com/contact/"] img,a[href^="https://go.admjmp.com/"],a[href^="https://prf.hn/click/"][href*="/camref:"] > img,a[href^="https://claring-loccelkin.com/"],[data-ad-cls],a[href^="https://go.zybrdr.com"],a[href^="https://go.xlvirdr.com"],hl-adsense,div[id^="ad-position-"],div[id^="js-dfp-"],a[href^="https://dishphysics.com/"],a[href^="https://vo2.qrlsx.com/"],[href^="https://www.mystore.com/"] > img,a[href^="https://as.conjectwatson.com/"],div[data-id-advertdfpconf],div[data-spotim-slot],a[href^="https://cams.imagetwist.com/in/?track="],div[class^="Display_displayAd"],a[href^="https://geniusdexchange.com/"],a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img,[href="https://jdrucker.com/gold"] > img,a[href^="http://go.fpmarkets.com/"],a[href^="https://ad.zanox.com/ppc/"] > img,[href^="https://clk.right-wing-health.com/"],a[href^="//chrif8kdstie.com/"],[href^="https://detachedbates.com/"],a[href^="https://trappist-1d.com/"],a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img,a[href^="https://www.bet365.com/"][href*="affiliate="],a[href*=".zlinkm.com/"],a[href^="https://a.adtng.com/"],a[href^="https://see.kmisln.com/"],a[href^="https://s.zlink1.com/"],a[href^="https://www.chngtrack.com/"],a[href^="//benoopto.com/"],a[href^="https://adsrv4k.com/"],[href^="https://cipledecline.buzz/"],a[data-obtrack^="http://paid.outbrain.com/network/redir?"],[href^="//ngeoziadiyc4hi2e.com/"],a[href^="https://trf.bannerator.com/"],a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"],a[href^="https://join.virtualtaboo.com/track/"],a[href^="https://fleshlight.sjv.io/"],a[href^="https://bngpt.com/"],a[href^="https://billing.purevpn.com/aff.php"] > img,a[href^="https://takeallsoft.ru/"],a[href^="http://adultfriendfinder.com/go/page/landing"],div[id^="yandex_ad"],a[href^="https://go.xlviirdr.com"],[onclick^="location.href='http://www.reimageplus.com"],a[href*="//lkstrck2.com/"],a[href^="http://affiliates.thrixxx.com/"],div.fadeInDown[id$="____equal"][class$="____equal"],a[href^="https://www.googleadservices.com/pagead/aclk?"],a[href^="https://natour.naughtyamerica.com/track/"],a[href^="https://www.sheetmusicplus.com/?aff_id="],a[href^="https://go.cmtaffiliates.com/"],a[data-oburl^="http://paid.outbrain.com/network/redir?"],[href^="https://goldforyourfuture.com/clk.trk"] img,[href^="https://noqreport.com/"] > img,span[id^="ezoic-pub-ad-placeholder-"],[data-ez-name],a[href^="https://www.bebi.com"],a[href^="https://thaudray.com/"],app-advertisement,div[id^="dfp-slot-"],a[href^="https://engine.trackingdesks.com/"],a[href^="http://bodelen.com/"],a[href^="https://track.interactivegf.com/"],a[href^="https://maymooth-stopic.com/"] { display: none !important }</style>
+
+</body><div></div></html>

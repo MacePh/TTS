@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)https://techtalentsouth.slides.com/techtalentsouth/java-data-structures?token=_YlbjbCY#/32 -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars reveal-is-ready fonts-are-ready" data-account="" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>Java Data Structures</title>
+    <meta name="description" content="These slides include an intro to Data Structures, Arrays, Collections Framework, ArrayList, HashMap, Linked List, Stack, Queues ">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta property="og:title" content="Java Data Structures">
+    <meta property="og:description" content="These slides include an intro to Data Structures, Arrays, Collections Framework, ArrayList, HashMap, Linked List, Stack, Queues ">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://media.slid.es/thumbnails/d5db002ecf324d7314110da742c53842/thumb.jpg?1605886688">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/techtalentsouth/java-data-structures?token=_YlbjbCY">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Java Data Structures_files/css2" onload="this.onload=null;this.removeAttribute(&#39;media&#39;);" rel="stylesheet" data-application-font="inter">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" data-application-font="inter">
+</noscript>
+
+    <link rel="stylesheet" media="all" href="./Java Data Structures_files/slides-321f9cf86a0d5f55c789340bfab5578b6c15251bf8ef1c818c6cc78376a0d230.css">
+    <link rel="stylesheet" media="all" href="./Java Data Structures_files/deck-consumption-4f67286e45dbb1cefdb356f50c5dcc554c5ae86f6becd50dd006ac19e26b6d5a.css">
+    	<link rel="stylesheet" media="all" href="./Java Data Structures_files/deck-v2-52b2f07feba210d651a559e960fc8e470003c288daa7750ea49d62784a543e13.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ZzEBDPYwQF4YbRFiGFb52XxADfU4q/GgPNy943z+KuwIYeeJSjmJbeqEmkYUjIrgpkKNMWbUvykpPkiSmPcogw==">
+    <script type="application/javascript" async="" defer="" src="./Java Data Structures_files/track.js.download"></script><script type="text/javascript" async="" src="./Java Data Structures_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./Java Data Structures_files/js"></script>
+<script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    window.slidesMeasurementId = 'G-LWVDH9STBJ';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LWVDH9STBJ', {
+      page_title: 'decks-show'
+    });
+
+  }
+</script>
+
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="Java Data Structures">
+	<meta name="twitter:description" content="These slides include an intro to Data Structures, Arrays, Collections Framework, ArrayList, HashMap, Linked List, Stack, Queues ">
+	<meta name="twitter:image" content="https://media.slid.es/thumbnails/d5db002ecf324d7314110da742c53842/thumb.jpg?1605886688">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./Java Data Structures_files/opensans.css"><link rel="stylesheet" href="./Java Data Structures_files/css"><style type="text/css" media="screen">.uv-icon{box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon .uv-tooltip-container{position:relative}.uv-icon .uv-tooltip-container .uv-icon-tooltip{display:none;position:absolute;height:20px;padding:4px 8px;background-color:#464653;color:white;font-size:12px;border-radius:4px;line-height:18px;font-family:"Open Sans", sans-serif;white-space:nowrap}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left,.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{top:0;bottom:0;margin:auto 10px}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top,.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{transform:translate(-30%);margin:10px auto}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top{bottom:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{top:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left{right:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{left:100%}.uv-icon .uv-tooltip-container:hover .uv-icon-tooltip{display:block}.uv-icon-trigger{display:block;width:39px;height:39px;border:none;padding:0;cursor:pointer;background:none}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;transition:background 200ms}.uv-bottom .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{transition:none !important}.uv-fade{opacity:1;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{transform:translateY(100%)}.uv-slide-left.uv-is-hidden{transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{transform:translateX(100%)}
+</style><script type="text/javascript" src="./Java Data Structures_files/highlight-0adde8531514527653fdb445e29c1cca3687dc50684c4b8f624246a318dc706a.js.download"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style><script type="text/javascript" src="./Java Data Structures_files/zoom-e1f94838c054500b9ea32c1cdb27173f7796522bc2af1b0c8efe98c65a4c57b7.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <body style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll show">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url(&#39;https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png&#39;)"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue" style="--slide-width:960px; --slide-height:700px; --slide-scale:0.643286;">
+			<div class="reveal slide embedded has-horizontal-slides ready focused" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.643286);">
+					<section data-background-image="https://media.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpeg" data-id="cda958e5ba0a20e5fd571784e8b23b23" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 959px; left: 1px; top: 511px; height: auto;" data-block-id="503651ccf97e5a59fc321e59decfa2bb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui" data-gramm_id="197670f9-6cad-0ecd-66d1-73b2572f0068" data-gramm="true" data-gramm_editor="true">
+<h2><span style="font-size:1.0em">Data Structures</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 638.939px; height: 511px; left: 156.022px; top: 0px; min-width: 1px; min-height: 1px;" data-block-id="0a27d01fff3f1a514f820c7deca3b051"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1688" data-natural-height="1350" style="" data-lazy-loaded="" src="./Java Data Structures_files/newTTSLogo.png"></div></div>
+</section><section data-id="866c52d3be29534a94f85dfe3282946a" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="73ca9d3cefb9a8b1b2709199baceb661">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>Homework Review</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+
+<div class="sl-block" data-block-type="text" data-name="text-8d2994" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="2728cdc3f431e64541b0e98ab3c871ac"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>We need a few volunteers to share his/her homework solution!</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-43e693" style="width: 232.602px; height: 239.386px; left: 363.699px; top: 210px; min-width: 1px; min-height: 1px;" data-block-id="d3792f1a8aaa2bec1af9bb595b03062f"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="480" data-natural-height="494" style="" data-lazy-loaded="" src="./Java Data Structures_files/giphy.gif"></div></div>
+</section><section data-id="2e5fefea10e38f79aef488550df43fcc" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="0f0ff8d2a3796d5a7fe7d6dd9522f4da">
+<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" dir="ui">
+<h2>Today's Lesson</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-110468" data-block-id="51b7473e5cd5b1f9767842a7c78019a7" style="height: auto; width: 953.428px; left: 6.572px; top: 101.583px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li style="color:rgb(0, 0, 0)">
+	<p><span style="color:#000000"><span style="font-size:0.9em">Introduction to Data Structures</span></span></p>
+	</li>
+	<li style="color:rgb(0, 0, 0)">
+	<p><span style="color:#000000"><span style="font-size:0.9em">Arrays</span></span></p>
+	</li>
+	<li style="color:rgb(0, 0, 0)">
+	<p><span style="font-size:0.9em">Collections Framework</span></p>
+	</li>
+	<li style="color:rgb(0, 0, 0)">
+	<p><span style="font-size:0.9em">ArrayList</span></p>
+	</li>
+	<li style="color:rgb(0, 0, 0)">
+	<p><span style="font-size:0.9em">HashMap</span></p>
+	</li>
+	<li style="color:rgb(0, 0, 0)">
+	<p><span style="color:#000000"><span style="font-size:0.9em">Linked List</span></span></p>
+	</li>
+	<li style="color:rgb(0, 0, 0)">
+	<p><span style="color:#000000"><span style="font-size:0.9em">Queues</span></span></p>
+	</li>
+	<li style="color:rgb(0, 0, 0)">
+	<p><span style="color:rgb(0, 0, 0); text-align:left">Stacks</span></p>
+	</li>
+</ul>
+</div></div></section><section data-id="91a4baa9fa8c8b0e281d0d45346053c9" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-block-id="21148c3edcf3ef75a44432f146b205e6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Java Review</h2>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-bab34c" data-block-id="3ff3cd7c561ac93aadb8010a9b2dd916" style="height: auto; width: 960px; left: 0px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(17, 17, 17)"><span style="color:rgb(0, 0, 0)">What are the two main Java data types?</span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:rgb(0, 0, 0)">What two components are needed when declaring a variable?</span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:rgb(0, 0, 0)">What is the console method used to read input from a user?</span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:rgb(0, 0, 0)">What comes between <em>if</em>&nbsp;and <em>else </em>?</span></p>
+</div></div></section><section data-id="ac9d9b6a0beba6c4f542523ded993626" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="714a5d4bee6338639f46766a4bec4b66"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="2449be9d-147a-2148-45d0-09bb4db25700" data-gramm="true" data-gramm_editor="true">
+<h2>Java Data Structures</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 108px;" data-block-id="e127f0558ceef4591ba73a39b6ec1791"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui" data-gramm_id="29a952c2-e4bb-4f01-7be8-2fed30e9d1ac" data-gramm="true" data-gramm_editor="true">
+<p>Data structures are different methods of organizing and storing information (data).</p>
+
+<p>&nbsp;</p>
+
+<p>You can have tables of data, lists of data, even trees of data - it just depends on how you want to access or manipulate your data.</p>
+
+<p>&nbsp;</p>
+
+<p>They were built with efficiency in mind. That's how you decide when to use one data structure over the other.&nbsp;</p>
+</div></div>
+
+
+
+
+
+
+</section><section data-id="f15e70843e59bc1552796fe08091b568" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-block-id="0930caadd991b1edb31aa8a1507d2563" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Arrays</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9566d84fbf5169d450e98cc45ae8ef2a" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 97.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="7fb805a4-fe82-5dd9-9442-3be170cedc93" data-gramm="true" data-gramm_editor="true">
+<p><span style="font-size:1.0em"><strong><span style="color:#000000">Arrays</span></strong> are a collection of data.&nbsp; </span></p>
+
+<p><span style="font-size:1.0em">The data stored in an array is collectively known as <strong>elements. &nbsp;</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="d89238ee3f43e6ae4ff83d18ecc72028" style="min-width: 30px; min-height: 30px; width: 649px; height: 217.634px; left: 155.5px; top: 210px;"><div class="sl-block-content notranslate" style="z-index: 13; border: 1px solid rgb(68, 68, 68); border-radius: 5px;" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">//creates an array of strings </span>
+String[] fruit;
+
+<span class="hljs-comment">//creates an array of integers</span>
+<span class="hljs-keyword">int</span>[] classSize;
+
+<span class="hljs-comment">//creates an array of boolean</span>
+<span class="hljs-keyword">boolean</span>[] brokenLights;
+
+<span class="hljs-comment">//creates an array of names</span>
+String[] names = {<span class="hljs-string">"John"</span>, <span class="hljs-string">"Daryl"</span>, <span class="hljs-string">"Mike"</span>, <span class="hljs-string">"Sarah"</span>, <span class="hljs-string">"Michelle"</span>};</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0c99719fc80e919998a24249898c0202" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 448px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-gramm_id="0f69ef7b-538e-7a3e-3aac-24e8b2b0fb48" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:#000000">An array can hold any sort of data type.&nbsp; </span></p>
+
+<p><span style="color:#000000">In Java, <strong>all elements in an array must be of the same data type</strong>.</span></p>
+</div></div>
+</section><section data-id="e969465ccab2f481ecb295ba10b8220b" class="past" style="display: none;" hidden="" aria-hidden="true">
+<div class="sl-block" data-block-type="text" data-block-id="aeb4bb210f5f005d30c051c8fd7074f1" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 86.936px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:1.0em"><span style="color:#000000">Just like characters in Strings, items in an Array can be called by their index:</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="b9a88253a4666a92ae05e96993e37276" style="min-width: 30px; min-height: 30px; width: 456px; height: 94.7852px; left: 252px; top: 210px;"><div class="sl-block-content notranslate" style="z-index: 11; border: 1px solid rgb(68, 68, 68); border-radius: 5px;" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs">String[] my_array = {<span class="hljs-string">"mary"</span>,<span class="hljs-string">"sybil"</span>,<span class="hljs-string">"edith"</span>};
+
+console.printf(my_array[<span class="hljs-number">1</span>]);
+ <span class="hljs-comment">// returns "sybil"</span></code></pre></div></div>
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-block-id="fbd753145ddfc47653c199b438082d91" data-name="text-7322e4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Arrays</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-00bdad" data-block-id="720a660a14db634c50ca994513c3a0fa" style="height: auto; width: 400px; left: 480px; top: 360.059px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:rgb(0, 0, 0)">But isn't "sybil" the 2nd item in the array?</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="color:#000000">Remember: In programming, indecies start at <strong>0</strong>!</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-db2d77" data-block-id="a574237205561400a9231ce0f24a9643" style="width: 308.344px; height: 213.785px; left: 97.828px; top: 356.167px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="300" data-natural-height="208" style="" data-lazy-loaded="" src="./Java Data Structures_files/giphy(1).gif"></div></div></section><section data-id="c0ea53ee50fa80a670dd9f59d3467a05" class="past" style="display: none;" hidden="" aria-hidden="true">
+<div class="sl-block" data-block-type="text" data-block-id="b0bb8b3f6bf7f9a04979a0b214b44e07" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 119px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="f3193263-0dc3-4e9c-3f22-28870d84343a" data-gramm="true" data-gramm_editor="true">
+<p>Using Array methods in Java is done using the Array class in our program.&nbsp; This class is part of the <strong><span style="color:#000000">java.util</span></strong> package and can bring in the inheritance of the Array class that let us create and inspect our array.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="e1c56958e3f50226296906f629a817dc" style="min-width: 30px; min-height: 30px; width: 473.991px; height: 194.398px; left: 243.005px; top: 280px;"><div class="sl-block-content notranslate has-copy-button" style="z-index: 11; border: 1px solid rgb(68, 68, 68); border-radius: 5px;" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">import</span> java.io.Console;
+<span class="hljs-keyword">import</span> java.util.*;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayPractice</span> </span>{
+      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        ...
+          
+      } 
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="0a9008edb890566c59c02a516b70d9fa" style="min-width: 4px; min-height: 4px; width: 198.69px; height: 30.8065px; left: 243.005px; top: 303.635px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="3"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 199 31"><defs><clippath id="shape-mask-1-1530623574455"><rect width="198.69" height="30.8065" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="6"></rect></clippath></defs><rect width="198.69" height="30.8065" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="6" clip-path="url(#shape-mask-1-1530623574455)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-name="text-7322e4" data-block-id="ec8eff8f0bb7fe48c1f1f01dea92fd96"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Arrays</h2>
+</div></div></section><section data-id="62dcb475cefb0cbad7cf0726872d6684" class="past" style="display: none;" hidden="" aria-hidden="true">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 956.404px; left: 0px; top: 84.2475px;" data-block-id="573282187c95b097c3a935950025c4a8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>To find the value of an array element at a specific index, we call the name of the array, followed by square brackets surrounding the index number. To find the size of the array, we call the <strong>.length </strong>method<strong>.</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 562.496px; height: 313.332px; left: 196.954px; top: 235.743px;" data-block-id="dadc2e83cf85e5044700eada00afec93"><div class="sl-block-content notranslate" style="z-index: 12; border: 1px solid rgb(68, 68, 68); border-radius: 5px;" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">import</span> java.io.Console;
+<span class="hljs-keyword">import</span> java.util.*;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayPractice</span> </span>{
+      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        String[] my_array = {<span class="hljs-string">"Aaron"</span>,<span class="hljs-string">"Joan"</span>,<span class="hljs-string">"Layla"</span>};
+        Console console = System.console();
+
+        console.printf(my_array[<span class="hljs-number">1</span>]);
+        <span class="hljs-comment">// returns "Joan"</span>
+        <span class="hljs-keyword">int</span> size = my_array.length;
+        System.out.println(size);
+          <span class="hljs-comment">// returns the length or size of the array (3)</span>
+      }    
+
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 951.807px; left: 4.5965px; top: 0px;" data-name="text-7322e4" data-block-id="c9f432f2bb4422365936b9a6103a46a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h2>Arrays</h2>
+</div></div></section><section data-id="fa6955f1601c235a7ae534017e84abb6" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 951.807px; left: 4.5965px; top: 0px;" data-name="text-7322e4" data-block-id="511a196f4d3ee11278cff4137dd34a20"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Collections Framework</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-9bdf55" data-block-id="cf23b3000375f22ccdd0065e44e84678" style="height: auto; width: 955.404px; left: 0.9995px; top: 311.613px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li style="color:rgb(0, 0, 0); text-align:start">
+	<p><span style="font-size:0.9em"><em>A Collection represents a single unit of objects, i.e., a group.</em></span></p>
+	</li>
+	<li style="color:rgb(0, 0, 0); text-align:start">
+	<p><span style="font-size:0.9em"><em>A framework provides readymade architecture.</em></span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-edeb64" data-block-id="c767585f20d2ad9b61d8c23e76d3e2f1" style="height: auto; width: 955.404px; left: 2.298px; top: 125.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="color:rgb(0, 0, 0)">The <strong>Collection Framework</strong> represents a unified architecture for storing and manipulating a group of objects. It has:</p>
+
+<ol style="color:rgb(0, 0, 0)">
+	<li>Interfaces and its implementations, i.e., classes</li>
+	<li>Algorithm</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-4c55ff" data-block-id="d4f8e6249a5e0953c551ffe89e2761f9" style="height: auto; width: 957.702px; left: 0px; top: 445px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:rgb(34, 34, 34); text-align:left">By providing useful data structures and algorithms, the </span><strong>Collections Framework</strong><span style="color:rgb(34, 34, 34); text-align:left">&nbsp;frees you to concentrate on the important parts of your program rather than less complex code required to make it work.</span></p>
+</div></div></section><section data-id="56b4ff1246a6daaf7a4aaf13cab81ba9" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 951.807px; left: 4.5965px; top: 0px;" data-name="text-7322e4" data-block-id="f6afbe716a029f82e8041d1646246f59"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Collections Framework</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-edeb64" style="height: auto; width: 955.404px; left: 2.298px; top: 125.5px;" data-block-id="3ef2aec22d202d8e2479802868adfa8b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0); text-align:start">The <strong>Collection interface</strong> is the interface which is implemented by all the classes in the collection framework. It declares the methods that every collection will have.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-95169a" data-block-id="14bd1cc94d0b85dfbc7a97b6e06e2d97" style="height: auto; width: 955.404px; left: 2.298px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="color:rgb(0, 0, 0)">The <strong>List interface</strong> is the child interface of Collection interface. It inhibits a list type data structure in which we can store the ordered collection of objects. It is implemented by the classes ArrayList, LinkedList, Vector, and Stack.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7fadf0" style="height: auto; width: 960px; left: 0px; top: 490px;" data-block-id="6652506a99ead6d0cd007e7376ff0454"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:rgb(0, 0, 0); text-align:start">The </span><strong>java.util</strong><span style="color:rgb(0, 0, 0); text-align:start">&nbsp;package contains all the </span>classes<span style="color:rgb(0, 0, 0); text-align:start">&nbsp;and </span>interfaces<span style="color:rgb(0, 0, 0); text-align:start">&nbsp;for the Collection framework.</span></p>
+</div></div></section><section data-id="c876fd501ef9da388b046889edc26e65" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 951.807px; left: 4.5965px; top: 0px;" data-name="text-7322e4" data-block-id="b6b617a7e05e6617fcc03f633e20214c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Collections Framework</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-edeb64" style="height: auto; width: 955.404px; left: 2.298px; top: 121px;" data-block-id="acd805cc466cb83210bceda96e3d91ba"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="color:rgb(17, 17, 17)">To instantiate the List interface, we must use:</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-0f31ea" data-block-id="8acd10c7a98655c6d00f956201e7e4e7" style="width: 464.495px; height: 92.4322px; left: 248.252px; top: 200px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" data-code-frame="none" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">List &lt;data-type&gt; list1= <span class="hljs-keyword">new</span> ArrayList();  </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">List &lt;data-type&gt; list2 = <span class="hljs-keyword">new</span> LinkedList();  </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">List &lt;data-type&gt; list3 = <span class="hljs-keyword">new</span> Vector();  </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">List &lt;data-type&gt; list4 = <span class="hljs-keyword">new</span> Stack();  </div></td></tr></tbody></table></code></pre></div></div></section><section data-id="b07e5ce2105e410850c4565a01acc50c" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="1af730126b7eb00a86264f9ef3d97abd"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Array vs. ArrayList</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 927px; left: 17px; top: 90.1721px;" data-block-id="b692b23e5c72d659a32a33e39dc6132b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>The Array class will not allow you to change the size of the array. </p>
+
+<p>To do that, you must use an <strong>ArrayList</strong>. </p>
+
+<p>ArrayList is also available by using the <strong>java.util.* </strong>import. While Arrays are fixed sized, <strong>ArrayLists</strong> are <em>d</em><span style="text-align:justify"><em>ynamic sized arrays</em> in Java that allow us to add and remove elements.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 695px; height: 228.549px; left: 133px; top: 311px;" data-block-id="5706e4d6e608cf84124e057573c87cf6"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 101%; border: 1px solid rgb(68, 68, 68); border-radius: 5px;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs"><span class="hljs-keyword">import</span> java.io.Console;
+<span class="hljs-keyword">import</span> java.util.*;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayPractice</span> </span>{
+      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+            <span class="hljs-comment">//our array code from before </span>
+
+        ArrayList&lt;Integer&gt; otherArray = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;(<span class="hljs-number">2</span>);
+        
+      }    
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 614px; height: 56px; left: 200px; top: 434px;" data-block-id="dac61adc4108d1f457f148b88b915e44"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="4"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 614 56"><defs><clippath id="shape-mask-3-1530623575091"><rect width="614" height="56" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="8"></rect></clippath></defs><rect width="614" height="56" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="8" clip-path="url(#shape-mask-3-1530623575091)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bd4d4eeafa385c76608b0aec78ad21bf" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>This creates an array list of Integers call <strong>otherArray</strong>.</p>
+</div></div></section><section data-id="e06ba9849f2d94554dca0dc07c9f1dea" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="2dfc32c033476cc21ddfd9e4600a4ed2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>ArrayList</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 84.7098px;" data-block-id="df89138359dedae91ec8c37d52a37821"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:center"><span style="text-align:justify">To modify our ArrayList, we call on the methods associated with the ArrayList object - <strong>.add(), .get(), .remove()</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 806.582px; height: 374.087px; left: 76.709px; top: 177.978px;" data-block-id="0dd620e5526a5837b574d9bd6ac42132"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 101%; border: 1px solid rgb(68, 68, 68); border-radius: 5px;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs">ArrayList&lt;String&gt; names = ArrayList&lt;String&gt;();  
+<span class="hljs-comment">//Creates an array of string called "names" </span>
+
+ArrayList&lt;String&gt; names = <span class="hljs-keyword">new</span> ArrayList&lt;String&gt;(<span class="hljs-number">5</span>);  
+<span class="hljs-comment">//Creates an array of string called "names" that has 5 indexes</span>
+<span class="hljs-comment">//The size is not permanent and can grow or shrink.  </span>
+
+
+<span class="hljs-comment">//adds elements to the end of the array</span>
+        names.add(<span class="hljs-string">"John"</span>);
+        names.add(<span class="hljs-string">"Heather"</span>);
+        names.add(<span class="hljs-string">"Joe"</span>);
+<span class="hljs-comment">//adds an element to a specifc index</span>
+        names.add(<span class="hljs-number">2</span>, <span class="hljs-string">"Finn"</span>); <span class="hljs-comment">//adds "Finn" to index 2, moves "Joe" to index 3 </span>
+
+<span class="hljs-comment">//retrieves element values based on index number      </span>
+       names.get(<span class="hljs-number">1</span>);  <span class="hljs-comment">//returns "Heather"</span>
+
+<span class="hljs-comment">//removes an element from an ArrayList</span>
+       names.remove(<span class="hljs-string">"Finn"</span>); <span class="hljs-comment">//takes "Finn" out of the list, moves "Joe" back to index 2</span>
+        <span class="hljs-comment">// index 3 no longer exists</span>
+
+
+
+
+          
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-c47ef5" data-block-id="0d196536651303d0884b8d91899ea5fc" style="height: auto; width: 960px; left: 0px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><em><span style="font-size:0.7em">Scroll for additional code</span></em></p>
+</div></div></section><section data-id="4927c0aeef3ee9f69b38cb09641f5069" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="code" style="width: 718.947px; height: 386.732px; left: 120.526px; top: 156.634px;" data-block-id="166be7b0fc831d103014bd0ef978e9e2"><div class="sl-block-style" style="z-index: 10; transform: rotate(360deg);"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 101%; border: 1px solid rgb(68, 68, 68); border-radius: 5px;" data-highlight-theme="monokai-sublime"><pre class="java"><code style="padding: 19px;" class="hljs">names = {John, Heather, Joe, Finn} <span class="hljs-comment">//original ArrayList</span>
+
+<span class="hljs-comment">//reverse the contents by calling Collections.reverse(ArrayListName)</span>
+Collections.reverse(names);
+=&gt;[Finn, Joe, Heather, John] <span class="hljs-comment">//after reversing the elements</span>
+
+
+<span class="hljs-comment">//Get the size of the ArrayList</span>
+System.out.println(names.size());
+=&gt; <span class="hljs-number">4</span>
+
+<span class="hljs-comment">//Checks the array list for a specific element</span>
+names.contains(<span class="hljs-string">"Heather"</span>)
+=&gt; <span class="hljs-keyword">true</span>
+
+<span class="hljs-comment">//remove all elements from list</span>
+names.clear(); 
+ =&gt; names ={}</code></pre></div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="78dd6574a889562f8751b0ee885d919d" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 543.366px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:0.9em">More methods can be found in the <em><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank">ArrayList</a></em> documentation.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="4bc6c567f60175f355b29b57549740e8" data-name="text-6a8d25"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<h2>ArrayList</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-fb77f0" data-block-id="35e268177bb6e30c98d6da084ce78df8" style="height: auto; width: 960px; left: 0px; top: 110.332px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Methods:</p>
+</div></div></section><section data-id="5e9542bef26a028dd14a4e820c553235" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 0px; height: auto;" data-block-id="6a5e08aaf098654421e6e6445cadf8fc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>String to Array to Arraylist</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 727.765px; height: 274px; left: 116.118px; top: 216px;" data-block-id="5aa4409e589b4a1384a6fe405065102c"><div class="sl-block-style" style="z-index: 11; transform: rotate(360deg);"><div class="sl-block-content notranslate" style="z-index: 11; border: 1px solid rgb(68, 68, 68); border-radius: 5px;" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">//Create a new string</span>
+String myString = <span class="hljs-string">"I really love icecream!"</span>;
+
+<span class="hljs-comment">//Create another string that holds the split version of the first</span>
+String str[] = myString.split(<span class="hljs-string">" "</span>);
+
+<span class="hljs-comment">//Use the List class to create a new ArrayList          </span>
+List&lt;String&gt; arrayString = <span class="hljs-keyword">new</span> ArrayList&lt;String&gt;();
+
+<span class="hljs-comment">//Store the contents of our split string as elements in</span>
+<span class="hljs-comment">//arrayString using the Array.asList to convert the string into an array</span>
+arrayString = Arrays.asList(str);
+=&gt;[I, really, love, icecream!] <span class="hljs-comment">//Turns the string myString into an array</span></code></pre></div></div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="b533f333441aacd8caa03a5f7a278baa" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 95px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>&nbsp; For conversion from a String to an Array, we use the String method <strong>&nbsp;.split()</strong>.</p>
+</div></div></section><section data-id="909637709e367d6ce9a8c207adb8b2e7" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 0px; height: auto;" data-block-id="31b2a29f87732022560d8756d87b1e48"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>ArrayList to Array to String</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 632px; height: 290.441px; left: 164px; top: 210px;" data-block-id="388bf11a0afb5c74d2213646320279de"><div class="sl-block-style" style="z-index: 11; transform: rotate(360deg);"><div class="sl-block-content notranslate" style="z-index: 11; border: 1px solid rgb(68, 68, 68); border-radius: 5px;" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">//ArrayList of strings</span>
+fruitList = {<span class="hljs-string">"Apple"</span>, <span class="hljs-string">"Banana"</span>, <span class="hljs-string">"Grape"</span>}
+
+<span class="hljs-comment">//Convert the list to an Array using .toArray method</span>
+Object[] fruitArray =  fruitList.toArray();
+
+<span class="hljs-comment">//create a new string to hold the converted array in string form.</span>
+String fruitString = Arrays.toString(fruitArray);
+=&gt;[Apple, Banana, Grape] <span class="hljs-comment">//output of fruitString</span>
+
+
+<span class="hljs-comment">//to remove brackets and commas, use the String method .replace</span>
+System.out.println(Arrays.toString(fruitArray)
+.replace(<span class="hljs-string">"["</span>,<span class="hljs-string">""</span>).replace(<span class="hljs-string">"]"</span>,<span class="hljs-string">""</span>).replace(<span class="hljs-string">","</span>, <span class="hljs-string">" "</span>));
+=&gt; Apple Banana Grape</code></pre></div></div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 954px; left: 0px; top: 94px;" data-block-id="a0c59dd999fb6b1e119380c81c599901"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="color:rgb(17, 17, 17)">For conversion from an Array to a String, w</span>e use the String class method <strong>.toString()</strong></p>
+</div></div></section><section data-id="d8065f9ca1f0970a2a85da1da2966895" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" data-block-id="84681c15a36f62569713c9957ee72256" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>HashMaps</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7240d916e281033c763e27402ec0f27c" style="height: auto; min-width: 30px; min-height: 30px; width: 948.225px; left: 5.775px; top: 132.505px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><strong>HashMaps</strong> are similar to Arrays and ArrayLists, in that they're a collection of data.</p>
+
+<p>While Arrays are stored by index,</p>
+
+<p>HashMaps store data as <strong>"key"/"value"</strong> pairs.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="524ac069a41e4f73eac586a27153293f" style="min-width: 30px; min-height: 30px; width: 774px; height: 57.044px; left: 92.8875px; top: 362.956px;"><div class="sl-block-content notranslate" style="z-index: 13; border-style: solid; border-width: 1px; border-radius: 5px; border-color: rgb(68, 68, 68);" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">//Creates a HashMap with a String as key and Integer as the value it points to</span>
+HashMap&lt;String, Integer&gt; person = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+       </code></pre></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 522px;" data-block-id="34140d49207fa75284505ca837348111"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p><em><span style="font-size:0.9em">Resource: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html" target="_blank">HashMap Documentation</a></span></em></p>
+</div></div></section><section data-id="aeabf9aa50d4024768f94363ec6af0d9" class="past" style="display: none;" hidden="" aria-hidden="true">
+<div data-block-id="a2763d241d940eebedcefda99cf88175" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 163px;" data-block-type="text" class="sl-block"><div style="z-index: 10;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content">
+<p>Here are some important methods associated with HashMap:</p>
+</div></div>
+<div data-block-id="e63b869c68f414dff4f3a5d5b520a407" style="min-width: 30px; min-height: 30px; width: 606.262px; height: 359px; left: 176.869px; top: 222.849px;" data-block-type="code" class="sl-block"><div style="z-index: 11; font-size: 110%; border-style: solid; border-width: 1px; border-radius: 5px;" class="sl-block-content notranslate" data-highlight-theme="monokai-sublime"><pre class="java"><code style="padding: 27px;" class="hljs">HashMap&lt;String, Integer&gt; person = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+<span class="hljs-comment">//.put adds items to the hash map</span>
+person.put(<span class="hljs-string">"Joan"</span>, <span class="hljs-number">21</span>);
+person.put(<span class="hljs-string">"Anna"</span>, <span class="hljs-number">34</span>);
+person.put(<span class="hljs-string">"Mike"</span>, <span class="hljs-number">55</span>);
+person.put(<span class="hljs-string">"Daniel"</span>, <span class="hljs-number">42</span>);
+
+<span class="hljs-comment">//creates the following HashMap</span>
+=&gt; {Joan=<span class="hljs-number">21</span>, Mike=<span class="hljs-number">55</span>, Daniel=<span class="hljs-number">42</span>, Anna=<span class="hljs-number">34</span>}
+
+
+<span class="hljs-comment">//.get retrieves data from the hash map</span>
+person.get(<span class="hljs-string">"Joan"</span>);
+=&gt; <span class="hljs-number">21</span> <span class="hljs-comment">//returns the value associated with the key</span>
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 768px; left: 96px; top: 108px;" data-block-id="6cbe92f8d19909deef65ce2c1a71b487"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="color:#000000">Each "key" &amp; "value" are separated by an equal (=) sign <span style="font-size:20px">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-block-id="364a9a619fcb88626d67b9ce14a31ed0" data-name="text-9a3d71"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>HashMaps</h2>
+</div></div></section><section data-id="74293bc6b3aff0695880a98a13ad930f" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div style="width: 769.765px; height: 410.023px; left: 95.1175px; top: 144.988px;" data-block-type="code" class="sl-block" data-block-id="16a8fe2b5fe9d76250bcf0c30755d769"><div style="z-index: 10; border-style: solid; border-width: 1px; border-radius: 5px;" class="sl-block-content notranslate" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code style="padding: 27px;" class="hljs"><span class="hljs-comment">//.remove takes the specified key and it's value out of the hash map</span>
+person.remove(<span class="hljs-string">"Mike"</span>);
+=&gt;{Joan=<span class="hljs-number">21</span>, Daniel=<span class="hljs-number">42</span>, Anna=<span class="hljs-number">34</span>}
+
+<span class="hljs-comment">//replace the value of a given key</span>
+person.put(<span class="hljs-string">"Joan"</span>, <span class="hljs-number">42</span>); 
+=&gt;{Joan=<span class="hljs-number">42</span>, Daniel=<span class="hljs-number">42</span>, Anna=<span class="hljs-number">34</span>} <span class="hljs-comment">//changes the associated value from 21 to 42</span>
+
+<span class="hljs-comment">//checks for a key within a HashMap.  Returns a boolean value</span>
+person.containsKey(<span class="hljs-string">"Daniel"</span>);
+=&gt;<span class="hljs-keyword">true</span>
+
+
+<span class="hljs-comment">//checks for a key within a HashMap.  Returns a boolean value</span>
+person.containsValue(<span class="hljs-number">34</span>);
+=&gt;<span class="hljs-keyword">true</span>
+
+<span class="hljs-comment">//Returns true if this map contains no key-value mappings.</span>
+person.isEmpty();
+=&gt; <span class="hljs-keyword">false</span></code></pre></div></div>
+<div style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 102px;" data-block-type="text" class="sl-block" data-block-id="f40b903728a6ef542ac48a0b31ea2c86" data-name="text-91fc2a"><div style="z-index: 11;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content">
+<p>Additional associated with HashMap:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-name="text-9a3d71" data-block-id="77ccfa50c9040324775e8cd47644ba22"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>HashMaps</h2>
+</div></div></section><section data-id="d205eb867b7f3e83b22f8812a7040ba6" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="20a8d5235c0a862e642cfd07609894d8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Loops</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 93.6935px;" data-block-id="d77997e8224eedce86cf246aa747e11b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="color:#000000">As a review, <em>code blocks</em>&nbsp;are chunks of code that come between braces {}.</span></p>
+
+<p><span style="color:#000000">Some blocks come pre-defined with particular rules.</span></p>
+
+<p><span style="color:#000000">These blocks are <strong>loops</strong>.</span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000">They check if a condition is true, then perform a block of code</span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000">until the condition becomes false</span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000">(through some manipulation in the code block)</span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(0, 0, 0)"><span style="color:#000000">An <strong>Iterator</strong> is an object that can be used to loop through collections, like ArrayList and HashSet. It is called an iterator because iterating is the technical term for looping.</span></p>
+
+<p style="color:rgb(0, 0, 0)"><span style="color:#000000">To use an Iterator, you must import it from the java.util package.</span></p>
+</div></div>
+
+
+</section><section data-id="b333a6cbe1c2c7c52e0828b4455d51a4" class="past" style="display: none;" hidden="" aria-hidden="true"><div data-block-id="8c32096fa32a8cd724335a05db4c1486" class="sl-block" data-block-type="text" style="width: 845px; left: 57.5px; top: 0px; height: auto;"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>Looping Through Collections</h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 119.903px;" data-block-id="845286ca020cef7bf6be4fbef7d8cb82"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="78f3384d-c6d1-be8b-0ec3-26f4bd58193a" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:#000000">To loop through collections, we use the <strong>for loop</strong>. The f<strong>or loop</strong> iterates through the collection to access each item individually. &nbsp;</span></p>
+
+<p style="color:rgb(17, 17, 17)">&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000">The <strong>for loop</strong> works on both ArrayLists &amp; HashMaps,</span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000">though in slightly different ways.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-f0051d" data-block-id="70fab8b3deb8ddaa04e44c51bd14d5d3" style="width: 206.649px; height: 206.649px; left: 376.675px; top: 370.943px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="460" data-natural-height="460" style="" src="./Java Data Structures_files/giphy(2).gif" data-lazy-loaded=""></div></div></section><section data-id="ad2110ef5fe5f334cbb1735911994a3d" class="past" style="display: none;" hidden="" aria-hidden="true"><div data-block-id="e8c61e6fcc24af72cd88b66b1eed9a00" class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>ArrayLists forEach</h2>
+</div></div>
+
+<div data-block-id="e4fc059fe7f1a59c918caf49c1100ab7" style="min-width: 30px; min-height: 30px; width: 421.098px; height: 147.108px; left: 52.613px; top: 136.446px;" data-block-type="code" class="sl-block"><div style="z-index: 12; border-style: solid; border-width: 1px; border-radius: 5px; border-color: rgb(68, 68, 68);" class="sl-block-content notranslate" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code style="padding: 11px;" class="hljs">fruitList = [<span class="hljs-string">"Apple"</span>, <span class="hljs-string">"Banana"</span>, <span class="hljs-string">"Grapes"</span>]
+
+
+<span class="hljs-keyword">for</span> (String fruit : fruitList){
+    System.out.println(fruit);
+}</code></pre></div></div>
+
+<div data-block-id="553124fee8254e33db1fc48228a1d4ca" style="min-width: 30px; min-height: 30px; width: 236.528px; height: 105.495px; left: 144.898px; top: 367.252px;" data-block-type="code" class="sl-block"><div style="z-index: 14; border-style: solid; border-width: 1px; border-color: rgb(68, 68, 68); border-radius: 5px;" class="sl-block-content notranslate"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs">$ java ArrayPractice
+Apple
+Banana
+Grapes
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="47e93fee775e0b894fbe775a75a071f3" style="height: auto; min-width: 30px; min-height: 30px; width: 363px; left: 497.603px; top: 152.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="62da4759-51c3-97b0-a072-73edee5628dd" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:#000000">F<strong>ruit</strong> represents each element in the <strong>fruitList</strong> array list.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 323px; left: 517.603px; top: 350px;" data-block-id="0ddf615620c444de58d00361c102100c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-gramm_id="065fc49f-872d-820a-4111-9609f5afe6bb" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:#000000">Each array element is print with each loop through the array list.</span></p>
+</div></div></section><section data-id="f81171b926681497b29a02c71c3fee29" class="past" style="display: none;" hidden="" aria-hidden="true"><div data-block-id="e7e64f254caf8386cc4c852ca30d7709" class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;"><div style="z-index: 11;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>HashMap</h2>
+</div></div>
+
+<div data-block-id="0521ea8e6d91adc18c6e870cbf84c53e" style="min-width: 30px; min-height: 30px; width: 602.701px; height: 176.861px; left: 178.649px; top: 261.57px;" data-block-type="code" class="sl-block"><div style="z-index: 13; border-style: solid; border-width: 1px; border-radius: 5px; border-color: rgb(68, 68, 68);" class="sl-block-content notranslate" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code style="padding: 13px;" class="hljs">person = {Joan=<span class="hljs-number">22</span>, Daniel=<span class="hljs-number">42</span>, Anna=<span class="hljs-number">34</span>}
+
+<span class="hljs-comment">//loop through the hash map and return each key/value pair</span>
+<span class="hljs-keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : person.entrySet()){
+	String key = entry.getKey();
+	Integer value = entry.getValue();
+	System.out.println(key + <span class="hljs-string">":"</span> + value);
+	}</code></pre></div></div>
+<div data-block-id="6273be0da648edee4c688a419f6743ca" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 117px;" data-block-type="text" class="sl-block"><div style="z-index: 14;" data-placeholder-text="Text" data-placeholder-tag="p" class="sl-block-content" data-gramm_id="d40f365e-1c0f-b330-c4cb-12141bd8616a" data-gramm="true" data-gramm_editor="true">
+<p><strong>Map.Entry</strong> interface allows us to work with a hash map entry.</p>
+
+<p>The entrySet( ) method returns a Set containing the map entries. Each of these set elements is a Map.Entry object.</p>
+</div></div>
+<div data-block-id="e4dd67d2d74ea07ec29f1eb99201a672" style="min-width: 30px; min-height: 30px; width: 235.216px; height: 98.9573px; left: 362.392px; top: 474.979px;" data-block-type="code" class="sl-block"><div style="z-index: 15; border-style: solid; border-width: 1px; border-color: rgb(68, 68, 68); border-radius: 5px;" class="sl-block-content notranslate" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs">$ java HashPractice
+Joan:<span class="hljs-number">22</span>
+Daniel:<span class="hljs-number">42</span>
+Anna:<span class="hljs-number">34</span></code></pre></div></div>
+</section><section data-id="206b9ae9f4cf4db7030710428b36b071" class="past" style="display: none;" hidden="" aria-hidden="true"><div data-block-id="acd99b41ffc0a15497b7d3ee042db79a" class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;"><div style="z-index: 10;" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h2>forEach and Map.Entry Exercises</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-8717c5" data-block-id="3b742664ee126077ad0c412287c6dada" style="height: auto; width: 960px; left: 0px; top: 104.495px;"><div class="sl-block-style" style="z-index: 11; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ol>
+	<li style="color:rgb(17, 17, 17)"><span style="font-size:1.0em"><span style="color:rgb(0, 0, 0)">Ask the user for 5 numbers and store them in an array list.</span></span></li>
+</ol>
+
+<p style="color:rgb(17, 17, 17)"><span style="font-size:1.0em"><span style="color:rgb(0, 0, 0)">Then find the sum, product, largest, and smallest of those numbers.</span></span></p>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-48ab1a" data-block-id="0118c2a39172cd1b87a8f61925c161e3" style="height: auto; width: 960px; left: 0px; top: 239.092px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000"><span style="font-size:1.0em">2. You are a car dealer - create a hash map of vehicles:</span></span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000"><span style="font-size:1.0em">The model is the Key, the make is the Value.</span></span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000"><span style="font-size:1.0em">Ask the customer what car (model) they are looking for,</span></span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000"><span style="font-size:1.0em">use the HashMap to determine if you have that vehicle, and what make it is.</span></span></p>
+
+<p style="color:rgb(17, 17, 17)"><span style="color:#000000"><span style="font-size:1.0em">(e.g., "Oh, you're looking for a Civic? Our Honda selection is right over here...")</span></span></p>
+</div></div></section><section data-id="e4d558dcda603f62566f2b41dc3e055d" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-block-id="ada890db0a0063343afed6695c2f5cf4" data-name="text-fe1fcb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>LinkedList</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 119px;" data-block-id="d558efe60788d84e56839407a4e85367" data-name="text-acaa08"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(51, 51, 51)"><span style="color:#000000">In Java, a LinkedList is a very important data structure because it serves as a template for other structures.</span></p>
+
+<p style="color:rgb(51, 51, 51)">&nbsp;</p>
+
+<p style="color:rgb(51, 51, 51)"><span style="color:#000000">LinkedLists consist of many <strong>objects</strong> with references to other objects. Because of this structure, LinkedLists are <em>not</em> indexed.</span></p>
+
+<p style="color:rgb(51, 51, 51)">&nbsp;</p>
+
+<p style="color:rgb(51, 51, 51)"><span style="color:#000000">The LinkedList itself functions as a container for its <strong>nodes</strong>, the objects which make up the list. This container object keeps track of the <strong>first</strong> and the <strong>last</strong> object in the list. It uses <strong>reference variables</strong> to point to these objects.</span></p>
+</div></div></section><section data-id="f7ec6cd2f30f77325b5e2d08a117ecb8" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-fe1fcb" data-block-id="df75b221503cdcc88483016c6b0c422c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>LinkedList</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 920.973px; height: 354.49px; left: 19.5135px; top: 135.51px;" data-block-id="7068ec526793c061e283f3bda7c3cf1a" data-name="image-a5849b"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1842" data-natural-height="709" style="" data-lazy-loaded="" src="./Java Data Structures_files/linkedlist07.png"></div></div></section><section data-id="0c90f17ecc5a6e251fca055a7912d7f6" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-fe1fcb" data-block-id="51d0475d61853511dd63f778a9c25b50"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>LinkedList</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 115.321px;" data-block-id="12188737dd3f4e739a1d87ea3f40265b" data-name="text-9cb9f6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(51, 51, 51)"><span style="color:#000000">Each object within the list has a <strong>next</strong> variable (or field) which references the proceeding object in the list. </span></p>
+
+<p style="color:rgb(51, 51, 51)"><span style="color:#000000"><span class="md-expand">The object that is first, will hold a reference to the object that is second, the second to the third, etc.</span></span></p>
+
+<p style="color:rgb(51, 51, 51)"><span style="color:#000000">But what about the <strong>last</strong> object in the list? What can it point to in its next field? The answer is nothing, so it points to <strong>null</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 673.002px; height: 126.377px; left: 143.499px; top: 402.248px;" data-block-id="824b76db19d262cf249200945c5176e6" data-name="code-3e7f76"><div class="sl-block-content notranslate has-copy-button" data-highlight-theme="monokai-sublime" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LinkedList</span> </span>{
+    <span class="hljs-keyword">private</span> Node first, last; 
+    <span class="hljs-comment">//Declares private variables `first` and `last`, which are 								</span>
+    <span class="hljs-comment">//instances of Node objects, to keep track of the first and last 								</span>
+    <span class="hljs-comment">//nodes of the list.</span>
+}</code></pre></div></div></section><section data-id="0ff69d35d8bba418c31483a32ce04bd7" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-fe1fcb" data-block-id="3c23de8bdcfc7ff32667d16cd9e5472a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>LinkedList</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 950.441px; left: 5.2795px; top: 108.592px;" data-block-id="f889d6227903fc0f612b42e4b72b6291" data-name="text-ba8faa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="afe843f4-58a3-82dd-a231-7741708ca892" data-gramm="true" data-gramm_editor="true">
+<p style="color: rgb(51, 51, 51);"><span style="color:#000000"><span style="text-align:start">Review: LinkedLists aren't indexed, so we don't know what position an object has in reference to the entire list, only which is first, which is last, and which comes after it.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 297.786px; height: 275.452px; left: 331.107px; top: 249.5px;" data-block-id="0866cdef0c5ce3d72820a430d7d036b3" data-name="image-b0ef94"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="480" data-natural-height="444" style="" data-lazy-loaded="" src="./Java Data Structures_files/giphy__29_.gif"></div></div></section><section data-id="3951b47a8706a657604e295f8b0c59d5" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-fe1fcb" data-block-id="4d9326fd48e4c493ddae976566724f2b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>LinkedList</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 663.615px; height: 441.13px; left: 148.192px; top: 154.698px;" data-block-id="8e2970a80a07deaeb7b784c2f1886f30" data-name="code-ba0e78"><div class="sl-block-content notranslate has-copy-button" data-highlight-theme="monokai-sublime" style="z-index: 11;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs">LinkedList&lt;String&gt; animalList = <span class="hljs-keyword">new</span> LinkedList&lt;String&gt;();
+animalList.add(<span class="hljs-string">"frog"</span>);
+animalList.add(<span class="hljs-string">"giraffe"</span>);
+animalList.add(<span class="hljs-string">"buffalo"</span>);
+animalList.add(<span class="hljs-string">"mongoose"</span>);
+System.out.println(animalList);
+<span class="hljs-comment">// =&gt; [frog, giraffe, buffalo, mongoose]</span>
+
+<span class="hljs-comment">// Puts shark as the first element in the ArrayList</span>
+animalList.addFirst(<span class="hljs-string">"shark"</span>); 
+System.out.println(animalList);
+<span class="hljs-comment">// =&gt; [shark, frog, giraffe, buffalo, mongoose]</span>
+
+<span class="hljs-comment">// Puts koala as the last element in the ArrayList</span>
+animalList.addLast(<span class="hljs-string">"koala"</span>); 
+System.out.println(animalList);
+<span class="hljs-comment">// =&gt; [shark, frog, giraffe, buffalo, mongoose, koala]</span>
+    
+<span class="hljs-comment">// This adds the value cuttlefish to the 3rd index of the LinkedList</span>
+animalList.add(<span class="hljs-number">3</span>, <span class="hljs-string">"cuttlefish"</span>); 
+System.out.println(animalList);
+<span class="hljs-comment">// =&gt; [shark, frog, giraffe, cuttlefish, buffalo, mongoose, koala]</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-887c6b" data-block-id="aa867e5e816ec70606bcc425f1b83e27" style="height: auto; width: 953.172px; left: 6.82788px; top: 116.698px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Examples:</p>
+</div></div></section><section data-id="b8750888c9fc4a5d3f048ff9a85b0145" class="past" style="display: block;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-fe1fcb" data-block-id="054add5b4bd8e1aaf7996d4e8b06ac0f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>LinkedList</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-887c6b" style="height: auto; width: 953.172px; left: 6.82788px; top: 116.698px;" data-block-id="4e37c254fc53b05ca5ca8379138e1c8c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Additional examples:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 665.442px; height: 424.302px; left: 147.279px; top: 161.644px;" data-block-id="43bb7e41f32106e156dd06fa9f13da50" data-name="code-adadd5"><div class="sl-block-content notranslate has-copy-button" data-highlight-theme="monokai-sublime" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs">animalList.remove(<span class="hljs-number">3</span>); 
+<span class="hljs-comment">// Removes the element that is at the 3rd index of the LinkedList</span>
+animalList.remove(<span class="hljs-string">"piranha"</span>); 
+<span class="hljs-comment">// Removes the first instance of "piranha" in the LinkedList</span>
+
+animalList.removeFirst(); 
+<span class="hljs-comment">// Removes the first element of the LinkedList</span>
+animalList.removeLast(); 
+<span class="hljs-comment">// Removes the last elements of the LinkedList</span>
+
+animalList.contains(<span class="hljs-string">"giraffe"</span>); 
+<span class="hljs-comment">// Returns `true` if "giraffe" is present in the LinkedList</span>
+
+animalList.size(); 
+<span class="hljs-comment">// Returns an integer denoting the size of the LinkedList</span>
+
+animalList.get(<span class="hljs-number">3</span>); 
+<span class="hljs-comment">// Returns the value located at the 3rd index of the LinkedList</span>
+animalList.set(<span class="hljs-number">3</span>, <span class="hljs-string">"emu"</span>); 
+<span class="hljs-comment">//Sets the value at index 4 to "emu"</span>
+System.out.println(animalList);
+<span class="hljs-comment">// =&gt; [frog, giraffe, buffalo, emu]</span></code></pre></div></div></section><section data-id="42085c7b393229c9a717a2d4d8a427f7" class="past" style="display: block;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-block-id="a47466fb86001c802ededdd930941db0" data-name="text-622117"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Queues</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 110.752px;" data-block-id="2ef98a17753af2f7a1ce392608ee7746" data-name="text-90df4f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="color:#000000"><strong>First In, First Out</strong></span>: <span style="color:#000000"><span style="text-align:start">Whoever joins the line first will leave the line first. </span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="color:#000000"><span style="text-align:start">Objects are added to the back​ and removed from the front.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="color:#000000"><span class="md-expand" style="text-align:start">When adding and removing from a queue, we call it </span><span style="text-align:start"><strong>enqueuing</strong></span><span style="text-align:start"> and </span><span style="text-align:start"><strong>dequeuing</strong></span><span style="text-align:start">. Each data structure has a different name for adding and removing objects.​</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="color:#000000"><span style="text-align:start">Queues have references to their first and last objects, and each object has a reference to the next one.</span></span></p>
+</div></div></section><section data-id="c2697b2d8e86d3c50db03a0947b0428c" class="present" style="display: block;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-622117" data-block-id="63dc6714943f8bb0d05920dc1b592bb7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Queues</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 96.7098px;" data-block-id="4aebda5233d02801523234572a559f5a" data-name="text-63597a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="e5b6d0ab-f15f-d13c-16b1-1aebf8cf5374" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:#000000"><span class="md-expand" style="text-align:start"><strong>Queue</strong> </span><span style="text-align:start">acts as an interface rather than an actual object. </span></span></p>
+
+<p><span style="color:#000000"><span style="text-align:start">We can't instantiate an interface, but we can create an instance of LinkedList and assign it to a Queue interface</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 443.585px; height: 71.5704px; left: 258.207px; top: 244.215px;" data-block-id="3d4e6520192f4db773fedbdcc6aa2d82" data-name="code-e23faa"><div class="sl-block-content notranslate has-copy-button" data-highlight-theme="monokai-sublime" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">import</span> java.util.*;
+
+Queue&lt;String&gt; q = <span class="hljs-keyword">new</span> LinkedList&lt;String&gt;();</code></pre><button class="copy-code-to-clipboard" data-code-to-copy="import java.util.*;
+
+Queue&lt;String&gt; q = new LinkedList&lt;String&gt;();">Copy</button></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-8155c5" data-block-id="1c28c3ca6ec5fe437c3d8689dfe17989" style="height: auto; width: 960px; left: 0px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:0.7em"><em>Note: <strong>import java.util.*; </strong>is required</em></span></p>
+</div></div></section><section data-id="f5d1424ff35d49729b6ddc7c2ecb77fa" hidden="" aria-hidden="true" class="future" style="display: block;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-622117" data-block-id="2b5c8cb96b51a362bb8944a89e9be807"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Queues</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 534.667px; height: 464.054px; left: 212.666px; top: 132.58px;" data-block-id="a845eb750254f82c644ecf5d35b6814f" data-name="code-d9fbd1"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 11;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs">Queue&lt;Integer&gt; myQueue = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;(); 
+
+<span class="hljs-comment">// Adds elements {5, 6, 7, 8, 9} to queue </span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=<span class="hljs-number">5</span>; i&lt;<span class="hljs-number">10</span>; i++) 
+myQueue.add(i); 
+
+<span class="hljs-comment">// Display contents of the queue. </span>
+System.out.println(<span class="hljs-string">"Elements of queue-"</span>+ myQueue); 
+
+<span class="hljs-comment">// To remove the head of queue. </span>
+<span class="hljs-keyword">int</span> removedHead = myQueue.remove(); 
+System.out.println(<span class="hljs-string">"removed element-"</span> + removedHead); 
+
+System.out.println(myQueue); 
+
+<span class="hljs-comment">// To view the head of queue </span>
+<span class="hljs-keyword">int</span> head = myQueue.peek(); 
+System.out.println(<span class="hljs-string">"head of queue-"</span> + head); 
+
+<span class="hljs-comment">// Rest all methods of collection interface, </span>
+<span class="hljs-comment">// Like size and contains can be used with this </span>
+<span class="hljs-comment">// implementation. </span>
+<span class="hljs-keyword">int</span> size = myQueue.size(); 
+System.out.println(<span class="hljs-string">"Size of queue-"</span> + size); </code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-0b6eaf" data-block-id="9354f744e2a1a81a1aa83af451bf7fba" style="height: auto; width: 960px; left: 0px; top: 94.58px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Examples:</p>
+</div></div></section><section data-id="8c2629dbfc7ff472d2c487b3da55cee4" hidden="" aria-hidden="true" class="future" style="display: block;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 952.717px; left: 0px; top: 0px;" data-block-id="51ee70c430b88ade9a9b85090be1743e" data-name="text-b2d250"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="24b23907-e5dd-73e1-0e52-271d440cdbea" data-gramm="true" data-gramm_editor="true">
+<h2>Stacks</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 483px; left: 454.366px; top: 123px;" data-block-id="8d0cd495ffe0511312945d481debf9a1" data-name="text-489f15"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="e5b6d0ab-f15f-d13c-16b1-1aebf8cf5374" data-gramm="true" data-gramm_editor="true">
+<p><span style="color:#000000"><strong>Last in, first out</strong></span></p>
+
+<p><span style="color:#000000"><span style="text-align:start">The most recently added to the stack is the first to be removed. </span><span class="md-expand" style="text-align:start">This can be seen as adding to the front (or the top) and removing from the front (or the top). Adding to a stack is called </span><span style="text-align:start"><strong>pushing</strong></span><span style="text-align:start">, and removing from a stack is called </span><span style="text-align:start"><strong>popping</strong>. </span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 248.833px; height: 321.616px; left: 115.584px; top: 119.192px;" data-block-id="c1b35ef5e11146fbbd46786c63a52398" data-name="image-41102a"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="400" data-natural-height="517" data-lazy-loaded="" src="./Java Data Structures_files/giphy__31_.gif"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-b1e922" data-block-id="9ab02afc781aee5df863409d693629ae" style="height: auto; width: 960px; left: 0px; top: 490px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:1.0em"><span style="color:rgb(0, 0, 0); text-align:start">Note: This can be a useful data structure to use when all of your objects are the same or are used for the same thing.</span></span></p>
+</div></div></section><section data-id="9bcaa361a4020f528930677edafb1b04" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 952.717px; left: 0px; top: 0px;" data-name="text-b2d250" data-block-id="38db82db357c65302e42272873bcb6c3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="24b23907-e5dd-73e1-0e52-271d440cdbea" data-gramm="true" data-gramm_editor="true">
+<h2>Stacks</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 729.398px; height: 352.882px; left: 115.301px; top: 165.366px;" data-block-id="708935f3be85e60fa2ebc97a33fff75b" data-name="code-d8309a"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 11;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-comment">// Imports the data we need to use the Stack class</span>
+
+Stack&lt;Integer&gt; myStack; 
+<span class="hljs-comment">// creates a reference variable for a Stack called myStack</span>
+myStack = <span class="hljs-keyword">new</span> Stack&lt;Integer&gt;(); 
+<span class="hljs-comment">// creates a new Integer Stack and assigns its address to myStack</span>
+
+myStack.push(<span class="hljs-number">1</span>); 
+<span class="hljs-comment">// Pushes 1 to the top of our stack</span>
+<span class="hljs-comment">// myStack now consists of [1]</span>
+myStack.push(<span class="hljs-number">2</span>);
+<span class="hljs-comment">// myStack now consists of [1, 2] </span>
+myStack.push(<span class="hljs-number">3</span>);
+<span class="hljs-comment">// myStack now consists of [1, 2, 3] </span>
+
+<span class="hljs-comment">// Despite pushing to the "top" of the stack, the printed representation </span>
+<span class="hljs-comment">// puts our new numbers at the back. The important part is that they are </span>
+<span class="hljs-comment">// removed from the same place they are added.</span>
+
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-09bb7e" data-block-id="067e0a2a9e5abecaa01037f51c6038f5" style="height: auto; width: 960px; left: 5.68434e-14px; top: 121px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Examples:</p>
+</div></div></section><section data-id="f5dff9827579f6247b514300810c7b74" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 952.717px; left: 0px; top: 0px;" data-name="text-b2d250" data-block-id="73679b78a72b5ba99d351980314f4db9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="24b23907-e5dd-73e1-0e52-271d440cdbea" data-gramm="true" data-gramm_editor="true">
+<h2>Stacks</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-09bb7e" style="height: auto; width: 960px; left: 5.68434e-14px; top: 121px;" data-block-id="7d684cf917d2fe6cba1ec7d70e3ceafa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Additional examples:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 666.174px; height: 262px; left: 146.913px; top: 167.559px;" data-block-id="174bb845748606ad0b6bb86f445eb9ff" data-name="code-b29b62"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs">myStack.pop(); 
+<span class="hljs-comment">//returns 3 and removes it from the stack</span>
+<span class="hljs-comment">//myStack now consists of [1, 2]</span>
+
+<span class="hljs-comment">//We can also look at the top of the stack without </span>
+<span class="hljs-comment">//removing it by using peek</span>
+myStack.peek(); 
+<span class="hljs-comment">//returns 2, but doesn't remove it</span>
+<span class="hljs-comment">//myStack still consists of [1, 2] </span>
+
+<span class="hljs-comment">//We may want to know if a stack is empty before we manipulate it:</span>
+myStack.empty(); 
+<span class="hljs-comment">//this will return `false` because our stack is not empty</span>
+
+</code></pre></div></div></section><section data-id="1cd52beee003ce3793ecd13354f8d3a1" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 952.717px; left: 0px; top: 0px;" data-name="text-b2d250" data-block-id="a9ebc57620c9cc1c414e5e5ffc23d6c8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="24b23907-e5dd-73e1-0e52-271d440cdbea" data-gramm="true" data-gramm_editor="true">
+<h2>Conclusion</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-09bb7e" style="height: auto; width: 960px; left: 0px; top: 114.172px;" data-block-id="4c69c69e74ae648a862a86464f7e7f59"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span><span style="color:rgb(0, 0, 0)">Each of these Collection-Type data structures has a specific purpose in programming that comes from ‘real life’ problems developers try to solve.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span><span style="color:rgb(0, 0, 0)">You should understand these types of data models so that you can easily recognize when you might want to use one in your own programs to make them the most efficient. </span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-7f5d61" data-block-id="0cade1462d20427cf9427ac5ecb4673f" style="width: 278.645px; height: 204.377px; left: 337.036px; top: 380.502px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="499" data-natural-height="366" style="" data-lazy-loaded="" src="./Java Data Structures_files/giphy(3).gif"></div></div></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background past" data-background-hash="0https://media.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpegnullnullnullnullnullnullnullnull" data-loaded="true" style="display: none;"><div class="slide-background-content" style="background-image: url(&quot;https://media.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpeg&quot;);"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="https://techtalentsouth.slides.com/techtalentsouth/java-data-structures?token=_YlbjbCY#/32">
+					<span class="slide-number-a">33</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.864865);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Queues Queue acts as an interface rather than an actual object. We can't instantiate an interface, but we can create an instance of LinkedList and assign it to a Queue interface import java.util.*;
+
+Queue&lt;String&gt; q = new LinkedList&lt;String&gt;(); Note: import java.util.*; is required </div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 647.075px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Java Data Structures</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 308px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+			<div class="deck-sharing">
+				<div class="deck-state" data-tooltip="This deck is only visible to people it has been explicitly shared it with" data-tooltip-maxwidth="250">Private</div>
+			</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/techtalentsouth/java-data-structures/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">Java Data Structures</h1>
+				<p class="description">These slides include an intro to Data Structures, Arrays, Collections Framework, ArrayList, HashMap, Linked List, Stack, Queues </p>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2020-10-14 21:04:29 UTC">2 years ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/techtalentsouth" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description">Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. </p>
+		<ul class="links">
+			
+			 <li><a href="https://twitter.com/techtalentsouth" target="_blank"><span class="icon i-twitter"></span>techtalentsouth</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="https://help.slides.com/">Help</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2022 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":2,"allow_scripts":false,"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":"","deck_templates_mode":null,"default_internal_role":"viewer"},"deck":{"id":1947503,"slug":"java-data-structures","title":"Java Data Structures","description":"These slides include an intro to Data Structures, Arrays, Collections Framework, ArrayList, HashMap, Linked List, Stack, Queues ","width":960,"height":700,"margin":0.05,"visibility":"self","published_at":"2015-01-26T21:37:26.372Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/d5db002ecf324d7314110da742c53842/thumb.jpg?1605886688","view_count":2210,"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":true,"share_notes":false,"slide_number":true,"slide_count":38,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1606163621859,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2021-12-09T13:13:26.768Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1639055602","sanitize_messages":null,"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="./Java Data Structures_files/deck-consumption-52d59a79d8d7c049a3f6477b5434d5c0b65ed1ad401b9d91fa122de7cd772e7d.js.download" defer="defer"></script>
+    	<script src="./Java Data Structures_files/deck-ad5840235506b1ae9f1911eee7c2c085efa010a566481a17970b4c7b3c037af2.js.download" defer="defer"></script>
+	
+
+
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+  <style>a[href^="https://traffic.bannerator.com/"],[href^="https://r.kraken.com/"],[href^="http://trafficare.net/"],[href^="https://zstacklife.com/"] img,a[href^="http://betahit.click/"],a[href^="https://as.conjectwatson.com/"],a[href^="https://a.bestcontentoperation.top/"],a[href^="https://galaxyroms.net/?scr="],a[href^="http://adultgames.xxx/"],a[href^="http://hotcandyland.com/partner/"],a[href^="https://go.julrdr.com/"],div[id^="advads-"],a[href^="https://go.alxbgo.com/"],a[href^="http://enter.anabolic.com/track/"],a[href^="https://go.ebrokerserve.com/"],a[href^="http://intent.bingads.com/"],a[href^="https://geniusdexchange.com/"],div[data-content="Advertisement"],a[href^="https://track.ultravpn.com/"],a[href="//rufflycouncil.com/"],a[href^="https://1free33style.com/"],a[href^="http://adf.ly/?id="],a[href^="https://aff-ads.stickywilds.com/"],a[href^="https://clickadilla.com/"],a[href^="//benoopto.com/"],[href^="//ngeoziadiyc4hi2e.com/"],[href^="https://join3.bannedsextapes.com"],a[href^="https://www.clicktraceclick.com/"],a[href^="https://engine.blueistheneworanges.com/"],a[href^="https://nutrientassumptionclaims.com/"],a[href^="https://go.markets.com/visit/?bta="],a[href^="https://meet-sex-here.com/"],a[href^="https://landing.brazzersplus.com/"],a[href^="https://chaturbate.jjgirls.com/?track="],a[href^="https://www.adultempire.com/"][href*="?partner_id="],[data-freestar-ad],a[href^="https://meet-sexhere.com/"],a[href^="https://aweptjmp.com/"],AD-SLOT,a[href^="https://go.trackitalltheway.com/"],[href^="https://v.investologic.co.uk/"],a[href^="https://t.mobtya.com/"],a[href*=".trust.zone"],a[href^="https://go.xtbaffiliates.com/"],[href^="http://join.shemalesfromhell.com/"],app-ad,[href^="https://mystore.com/"] > img,a[href^="https://cpartner.bdswiss.com/"],a[data-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://track.healthtrader.com/"],a[href^="https://bngpt.com/"],a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://natour.naughtyamerica.com/track/"],a[href^="https://axdsz.pro/"],[href^="https://awbbjmp.com/"],div[id^="rc-widget-"],article.ad,a[href^="//go.eabids.com/"],a[data-oburl^="http://paid.outbrain.com/network/redir?"],div[data-contentexchange-widget],[href^="http://join.michelle-austin.com/"],div[id^="ads300_100-widget-"],a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"],a[href^="https://pcm.bannerator.com/"],ad-desktop-sidebar,[href^="https://www.mypillow.com/"] > img,a[href^="https://track.interactivegf.com/"],a[href^="https://track.adform.net/"],a[href^="//go.xlviiirdr.com"],a[href^="http://ad.doubleclick.net/"],a[href^="https://engine.trackingdesks.com/"],a[href^="https://go.tmrjmp.com"],a[href^="https://go.xxxijmp.com"],a[href^="https://offers.refchamp.com/"],a[href^="https://adsrv4k.com/"],[href^="http://residenceseeingstanding.com/"],a[href^="https://t.aslnk.link/"],a[href^="https://msecure117.com/"],[href^="https://www.avantlink.com/click.php"] img,a[href^="https://datingbests.life/"],a[href^="https://t.hrtyj.com/"],a[href^="https://go.skinstrip.net"][href*="?campaignId="],a[href^="http://secure.vivid.com/track/"],a[href^="https://twinrdsyn.com/"],a[href^="https://cpmspace.com/"],a[href^="http://trk.mdrtrck.com/"],a[href^="https://vo2.qrlsx.com/"],a[href^="https://www.sheetmusicplus.com/?aff_id="],a[href^="https://tour.mrskin.com/"],a[href^="https://tracking.comfortclick.eu/"],a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="],a[href^="http://www.onclickmega.com/jump/next.php?"],div[id^="ad_script_"],[href="https://www.masstortfinancing.com/"] > img,a[href^="https://www.healthrangerstore.com/"] > img,a[data-oburl^="https://paid.outbrain.com/network/redir?"],a[href^="https://adclick.g.doubleclick.net/"],[href="https://masstortfinancing.com"] img,a[href^="https://serve.awmdelivery.com/"],[data-ad-module],a[href^="https://track.effiliation.com/servlet/effi.click?"] > img,a[href^="http://cam4com.go2cloud.org/aff_c?"],div[data-role="sidebarAd"],[href^="https://freecourseweb.com/"] > .sitefriend,div[data-native_ad],a[href^="https://banners.livepartners.com/"],[class^="chp_ads_block"],a[href^="https://someperceptionparade.com/"],[href^="https://www.mypatriotsupply.com/"] > img,div[data-google-query-id],a[href^="https://moneynow.one/"],a[href^="https://a.bestcontentweb.top/"],a[href^="https://ovb.im/"],a[href^="http://www.advcashpro.com/aff/"],[href^="http://join.trannies-fuck.com/"],a[href^="https://www.iyalc.com/"],a[href^="https://www.bang.com/?aff="],div[id^="dfp-slot-"],a[href^="http://partners.etoro.com/"],[id^="ad_sky"],a[href^="https://fast-redirecting.com/"],a[href^="https://go.goaserv.com/"],a[href^="https://track.afftck.com/"],a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="],a[href^="https://mob1ledev1ces.com/"],bottomadblock,a[href^="https://adnetwrk.com/"],a[href^="http://adultfriendfinder.com/go/page/landing"],[href^="https://totlnkcl.com/"],a[href^="https://engine.phn.doublepimp.com/"],a[href^="https://affiliate.rusvpn.com/click.php?"],a[href^="https://cam4com.go2cloud.org/"],a[href^="https://go.hpyrdr.com/"],[data-ez-name],a[href^="https://www.get-express-vpn.com/offer/"],a[href^="https://bestcond1tions.com/"],a[href^="https://refpazkjixes.top/"],a[href^="http://static.fleshlight.com/images/banners/"],a[href^="https://reachtrgt.com/"],a[href^="https://fertilitycommand.com/"],a[href^="https://gghf.mobi/"],div[id^="gpt-ad-hor"],a[href^="https://watchmygirlfriend.tv/"],a[href^="http://pubads.g.doubleclick.net/"],a[href^="https://tracking.avapartner.com/"],[href^="https://ilovemyfreedoms.com/landing-"],[href^="http://join.shemalepornstar.com/"],[href^="https://www.herbanomic.com/"] > img,div[class^="Adstyled__AdWrapper-"],div[data-ad-placeholder],a[href^="https://click.hoolig.app/"],a[href*=".engine.adglare.net/"],iframe[src^="http://ad.yieldmanager.com/"],a[href^="https://click.linksynergy.com/fs-bin/"],[class^="amp-ad-"],a[href^="https://mmwebhandler.aff-online.com/"],div[id^="yandex_ad"],[href^="https://www.reimageplus.com/"],div[id^="zergnet-widget"],div[data-ad-wrapper],a[href^="https://get2nesoft1.ru/"],a[href^="https://billing.purevpn.com/aff.php"] > img,a[href^="https://gohere.pl/"],div[aria-label="Ads"],a[href^="https://bestdatinghere.life/"],a[href^="https://tupitea.co/"],a[href^="https://1startfiledownload1.com/"],a[href^="https://queersodadults.com/"],a[href^="https://explore.findanswersnow.net/"],[href="https://jdrucker.com/gold"] > img,a[href^="https://trappist-1d.com/"],a[href^="https://medleyads.com/"],[href^="http://homemoviestube.com/"],a[href^="https://click.dtiserv2.com/"],a[href^="https://deliver.ptgncdn.com/"],div[id^="adngin-"],a[href^="https://traffdaq.com/"],div[id^="div-ads-"],[href^="https://ad.admitad.com/"],a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"],aside[id^="adrotate_widgets-"],[data-d-ad-id],hl-adsense,[href^="http://go.cm-trk2.com/"],a[href^="https://wantopticalfreelance.com/"],a[href^="http://adserver.adreactor.com/"],a[href^="https://adultfriendfinder.com/go/page/landing"],a[href^="https://go.xxxjmp.com"],a[href^="https://www.passeura.com/"],a[href^="https://www.nudeidols.com/cams/"],a[href^="https://ads-for-free.com/click.php?"],[data-mobile-ad-id],[href^="https://affiliate.fastcomet.com/"] > img,[class^="s2nPlayer"],div[id^="ad-inserter-"],[name^="google_ads_iframe"],div[data-id-advertdfpconf],[class^="div-gpt-ad"],a[href^="https://ads.cdn.live/"],a[href^="https://itubego.com/video-downloader/?affid="],a[href^="https://streamate.com/landing/click/"],div[id^="div-gpt-"],a[href^="https://www.onlineusershielder.com/torrent-guard/?"],div[data-dfp-id],a[href^="https://www.chngtrack.com/"],a[href^="https://bluedelivery.pro/"],a[href*=".flndmyiove.net/"],div[data-alias="300x250 Ad 1"],app-large-ad,a[href*=".zlinkm.com/"],a[href^="https://prf.hn/click/"][href*="/adref:"] > img,a[href^="https://landing.brazzersnetwork.com/"],a[href^="https://www.googleadservices.com/pagead/aclk?"],[id^="chp_ads_block"],[href^="https://shrugartisticelder.com"],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,a[data-redirect^="https://paid.outbrain.com/network/redir?"],a[href^="https://go.zybrdr.com"],amp-embed[type="taboola"],a[href^="https://ad.atdmt.com/"],div[data-native-ad],a[href^="http://traffic.tc-clicks.com/"],a[href^="https://earandmarketing.com/"],[data-ad-width],div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"],AMP-AD,a[href^="https://deliver.tf2www.com/"],div[data-insertion],a[href^="https://join.virtuallust3d.com/"],a[href^="https://torguard.net/aff.php"] > img,a[href^="//wagerprocuratorantiterrorist.com/"],div[id^="adfox_"],a[href^="https://www.profitablecpmgate.com/"],div[id*="ScriptRoot"],[href^="http://join.hardcoreshemalevideo.com/"],a[href^="https://a2.adform.net/"],div[id^="adrotate_widgets-"],a[href^="https://a.bestcontentfood.top/"],a[href^="http://googleads.g.doubleclick.net/pcs/click"],[href^="https://routewebtk.com/"],[data-css-class="dfp-inarticle"],a[href^="https://go.247traffic.com/"],[href^="https://trackfin.asia/"],a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"],[href^="http://mypillow.com/"] > img,a[href^="https://dfsdkkka.com/"],[href^="https://clk.right-wing-health.com/"],a[href^="https://bongacams2.com/track?"],a[href^="https://awecrptjmp.com/"],a[href^="https://lnkxt.bannerator.com/"],a[href^="https://uncensored3d.com/"],a[href^="https://partners.fxoro.com/click.php?"],a[href^="https://iac.ampxdirect.com/"],a[href^="https://www.arthrozene.com/"][href*="?tid="],[href^="https://go.xlrdr.com"],[data-ad-manager-id],a[href^="https://look.utndln.com/"],[href^="https://rapidgator.net/article/premium/ref/"],a[href^="https://fleshlight.sjv.io/"],a[href^="https://trk.moviesflix4k.xyz/"],a[href^="https://speedsupermarketdonut.com/"],[id^="ad_slider"],a[href^="https://reinstandpointdumbest.com/"],a[href^="https://www.nutaku.net/signup/landing/"],a[href^="https://tracking.gitads.io/"],a[href^="http://go.xtbaffiliates.com/"],a[href^="https://porntubemate.com/"],div[id^="sticky_ad_"],a[href^="http://www.onwebcam.com/random?t_link="],a[href^="//lambingsyddir.com/"],a[href^="https://www.highperformancegate.com/"],a[href^="https://www.rabbits.webcam/?id="],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"],a[href^="https://join.dreamsexworld.com/"],a[href^="https://www.bebi.com"],div[id^="taboola-stream-"],a[href^="https://www.sugarinstant.com/?partner_id="],a[href*="//lkstrck2.com/"],ark-top-ad,a[href^="https://www.awin1.com/cread.php?awinaffid="],[href^="https://track.fiverr.com/visit/"] > img,zeus-ad,[href^="http://www.fleshlightgirls.com/"],[href^="https://join.playboyplus.com/track/"],a[href^="https://trf.bannerator.com/"],a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"],a[href^="https://azpresearch.club/"],div[id^="advads_"],div[id^="adspot-"],a[href^="https://juicyads.in/"],[href^="https://detachedbates.com/"],a[href^="http://paid.outbrain.com/network/redir?"],div[id^="ads250_250-widget-"],a[data-url^="http://paid.outbrain.com/network/redir?"] + .author,[href^="https://optimizedelite.com/"] > img,a[href^="https://track.bruceads.com/"],a[href^="https://a.adtng.com/"],[href^="http://www.mypillow.com/"] > img,[href^="https://antiagingbed.com/discount/"] > img,a[href^="https://go.etoro.com/"] > img,div.fadeInDown[id$="____equal"][class$="____equal"],a[href^="https://cagothie.net/"],a[href^="https://www.jackery.com?aff="] > img,[href^="https://affect3dnetwork.com/track/"],div[class^="s-dfp-"],a[href^="https://mk-cdn.net/"],a[href^="https://porngames.adult/?SID="],a[href^="https://transfer.xe.com/signup/track/redirect?"],a[href^="https://go.xlviirdr.com"],a[href^="https://iactrivago.ampxdirect.com/"],a[href^="https://tragency-clesburg.icu/"],a[href^="https://pongidsrunback.com/"],a[href^="https://join.sexworld3d.com/track/"],a[href^="https://topoffers.com/"][href*="/?pid="],a[href^="https://tc.tradetracker.net/"] > img,[href^="https://goldcometals.com/clk.trk"],a[href^="https://burpee.xyz/"],a[href^="https://www.adsexse.com/x/"],a[href^="https://oackoubs.com/"],[data-revive-zoneid],a[href^="https://googleads.g.doubleclick.net/pcs/click"],div[id*="MarketGid"],a[href^="https://ads.betfair.com/redirect.aspx?"],a[href^="https://camfapr.com/landing/click/"],a[href^="https://land.brazzersnetwork.com/landing/"],a[href^="https://www.bet365.com/"][href*="affiliate="],topadblock,div[id^="dfp-ad-"],[href^="https://mylead.global/stl/"] > img,a[href*="http://MyPillow.com"] > img,a[href^="https://click.a-ads.com/"],display-ads,a[href^="https://clicks.pipaffiliates.com/"],div[id^="ad_bnr_"],a[href^="https://affpa.top/"],a[href^="https://www.oneclickroot.com/?tap_a="] > img,a[href^="https://landing1.brazzersnetwork.com"],a[href^="https://tm-offers.gamingadult.com/"],a[href^="http://pityhostngco2.xyz/"],a[href^="https://5hjdbfjfd5.monster/"],a[href^="https://ads.leovegas.com/redirect.aspx?"],[data-role="tile-ads-module"],a[href^="https://go.cmrdr.com/"],a[href^="https://avtub.click/assets/link.php"],a[href^="https://ptapjmp.com/"],[href^="http://join.rodneymoore.com/"],[href^="https://www.cloudways.com/en/?id"],a[href^="https://maymooth-stopic.com/"],a[href^="https://track.totalav.com/"],a[data-obtrack^="http://paid.outbrain.com/network/redir?"],ADS-RIGHT,a[href^="https://www.infowarsstore.com/"] > img,a[href^="http://www.mrskin.com/tour"],a[href^="https://go.xlvirdr.com"],a[href^="https://vlnk.me/"],a[href^="https://takeallsoft.ru/"],a[href^="http://www.FriendlyDuck.com/"],gpt-ad,[href^="https://wct.link/"],a[href^="https://dialling-abutory.com/"],a[href^="https://albionsoftwares.com/"],a[href^="https://movie.download-file.org/"],div[id^="ad-gpt-"],[href="https://ourgoldguy.com/contact/"] img,div[id^="gtm-ad-"],a[href^="https://www.camsoda.com/enter.php?id="],[href^="https://go.4rabettraff.com/"],a[href^="https://go.xlviiirdr.com"],a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img,[href^="https://secure.bmtmicro.com/servlets/"],a[href^="https://creacdn.top-convert.com/"],div[id^="js-dfp-"],[href^="https://engine.gettopple.com/"],a[href^="http://tc.tradetracker.net/"] > img,[href^="https://turtlebids.irauctions.com/"] img,a[href^="https://aaucwbe.com/"],[href^="https://www.targetingpartner.com/"],a[href^="https://ttf.trmobc.com/"],a[href^="https://www.mrskin.com/tour"],a[href^="https://www.mrskin.com/account/"],a[href^="https://pl.premium4kflix.website/"],div[data-adunit-path],a[href^="http://www.coiwqe.site/"],div[class^="native-ad-"],div[id^="ezoic-pub-ad-"],a[href^="https://www.adskeeper.com"],a[href^="http://go.fpmarkets.com/"],a[href^="https://tracking.trackcasino.co/"],a[href^="http://click.payserve.com/"],a[href^="https://playuhd.host/"],a[href^="http://ads2.williamhill.com/redirect.aspx?"],a[href^="https://loboclick.com"],a[href^="https://claring-loccelkin.com/"],a[href^="https://track.wg-aff.com"],div[class^="kiwi-ad-wrapper"],a[href^="https://ad.doubleclick.net/"],a[href^="https://track.themadtrcker.com/"],[href^="http://clicks.totemcash.com/"],div[id^="lazyad-"],a[href^="https://americafirstpolls.com/"],[href^="https://cpa.10kfreesilver.com/"],a[href^="https://go.xxxiijmp.com"],a[data-url^="http://paid.outbrain.com/network/redir?"],aside[id^="advads_ad_widget-"],a[href^="https://financeads.net/tc.php?"],a[href^="https://spygasm.com/track?"],DFP-AD,div[id^="ad_position_"],a[href^="https://dishphysics.com/"],div[id^="ads300_250-widget-"],a[href^="https://www.oboom.com/ref/"],[href^="https://istlnkcl.com/"],span[id^="ezoic-pub-ad-placeholder-"],a[href^="https://s.zlink1.com/"],img[src^="https://images.purevpnaffiliates.com"],a[href^="http://allaptair.club/"],a[href^="https://black77854.com/"],iframe[src^="http://www.adpeepshosted.com/"],a[href^="https://go.goasrv.com/"],a[href^="http://bodelen.com/"],a[href^="https://k2s.cc/pr/"],a[href^="https://thechleads.pro/"],[href^="https://goldforyourfuture.com/clk.trk"] img,[href^="https://www.mystore.com/"] > img,a[href^="https://go.nordvpn.net/aff"] > img,guj-ad,[data-m-ad-id],a[href^="https://www.mypornstarcams.com/landing/click/"],a[href^="http://deloplen.com/"],[href^="https://mypatriotsupply.com/"] > img,a[href^="https://awentw.com/"],[data-desktop-ad-id],a[href^="https://intenseaffiliates.com/redirect/"],a[href^="https://bs.serving-sys.com"],a[href*="https://www.sweetdeals.com/"] img,a[href^="//chrif8kdstie.com/"],div[class^="gpt-ad-hor"],a[href^="https://adswick.com/"],a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="],a[href^="https://promo-bc.com/"],a[href^="https://see.kmisln.com/"],div[data-mpu1],[href^="https://shiftnetwork.infusionsoft.com/go/"] > img,a[href^="https://aj1070.online/"],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"],a[href^="https://cams.imagetwist.com/in/?track="],a[href^="https://syndication.exoclick.com/"],a[href^="https://thaudray.com/"],iframe[src^="https://pagead2.googlesyndication.com/"],a[href^="https://taghaugh.com/"],a[href^="//agacelebir.com/"],a[href^="https://misspkl.com/"],[href^="https://mypillow.com/"] > img,a[href^="http://https://www.get-express-vpn.com/offer/"],a[href^="https://scurewall.co/"],[data-template-type="nativead"],a[href^="http://affiliates.thrixxx.com/"],a[href^="https://a-ads.com/"],a[href^="https://ndt5.net/"],[href^="https://cipledecline.buzz/"],[href^="http://misslinkvocation.com/"],a[href^="https://webroutetrk.com/"],a[href^="https://affcpatrk.com/"],div[id^="gpt_ad_"],a[href^="https://www.financeads.net/tc.php?"],a[href^="https://chaturbate.com/in/?tour="],[id^="div-gpt-ad"],a[href^="http://rs-stripe.wsj.com/stripe/redirect"],a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img,a[href^="https://go.cmtaffiliates.com/"],a[href^="https://www.sweetdeals.com"],display-ad-component,[href^="https://glersakr.com/"],a[href^="http://www.gfrevenge.com/landing/"],a[href^="https://go.xlivrdr.com"],a[href^="https://adjoincomprise.com/"],div[id^="vuukle-ad-"],a-ad,a[href^="https://clixtrac.com/"],[href^="https://noqreport.com/"] > img,a[href^="https://a.montangop.top/"],amp-ad-custom,a[href^="https://prf.hn/click/"][href*="/camref:"] > img,a[href^="//voyeurhit.com/cs/"],a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"],[data-advadstrackid],[id^="ad-wrap-"],a[href^="http://affiliate.glbtracker.com/"],a[href^="https://t.hrtye.com/"],a[href^="https://delivery.porn.com/"],a[href^="http://d2.zedo.com/"],app-advertisement,a[href^="https://ausoafab.net/"],iframe[id^="google_ads_frame"],a[href^="https://ads.ad4game.com/"],a[href^="http://go.247traffic.com/"],div[id^="ad-server-"],a[href^="https://fakelay.com/"],div[data-adzone],a[href^="//coarsewary.com/"],a[href^="https://my-movie.club/"],[href^="https://traffserve.com/"],a[href^="https://m.do.co/c/"] > img,a[href^="https://dianches-inchor.com/"],[id^="google_ads_iframe"],a[href*=".zlink9.com/"],div[data-spotim-slot],a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"],a[href^="https://frameworkdeserve.com/"],a[href^="https://incisivetrk.cvtr.io/click?"],a[href^="https://bongacams10.com/track?"],div[id^="ad-position-"],a[href^="https://trk.watchlivesports4k.club/"],a[href^="//pubads.g.doubleclick.net/"],a[href^="https://go.xlirdr.com"],div[id^="crt-"][style],[href^="http://join.shemale.xxx/"],ad-shield-ads,[href^="https://go.astutelinks.com/"],a[href^="https://odnxe.lncredlbiedate.com/"],a[href^="https://wittered-mainging.com/"],a[href^="https://paid.outbrain.com/network/redir?"],a[href^="https://www.brazzersnetwork.com/landing/"],[href^="https://zone.gotrackier.com/"],[href^="https://www.hostg.xyz/"] > img,[onclick^="location.href='http://www.reimageplus.com"],a[href^="http://tour.mrskin.com/"],div[id^="google_dfp_"],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,a[href^="//syndication.dynsrvtbg.com/"],a[href^="https://myusenet.xyz/"],a[href^="https://join.virtualtaboo.com/track/"],a[href^="https://iqbroker.com/"][href*="?aff="],[href^="https://www.brighteonstore.com/products/"] img,a[href^="//thaudray.com/"],a[href^="https://www.vfreecams.com/in/?track="],[data-name="adaptiveConstructorAd"],a[href^="https://ak.hetaruwg.com/"],amp-connatix-player,a[href^="https://syndication.optimizesrv.com/"],a[href^="https://go.gldrdr.com/"],div[data-ad-targeting],amp-fx-flying-carpet,div[class^="Display_displayAd"],a[href^="https://waisheph.com/"],a[href^="https://leg.xyz/?track="],[href^="https://go.affiliatexe.com/"],[href^="https://infinitytrk.com/"],a[href^="https://trusted-click-host.com/"],a[href^="https://agacelebir.com/"],[data-dynamic-ads],a[href^="https://torrentsafeguard.com/?aid="],a[href^="https://www.kingsoffetish.com/tour?partner_id="],[href^="https://kingered-banctours.com/"],a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"],[href^="https://join.girlsoutwest.com/"],a[href^="http://bc.vc/?r="],[data-adblockkey],a[href^="https://lobimax.com/"],a[href^="http://wct.link/"],a[href^="https://t.grtyi.com/"],[href^="http://www.pingperfect.com/aff.php"],div[data-adunit],[href^="http://globsads.com/"],a[href^="https://go.strpjmp.com/"],[href^="https://click2cvs.com/"],div[data-adname],[href^="https://www.restoro.com/"],div[id^="ad-div-"],AD-TRIPLE-BOX,a[href^="https://go.currency.com/"],a[href^="https://s.zlink2.com/"],a[href^="https://go.admjmp.com/"],a[href^="https://meet-to-fuck.com/"],a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="],a[href^="https://ad.kubiccomps.icu/"],a[href^="https://ismlks.com/"],a[href^="https://losingoldfry.com/"],div[data-alias="300x250 Ad 2"],a[href^="https://t.adating.link/"],a[href^="https://dooloust.net/"],a[href^="https://www.privateinternetaccess.com/"] > img,[data-ad-cls],a[href^="https://lead1.pl/"],a[href^="https://syndication.dynsrvtbg.com/"],div[id^="_vdo_ads_player_ai_"],[id^="section-ad-banner"],a[href^="https://ad.zanox.com/ppc/"] > img,a[href^="https://static.fleshlight.com/images/banners/"],a[href^="https://uncensored.game/"],a[href^="https://track.clickmoi.xyz/"],[href^="http://join.ts-dominopresley.com/"],a[href^="https://adserver.adreactor.com/"],a[href^="https://chaturbate.com/in/?track="],a[href^="https://pb-track.com/"],[href^="https://stvkr.com/"],a[href^="https://as.sexad.net/"],[onclick*="content.ad/"],a[href^="https://awptjmp.com/"],a[href^="https://track.afcpatrk.com/"] { display: none !important }</style>
+
+</body></html>

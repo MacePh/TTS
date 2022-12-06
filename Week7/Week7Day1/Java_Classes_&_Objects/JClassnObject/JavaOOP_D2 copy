@@ -1,0 +1,1191 @@
+
+
+## Java OOP Day 2
+
+## Homework Review
+
+We need a few volunteers to share his/her homework solution!
+
+**Java Review**
+
+What would you use if you wanted to check a numerical range in an If statement?
+
+How do you add an item to an ArrayList?
+
+How do you add an item to a HashMap?
+
+How many arguments (parameters) can a method take?
+
+What is the purpose the "main" method in the Java program?
+
+## NEEDS TO BE EDITED DEPENDENT ON ORDER OF CURRICULUM
+
+## Java OOP Day 2
+
+## Java OOP Day 2
+
+**Object vs Class**
+
+An _object_ is a piece of data.
+
+A _class_ is what type of data that is.
+
+**Object**
+
+4
+
+"what?"
+
+true
+
+\[8,15,16,23,42\]
+
+**Class**
+
+Integer
+
+String
+
+Boolean
+
+Array
+
+## Java OOP Day 2
+
+**Data Types == Classes**
+
+In Java, the different data types are considered classes
+
+(whereas any instance of that data type is an object)
+
+There's even a way to tell what _class_ and object is:
+
+**We also have the ability to create our own classes!**
+
+```
+Integer num = new Integer(5);
+
+num.getClass();
+// returns class java.lang.Integer
+
+String word = new String("Hello");
+
+word.getClass();
+//returns class java.lang.String
+```
+
+## Java OOP Day 2
+
+**Give Your Program Some Class**
+
+Let's build a class piece by piece.
+
+In Eclipse, you want to right click on your folder labeled src, and select **New -> Class.** Name your class Person.
+
+```
+public class Person {
+
+}
+
+
+```
+
+The name of our class is now **Person.** When working with a class, the name should have the following characteristics:
+
+*   Be a noun
+*   The first letter of each new word should be capitalized.
+
+Every time you have been selecting New -> Class, you have been creating a new class. We haven't been treating it as a class but that is what has been happening.
+
+## Java OOP Day 2
+
+Think of a class as a template that we use to create individual objects. It is a set of instructions that describe how an object should behave. Every Java class is made up of the following parts:
+
+*   **Instance Variables**
+    *   Instance variables are variables within a class but outside any method
+*   **Constructors**
+    *   Allows instances of our classes to be created
+    *   They set up the specifications for each instance
+*   **Methods**
+    *   describes the kind of functionality and behavior of the class.
+
+## Java OOP Day 2
+
+**Access Modifiers**
+
+Variables and methods have different _access modifiers_ that can be used.
+
+*   **Default**: without an access modifier specified, they are accessible only within the same package
+*   **Private:** can only be accessed within the class it is declared
+*   **Protected:** accessible within the same package or sub classes in different packages
+*   **Public**: can be accessed from every where in the program
+
+## Java OOP Day 2
+
+*   Instance Variables are associated with objects
+*   They get created inside of a class but outside of what is known as a method.
+*   They're free floaters
+*   They get initialized (/defined) when an instance of our class is created
+*   Each instance of our class may have unique values for each instance variable
+
+[<Image Source>](https://gph.is/162DEQG)
+
+## Java OOP Day 2
+
+**Instance Variables**
+
+*   Instance Variables are dependent on the instance of our class
+*   You can make instance variables private, public, protected
+    *   Private variables are often called properties
+*   Can use any of the four access levels (which means they can be marked with any of the three access modifiers)
+*   Cannot be marked static, because then they'd become class variables.
+
+## Java OOP Day 2
+
+**Instance Variables**
+
+Let's go ahead and add some instance variables to our Class.
+
+When you're thinking of instance variables, think about what attributes, characteristics, and features you want to have in your class.
+
+In our case we're building a Person and it would be nice to know the following about a Person:
+
+*   Name - String
+*   Age - Int
+*   Location - String
+
+## Java OOP Day 2
+
+```
+public class Person{
+
+    String name; 
+    int age; 
+    String location; 
+}
+```
+
+We now have three instance variables (**name, age, and location).** They have no value yet but they do exist, they're just empty at the moment.
+
+## Java OOP Day 2
+
+**Add Instance Variables**
+
+**Constructors**
+
+Next up we have constructors. Each time we use the keyword new to create an instance of our class we are calling on our constructor.
+
+Constructors are used when you create an instance of an object. They get the party started. Constructors can come in many shapes and sizes.
+
+Typically a constructor will set the values for all of the instance values of the class.
+
+This won't always be the case, though.
+
+## Java OOP Day 2
+
+**Types of Constructors**
+
+All constructors have the same name as the class, that is how Java recognizes it as the constructor, it also does not have a return type.
+
+**Parameterized** **Constructor**
+
+This type of constructor takes in parameters that will then be used to set the value of your instance values. For our Person it would look something like this:
+
+```
+public Person (String name; int age; String location) {
+    
+    this.name = name; 
+    this.age = age; 
+    this.location = location; 
+
+}
+```
+
+## Java OOP Day 2
+
+You can build out more than one constructor. Your class will know which one to use based on how many arguments it is fed.
+
+For example, a Person class may have one for people who give you all of their information, and one for people who only give you their name.
+
+This way you can still create an instance of your Person class for the people who only give you their name.
+
+## Java OOP Day 2
+
+```
+public Person (String name, int age, String location) {
+    this.name = name; 
+    this.age = age; 
+    this.location = location; 
+}
+```
+
+All Parameter Constructor, this requires all parameters:
+
+```
+public Person (String name) {
+    this.name = name; 
+}
+```
+
+One Parameter Constructor: This constructor allows for the creation of ​a Person object with only one parameter. When requiring a parameter, you much specify the data-type and parameter name. The object is created using
+
+## Java OOP Day 2
+
+You can have as many constructors as you wish. However, the more constructors you have the higher the possibility that your instances are incredibly different from one another.
+
+**Empty** **Constructor**
+
+You can also have an empty constructor. This allows an instance of your class to be created without any information.
+
+```
+public Person (){
+    
+}
+```
+
+## Java OOP Day 2
+
+Let's add two Parametrized Constructors and an empty Constructor to our Person class.
+
+```
+public class Person {
+	
+	String name; 
+	int age; 
+	String location;
+	
+	public Person() {
+		
+	}
+	
+	public Person (String name, int age, String location) {
+		this.name = name; 
+		this.age = age; 
+		this.location = location; 
+	}
+	
+	public Person(String name) {
+		this.name = name; 
+	}
+
+
+
+}
+```
+
+## Java OOP Day 2
+
+Let's go ahead and create some instances of our class. Add a **main** in your class:
+
+```
+public static void main(String[] args){
+
+}
+```
+
+Inside of your main add the following code:
+
+```
+Person firstPerson = new Person();
+
+Person secondPerson = new Person("John");
+
+Person thirdPerson = new Person("Jane", 45, "London");
+```
+
+Class
+
+Name of instance
+
+Call to Constructor
+
+## Java OOP Day 2
+
+When creating an object:
+
+*   We call the class we want to create the object from and associate it with a variable name.
+*   We use the 'new' keyword to create the object (an instance of our class), allowing it to inherit the characteristics of our Person class (all variables and methods).
+*   After "new" is the constructor we want to use to construct our new object. This constructor initializes the new object.
+
+```
+Person secondPerson = new Person("John");
+```
+
+```
+Person firstPerson = new Person();
+```
+
+## Java OOP Day 2
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Person{
+   String name;
+   int age;
+   String location;
+
+   // constructor 
+
+   public void sayHello(){
+   	System.out.println("Hello " +  name);
+
+   }
+
+}
+
+    
+```
+
+**Using Methods**
+
+Methods help to describe/modify the behavior of our objects. Below, we use a method sayHello() to say a greeting with the name attribute.
+
+## Java OOP Day 2
+
+Class Methods are non-static. They exist as added functionality to our objects. In order to access the chunks of code that live inside of methods you need to call them on an object.
+
+```
+public void sayHello(){
+   System.out.println("Hello " +  name);
+
+}
+```
+
+Let's breakdown **sayHello().**
+
+*   We have made it public, so it will be able to be accessed outside of the class.
+*   We also made it void, so it does not return anything
+*   The lines of code that exist between the sayHello curly brackets will only be executed if the method is called
+
+## Java OOP Day 2
+
+**public** − **Modifier**
+
+The modifier defines the access type of the method and it is optional to use.
+
+**void** − **Return Type**
+
+The return type states the data type of the methods return value. Set to **void** if the method does not return a value.
+
+```
+public void sayHello(){
+    System.out.println("Hello" + name);
+}
+```
+
+## Java OOP Day 2
+
+**sayHello** − **Method Name**
+
+The actual name the method will be called by
+
+**()** - **Parameters**
+
+The parameters specify the type and order of parameters of a method. These are optional, methods may contain no parameters, as above. Below is an example with parameters:
+
+```
+public void sayHello(){
+    System.out.println("Hello" + name);
+}
+```
+
+```
+public void sayHello(String firstName){
+    System.out.println("Hello " + firstName);
+}
+```
+
+## Java OOP Day 2
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Person{
+   // variables and constructor 
+
+   public void sayHello(){
+   	System.out.println("Hello, my name is " +  name);
+   }
+
+   public static void main(String[] args){
+       Person firstPerson = new Person();
+       Person secondPerson = new Person("John");
+       Person thirdPerson = new Person("Jane", 45, "London");
+
+        thirdPerson.sayHello(); 
+   }
+}
+
+    
+```
+
+To get to the codes that our method contains we need to call it. To call a class method, you must use the format "ObjectName.Method()". In the example below, we call the method with thirdPerson.sayHello();
+
+```
+Hello Jane
+```
+
+The output from the call
+
+## Java OOP Day 2
+
+```
+public int birthday() {
+    return age + 1;
+}
+```
+
+A method can do more than just print to screen its results.
+
+The command return gives the method a value. Notice the Return Type now says int, which is the data type of the value being returned.
+
+The **Return Type** and the data type of the returned value **MUST** match!
+
+## Java OOP Day 2
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Person{
+   // variables and constructor 
+
+   public void sayHello(){
+   	System.out.println("Hello, my name is " +  name);
+   }
+
+   public int birthday(){
+   	return (age + 1);
+   }
+}
+```
+
+To allow for a return value, we create the method by first stating the return type of the method, followed by the name of the method and the task it should perform. We explicitly use the **return** keyword to return data. In the example below, we expect an integer return type.
+
+## Java OOP Day 2
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Person{
+   // variables and constructor 
+
+   public void sayHello(){
+   	System.out.println("Hello, my name is " +  name);
+   }
+
+   public int birthday(){
+   	return (age + 1);
+   }
+
+   public static void main(String[] args){
+       Person firstPerson = new Person();
+       Person secondPerson = new Person("John");
+       Person thirdPerson = new Person("Jane", 45, "London");
+
+        thirdPerson.sayHello(); 
+       System.out.println("Jane will be " + thirdperson.birthday() + "years old next year!");
+   }
+}
+```
+
+Again we call the method, this time adding it to our string output. The return value will be 1 year added to the age. For our example, we create Jane with age = 45.
+
+```
+Jane will be 46 years old next year!
+```
+
+The output from the call
+
+## Java OOP Day 2
+
+**Method Madness**
+
+**Note:** Methods can do as much or as little as you need them to do.
+
+```
+public void sayHello(){
+    System.out.println("Hello Everyone!");
+}
+
+
+public void reallyHardMath(){
+    answer = (-5 + Math.sqrt(5**2 - 4 * (8*15)))/(2 * 8)
+    System.out.println(answer);
+}
+```
+
+## Java OOP Day 2
+
+You can give a method parameters (passed values) to play with!
+
+```
+public class Person{
+
+//instance variables & constructors
+
+    public int birthYear(int currentYear) {
+        int birthYear = currentYear - age; 
+        //age is the instance variable 
+        //that we have saved
+
+        return birthYear;
+    }
+
+//main method
+
+}
+```
+
+You can pass variables from outside the method via arguments when the method is called.
+
+```
+public static void main(String[] args){
+    Person firstPerson = new Person();
+    Person secondPerson = new Person("John");
+    Person thirdPerson = new Person("Jane", 45, "London");
+
+    System.out.println(thirdPerson.birthYear(2018)); 
+   }
+```
+
+int currentYear is the parameter needed for the method to run.
+
+## Java OOP Day 2
+
+**Instance Variables vs Local Variables**
+
+```
+
+public class Person {
+   String name;
+   int age;
+   String location;
+
+  //class constructor and methods 
+   
+}
+```
+
+```
+
+public class Animal {
+   String name;
+   int age;
+   String location;
+   
+    //constructor methods
+
+   public int birthday(){
+        int birthday = age + 1; 
+   	return birthday;
+   }
+   
+}
+```
+
+Instance variables **name, age, and location** are created in the class, but outside of a method. They are the **attributes** associated with Person. They can be accessed by any method that is a part of the class.
+
+Local variables **birthday** is created inside of methods and therefore can only be accessed by that method.
+
+## Java OOP Day 2
+
+**"this" variable or that variable?**
+
+```
+
+public class Person {
+   String name;
+   int age;
+   String location;
+
+   public Person(){
+
+   }
+
+   public Person(String name, int age, String location){
+    this.name = name;
+    this.age = age; 
+    this.location = location; 
+   }
+}
+```
+
+instance variable **name**
+
+local variable **name**
+
+In the constructor, you will notice there is a **local variable** **name**, just like the **instance variable** **name**. How do you call one without it being confused with the other?
+
+## Java OOP Day 2
+
+## Java OOP Day 2
+
+```
+public class Animal {
+   String name;
+   int age;
+   String breed;
+
+   public Animal(){
+
+   }
+
+   public Animal(String name){
+    this.name = name;
+   }
+}
+```
+
+By using the keyword "**this**", we specify the object we are referring to. In this case, "this.name" refers to the instance variable declared in the class, not the local variable. It is then set equal to the local variable name that will be given in the parameter upon the objects creation.
+
+instance variable **name**
+
+local variable **name** **(from parameter)**
+
+## Java OOP Day 2
+
+Let's spend some time making classes:
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Person{
+   String name;
+   int age;
+
+   public Person(){
+      //default constructor
+   }
+
+   public Person(String name, Integer age){
+       this.name = name;
+       this.age = age;
+   }
+
+   public static void main(String[] args){
+       Person new_profile = new Person("Michael", 31); 
+   }
+}
+
+    
+```
+
+## Java OOP Day 2
+
+```
+public class Person{
+   String name;
+   int age;
+
+   public Person(){
+      //default constructor
+   }
+
+   public Person(String name, Integer age){
+       this.name = name;
+       this.age = age;
+   }
+
+   public static void main(String[] args){
+       Person new_profile = new Person("Michael", 31); 
+   }
+}
+    
+```
+
+Accessing data in our object is pretty easy. We do this by calling the ObjectName.InstanceVariable
+
+In the example, we create a new Object called new\_profile. To access the name information for new profile, we call new\_profile.name.
+
+## Java OOP Day 2
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Person{
+   String name;
+   int age;
+
+   public Person(){
+        //default constructor
+   }
+   public Person(String name, Integer age){
+       this.name = name;
+       this.age = age;
+   }
+
+   public static void main(String[] args){
+       Person new_profile = new Person("Michael", 31); 
+       System.out.println(new_profile.name);
+   }
+}
+
+    
+```
+
+We can print our object data by simply calling the objects name and the instance variable.
+
+## Java OOP Day 2
+
+By convention, attributes (instance variables) are created right after the class declaration and before any methods.
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Book{
+   public String author = "Hemmingway";
+   public int chapters = 10;
+
+  // methods
+}
+
+    
+```
+
+These variables can only be used in the classes they are declared in.
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Person{
+   String name;
+   int age;
+
+  // methods
+}
+
+    
+```
+
+For the Book class, we've added the keyword public in front of our variable declaration. This allows the variable to be modified from other programs using the Book class.
+
+## Java OOP Day 2
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Book{
+   public String author = "Charles Dickens";
+   public String bookName = "A Tale of Two Cities";
+   String genre = "fiction";
+   
+
+  // methods
+}
+
+    
+```
+
+Using public in front of attribute declarations is called access control. It determines how other objects made from other classes can use that attribute - or if it can be used at all.
+
+## Java OOP Day 2
+
+**Inheritance**
+
+We've mentioned Inheritance before. **Inheritance** is an important part of Object Oriented Programming. It is the way in which one class is able to inherit the characteristics (variables and methods) of another class.
+
+**Super Class**: The class whose characteristics are inherited is known as the super class (or a base class or a parent class).
+
+  
+**Sub Class:** The class that inherits the other class is known as sub class (or a derived class, extended class, or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.
+
+## Java OOP Day 2
+
+Inheritance supports the concept of “reusability”. When we want to create a new class and there is already a class that includes some of the code that we want, we can **extend** our new class from the existing class.
+
+By doing this, we are reusing the fields and methods of the existing class. Remember our Person class? What if we wanted to create a StudentList? Wouldn't they have the same attributes?
+
+```
+public class newClass extends existingClass {
+ 
+    // "extend" helps newClass "inherit" all the  
+    // variables and methods froma previously created class.  
+ 
+}
+```
+
+## Java OOP Day 2
+
+```
+public class Student extends Person {
+   
+  int gradYear; 
+  boolean enrolled = false;
+
+  void enrolledStudent(){
+    enrolled = true;
+  }
+    
+    //We added an additional instance variable 
+    //and method to our new class
+
+}
+```
+
+Student takes on the instance variables and methods from the Person class. We can create additional variables and methods, like **gradYear**, **enrolled**, and **enrolledStudent**.
+
+## Java OOP Day 2
+
+```
+public class Student extends Person {
+   
+//our variables and methods
+
+  public static void main(String[] args) {
+    Student new_student = new Student();
+    new_student.name = "Michael";
+    new_student.age = 20;
+    new_student.gradYear = 2020;
+    System.out.println("Name: " + new_student.name + "\nAge: " 
+        + new_student.age +"\nGraduation Year: " + new_student.gradYear 
+        + "\nEnrolled? " + new_student.enrolled);
+  } 
+}
+```
+
+```
+$ java Student
+Name: Michael
+Age: 20
+Graduation Year: 2020
+Enrolled? false
+```
+
+We set up our attributes and print the results. Notice "Enrolled" is set to false.
+
+## Java OOP Day 2
+
+```
+public class Student extends Person {
+   
+//our variable and methods
+
+  public static void main(String[] args) {
+    Student new_student = new Student();
+    new_student.name = "Michael";
+    new_student.age = 20;
+    new_student.gradYear = 2020;
+ 
+    new_student.enrolledStudent(); //our call to the new method
+
+    System.out.println("Name: " + new_student.name + "\nAge: " 
+        + new_student.age +"\nGraduation Year: " + new_student.gradYear 
+        + "\nEnrolled? " + new_student.enrolled);
+  } 
+}
+```
+
+```
+$ java Student
+Name: Michael
+Age: 20
+Graduation Year: 2020
+Enrolled? true
+```
+
+To change the enrollment status, you have to call the method "**enrolledStudent**" .
+
+## Java OOP Day 2
+
+```
+public class Student extends Person {
+   
+  //other variables and methods
+
+  public static void main(String[] args) {
+
+    ArrayList<Student> studentList = new ArrayList<Student>();
+
+    Student new_student = new Student();
+    new_student.name = "Michael";
+    new_student.age = 20;
+    new_student.gradYear = 2020;
+    studentList.add(new_student);
+  
+    Student new_student2 = new Student();
+    new_student2.name = "Janice";
+    new_student2.age = 32;
+    new_student2.gradYear = 2019;
+    studentList.add(new_student2);
+  
+    for (Student s : studentList){
+      System.out.println("Name: " + s.name + "\nAge: " + 
+      s.age +"\nGraduation Year: " + s.gradYear + 
+      "\nEnrolled? " + s.enrolled);
+    }
+
+  }
+```
+
+Custom class objects can be handily stored in ArrayLists! We can create new instances of the **Student** object, and then add them into an ArrayList called **studentList** for storage. We loop through the list using a ForEach loop to output individual objects.
+
+How could we use this approach, along with a loop, to create a collection of objects created by the user?
+
+## Java OOP Day 2
+
+```
+public class Student extends Person {
+   
+  //variables, constuctor and enrolled method
+
+  static Student addStudents(String name, int age, int gradYear, boolean enrolled){
+ 
+    Student new_student = new Student();
+    new_student.name = name;
+    new_student.age = age;
+    new_student.gradYear = gradYear;
+    new_student.enrolled = enrolled;
+    return new_student;
+
+    }
+
+  public static void main(String[] args) {
+       //other code
+    }
+  }
+}
+```
+
+We can also create a method that creates a new student Object. Since we will return the object, we have to specify a return type, which happens to be Student, our custom class. These objects will be stored in an array list.
+
+## Java OOP Day 2
+
+```
+public class Student extends Person {
+   
+  //variables, constuctor and enrolled method
+
+  static Student addStudents(String name, int age, int gradYear, boolean enrolled){
+ 
+    Student new_student = new Student();
+    new_student.name = name;
+    new_student.age = age;
+    new_student.gradYear = gradYear;
+    new_student.enrolled = enrolled;
+    return new_student;
+    }
+
+  public static void main(String[] args) {
+   ArrayList<Student> studentList = new ArrayList<Student>(); 
+   studentList.add(addStudents("Angela", 43, 1996, false));
+   studentList.add(addStudents("Daniel", 33, 2002, true));
+   studentList.add(addStudents("Ronald", 19, 2021, false));
+  }
+}
+```
+
+Create objects by calling the method and providing data for the parameters.
+
+## Java OOP Day 2
+
+```
+public class Student extends Person {
+   
+  //variables, constuctor and enrolled method
+
+  public static void main(String[] args) {
+   ArrayList<Student> studentList = new ArrayList<Student>(); 
+   studentList.add(addStudents("Angela", 43, 1996, false));
+   studentList.add(addStudents("Daniel", 33, 2002, true));
+   studentList.add(addStudents("Ronald", 19, 2021, false));
+
+    for (Student s : studentList){
+      System.out.println("Name: " + s.name + "\nAge: " +  
+      s.age +"\nGraduation Year: " + s.gradYear +  
+      "\nEnrolled? " + s.enrolled);
+    }
+  }
+}
+```
+
+Next, a ForEach loop is used to iterate through the list and output the individual array list objects.
+
+```
+$ java Student
+Name: Angela
+Age: 43
+Graduation Year: 1996
+Enrolled? false
+Name: Daniel
+Age: 33
+Graduation Year: 2002
+Enrolled? true
+Name: Ronald
+Age: 19
+Graduation Year: 2021
+Enrolled? false
+```
+
+## Java OOP Day 2
+
+Use a while loop to let the user provide data for our objects, and save the objects in an array list.
+
+```
+
+public class Student extends Person {
+   
+  //variables and methods
+   
+  public static void main(String[] args) {
+    Console console =  System.console();
+      ArrayList<Student> studentList = new ArrayList<Student>();
+      String studentName;
+      int studentAge;
+      int studentGradYear;
+      boolean enrollmentStatus;
+      String complete = "no";
+    //loop keeps getting user input as long as the complete variable equals "no"
+      while (complete.equals("no")) {
+        studentName = console.readLine("Enter a name: ");
+        studentAge = Integer.parseInt(console.readLine("Enter Age: "));
+        studentGradYear = Integer.parseInt(console.readLine("Year of Graduation: "));
+        enrollmentStatus = Boolean.parseBoolean(console.readLine("Enrolled (enter true or false: "));
+        studentList.add(addStudents(studentName, studentAge, studentGradYear, enrollmentStatus));
+        complete = console.readLine("List complete? Enter yes or no: ");
+      }
+ 
+    //loop through array list and output the contents one object at a time.
+    for (Student s : studentList){
+      System.out.println("Name: " + s.name + 
+      "\nAge: " +  s.age +"\nGraduation Year: " + s.gradYear +  "\nEnrolled? " + s.enrolled);
+    }
+  }
+}
+```
+
+## Java OOP Day 2
+
+**Method Overriding**
+
+## Java OOP Day 2
+
+Sometimes, we may want to change the functionality of a method in a parent class.
+
+We can do this with overriding. This is a form of polymorphism. Let's take a look at an example.
+
+**Method Overriding**
+
+## Java OOP Day 2
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Car {
+	
+	private String name; 
+	private String color;
+
+	public Car() {
+		
+	}
+	
+	public Car (String name, String color) {
+		this.name = name; 
+		this.color = color; 
+	}
+    
+   public static void main(String[] args){
+        Car myCar = new Car("crossover", "blue");
+
+        System.out.println(myCar); // output: Car@6d06d69c
+
+   }
+
+}
+```
+
+**Method Overriding**
+
+## Java OOP Day 2
+
+As you can see, calling System.out.println() on an instance of your class, you'll end up with a weird looking output - and it won't be too useful!
+
+This is because the compiler has called toString() on it, which tries to make a readable string out of whatever is given to it.
+
+We can alter the functionality of toString() by overriding the method for our class.
+
+**Method Overriding**
+
+## Java OOP Day 2
+
+```
+import java.io.Console;
+import java.util.*;
+
+public class Car {
+	
+	private String name; 
+	private String color;
+
+	public Car() {
+		
+	}
+	
+	public Car (String name, String color) {
+		this.name = name; 
+		this.color = color; 
+	}
+    
+    public String getName(){
+		return this.name;
+	}
+    
+    public String getColor(){
+    	return this.color;
+    }
+
+    @Override
+    public String toString() 
+    {
+        return String.format("This %s car is %s.", 
+                this.getName(),
+                this.getColor());
+    }
+
+
+   public static void main(String[] args){
+        Car myCar = new Car("crossover", "blue");
+
+        System.out.println(myCar); // output: This crossover car is blue.
+
+   }
+
+}
+```
+
+**Method Overriding**
+
+## Java OOP Day 2
+
+The @Override statement is known as an annotation. It should be declared on methods that are overridden. Other than that the method is a normal method implementation.
+
+#### Java OOP Day 2
+
+By Tech Talent South
+
+Internal
+
+[](/techtalentsouth/java-oop-day-2/fullscreen)
+
+# Java OOP Day 2
+
+Day four of Java: what are classes? And how do we build our own?
+
+### [Tech Talent South](/techtalentsouth)
+
+Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners.
+
+*   [techtalentsouth](https://twitter.com/techtalentsouth)
+
+[Help](https://help.slides.com) • [Terms](https://techtalentsouth.slides.com/terms?root=true) • [Privacy](https://techtalentsouth.slides.com/privacy?root=true) • © 2022 Slides, Inc.

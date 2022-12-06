@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Control Flow - PROJECT.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="control-flow-project">Control Flow Project</h1>
+<p>The following instructions and exercises constitute the project for understanding and applying Java Control Flow statements.  There will be some instructions that involve classes and/or operation that have not been covered yet.  In those cases code will be provided for basic operations, but you are encouraged to use online resources to obtain further documentation and examples.</p>
+<h3 id="overview">Overview</h3>
+<p>You will be building an interactive command-line program which will take input from the user, process it, and then display the results.  It will be built in phases and will begin from a presentation-only system to a fully function request-response system.</p>
+<p>First, create a simple Java project that prints &quot;Hello World&quot;.  This will verify your environment, settings, and ability to run a project on the command line.  Depending on build tools and/or IDE this process can be done from the actual command line or in a console output window.  The instructions assume the use of an IDE such as Eclipse or Spring Tool Suite; if a plain editor and command line tools are used those steps will have to be done by the user.</p>
+<h4 id="project-steps">Project Steps</h4>
+<p>The first step in the project is to create a separate class that will print valid characters to the user.  This will be a simple utility class that is called from the <code>main()</code> method to print valid character sets to the user.  The skeleton of the class should resemble the following:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AsciiChars</span> 
+</span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printNumbers</span><span class="hljs-params">()</span>
+  </span>{
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> print valid numeric input</span>
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printLowerCase</span><span class="hljs-params">()</span>
+  </span>{
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> print valid lowercase alphabetic input</span>
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printUpperCase</span><span class="hljs-params">()</span>
+  </span>{
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> print valid uppercase alphabetic input</span>
+  }
+}
+</div></code></pre>
+<p>Using an ACSII chart, find the range of values for each of the different characters sets above - numbers, lower case letters, and upper case letters.  Then using a <code>for</code> loop, print the valid values in each set. Note that since these are <code>static</code> methods they can be called from within the <code>main()</code> method as follows:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// print the valid characters for input</span>
+AsciiChars.printNumbers();
+AsciiChars.printUpperCaseLetters();
+AsciiChars.printLowerCaseLetters();
+</div></code></pre>
+<p>Next, set up a simple interaction with the user.  After printing the valid characters, ask the question <code>Please enter your name: </code>.  When the user inputs their name, simply respond to them by echoing back <code>Hello Tom</code> (if they input Tom of course). See more detailed instructions below on reading input from the keyboard.</p>
+<h4 id="scanner-class">Scanner class</h4>
+<p>To read input from the console, one of the easiest ways is to use the framework class <code>Scanner</code>. More details and explanations of several different methods exist on the official documentation site, but a simple example to read a string input is:</p>
+<pre class="hljs"><code><div>Scanner scanner = <span class="hljs-keyword">new</span> Scanner(System.in);
+System.out.print(<span class="hljs-string">"Enter a string: "</span>);     <span class="hljs-comment">// type a word and hit enter</span>
+String someString = scanner.next();
+</div></code></pre>
+<p>Implement the following:</p>
+<p>After the name prompt, ask the user if they wish to continue to the interactive portion. If they enter 'yes' or 'y', continue.  Otherwise quit the program with a message to please return later to complete the survey.</p>
+<p>Use a loop to repeatedly ask the user some questions. What will be done is to gather some random information from the user and then generate their potential winning Powerball numbers.  At the end, ask them if they would like to generate another set of numbers.  Note that it may be helpful to put example responses after each question.</p>
+<pre class="hljs"><code><div>Do you have a red car? (yes, no):
+</div></code></pre>
+<p>Ask the user for the name of their favorite pet.</p>
+<p>Ask the user for the age of their favorite pet. (<em>NOTE:</em> the <code>next()</code> function will not work here, look up what the appropriate <code>Scanner</code> method is to read numbers.)</p>
+<p>What is their lucky number?</p>
+<p>Do they have a favorite quarterback?  If so what is their jersey number?</p>
+<p>What is two-digit model year of their car?</p>
+<p>What is the first name of the their favorite actor or actress?</p>
+<p>Enter a random number between 1 and 50.</p>
+<p><strong>Generating output</strong>
+Now that you have 6 or 7 pieces of information it's time to generate the lottery numbers.  The output will 5 random numbers between 1 and 65, and the &quot;magic ball&quot; between 1 and 75.<br>
+To accomplish this you should have 3 random integers, generated in the same way as in the previous exercises.  You may also want to declare constants for the max values of each set of of numbers.</p>
+<p>Generate the &quot;magic ball&quot; first.  It should be the user's favorite quarterback jersey number <em>or</em> their lucky number, multiplied by one of the random numbers.  Make sure that the answer is less the max &quot;magic&quot; number of 75; if it is greater than 75 then subtract 75 from the value and that value is now the &quot;magic ball&quot; number.</p>
+<p>For the 5 non-magic numbers use your choice of any of the following methods to generate values: (Note that you may have to adjust each value to correct range by adding/subtracting.)</p>
+<ul>
+<li>Find the 3rd letter of their favorite pet.  Convert that character value to an integer value.</li>
+<li>Use the two digit model year of their car and add their lucky number to it.</li>
+<li>Use the random number between 1 and 50, subtracting one of the generated random numbers.</li>
+<li>Convert the first letter of their favorite actor/actress to an integer and use that value.</li>
+<li>Convert the last letter of their favorate actor/actress to an integer and use that value.</li>
+<li>Use the value 42.</li>
+<li>Use the age of their favorite pet + their car model year.</li>
+<li>Favorite quarterback number + age of pet + lucky number.</li>
+</ul>
+<p>Once all the numbers have been calculated, print them out in this form:</p>
+<pre class="hljs"><code><div>Lottery numbers: 4, 17, 15, 52, 26  Magic ball: 22
+</div></code></pre>
+<p><strong>Play again?</strong>
+After the numbers have been printed, ask the user if they would like to answer questions to generate another set of numbers.  If so, repeat the entire process.  If not, print a thank you message and exit.</p>
+<p>Once the basics of this are working (happy path), go back and add error-checking for each question.  If the user does not enter a valid entry, ask the question again until a valid entry is produced.</p>
+<h4 id="bonus">Bonus</h4>
+<ul>
+<li>Remove duplicate numbers</li>
+<li>sort the first 5 numbers.</li>
+</ul>
+
+</body>
+</html>
