@@ -1,0 +1,269 @@
+--- 16-12-2022 10:39:59
+--- 1
+--************************PROMPT# 1*********************************************
+			--SELECT everything from a table
+SElECT *
+from albums;
+
+--- 16-12-2022 10:40:11
+--- 2
+        --************************PROMPT# 2*********************************************
+        			--SELECT exactly one column from a table.
+select name
+from artists;
+
+--- 16-12-2022 10:41:40
+--- 3
+--************************PROMPT# 3*********************************************
+			--SELECT more than one but not all columns from a table
+select name,year_started,bio
+from artists;
+
+--- 16-12-2022 10:41:52
+--- 4
+--************************PROMPT# 4*********************************************
+			--SELECT everything from the songs table whose id numbers are even and greater than 50, or odd and less than ten.
+select *
+from SONGS
+where id > 50 and id % 2 = 0
+or id % 2 <> 0 and id < 11
+ORDER BY ID ASC;
+
+--- 16-12-2022 10:43:24
+--- 5.1
+--************************PROMPT# 5.1*********************************************
+			--Creating User and Favorite Tables
+CREATE TABLE User
+(
+	UserID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+	FirstName VARCHAR NOT NULL,
+	LastName VARCHAR NOT NULL,
+	Birthplace VARCHAR NOT NULL,
+	CreatedAt DATETIME NOT NULL,
+	UpdatedAt DATETIME NULL
+);
+
+CREATE TABLE Favorite 
+(
+	FavoriteID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+	UserID INTEGER NOT NULL,
+	ArtistID INTEGER, 
+	AlbumID INTEGER,
+	SongID INTEGER,
+	GenreID INTEGER,
+	CreatedAt DATETIME NOT NULL,
+	UpdatedAt DATETIME NULL,
+	FOREIGN KEY (UserID) REFERENCES User (UserID),
+	FOREIGN KEY (ArtistID) REFERENCES artists (id),
+	FOREIGN KEY (AlbumID) REFERENCES albums (id),
+	FOREIGN KEY (SongID) REFERENCES songs (id),
+	FOREIGN KEY (GenreID) REFERENCES genres (id)
+);
+
+--- 16-12-2022 10:45:20
+--- 5.2
+--************************PROMPT# 5.2*********************************************
+			            --INSERT ten new records into the User table. They can be real or fictional individuals.
+                        INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Wesley', 
+  'Chambers', 
+  'Orlando, Florida',
+  CURRENT_DATE
+);
+
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Michael', 
+  'Jordan', 
+  'Brooklyn, New York',
+  CURRENT_TIMESTAMP
+);
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Peter', 
+  'Chambers2', 
+  'Orlando, Mexico',
+  CURRENT_DATE
+);
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Sally', 
+  'Chambers3', 
+  'Orlando, Paris',
+  CURRENT_DATE
+);
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Rodrigo', 
+  'Chambers4', 
+  'Orlando, Toronto',
+  CURRENT_DATE
+);
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Bill', 
+  'Chambers5', 
+  'Orlando, Africa',
+  CURRENT_DATE
+);
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Tragdor', 
+  'Chambers6', 
+  'Orlando, USA',
+  CURRENT_DATE
+);
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Homestar', 
+  'Chambers7', 
+  'Orlando, Mexicolandia',
+  CURRENT_DATE
+);
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Legolas', 
+  'Chambers8', 
+  'Orlando, USA',
+  CURRENT_DATE
+);
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Gimli', 
+  'Chambers9', 
+  'Orlando, Mexicolandia',
+  CURRENT_DATE
+);
+INSERT INTO User 
+(
+  FirstName, 
+  LastName,
+  Birthplace,
+  CreatedAt
+)  
+VALUES 
+(	
+  'Ye', 
+  'Chambers10', 
+  'Orlando, Canada',
+  CURRENT_DATE
+);
+
+--- 16-12-2022 10:46:34
+--- 6
+--************************PROMPT# 6*********************************************
+	--UPDATE the User table and change some names.
+		--When you UPDATE, do not forget to put CURRENT_TIMESTAMP into UpdatedAt. That way, you always know when the last update was.
+UPDATE User 
+SET FirstName = 'Jordan',
+	LastName = 'Micheals',
+	UpdatedAt = CURRENT_TIMESTAMP
+WHERE UserID = 2;
+
+--- 16-12-2022 10:47:24
+--- 7
+	--************************PROMPT# 7*********************************************
+    	--Use a TRANSACTION/ROLLBACK window to DELETE everything from the User table.
+--end TRANSACTION;
+BEGIN TRANSACTION;
+
+  DELETE FROM User; 
+
+  SELECT * FROM User; 
+  --this SELECT is here to help you see what would have happened in the delete statement.
+  --You don't need it in order to delete. 
+
+ROLLBACK;
+
+--- 16-12-2022 10:48:06
+--- 8
+--************************PROMPT# 8*********************************************
+	--For each user in the User table, add a record to the Favorite table, but only INSERT for UserID (the FK), and CreatedAt.
+INSERT INTO Favorite (UserID, CreatedAt)
+SELECT userid, CURRENT_TIMESTAMP from user
+WHERE userid > 0;
+
+--- 16-12-2022 10:48:36
+--- 9
+--************************PROMPT# 9*********************************************
+	--Use a TRANSACTION/ROLLBACK window to DELETE everything from the Favorite table WHERE the FavoriteID is odd, 
+    --or even but greater than 10Put "SELECT * FROM Favorite;" in the window to make sure you delete only those records you should!
+--end TRANSACTION;
+BEGIN TRANSACTION;
+  DELETE from Favorite
+  	where favoriteid % 2 <> 0
+	or favoriteid % 2 = 0 and favoriteid > 10;
+
+ROLLBACK;
+

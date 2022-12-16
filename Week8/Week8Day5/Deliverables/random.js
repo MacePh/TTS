@@ -14,7 +14,7 @@ async function getRandomNumber() {
     let result = await promise; // wait until the promise resolves (*)
 
     console.log("Random Number: " + result); // random number
-    alert("****************ALERT!**************** \n Random Number: " + result+" printed to console first!");
+    // alert("****************ALERT!**************** \n Random Number: " + result+" printed to console first!");
     
 }
 
