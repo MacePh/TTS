@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)https://techtalentsouth.slides.com/ttscurriculum/data-structures-part-ii-52?token=WDqvRDpu -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars reveal-is-ready fonts-are-ready" data-account="" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>Heaps, Binary Trees and Search Trees</title>
+    <meta name="description" content="Full Stack Java">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta property="og:title" content="Heaps, Binary Trees and Search Trees">
+    <meta property="og:description" content="Full Stack Java">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://media.slid.es/thumbnails/82515b37668c8ad4fc1adaabe1d6229f/thumb.jpg?1606258862">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/ttscurriculum/data-structures-part-ii-52?token=WDqvRDpu">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Heaps, Binary Trees and Search Trees_files/css2" onload="this.onload=null;this.removeAttribute(&#39;media&#39;);" rel="stylesheet" data-application-font="inter">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" data-application-font="inter">
+</noscript>
+
+    <link rel="stylesheet" media="all" href="./Heaps, Binary Trees and Search Trees_files/slides-9486051f6b033e85e64e4e925c2d2d8ccb9a3566a8a0e1f9d5c891e9f959a77e.css">
+    <link rel="stylesheet" media="all" href="./Heaps, Binary Trees and Search Trees_files/deck-consumption-62767a9d5b34b088d2e3f948d9b3154d6bf711dc30aee1b141a69143fbe2613a.css">
+    	<link rel="stylesheet" media="all" href="./Heaps, Binary Trees and Search Trees_files/deck-v2-9096d1ab9031809cd7e0dd8baac906708e581e3b86875ff854417195bd729248.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Dg8EmkxgOo/5eXc1T/y68vJowbKuIli+kqV+IixZVzc27dxnY3k+IeWqdRcX57KznkihM2xY/FVAWfO/fTfJlg==">
+    <script type="application/javascript" async="" defer="" src="./Heaps, Binary Trees and Search Trees_files/track.js.download"></script><script type="text/javascript" async="" src="./Heaps, Binary Trees and Search Trees_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./Heaps, Binary Trees and Search Trees_files/js"></script>
+<script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    window.slidesMeasurementId = 'G-LWVDH9STBJ';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LWVDH9STBJ', {
+      page_title: 'decks-show'
+    });
+
+  }
+</script>
+
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="Heaps, Binary Trees and Search Trees">
+	<meta name="twitter:description" content="Full Stack Java">
+	<meta name="twitter:image" content="https://media.slid.es/thumbnails/82515b37668c8ad4fc1adaabe1d6229f/thumb.jpg?1606258862">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./Heaps, Binary Trees and Search Trees_files/opensans.css"><link rel="stylesheet" href="./Heaps, Binary Trees and Search Trees_files/css"><style type="text/css" media="screen">.uv-icon{box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon .uv-tooltip-container{position:relative}.uv-icon .uv-tooltip-container .uv-icon-tooltip{display:none;position:absolute;height:20px;padding:4px 8px;background-color:#464653;color:white;font-size:12px;border-radius:4px;line-height:18px;font-family:"Open Sans", sans-serif;white-space:nowrap}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left,.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{top:0;bottom:0;margin:auto 10px}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top,.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{transform:translate(-30%);margin:10px auto}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top{bottom:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{top:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left{right:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{left:100%}.uv-icon .uv-tooltip-container:hover .uv-icon-tooltip{display:block}.uv-icon-trigger{display:block;width:39px;height:39px;border:none;padding:0;cursor:pointer;background:none}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;transition:background 200ms}.uv-bottom .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{transition:none !important}.uv-fade{opacity:1;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{transform:translateY(100%)}.uv-slide-left.uv-is-hidden{transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{transform:translateX(100%)}
+</style><script type="text/javascript" src="./Heaps, Binary Trees and Search Trees_files/highlight-0adde8531514527653fdb445e29c1cca3687dc50684c4b8f624246a318dc706a.js.download"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style><script type="text/javascript" src="./Heaps, Binary Trees and Search Trees_files/zoom-e1f94838c054500b9ea32c1cdb27173f7796522bc2af1b0c8efe98c65a4c57b7.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <body style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url(&#39;https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png&#39;)"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue" style="--slide-width:960px; --slide-height:700px; --slide-scale:0.583571;">
+			<div class="reveal slide embedded has-vertical-slides has-horizontal-slides ready focused" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.583571);">
+					<section data-background-image="https://media.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpeg" data-id="29bb67b0f905961f4b564b105078c2a7" class="present" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 847px; left: 44px; top: 410px; height: auto;" data-block-id="7c2272faa6c64853b81aed2a04b7d8c7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.4em">Heaps, Binary Trees, and Search Trees</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 425px; height: 340px; left: 268px; top: 42.5px; min-width: 1px; min-height: 1px;" data-block-id="d1e653c54c5d771999185827846f781d"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1688" data-natural-height="1350" style="" data-lazy-loaded="" src="./Heaps, Binary Trees and Search Trees_files/TTS-Identity-FullColor-Cube.png"></div></div></section><section data-id="661796dadd644fa39ca5d95dc41f8fa7" hidden="" aria-hidden="true" class="future" style="display: block;"><div class="sl-block" data-block-type="text" data-block-id="5d1a8835c510976152334f8eedf975e8" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 0px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>What Are Trees?</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="e742b2c95e530258a44e4edeacd4bf9a" style="min-width: 1px; min-height: 1px; width: 640px; height: 426px; left: 160px; top: 137px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="640" data-natural-height="426" style="" data-lazy-loaded="" src="./Heaps, Binary Trees and Search Trees_files/pasted-from-clipboard.png"></div></div></section><section data-id="efc7f266f43b30d872fe7a0b54e8550e" hidden="" aria-hidden="true" class="future" style="display: block;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 516.985px; left: 14.958px; top: 97px;" data-block-id="e7141e9643e05b679e69ce948ff5b80f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<ul>
+	<li style="text-align:left">
+<strong>Node</strong> - Also known as the key</li>
+	<li style="text-align:left">
+<strong>Edge </strong>- An edge connects two nodes to show that there is a relationship between them. Every node except the root is connected by one incoming edge from another node. Each node may have several outgoing edges.</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">
+<strong>Root</strong> - The<strong> root </strong>of the tree is the originating node. It has no incoming edges.</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">
+<strong>Path</strong> - A path is an ordered list of nodes that are connected by edges.&nbsp;</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 165px; top: 17px;" data-block-id="e9491f88bce08356a078990d97a7557b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><strong>Terminology</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 395.878px; height: 224.508px; left: 540.504px; top: 125.492px;" data-block-id="cc8dd4e808467d4034e546df0952f204" data-name="image-781086"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="298" data-natural-height="169" style="" data-lazy-loaded="" src="./Heaps, Binary Trees and Search Trees_files/pasted-from-clipboard(1).png"></div></div>
+<div class="sl-block" data-block-type="code" data-name="code-fe594e" data-block-id="301b45048eaecee65bf6732e761b7915" style="width: 413px; height: 209.371px; left: 531.943px; top: 385.315px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;" data-code-wrap="true"><pre style="font-size: 15px; line-height: 18px;" class="java"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">int</span> key; <span class="hljs-comment">//data held in Node</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	Node leftNode; <span class="hljs-comment">//left child node</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	Node rightNode; <span class="hljs-comment">//right child node</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tree</span></span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	Node root; <span class="hljs-comment">//notice that to start a tree, we only actually need the root node. </span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="24bced5684ab251f0d253049619d7621" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 906.626px; left: 26.687px; top: 131.534px;" data-block-id="d58b8740fef6294598f58d0226b26049"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<ul>
+	<li style="text-align:left">
+<strong>Children</strong> - The nodes with incoming edges from the same node are the children of that node.&nbsp;</li>
+	<li style="text-align:left">
+<strong>Parent</strong> - A node is the parent of all the nodes it connects to with outgoing edges.&nbsp;</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">
+<strong>Sibling</strong> - Nodes in the tree that are children of the same parent are siblings.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 187px; top: 11px;" data-block-id="e617271639d64ad89b26d4b54a671ea7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><strong>Terminology cont...</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 436.812px; height: 247.722px; left: 253.612px; top: 375.679px;" data-name="image-781086" data-block-id="2040742c0e2b30bd2ce9a9e8e98498e6"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="298" data-natural-height="169" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6450040/pasted-from-clipboard.png"></div></div></section><section data-id="af2653aa820675288453ab8f34d5e678" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 824.5px; left: 80px; top: 428.546px;" data-block-id="a96b7a01f05ac029198431b73876ea32"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<ul>
+	<li style="text-align:left">
+<strong>Subtree</strong> - A subtree is a set of nodes and edges comprised of a parent and all the descendants.</li>
+	<li style="color:rgb(17, 17, 17); text-align:left">
+<strong>Leaf Node</strong> - A leaf node indicates the end of one path along the tree as it is a node that has no children.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 187px; top: 11px;" data-block-id="5bcf1649d1802ff5598019830c4211a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><strong>Terminology cont...</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 457.138px; height: 259.25px; left: 251.431px; top: 150.375px; min-width: 1px; min-height: 1px;" data-name="image-781086" data-block-id="f520ee0eaf38ac46af0541c04f5805f9"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="298" data-natural-height="169" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6450040/pasted-from-clipboard.png"></div></div></section><section data-id="8086b2a28d0e6a8e1a503580f4f91ff2" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 526.494px; left: 56.753px; top: 109.5px;" data-block-id="b5f41df3c96dcc2053df586b83d30584"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<ul>
+	<li style="text-align:left"><span class="s1">Every node has a <strong>path</strong> of length 0 to itself</span></li>
+	<li style="text-align:left">
+<span class="s1">Every node has <strong>only</strong> one path to it from the root</span>
+	<ul>
+		<li style="text-align:left">
+<strong><span class="s2">depth</span></strong><span class="s1">: length of the path from the root to the node</span>
+</li>
+		<li style="text-align:left">
+<strong><span class="s2">height</span></strong><span class="s1"><strong>:</strong> length of the longest path from the node to a leaf </span>
+</li>
+		<li style="text-align:left">
+<strong><span class="s2">height of tree</span></strong><span class="s1"><strong>:</strong> is the height of the root</span>
+</li>
+	</ul>
+	</li>
+	<li style="text-align:left"><span class="s1">So, a root has depth 0 and a leaf has height 0</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e3cb8bce5f57510cd987b0716e1139b0" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 195px; top: 15px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Tree Terminology</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-6b99fc" data-block-id="4ce9508fa99d2d88a95ab14761d9ad07" style="width: 315.853px; height: 346.852px; left: 615.731px; top: 160.944px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="377" data-natural-height="414" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/7973169/pasted-from-clipboard.png"></div></div></section><section data-id="0f65cea937c996c91f95f0cbe5cf13a4" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="ab44dbd3cb8f05b135121a884d98ed78" style="height: auto; min-width: 30px; min-height: 30px; width: 868px; left: 46px; top: 42px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h1 style="color:rgb(36, 41, 46); font-size:1.5em">Binary Trees</h1>
+
+<p style="color:rgb(36, 41, 46); text-align:start">&nbsp;</p>
+
+<p style="color:rgb(36, 41, 46)">A Binary Tree works a lot like a LinkedList, but each of its <span>nodes</span> holds a reference to not one, but two other objects.</p>
+
+<p style="color:rgb(36, 41, 46)">&nbsp;</p>
+
+<p style="color: rgb(36, 41, 46);">Each node can have a left child and a right child, and each of those children can have children.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 220.126px; height: 219.148px; left: 196.49px; top: 380.426px;" data-name="image-031284" data-block-id="82159b2b95757085a6ce92ffb2e6768f"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="225" data-natural-height="224" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6450018/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 279.717px; height: 219.148px; left: 520.283px; top: 380.426px;" data-block-id="2773658622d9a31973df1251debb328d" data-name="image-b250c1"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="254" data-natural-height="199" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6450006/pasted-from-clipboard.png"></div></div></section><section data-id="a4d39eb1b6a35342355ff1d1ba96372d" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="a5c7f62379fb653b6d30cc46fe153829" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 0px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Binary Tree Structure Property</h2>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 316.436px; height: 355.546px; left: 590.266px; top: 204.454px;" data-name="image-6a9acd" data-block-id="c2d2916701af0163fdcf2dbbd5847da5"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="356" data-natural-height="400" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6437958/binary-search-tree-degenerating-demo-animation.gif"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-75537c" data-block-id="8b6056af8051de3969ad4171a6740364" style="height: auto; width: 485.259px; left: 68.312px; top: 193.779px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left"><strong>Full:</strong>&nbsp;A full Binary Tree is a tree in which every node except for the leaves has exactly two children.&nbsp;</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left"><strong>Complete:</strong>&nbsp;A complete binary tree refers to a tree in which each level (except the last possibly) is <strong>full </strong>and all the nodes are as far to the left as possible.&nbsp;</p>
+</div></div></section><section data-id="764aa69da2fb95cd05196735c49d8b36" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 0px;" data-block-id="ef541fb1fdc8356b29a7ebbdb13b5cfc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Tree Traversals</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 740px; left: 98px; top: 110px;" data-block-id="cf882b340da99ded8452aeaf57951084"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left"><span class="s1">We visit all nodes </span><span class="s2">in some order, following edges in two ways:</span></p>
+
+<p style="text-align:left"><strong><span style="text-align:left">1. Depth first</span></strong></p>
+
+<p style="text-align:left"><span class="s2">Basic idea is to travel down paths towards leaves until forced to stop</span></p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left"><strong><span class="s2">2. Breadth first</span></strong></p>
+
+<p style="text-align:left"><span class="s2">Basic idea is to visit all children of a node before going deeper down paths</span></p>
+</div></div></section><section data-id="55decaf74bfa99ba421768689bb04029" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 642px; left: 143px; top: 19px;" data-block-id="320f53970121a3efa9b27fca0172a660"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Depth First Traversals</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 653px; left: 122px; top: 112px;" data-block-id="fff27420ac26a4be37a33bc9e006f70c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left"><strong><span class="s1">1. PreOrder</span></strong></p>
+
+<p style="text-align:left"><span class="s1">Visit root, then recursively visit children (L to R)</span></p>
+
+<p style="text-align:left"><strong><span class="s1">2. PostOrder</span></strong></p>
+
+<p style="text-align:left"><span class="s1">Visit children (L to R) and finally visit root</span></p>
+
+<p style="text-align:left"><strong><span class="s1">3. InOrder</span></strong></p>
+
+<p style="text-align:left"><span class="s1">Visit L child, then visit root, then visit R child</span></p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left"><span class="s1">For n-ary tree, we have to decide where in the “middle” to put root visit</span></p>
+</div></div></section><section data-id="ba1e42cd42256307b1dc6f0dc75a4b81" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 642px; left: 159px; top: 26px;" data-block-id="e6840c063c85a7326ee08bd030330d85"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Depth First Traversals</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="63b39d17d4e2f2af78c8c582cc45c48e" style="min-width: 1px; min-height: 1px; width: 696px; height: 257px; left: 132px; top: 222px;"><div class="sl-block-content" style="z-index: 11;"><img style="left: 0px; top: 0px; width: 696px; height: 297px;" data-natural-width="696" data-natural-height="297" data-crop-x="0" data-crop-y="0" data-crop-width="1" data-crop-height="0.864865" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6447003/traversals.bmp"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 174px; left: 159px; top: 148px;" data-block-id="74aa17e3e76f875d1c252e0fda80e1f7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Preorder</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 145px; left: 635px; top: 148px;" data-block-id="b5a52b9b05b81faac42104660645a83c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Postorder</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 112px; left: 424px; top: 148px;" data-block-id="50b8b5111f3bc804d55ef652a44f4f56"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Inorder</p>
+</div></div></section><section class="stack future" data-id="19c8e1a0091f152c6236b9a086a2c08c" hidden="" aria-hidden="true" style="display: none;"><section data-id="722ef24f684fc5719ad9283613843bc5" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 690px; left: 135px; top: 0px;" data-block-id="5ae183ecafbb614611a6e5f8c67bd6b4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2 style="text-align: left;">Lab Activity - Traversals</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 729px; left: 116px; top: 494px;" data-block-id="351eb791e49c2d31af5cb13481b7cb09"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">What is the outcome of inorder traversal on this BST? How about postorder traversal and preorder traversal?</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 806px; height: 316px; left: 77px; top: 133px;" data-block-id="8367e75df4d2c9bbda63bf6800887d4f"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1292" data-natural-height="506" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6446790/Screen_Shot_2019-08-15_at_12.51.30_PM.png"></div></div></section><section data-id="08a2304f0d9b008921869762ef76a0ac" class="future" aria-hidden="true" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 923px; left: 12px; top: 18px;" data-block-id="8c34d8848b339c97eef9170636949c13"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Lab Activity - Traversals Answer</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 702px; left: 12px; top: 415px;" data-block-id="64056c4004e97804d71128f29751bb47"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li><span style="font-size:0.9em">Inorder traversal: 2, 3, 4, 5, 6, 7, 8 , 9, 11, 12, 15, 19, 20</span></li>
+	<li><span style="font-size:0.9em">Preorder traversal: 7, 4, 2, 3, 6, 5, 12, 9, 8, 11, 19, 15, 20</span></li>
+	<li><span style="font-size:0.9em">Postorder traversal: 3, 2, 5, 6, 4, 8, 11, 9, 15, 20, 19, 12, 7</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 610px; height: 239px; left: 12px; top: 164px; min-width: 4px; min-height: 4px;" data-block-id="32b875c3bbcfc63fab4a5af2561504ea"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1292" data-natural-height="506" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6446790/Screen_Shot_2019-08-15_at_12.51.30_PM.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="8dd4830fa0dd292bdb806dc178c02e91" style="min-width: 4px; min-height: 4px; width: 309px; height: 293px; left: 636px; top: 122px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="231" data-natural-height="219" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6450068/pasted-from-clipboard.png"></div></div></section></section><section data-id="b9e336c79ab51b56ad910728265bcf7e" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 452px; left: 54px; top: 151.93px;" data-block-id="d47382b6f8427d3ff312ca3a90ef8756"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgba(0, 0, 0, 0.84); text-align:left"><span style="font-size:0.9em">A node-based binary tree data structure has the following properties:</span></p>
+
+<ul style="color:rgba(0, 0, 0, 0.84); text-align:justify">
+	<li style="text-align:left"><span style="font-size:0.9em">The left subtree of a node only contains nodes with keys less than the node’s key.</span></li>
+	<li style="text-align:left"><span style="font-size:0.9em">The right subtree of a node only contains nodes with keys greater than the node’s key.</span></li>
+	<li style="text-align:left"><span style="font-size:0.9em">The left and right subtree each must also be a binary search tree.</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6482a44a9bc78fdd0e326eb325ee2c9d" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 0px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><strong>Binary Search Tree (BST)</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="c30c294d22731bf767a195c225b6dac5" style="min-width: 1px; min-height: 1px; width: 334px; height: 275px; left: 546px; top: 203.846px;"><div class="sl-block-content" style="z-index: 13;"><img style="left: -14px; top: -13px; width: 392px; height: 301px;" data-natural-width="914" data-natural-height="700" data-crop-x="0.035714" data-crop-y="0.044052" data-crop-width="0.852015" data-crop-height="0.914334" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6446741/Screen_Shot_2019-08-15_at_12.33.32_PM.png"></div></div></section><section data-id="c07651e4bbf632a3e3da18bd961c37a2" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 512px; left: 36.266px; top: 318.279px;" data-block-id="b1dd4195e5e4710dd7706da02f9eed14"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="text-align:left">For our example, we’ll use alphabetical order as our criteria for whether an element is greater than or less than another element.</p>
+
+<p>&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 23px;" data-block-id="938324cccb3a0e0a5a8ee62cea26de6c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><strong>Binary Search Tree</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="40d8df1f6f8f9d7fa0745f7f79e8f724" style="min-width: 1px; min-height: 1px; width: 361px; height: 258px; left: 562.734px; top: 284.113px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1038" data-natural-height="742" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6446766/Screen_Shot_2019-08-15_at_12.45.35_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-20b48d" data-block-id="40bd764239e59fefc9588446fb7ca569" style="height: auto; width: 829.596px; left: 70.51px; top: 170.279px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:rgb(17, 17, 17); text-align:left">Implementing a binary search tree is useful when the elements can be compared in a less than / greater than manner.</span></p>
+</div></div></section><section data-id="331d9021a179e0af1022e69f19e51681" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 741.552px; left: 109.224px; top: 33px;" data-block-id="08b75190c0d74252cef647600bd62acf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Do you think it's faster?&nbsp;</h2>
+
+<h3>Lab</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="72ce98dfea7af4dfc94f294e80d06fc1" style="height: auto; min-width: 30px; min-height: 30px; width: 917px; left: 21.5px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: center;">
+<p><span style="font-size:36px">Use the skills we have already learned to write a program that proves just how much faster binary search is from a standard search. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="48420d2bd976ba35ea7b62f2edc3f2aa" style="min-width: 1px; min-height: 1px; width: 180.034px; height: 180.034px; left: 389.983px; top: 366.561px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="225" data-natural-height="225" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6450046/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 917px; left: 21.5px; top: 573.71px;" data-block-id="66e65b130aec5a655bec29e5b24102b6" data-name="text-ac8502"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: center;">
+<p><span style="font-size:36px">instructions on next slide</span></p>
+</div></div></section><section data-id="b92cb8b45eee36cc3f9d04bd4905fc71" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 741.552px; left: 109.224px; top: 27.1018px;" data-block-id="7dacc6a7a542bb6d7aa3747560d49391" data-name="text-66846c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Do you think it's faster?&nbsp;</h2>
+
+<h3>Lab</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-138b39" data-block-id="aff76fb139f30dd5a7a8289c83cf430e" style="height: auto; width: 893.156px; left: 41.2861px; top: 183.728px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; font-size: 80%;">
+<p>1. Create a program called Binary Search Proof<br>
+2. Have your program pick a random number between 0 and 500<br>
+3. Write two methods: randomGuesser and highlowGuesser</p>
+
+<ul>
+	<li>Each guessing method should take the range of possibilities as well as the magic number</li>
+	<li>
+<em>randomGuesser:</em>
+	<ul>
+		<li>Pick a random number within the given range</li>
+		<li>Check if that number has already been picked (if so, pick another number)</li>
+		<li>Check that number against the magic number</li>
+		<li>if the same, it should return the number of guesses it took to find the magic number</li>
+		<li>if not the same, it should increment a count of guesses and try again)</li>
+	</ul>
+	</li>
+</ul>
+
+<p style="text-align:center"><em><span style="font-size:1.2em">cont... next slide</span></em></p>
+</div></div></section><section data-id="ccf4903e3318e6f370fb77e8cf010c97" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 741.552px; left: 109.224px; top: 27.1018px;" data-name="text-66846c" data-block-id="9e1ac5a6658eef62ba28bd71b3484280"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Do you think it's faster?&nbsp;</h2>
+
+<h3>Lab</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-138b39" style="height: auto; width: 893.156px; left: 33.422px; top: 124.02px;" data-block-id="9492e5318f8001e122306a4f6612d82a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; font-size: 80%;" dir="ui">
+<p>&nbsp;</p>
+
+<ul>
+	<li>highlowGuesser
+	<ul>
+		<li>Pick a random number within the given range</li>
+		<li>Check to see if that number matches magic number</li>
+		<li>if its a match, it should return the number of guesses it took to get a match</li>
+		<li>if its not a match, it should check to see if the guessed number is higher or lower than the magic number, adjust the range accordingly, and pick again</li>
+	</ul>
+	</li>
+</ul>
+
+<p style="text-align:center"><em>hint: randomGueser and highlowGuesser should use do-while loops</em></p>
+
+<p>4. Pick a random number and run both randomGuesser and highlowGuesser at least 20 times, find (and output) the average number of tries it takes for each method to reach the outcome.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-fe928c" data-block-id="772f4e275a5637c01f4a916c9891b87e" style="height: auto; width: 600px; left: 180px; top: 540.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><em>Run your program; what's the outcome</em></p>
+</div></div></section><section data-id="d473d3748cb1ce00e27915cf0332deff" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 741.552px; left: 109.224px; top: 27.1018px;" data-name="text-66846c" data-block-id="38f0eb799e5afe283918f794a3ed4cc6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>What happened?</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-ac4e46" data-block-id="8eac8545561103f93e0748b962c184ff" style="width: 271.913px; height: 236.862px; left: 152.742px; top: 151.796px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="512" data-natural-height="446" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/7977099/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 894.832px; left: 32.584px; top: 420px;" data-block-id="dcae3fb3100279fd36191fc215b3d9eb" data-name="text-652a61"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:1.0em"><strong>Total nodes in a complete binary tree </strong>= 2^(height+1)-1</span></p>
+
+<p><span style="font-size:1.0em">&nbsp;Conversely, <strong>height of a complete binary tree </strong>= floor(log2 n)</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 417.263px; height: 236.862px; left: 472.567px; top: 151.796px;" data-block-id="783632bda0b8e996dafce38f13fad1f3" data-name="image-6dccd0"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="1212" data-natural-height="688" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6446637/Screen_Shot_2019-08-15_at_12.07.10_PM.png"></div></div></section><section data-id="be265fde42d3c7c74a40db1e887d8ef2" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 838px; left: 62px; top: 226px;" data-block-id="12c04cdabaefa2291b30380a4e73cf54"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p style="text-align:left">1) Start at the root.</p>
+
+<p style="text-align:left">2) If the search key is less than the index key of the element, go to the left child. If the search key is greater than the index key of the element, go to the right child.</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left">This process continues until the element is found, or until the end of the tree is found (in which case the element does not exist). In three comparisons, we have either found the element, or it does not exist.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 905.976px; left: 9.895px; top: 20px;" data-block-id="079d44b5e07a1d691bdec1b5c9a608cc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><strong>Traversing a Binary Search Tree</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 385px; left: 288px; top: 120px;" data-block-id="b18b0c8f2ac557e61c851466a1fc3ff7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>BST = 3 comparisons</p>
+
+<p><span style="color:rgb(17, 17, 17); text-align:left">Array = 7 comparisons</span></p>
+</div></div></section><section data-id="daad7dea200366ef26caec7d312370bb" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 905.976px; left: 27.0125px; top: 20px;" data-block-id="8d906e5baa99f82284f9122bcee707db"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><strong>Implementing a BST</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 788.496px; left: 80px; top: 123.32px;" data-block-id="57576c42d3543bba3817af26b0026b02"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>When we implement a binary tree in code, all we actually need is a class for a Node and a class for the Tree.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-a94d90" data-block-id="281094369b72d5f9104c36486e21a2a9" style="width: 292.891px; height: 70.6508px; left: 57.1455px; top: 234.75px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BinaryTree</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	Node root; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 423.556px; height: 262.471px; left: 50.6916px; top: 322.469px;" data-block-id="00dd7c272980d10dd3c3d339aff3a912" data-name="code-96dcac"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> key; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">private</span> Node leftNode;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword">private</span> Node rightNode;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	Node(<span class="hljs-keyword">int</span> key){</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">this</span>.key = key;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">this</span>.leftNode = <span class="hljs-keyword">null</span>; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">this</span>.rightNode = <span class="hljs-keyword">null</span>; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getKey</span><span class="hljs-params">()</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">return</span> key;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setKey</span><span class="hljs-params">(<span class="hljs-keyword">int</span> key)</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">this</span>.key = key;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">public</span> Node <span class="hljs-title">getLeftNode</span><span class="hljs-params">()</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">return</span> leftNode;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="22"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="23"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="24"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setLeftNode</span><span class="hljs-params">(Node leftNode)</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="25"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">this</span>.leftNode = leftNode;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="26"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="27"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="28"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">public</span> Node <span class="hljs-title">getRightNode</span><span class="hljs-params">()</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="29"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">return</span> rightNode;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="30"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="31"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="32"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRightNode</span><span class="hljs-params">(Node rightNode)</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="33"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">this</span>.rightNode = rightNode;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="34"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="35"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-5581c2" data-block-id="7f2b4ca6eace34623cf955816b9347af" style="height: auto; width: 600px; left: -60px; top: 575.21px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.7em"><em>Scroll for full code</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 406.349px; left: 526.64px; top: 234.75px;" data-block-id="d4f6b85dec5d31e397397d7e204abcc5" data-name="text-2d2556"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Notice that we created getters and setters for each property of Node.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Also notice that the constructor for a Node only takes the 'key' and sets the left and right Nodes to 'null'</p>
+</div></div></section><section data-id="7e4a3bdcd46a2994fa163db75bc35ae7" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 905.976px; left: 27.0125px; top: 20px;" data-block-id="b4c968ebdf6ab8d1d6308b5c703e150a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><strong>Implementing a BST</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 852.2px; left: 53.9005px; top: 94px;" data-block-id="feb408f15b37e4c734191a2bc37dd7fd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; font-size: 90%;">
+<p style="text-align: center;">Now, we need to add a method for inserting Nodes into our tree.&nbsp;</p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;">To do this, we can use the same algorithm we used for traversing (searching) through a BST.</p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;">We'll also add a method called add() that will initialize our recursive insertNode() method.</p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" data-name="code-605a10" style="width: 885.029px; height: 223.551px; left: 48.9154px; top: 378.225px;" data-block-id="486191a03736657e1b3ead524fcbc233"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BinaryTree</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	Node root; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">public</span> Node <span class="hljs-title">insertNode</span><span class="hljs-params">(Node current, <span class="hljs-keyword">int</span> key)</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-comment">//...full code on next slide</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> key)</span></span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    	root = insertNode(root, key);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    }</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="2e7fb5ce0a954e56c59a0aa1f6630c10" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 905.976px; left: 27.0125px; top: 20px;" data-block-id="bab2d245ce407d5068bafce915867fe6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><strong>Implementing a BST</strong></h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 657.318px; left: 41.6555px; top: 111.02px;" data-name="text-c815eb" data-block-id="772be71bb608e1e95e84ea25bdfe391c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<p><span style="font-size:0.9em">A <em>recursive</em>&nbsp;method for inserting a Node in the tree: </span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-605a10" style="width: 891.333px; height: 432.05px; left: 41.6555px; top: 159.71px;" data-block-id="ac403d2ff1bcb424cf6c04d1fc1b0a19"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BinaryTree</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	Node root; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">public</span> Node <span class="hljs-title">insertNode</span><span class="hljs-params">(Node current, <span class="hljs-keyword">int</span> key)</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">if</span>(current == <span class="hljs-keyword">null</span>) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Node(key);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(key &lt; current.getKey()) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			current.setLeftNode(insertNode(current.getLeftNode(), key));</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(key &gt; current.getKey()) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			current.setRightNode(insertNode(current.getRightNode(), key));</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}<span class="hljs-keyword">else</span> {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			<span class="hljs-keyword">return</span> current; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">return</span> current; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> key)</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		root = insertNode(root, key); </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="6b35a05e6b215e7ea43266f3eccb4de6" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 905.976px; left: 27.0125px; top: 20px;" data-block-id="4a8720674b2c617668d15a7f0c344179"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><strong>Implementing a BST</strong></h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 781.646px; left: 89.177px; top: 121.89px;" data-name="text-c815eb" data-block-id="44bd9db8d1616eaaeb2fc8f78760e238"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p style="text-align:center"><span style="font-size:27px">Let's try it out.</span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">In each of our classes, we should add toString() methods:&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-0bfc33" data-block-id="5deeb9273e1b6e78550941f4319c73f6" style="width: 755.759px; height: 249.19px; left: 102.12px; top: 263.05px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;" data-code-wrap="true"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment">//in BinaryTree class</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-meta">@Override</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">return</span> <span class="hljs-string">"BinaryTree: \nroot="</span> + root;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment">//in Node class</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-meta">@Override</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">return</span> <span class="hljs-string">"\nKey="</span> + key + <span class="hljs-string">": \n\tleftNode="</span> + leftNode + <span class="hljs-string">", \n\trightNode="</span> + rightNode;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="8d3ca13ddade5946c60ff985f6841a4a" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 905.976px; left: 27.0125px; top: 20px;" data-block-id="0c125bcabb1236fec8a3c30dc9f6d9c5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><strong>Implementing a BST</strong></h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 781.646px; left: 89.177px; top: 121.89px;" data-name="text-c815eb" data-block-id="b2b2d2d6b8643ba8bf2a4b59a53f3796"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p style="text-align:center"><span style="font-size:27px">Let's try it out.</span></p>
+
+<p style="text-align:center">Now, in our main() method.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-0bfc33" style="width: 757.149px; height: 350.66px; left: 101.426px; top: 216.95px;" data-block-id="83944f944ad0dd2bd2898297fccd04d8"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;" data-code-wrap="true"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-comment">// TODO Auto-generated method stub</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		BinaryTree bt = <span class="hljs-keyword">new</span> BinaryTree();</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">int</span>[] Nodes = {<span class="hljs-number">7</span>, <span class="hljs-number">12</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>, <span class="hljs-number">6</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">78</span>, <span class="hljs-number">24</span>, <span class="hljs-number">2</span>};</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> n : Nodes) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			bt.add(n);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		System.out.println(bt);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="1dd6d521ebe3b401532762908e4a9526" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 905.976px; left: 27.0125px; top: 20px;" data-block-id="c1e9ac062710e76c16ccd64c59b03527"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><strong>Implementing a BST</strong></h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 781.646px; left: 89.177px; top: 195px;" data-name="text-c815eb" data-block-id="11f80e144f2984c9aa3602c2d32b5d1f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p style="text-align:center"><span style="font-size:1.0em">Try different sets of numbers. </span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:1.0em">Try drawing the tree that is output in the console. </span></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-size:1.0em">What happens if you input an ordered array? </span></p>
+</div></div>
+</section><section data-id="edb479fe4d85717a6a753edcb87cb0f6" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 286px; left: 476.428px; top: 127.864px;" data-block-id="f4af8a6fb05f5d68b2590c3b8cc63a1e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Height = 6</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 950.262px; left: 1.297px; top: 8.052px;" data-block-id="8ba99d199c3bb65b889dd60428636cc2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Binary Search Tree Degradation</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 185.884px; height: 256.68px; left: 547.058px; top: 179.624px; min-width: 1px; min-height: 1px;" data-block-id="a285524c89901ce60a92bb2ca4e3821e"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="740" data-natural-height="786" style="left: -34px; top: 0px; width: 243px; height: 258px;" data-crop-x="0.139319" data-crop-y="0" data-crop-width="0.764706" data-crop-height="0.994152" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6446611/Screen_Shot_2019-08-15_at_11.47.55_AM.png"></div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 319px; left: 110.751px; top: 127.864px;" data-block-id="cd2de35deca0c3b8fc8b0cc473969089" data-name="text-692ff6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Height = 3</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 199.526px; height: 255.556px; left: 170.488px; top: 179.624px; min-width: 1px; min-height: 1px;" data-block-id="659f9b09053e98c80c9e01ce0c9b7145" data-name="image-64dbb5"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="664" data-natural-height="538" style="left: -40px; top: 0px; width: 315px; height: 256px;" data-crop-x="0.127072" data-crop-y="0" data-crop-width="0.632597" data-crop-height="1" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6446612/Screen_Shot_2019-08-15_at_11.49.21_AM.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-d4202d" data-block-id="0d29a1acf8ca56f6f4192e6ac7ace0fb" style="height: auto; width: 924.547px; left: 17.7265px; top: 448.714px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>On the one hand, it's rather easy to convert a binary search tree to a sorted list, and vice-versa.</p>
+
+<p>However, if we had to iterate over each item in our (now) linked list... we'd lose the search speed of the binary sort.</p>
+</div></div></section><section data-id="3ddae6ff9095575dc4f7369004d99e54" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 868px; left: 48px; top: 17px;" data-block-id="3ac85c39bfa2f12c709db2210568b2a6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h1 style="color:rgb(36, 41, 46); font-size:1.5em"><span style="font-size:1.2em">Heaps</span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 865px; left: 48px; top: 125.694px;" data-block-id="20d8277732d18eb424a640592b7bf36d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li style="text-align:left"><span style="color:rgb(36, 41, 46); text-align:start">Heaps are just specialized Binary Trees, with two additional characteristics/rules.</span></li>
+	<li style="color:rgb(36, 41, 46); text-align:start">Because of these rules, you use a heap only when you care about the highest or lowest value in a set of numbers.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 209.208px; height: 271.971px; left: 368.648px; top: 308.3px; min-width: 1px; min-height: 1px;" data-name="image-8e74cd" data-block-id="1542b9299bc41234f0a6cfdd44a76357"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="250" data-natural-height="325" data-lazy-loaded="" data-src="https://media0.giphy.com/media/8RH4MrJPTnVRK/giphy.gif"></div></div></section><section data-id="c3eff94476a24049903d66cf8d503c57" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 868px; left: 46px; top: 14.2524px;" data-block-id="a152e603a661a2e76c578b099b921e19"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h3 style="color: rgb(36, 41, 46); font-size: 1.5em;"><span style="font-size:1.2em">Heaps</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c97409cd557451d7a7eae799c69e1bf6" style="height: auto; min-width: 30px; min-height: 30px; width: 857.37px; left: 50.63px; top: 106.107px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ol style="color:rgb(36, 41, 46)">
+<li>The tree must be complete and balanced (structure property)<ul><li>Must be filled out top-to-bottom, left-to-right</li></ul>
+</li>
+<li>The tree must follow certain ordering rules. (order property)</li>
+</ol>
+<p>There are two kinds of heaps:</p>
+<p><strong>Min Heaps</strong></p>
+<ul>
+<li style="text-align:left">The parent value &lt;= its children</li>
+<li style="text-align:left">The smallest value will always be at the top</li>
+</ul>
+<p><strong>Max Heaps</strong></p>
+<ul>
+<li style="text-align:left">The parent value &gt;= its children</li>
+<li style="text-align:left">The largest value will always be at the top</li>
+</ul>
+<p style="text-align:left"><br></p>
+</div></div></section><section data-id="f119cffb6828d548cc42df6f0f1978be" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 732.05px; left: 113.975px; top: 21.22px;" data-block-id="1e3a2f0176eef9b773cc3e722cfafb87"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Heap-structure property</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="b86ae54be4418bc54729ac67845b01f7" style="min-width: 1px; min-height: 1px; width: 900px; height: 197px; left: 19px; top: 153px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1003" data-natural-height="253" style="left: 0px; top: 0px; width: 900px; height: 227px;" data-lazy-loaded="" data-crop-x="0" data-crop-y="0" data-crop-width="1" data-crop-height="0.86802" data-src="https://media.slid.es/uploads/820756/images/6444397/pasted-from-clipboard.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="29ba9981feebcc733eb72db021065d07" style="height: auto; min-width: 30px; min-height: 30px; width: 319px; left: 0px; top: 427px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Complete Tree</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 192px; left: 404px; top: 427px;" data-block-id="3447aaa50ce5575e01503723f9f96525"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Not Complete</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 238px; left: 722px; top: 427px;" data-block-id="017ea360df028ca3a2b986a65b7ac6bd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Not Complete</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 524px;" data-block-id="abd5814dee3b47e790012fdbc50f0e4b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>A complete binary tree is where every level, except possibly the last, is filled.</p>
+</div></div></section><section data-id="b56a22eb4f4fcd72a7c30489ec32cd11" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 23px;" data-block-id="8bb0fe8a6456ce7df4c14b0a4940750d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span class="s1"><strong>Heap-order property (min-heap)</strong></span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5a83d05da493e1467e0dd103e9b50028" style="height: auto; min-width: 30px; min-height: 30px; width: 907px; left: 10px; top: 197.18px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="text-align:left"><span class="s1">Every path from root to leaf is an ordered sequence small to large</span></li>
+	<li style="text-align:left"><span class="s1">Min at root</span></li>
+	<li style="text-align:left"><span class="s1">Every child &gt;= parent</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="d65c425d548607949ccdd67f1812296b" style="min-width: 1px; min-height: 1px; width: 658.807px; height: 254.995px; left: 134.096px; top: 336.1px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1576" data-natural-height="610" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6444408/Screen_Shot_2019-08-14_at_4.58.09_PM.png"></div></div></section><section data-id="b9e22f5483bcb50343eb93751f61316f" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 23px;" data-block-id="bac51b1791519562636ff523c00be47b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><span class="s1"><strong>Heap-order property (min-heap)</strong></span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 907px; left: 10px; top: 197.18px;" data-block-id="50451edb3fe974149100bc94e300770c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<ul>
+	<li style="text-align:left"><span class="s1">Every path from root to leaf is an ordered sequence large to small</span></li>
+	<li style="text-align:left"><span class="s1">Max at root</span></li>
+	<li style="text-align:left"><span class="s1">Every child &lt;= parent</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-a49100" data-block-id="dacb6c824a88012cad8b222627081203" style="width: 378.372px; height: 280.311px; left: 290.814px; top: 330.079px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1200" data-natural-height="889" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/7977378/pasted-from-clipboard.png"></div></div></section><section data-id="efbc135732a9d18ccd4348950069e8b8" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 849px; left: 56px; top: 30px;" data-block-id="79c71a3b0ce9d6d3ecad3beec5d78c5f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span class="s1"><strong>Binary Heap Implementation</strong></span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="386fda01009c7f39299cc9a9350a9ece" style="height: auto; min-width: 30px; min-height: 30px; width: 842px; left: 56px; top: 142px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left"><span class="s1">Structure property allows very efficient representation with an array</span></p>
+
+<ul>
+	<li style="text-align:left"><span class="s1">Leave slot 0 unused</span></li>
+	<li style="text-align:left"><span class="s1">Store node val as an array element</span></li>
+	<li style="text-align:left">
+<span class="s1">For a node in slot <strong>i</strong></span>
+	<ul>
+		<li style="color:rgb(17, 17, 17); text-align:left"><span class="s1">The parent is at &nbsp;i/2 (floor, int division)</span></li>
+		<li style="color:rgb(17, 17, 17); text-align:left"><span class="s1">Left child is&nbsp; 2*i</span></li>
+		<li style="color:rgb(17, 17, 17); text-align:left">
+<span class="s1">Right child is (</span>2*i<span class="s1">)+1</span>
+</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+</div></div></section><section data-id="b032b4490f44131819bf7cfb83dd08a5" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 849px; left: 70px; top: 22px;" data-block-id="32251a643facbca35e078eb8af9c147c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><span style="font-size:1.4em"><span class="s1"><strong>Binary Heap Implementation</strong></span></span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 820px; left: 70px; top: 442.596px;" data-block-id="239a893f9431d4ddf76ad2f1e31b2930"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="text-align:left">
+<span class="s1">Fill the array, </span><span class="s2">breadth-first</span><span class="s1"> across the tree, placing the root at index 1. </span>
+</li>
+	<li style="text-align:left">Each level is then placed in the subsequent index locations (Level 1 -&gt; index 2-3)...&nbsp;</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="90b6a621aa8fae1b4c23f39baab22a7c" style="min-width: 1px; min-height: 1px; width: 697.565px; height: 321.479px; left: 131.217px; top: 105.702px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1584" data-natural-height="730" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6444416/Screen_Shot_2019-08-14_at_5.08.21_PM.png"></div></div></section><section data-id="ce3f1ce3fe31b08147ae4b05e56cf2b0" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 849px; left: 56px; top: 14px;" data-block-id="0504fcce0592c0ad5364f0bb6b1f76db"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="color:rgb(17, 17, 17); text-align:left">Tree From Array</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 659px; left: 158px; top: 475px;" data-block-id="2550daea39826c2adbee32eacde83cb2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="text-align:left">
+<span class="s3">Parent</span><span class="s1">: floor(1/2) is 0 (root, no parent)</span>
+</li>
+	<li style="text-align:left">
+<span class="s3">L-Child</span><span class="s1">: 2*1 is 2, slot 2 has </span><span class="s2">7</span>
+</li>
+	<li style="text-align:left">
+<span class="s3">R-Child: </span><span class="s1">(2*1)+1 is 3, slot 3 has the value </span><span class="s2">4</span>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="2950e34bc7625b54c5850117bc5c8950" style="min-width: 1px; min-height: 1px; width: 806px; height: 325px; left: 77px; top: 105px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1582" data-natural-height="638" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6446575/pasted-from-clipboard.png"></div></div></section><section data-id="5da7a577285f7d10cf8093a7f3cdaddf" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 849px; left: 56px; top: 14px;" data-block-id="f7bdcf36952f8691c9adbb90764468ec"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><span style="color:rgb(17, 17, 17); text-align:left">Implement a Heap</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 748.063px; left: 106.469px; top: 125.598px;" data-block-id="ad375143a89622d92e16f84aa9850aa3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>If we made a new class called BinaryHeap, it could have a property, heap that held the heap as an ArrayList.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-ed3e68" data-block-id="35adf1d266d5e1eaf5a7b9c0f227e441" style="width: 727.797px; height: 245.245px; left: 116.101px; top: 220.553px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">import</span> java.util.ArrayList;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">import</span> java.util.List;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BinaryHeap</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	List&lt;Integer&gt; heap; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	BinaryHeap(){</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		heap = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		heap.add(<span class="hljs-keyword">null</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div></section><section data-id="613c281c642da52c093e8c3e93569b78" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 849px; left: 56px; top: 14px;" data-block-id="40b19501f7c863e371d58741d84046bd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><span style="color:rgb(17, 17, 17); text-align:left">Implement a Heap</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 748.063px; left: 106.469px; top: 125.598px;" data-block-id="da40f718e4e99ca4ddee344db628c356"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>...and in our main() method we could...&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-ed3e68" style="width: 727.797px; height: 245.245px; left: 116.101px; top: 220.553px;" data-block-id="8e6649ee4af383f4512b38c91afde5b4"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment">//in the main() method: </span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">BinaryHeap bh = <span class="hljs-keyword">new</span> BinaryHeap(); </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">int</span>[] Nodes = {<span class="hljs-number">1</span>, <span class="hljs-number">12</span>, <span class="hljs-number">3</span>, <span class="hljs-number">24</span>, <span class="hljs-number">7</span>, <span class="hljs-number">19</span>, <span class="hljs-number">1</span>, <span class="hljs-number">50</span>, <span class="hljs-number">16</span>};</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> n : Nodes) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	bh.heap.add(n); </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">System.out.print(bh.heap);</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-3914c8" data-block-id="c7a395abf7a1192b94e8b81900eb7c24" style="height: auto; width: 600px; left: 180.5px; top: 498.35px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>But! We have a problem! Our heap in not ordered correctly! </p>
+</div></div></section><section data-id="d03cae08c83e43b30f08eaa9a7fa7942" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 859px; left: 50.5px; top: 33px;" data-block-id="77c6316d833fddca926bcbec270da808"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><span style="color:rgb(17, 17, 17); text-align:left">Binary Heap Insert Operation</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 909.798px; left: 22px; top: 154.78px;" data-block-id="057a446d0cc6c9819368d9e4c58e730d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ol>
+	<li style="text-align:left">
+<span class="s1">Put new val in next open slot in array/tree</span><span class="s1">​</span>
+</li>
+	<li style="text-align:left">
+<span class="s1">Swap/bubble up values towards root until </span><span class="s1">heap-order is achieved.</span>
+</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 249.964px; height: 293.436px; left: 355.018px; top: 273.282px;" data-block-id="d9e23037fb50b7d3538f6362bf3c8c10" data-name="image-56a786"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="207" data-natural-height="243" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6450058/pasted-from-clipboard.png"></div></div></section><section data-id="51b883ceb7a664688eee45a9e8dbdb12" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 690px; left: 136px; top: 0px;" data-block-id="08fa31e1c5ff0785590431526c05dba4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2 style="text-align:left">Lab Activity - Insertion</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 807px; left: 77px; top: 108px;" data-block-id="2e8baaac50a705fa08523120a7ee2c1a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left"><span style="color:rgba(0, 0, 0, 0.84); text-align:left">Here is a max heap, represented by the array: 40, 30, 20, 10, 15, 16, 17, 8, 4. What happens if we insert 35?</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d79016bd521b6b63453615a36e36286c" style="height: auto; min-width: 30px; min-height: 30px; width: 375px; left: 293px; top: 218px;"><div class="sl-block-style" style="z-index: 13; transform: rotate(360deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<pre style="color:rgba(0, 0, 0, 0.9)">         40
+       /    \
+     30      20
+    / \      / \
+   10  15  16   17
+  / \
+ 8   4</pre>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="92e04c153a531209666b11484dedfdc7" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 532px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><strong>Task: </strong>Map out the new heap after insertion</p>
+</div></div></section><section data-id="17c803364a4e9aedb5ec421aad9c36f5" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 849px; left: 56px; top: 14px;" data-block-id="810538526e4eca4cf2bc807cd9c38f17"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><span style="color:rgb(17, 17, 17); text-align:left">Implement a Heap</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 890.222px; left: 34.8885px; top: 130.736px;" data-block-id="929aace0b5cc945ecc2d774a1a0b18da"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Following that pattern, let's add some methods to add to our heap.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-ed3e68" style="width: 887.085px; height: 423.372px; left: 34.8885px; top: 169.736px;" data-block-id="107ddd899eafd6f98024fa99a9bc841d"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code data-line-numbers="" class="hljs"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Minadd</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value)</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">if</span>(heap.size()&gt;<span class="hljs-number">1</span>) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">int</span> parentIndex = Math.floorDiv(heap.size(), <span class="hljs-number">2</span>); </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">int</span> parentValue = heap.get(parentIndex);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">if</span>(value &gt;= parentValue) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			heap.add(value);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}<span class="hljs-keyword">else</span> {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">        	heap.add(parentValue);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			<span class="hljs-keyword">if</span>(parentIndex == <span class="hljs-number">1</span>) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				heap.set(<span class="hljs-number">1</span>, value);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			}<span class="hljs-keyword">else</span> {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				<span class="hljs-keyword">int</span> newParentIndex = Math.floorDiv(parentIndex, <span class="hljs-number">2</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				<span class="hljs-keyword">int</span> newParentValue = heap.get(newParentIndex);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				<span class="hljs-keyword">do</span> {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					<span class="hljs-keyword">if</span>(newParentIndex == <span class="hljs-number">1</span>) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">						<span class="hljs-keyword">break</span>; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					heap.set(parentIndex, newParentValue);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					parentIndex = newParentIndex; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					parentValue = newParentValue; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					newParentIndex = Math.floorDiv(parentIndex, <span class="hljs-number">2</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="22"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					newParentValue = heap.get(newParentIndex);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="23"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				} <span class="hljs-keyword">while</span>(value &lt; newParentValue);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="24"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				heap.set(parentIndex, newParentValue);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="25"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				heap.set(newParentIndex, value);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="26"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="27"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="28"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}<span class="hljs-keyword">else</span> {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="29"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			heap.add(value);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="30"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="31"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="32"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="33"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Maxadd</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value)</span> </span>{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="34"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	<span class="hljs-keyword">if</span>(heap.size()&gt;<span class="hljs-number">1</span>) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="35"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">int</span> parentIndex = Math.floorDiv(heap.size(), <span class="hljs-number">2</span>); </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="36"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">int</span> parentValue = heap.get(parentIndex);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="37"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">if</span>(value &lt;= parentValue) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="38"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			heap.add(value);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="39"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}<span class="hljs-keyword">else</span> {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="40"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				heap.add(parentValue);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="41"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		<span class="hljs-keyword">if</span>(parentIndex == <span class="hljs-number">1</span>) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="42"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				heap.set(<span class="hljs-number">1</span>, value);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="43"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">			}<span class="hljs-keyword">else</span> {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="44"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				<span class="hljs-keyword">int</span> newParentIndex = Math.floorDiv(parentIndex, <span class="hljs-number">2</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="45"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				<span class="hljs-keyword">int</span> newParentValue = heap.get(newParentIndex);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="46"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				<span class="hljs-keyword">do</span> {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="47"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					<span class="hljs-keyword">if</span>(newParentIndex == <span class="hljs-number">1</span>) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="48"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">						<span class="hljs-keyword">break</span>; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="49"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="50"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					heap.set(parentIndex, newParentValue);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="51"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					parentIndex = newParentIndex; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="52"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					parentValue = newParentValue; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="53"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					newParentIndex = Math.floorDiv(parentIndex, <span class="hljs-number">2</span>);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="54"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">					newParentValue = heap.get(newParentIndex);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="55"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				} <span class="hljs-keyword">while</span>(value &gt; newParentValue);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="56"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				heap.set(parentIndex, newParentValue);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="57"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">				heap.set(newParentIndex, value);				</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="58"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">            }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="59"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		}	</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="60"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}<span class="hljs-keyword">else</span> {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="61"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">		heap.add(value);</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="62"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">	}</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="63"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 890.222px; left: 33.8885px; top: 585.031px;" data-block-id="bc06d63edd69b030ba7f5e45e777956c" data-name="text-67f2d5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:0.7em"><em>Scroll to see full code</em></span></p>
+</div></div></section><section data-id="de3ee02466d0e49b21613fd1418ceba9" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 928px; left: 16px; top: 22px;" data-block-id="e4b178e66c6ebd1170011295c7b3d8c4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2><span style="color:rgb(17, 17, 17); text-align:left">Binary Heap Deletion Operation</span></h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" data-name="text-9baae1" data-block-id="1c055942356c5343bf480b533be5680b" style="height: auto; width: 887.743px; left: 36.1285px; top: 118.118px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Deleting a leaf has no effect on the tree and is therefore</p>
+
+<p>straight-forward</p>
+
+<p>&nbsp;</p>
+
+<p>Deleting a node with 1 child involves simply replacing the value in the node to be deleted with the value in the child node.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>However, deleting a node that has 2 or more children can be more complicated as you must shift values in the tree to not break the linkages between nodes.&nbsp;</p>
+</div></div></section><section data-id="4f4cd509c17366f0789b472137ea5e17" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 921px; left: 39px; top: 24px;" data-block-id="52c59ff11a02aefc0ef7ea0043d6291d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="color:rgb(17, 17, 17); text-align:left">Binary Heap Deletion Operation</span></h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 536px; height: 178px; left: 196px; top: 150px; min-width: 1px; min-height: 1px;" data-block-id="d5f562b8c0c20b68bfdbc9b14f252c57"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="795" data-natural-height="296" style="left: 0px; top: -1px; width: 537px; height: 200px;" data-crop-x="0" data-crop-y="0.00678" data-crop-width="0.998737" data-crop-height="0.891525" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6447009/del02.bmp"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cd3a8fe7682887446ab51332b9265879" style="height: auto; min-width: 30px; min-height: 30px; width: 757px; left: 102px; top: 390px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left"><span style="font-size:1.0em"><span style="text-align:start">Deletion of an internal node with two children is a bit tricky. If we delete a node like this, we split a tree into two subtrees, and some children of the internal node won't be accessible after deletion.</span></span></p>
+</div></div></section><section data-id="bb1b050e93ee7f81ace5a072b6fa2b09" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 458px; left: 251px; top: 19px;" data-block-id="3cb62b9e34091ede824d35db95225697"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>What To Do</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 683px; height: 227px; left: 138.5px; top: 260.287px; min-width: 1px; min-height: 1px;" data-block-id="d524c136c14aff6304cd944c7b83a316"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="795" data-natural-height="296" style="left: 0px; top: -2px; width: 684px; height: 255px;" data-crop-x="0" data-crop-y="0.00678" data-crop-width="0.998737" data-crop-height="0.891525" data-lazy-loaded="" data-src="https://media.slid.es/uploads/820756/images/6447009/del02.bmp"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 843.255px; left: 58.3725px; top: 152.287px;" data-block-id="148a09eac12a8bf21ab98d9f4a0e1431"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: center;">
+<p><span style="font-size:1.0em"><span style="text-align:start">Replace the node being deleted with the largest node in the left subtree and then delete that largest node. </span></span></p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p><span style="font-size:1.0em"><span style="text-align:start">By symmetry, the node being deleted can be swapped with the smallest node in the right subtree.</span></span></p>
+</div></div></section><section data-id="19d7bbe7b5c8be399decb95e76f5d77f" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 690px; left: 136px; top: 0px;" data-block-id="ac9c959b062f4f0baa02f49d35881376"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2 style="text-align:left">Lab Activity - Questions</h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 181px; top: 133px;" data-block-id="524996e3f022be826345373805583d55"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left">Consider a minimum binary heap. In the array used to represent it, at what subscript will we find the parent of the element stored at subscript 43?</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left">a) 42</p>
+
+<p style="text-align:left"><strong>b) 21</strong></p>
+
+<p style="text-align:left">c) 22</p>
+
+<p style="text-align:left">d) 86</p>
+
+<p style="text-align:left">e) 87</p>
+</div></div></section><section data-id="17f124b8242e1757ae90a2be7a5a4f14" hidden="" aria-hidden="true" class="future" style="display: block;"><div class="sl-block" data-block-type="text" style="height: auto; width: 690px; left: 136px; top: 0px;" data-block-id="823a62d923a14d249b904272598b24c4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2 style="text-align:left">Lab Activity - Questions</h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 133px;" data-block-id="3e0027cd6e2b2f854be12c945d164470"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left">Consider a minimum binary heap. In the array used to represent it, at what subscript will we find the right child of the element stored at subscript 43?</p>
+
+<p style="text-align:left">&nbsp;</p>
+
+<p style="text-align:left">a) 44</p>
+
+<p style="text-align:left">b) 45</p>
+
+<p style="text-align:left">c) 21</p>
+
+<p style="text-align:left">d) 86</p>
+
+<p style="text-align:left"><strong>e) 87</strong></p>
+</div></div></section><section data-id="dee45854c558d6944e199aadd217cbbd" hidden="" aria-hidden="true" class="future" style="display: block;"><div class="sl-block" data-block-type="text" style="height: auto; width: 727px; left: 118px; top: 17px;" data-block-id="d44d93feb30aed1dfdfa0ce470ff1dd0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Lab Activity - Homework</h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 821px; left: 70px; top: 126px;" data-block-id="56ad9aec3fae75f160e976e39e8c479f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left">For the following minimum binary heap (drawn as a complete binary tree) fill the items into an array in the correct positions for the way a binary heap is normally represented with an array.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 515px; height: 257px; left: 223px; top: 326px; min-width: 1px; min-height: 1px;" data-block-id="a225843b988eb3758e6f29a62b9823d8"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="700" data-natural-height="350" style="" data-lazy-loaded="" src="./Heaps, Binary Trees and Search Trees_files/pasted-from-clipboard(2).png"></div></div></section><section data-id="8c812c9dbefb3c3fada5867ba09486f8" hidden="" aria-hidden="true" class="future" style="display: block;"><div class="sl-block" data-block-type="text" style="height: auto; width: 727px; left: 118px; top: 17px;" data-block-id="55145fb96499524745ffbc2fdda46d13"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Lab Activity - Homework</h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="image" data-block-id="3f8361d7f5f9c9069a2a89726f47c0ae" style="min-width: 1px; min-height: 1px; width: 515px; height: 257px; left: 223px; top: 160px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="700" data-natural-height="350" style="" data-lazy-loaded="" src="./Heaps, Binary Trees and Search Trees_files/pasted-from-clipboard(2).png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="009227c0a6425b1ca05dd2ae71b4cd07" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 182px; top: 453px;">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<p>Check your answer using this link:</p>
+<p><a href="https://www.cs.usfca.edu/~galles/JavascriptVisual/Heap.html" target="_blank">heap visual</a></p>
+</div>
+<grammarly-extension class="_1KJtL" style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 13;"><div data-grammarly-part="highlights" class="u_fNK" style="position: absolute; top: 0px; left: 0px;"><div style="box-sizing: content-box; top: 0px; left: 0px; width: 600px; height: 85.5px; position: relative; pointer-events: none; overflow: hidden; border: 0px; border-radius: 0px; padding: 0px; margin: 0px;"><div style="position: absolute; top: 0px; left: 0px;">
+<div style="height: 986px; width: 2040px;"></div>
+<div style="position: absolute; top: 0px; left: 0px; height: 986px; width: 2040px;"></div>
+</div></div></div>
+<div data-grammarly-part="button" class="u_fNK" style="position: absolute; top: 0px; left: 0px;"><div style="box-sizing: content-box; top: 0px; left: 0px; width: 600px; height: 85.5px; position: relative; pointer-events: none; overflow: hidden; border: 0px; border-radius: 0px; padding: 0px; margin: 0px;"><div style="position: absolute; transform: translate(-100%, -100%); top: 81.5px; left: 596px; width: auto; height: auto; pointer-events: all;"><div style="display: flex; flex-direction: row;">
+<div style="position: relative;"><div class="_2vV1Z _3uWIx" style="position: absolute; right: 0px; top: 0px;"><div class="_2mmtW"><div class="-mjUa">
+<div class="_3dPLF _2_DQz" style="transform: scale(1);">0</div>&nbsp;Advanced issues found<div class="SY83w _5pAkg">▲</div>
+<div class="_3pmCo"></div>
+</div></div></div></div>
+<div><div class="_5WizN _1QzSN"><div class="_3YmQx"><div title="Protected by Grammarly" class="_3QdKe">&nbsp;</div></div></div></div>
+</div></div></div></div></grammarly-extension>
+</div></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background present" data-background-hash="0https://media.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpegnullnullnullnullnullnullnullnull" data-loaded="true" style="display: block;"><div class="slide-background-content" style="background-image: url(&quot;https://media.slid.es/uploads/techtalentsouth/images/977279/prezziebackground-01.jpeg&quot;);"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background stack future" style="display: none;"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="https://techtalentsouth.slides.com/ttscurriculum/data-structures-part-ii-52?token=WDqvRDpu#/">
+					<span class="slide-number-a">1</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Heaps, Binary Trees, and Search Trees </div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 533.571px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/2f351feadc5e71dfda8ef8ea6dbe313b?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Heaps, Binary Trees and Search Trees</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 644.002px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+			<div class="deck-sharing">
+				<div class="deck-state" data-tooltip="This deck is only visible to your team">Internal</div>
+			</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/ttscurriculum/data-structures-part-ii-52/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">Heaps, Binary Trees and Search Trees</h1>
+				<p class="description">Full Stack Java</p>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2019-08-14 20:24:10 UTC">3 years ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/2f351feadc5e71dfda8ef8ea6dbe313b?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/ttscurriculum" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description"></p>
+		<ul class="links">
+			
+			
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="https://help.slides.com/">Help</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2022 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":2,"allow_scripts":false,"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":"","deck_templates_mode":null,"default_internal_role":"viewer"},"deck":{"id":1578880,"slug":"data-structures-part-ii-52","title":"Heaps, Binary Trees and Search Trees","description":"Full Stack Java","width":960,"height":700,"margin":0.05,"visibility":"team","published_at":"2020-10-19T14:44:25.097Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/82515b37668c8ad4fc1adaabe1d6229f/thumb.jpg?1606258862","view_count":720,"user":{"id":820756,"username":"ttscurriculum","name":"Tech Talent South","description":"","thumbnail_url":"https://www.gravatar.com/avatar/2f351feadc5e71dfda8ef8ea6dbe313b?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":672243,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"admin","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":true,"share_notes":false,"slide_number":true,"slide_count":48,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1606512492820,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":null},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2021-12-09T13:13:26.768Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1639055602","sanitize_messages":null,"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":820756,"username":"ttscurriculum","name":"Tech Talent South","description":"","thumbnail_url":"https://www.gravatar.com/avatar/2f351feadc5e71dfda8ef8ea6dbe313b?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":672243,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"admin","manager":true,"activated":true}}};
+</script>
+    <script src="./Heaps, Binary Trees and Search Trees_files/deck-consumption-6cb0dabfae7aab87de181e1519116bc15f62efe65c18c46e2a72775c05dc09c7.js.download" defer="defer"></script>
+    	<script src="./Heaps, Binary Trees and Search Trees_files/deck-ad5840235506b1ae9f1911eee7c2c085efa010a566481a17970b4c7b3c037af2.js.download" defer="defer"></script>
+	
+
+
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+  <style>a[href^="https://axdsz.pro/"],a[href^="https://adultfriendfinder.com/go/page/landing"],[href^="http://trafficare.net/"],ark-top-ad,a[href^="http://m.hsrve.com/"],a[href^="https://go.xtbaffiliates.com/"],a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"],a[href^="http://adultfriendfinder.com/go/page/landing"],a[href^="http://tour.mrskin.com/"],gpt-ad,a[href^="https://go.trackitalltheway.com/"],[href^="https://totlnkcl.com/"],a[href^="https://www.brazzersnetwork.com/landing/"],a[href^="http://adtrack1.club/"],amp-embed[type="taboola"],a[href^="https://go.julrdr.com/"],a[href^="http://intent.bingads.com/"],a[href^="https://galaxyroms.net/?scr="],[href^="https://shiftnetwork.infusionsoft.com/go/"] > img,div[id^="ad_script_"],[id^="google_ads_iframe"],a[href^="http://googleads.g.doubleclick.net/pcs/click"],[href="https://www.masstortfinancing.com/"] > img,[href^="http://join.shemalesfromhell.com/"],a[href*="//lkstrck2.com/"],div[id^="rc-widget-"],[href^="https://ilovemyfreedoms.com/landing-"],[href^="https://freecourseweb.com/"] > .sitefriend,a[href^="https://itubego.com/video-downloader/?affid="],[data-m-ad-id],a[href^="http://go.247traffic.com/"],a[data-obtrack^="http://paid.outbrain.com/network/redir?"],div[data-adunit],a[href^="//go.eabids.com/"],[data-template-type="nativead"],[data-ez-name],[href^="http://www.pingperfect.com/aff.php"],a[href^="https://tc.tradetracker.net/"] > img,a[href^="https://www.iyalc.com/"],[class^="div-gpt-ad"],a[href^="https://chaturbate.com/in/?track="],div[data-content="Advertisement"],amp-fx-flying-carpet,a[href^="http://ad.doubleclick.net/"],a[href^="https://claring-loccelkin.com/"],a[href^="https://a.bestcontentoperation.top/"],div[id^="crt-"][style],[href^="http://join.michelle-austin.com/"],[href^="https://goldcometals.com/clk.trk"],a[href^="https://explore.findanswersnow.net/"],a[href^="https://juicyads.in/"],div[data-contentexchange-widget],a[href^="https://googleads.g.doubleclick.net/pcs/click"],a[href^="https://gghf.mobi/"],a[href^="https://offers.refchamp.com/"],img[src^="https://images.purevpnaffiliates.com"],[data-revive-zoneid],[class^="s2nPlayer"],a[href^="http://tc.tradetracker.net/"] > img,[href^="https://optimizedelite.com/"] > img,[href^="https://www.restoro.com/"],a[href^="https://tm-offers.gamingadult.com/"],a[href^="https://fast-redirecting.com/"],div[class^="Adstyled__AdWrapper-"],[href^="https://mystore.com/"] > img,[href^="http://join.trannies-fuck.com/"],a[href^="https://transfer.xe.com/signup/track/redirect?"],[href^="https://antiagingbed.com/discount/"] > img,[href^="https://www.avantlink.com/click.php"] img,a[href^="https://go.xxxjmp.com"],[href^="https://glersakr.com/"],a[href^="https://www.financeads.net/tc.php?"],app-large-ad,a[href^="https://deliver.tf2www.com/"],a[href^="https://www.vfreecams.com/in/?track="],a[href^="https://go.etoro.com/"] > img,a[href^="https://tracking.avapartner.com/"],a[href*=".zlink9.com/"],a[href^="https://ad.atdmt.com/"],a[href^="https://fakelay.com/"],a[href^="https://click.linksynergy.com/fs-bin/"],a[href^="http://go.xtbaffiliates.com/"],div[id^="google_dfp_"],a[href^="https://adserver.adreactor.com/"],a[href^="http://www.advcashpro.com/aff/"],a[href^="https://bongacams10.com/track?"],a[href^="https://track.interactivegf.com/"],a[href^="https://go.alxbgo.com/"],[href^="http://join.shemale.xxx/"],[href^="http://clicks.totemcash.com/"],a[href^="https://tracking.comfortclick.eu/"],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,a[href^="http://enter.anabolic.com/track/"],div[class^="Display_displayAd"],a[href^="https://www.nutaku.net/signup/landing/"],a[href^="http://secure.vivid.com/track/"],a[href^="//thaudray.com/"],a[href^="https://t.adating.link/"],a[href^="https://cpartner.bdswiss.com/"],a[href^="https://go.strpjmp.com/"],a[href^="https://tracking.trackcasino.co/"],div[id^="taboola-stream-"],a[href^="https://takeallsoft.ru/"],a[href^="https://landing.brazzersplus.com/"],a[href^="http://hotcandyland.com/partner/"],a[href^="https://www.rabbits.webcam/?id="],[href^="//ngeoziadiyc4hi2e.com/"],a[href^="https://streamate.com/landing/click/"],[href^="https://www.mypillow.com/"] > img,[href^="https://routewebtk.com/"],a[href^="https://www.profitablecpmgate.com/"],[href^="https://www.herbanomic.com/"] > img,a[href^="//lambingsyddir.com/"],div[id^="advads_"],guj-ad,a[href^="https://t.mobtya.com/"],a[href^="https://iac.ampxdirect.com/"],a[href^="https://oackoubs.com/"],a[href^="https://earandmarketing.com/"],a[href^="https://scurewall.co/"],a[href^="https://trappist-1d.com/"],zeus-ad,display-ad-component,a[href^="https://albionsoftwares.com/"],div.fadeInDown[id$="____equal"][class$="____equal"],[data-name="adaptiveConstructorAd"],a[href^="https://taghaugh.com/"],a[href^="https://lead1.pl/"],a[href^="https://cagothie.net/"],div[data-ad-placeholder],a[href^="https://affiliate.rusvpn.com/click.php?"],a[href^="https://www.sugarinstant.com/?partner_id="],a[data-url^="http://paid.outbrain.com/network/redir?"] + .author,a[href^="https://go.cmrdr.com/"],a[href^="//voyeurhit.com/cs/"],a[href^="https://queersodadults.com/"],a[href^="https://dooloust.net/"],a[href^="https://ttf.trmobc.com/"],a[href^="https://adswick.com/"],[href^="https://awbbjmp.com/"],a[href^="https://s.zlink1.com/"],a[href^="https://ads.ad4game.com/"],[href^="https://mypillow.com/"] > img,a[href^="https://a-ads.com/"],a[data-url^="http://paid.outbrain.com/network/redir?"],[data-mobile-ad-id],a[href^="https://www.passeura.com/"],a[href^="https://deliver.ptgncdn.com/"],div[data-alias="300x250 Ad 1"],a[href^="http://partners.etoro.com/"],div[data-ad-targeting],div[id^="adrotate_widgets-"],[href^="https://trackfin.asia/"],[data-adblockkey],a[href^="https://go.currency.com/"],a[href^="http://rs-stripe.wsj.com/stripe/redirect"],a[href^="https://azpresearch.club/"],a[href^="https://dishphysics.com/"],div[id*="ScriptRoot"],a[href^="https://billing.purevpn.com/aff.php"] > img,a[href^="https://bluedelivery.pro/"],[href^="https://join.playboyplus.com/track/"],a[href^="https://ad.doubleclick.net/"],a[href^="https://americafirstpolls.com/"],a[href^="https://torguard.net/aff.php"] > img,div[data-spotim-slot],a[href^="https://moneynow.one/"],a[href^="https://adnetwrk.com/"],a[href^="https://aj1070.online/"],a[href^="https://funkydaters.com/"],a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"],a[href^="https://porntubemate.com/"],a[href^="https://click.hoolig.app/"],div[class^="s-dfp-"],a[href^="http://bongacams.com/track?"],[href^="https://www.targetingpartner.com/"],div[id^="lazyad-"],a[href^="http://adserver.adreactor.com/"],a[href^="https://www.onlineusershielder.com/torrent-guard/?"],div[id^="ads300_250-widget-"],a[href^="https://1startfiledownload1.com/"],a[href^="https://ad.kubiccomps.icu/"],[onclick*="content.ad/"],a[href^="https://traffic.bannerator.com/"],div[id^="gpt-ad-hor"],a[href*="http://MyPillow.com"] > img,a[href^="https://go.cmtaffiliates.com/"],a[href^="https://leg.xyz/?track="],a[href^="https://m.do.co/c/"] > img,a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"],a[href^="https://ads-for-free.com/click.php?"],a[href^="http://click.payserve.com/"],a[href^="http://adf.ly/?id="],a[href^="https://topoffers.com/"][href*="/?pid="],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"],div[data-ad-wrapper],a[href^="https://a.montangop.top/"],a[href^="https://a.bestcontentfood.top/"],[href^="https://ad.admitad.com/"],a[href^="https://adclick.g.doubleclick.net/"],[href^="https://noqreport.com/"] > img,span[id^="ezoic-pub-ad-placeholder-"],iframe[src^="http://ad.yieldmanager.com/"],a[href^="http://affiliate.glbtracker.com/"],a[href^="http://traffic.tc-clicks.com/"],a[href*=".zlinkm.com/"],a[href^="https://meet-sexhere.com/"],a[href^="https://go.xlvirdr.com"],DFP-AD,a[href^="https://wantopticalfreelance.com/"],a[href^="http://affiliates.thrixxx.com/"],a[href^="https://bongacams2.com/track?"],[onclick^="location.href='http://www.reimageplus.com"],a[href^="https://losingoldfry.com/"],a[href^="https://intenseaffiliates.com/redirect/"],[href^="https://cipledecline.buzz/"],a[href^="https://geniusdexchange.com/"],a[href^="https://track.bruceads.com/"],[href^="https://zstacklife.com/"] img,a[href^="https://lnkxt.bannerator.com/"],div[id^="ads300_100-widget-"],a[href^="https://trf.bannerator.com/"],a[href^="https://track.themadtrcker.com/"],[href^="https://go.affiliatexe.com/"],a[href^="https://ausoafab.net/"],a[href^="https://dianches-inchor.com/"],a[href^="https://affcpatrk.com/"],a[href^="https://ak.hetaruwg.com/"],a[href^="https://5hjdbfjfd5.monster/"],a[href^="//coarsewary.com/"],div[class^="gpt-ad-hor"],[data-ad-cls],a[href^="https://vo2.qrlsx.com/"],a[href^="http://pityhostngco2.xyz/"],a[href^="https://www.camsoda.com/enter.php?id="],a[href^="https://engine.trackingdesks.com/"],a[href^="https://cpmspace.com/"],a[href^="https://pongidsrunback.com/"],div[data-native_ad],a[href^="http://www.gfrevenge.com/landing/"],a[href^="//pubads.g.doubleclick.net/"],ad-desktop-sidebar,div[id^="ezoic-pub-ad-"],a[href^="https://my-movie.club/"],a[href^="https://see.kmisln.com/"],div[class^="native-ad-"],a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img,[id^="ad_slider"],a[href^="https://www.jackery.com?aff="] > img,a[href^="https://track.afcpatrk.com/"],a[href^="https://adsrv4k.com/"],a[href^="https://www.healthrangerstore.com/"] > img,a[href*="https://www.sweetdeals.com/"] img,a[href^="https://playuhd.host/"],[href^="https://go.xlrdr.com"],a[href^="https://affpa.top/"],a[href^="https://land.brazzersnetwork.com/landing/"],a[href^="https://t.hrtye.com/"],a[href^="https://www.privateinternetaccess.com/"] > img,a[href^="https://join.virtuallust3d.com/"],a[data-redirect^="https://paid.outbrain.com/network/redir?"],a[href^="https://gohere.pl/"],a[href^="https://webroutetrk.com/"],a[href^="https://as.sexad.net/"],a[href^="https://t.grtyi.com/"],a[href^="https://www.bang.com/?aff="],a[href^="https://natour.naughtyamerica.com/track/"],a[href^="https://a.bestcontentweb.top/"],a[href^="https://www.googleadservices.com/pagead/aclk?"],a[href^="//syndication.dynsrvtbg.com/"],AD-TRIPLE-BOX,ad-shield-ads,a[href^="https://go.zybrdr.com"],a[href^="https://t.hrtyj.com/"],[href^="http://join.ts-dominopresley.com/"],a[href^="https://maymooth-stopic.com/"],iframe[src^="https://pagead2.googlesyndication.com/"],[href^="https://mypatriotsupply.com/"] > img,a[href^="https://track.totalav.com/"],a[href^="https://go.ebrokerserve.com/"],a[href^="https://go.skinstrip.net"][href*="?campaignId="],a[href^="https://pcm.bannerator.com/"],div[id^="gpt_ad_"],[href^="https://www.mystore.com/"] > img,a[href^="https://www.oneclickroot.com/?tap_a="] > img,a[href^="https://bestcond1tions.com/"],a[href^="https://get2nesoft1.ru/"],topadblock,a[href^="https://click.dtiserv2.com/"],[href^="https://infinitytrk.com/"],a[href^="https://financeads.net/tc.php?"],a[href^="https://adjoincomprise.com/"],a[href^="https://syndication.exoclick.com/"],a[href^="https://www.chngtrack.com/"],[href^="https://turtlebids.irauctions.com/"] img,app-advertisement,[href^="https://click2cvs.com/"],display-ads,amp-ad-custom,a[href^="https://ovb.im/"],a[href^="https://go.gldrdr.com/"],a[href^="https://go.xxxiijmp.com"],div[id^="adfox_"],[href^="https://join3.bannedsextapes.com"],a[href^="https://torrentsafeguard.com/?aid="],a[href^="https://pl.premium4kflix.website/"],a[href^="https://awptjmp.com/"],[href^="https://wct.link/"],a[href^="https://s.zlink2.com/"],[data-d-ad-id],a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://go.hpyrdr.com/"],a[href^="https://meet-sex-here.com/"],div[id^="vuukle-ad-"],a[href^="http://deloplen.com/"],div[aria-label="Ads"],a[href^="https://iqbroker.com/"][href*="?aff="],a[href^="https://www.sweetdeals.com"],[href^="https://www.brighteonstore.com/products/"] img,a[href^="https://ads.leovegas.com/redirect.aspx?"],a[href^="https://delivery.porn.com/"],a[href^="https://clicks.pipaffiliates.com/"],a[href^="https://dialling-abutory.com/"],[href^="https://rapidgator.net/article/premium/ref/"],a[href^="https://prf.hn/click/"][href*="/camref:"] > img,a[href^="//go.xlviiirdr.com"],a[href^="https://pb-track.com/"],a[data-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="],[data-ad-width],a[href^="https://www.bet365.com/"][href*="affiliate="],a[href^="https://bestdatinghere.life/"],a[href^="//benoopto.com/"],a[href^="https://aweptjmp.com/"],div[class^="kiwi-ad-wrapper"],a[href^="https://track.afftck.com/"],a[href^="https://bngpt.com/"],[id^="div-gpt-ad"],[href^="https://r.kraken.com/"],a[href^="https://meet-to-fuck.com/"],a[href^="https://msecure117.com/"],a[href^="https://fleshlight.sjv.io/"],[href^="https://goldforyourfuture.com/clk.trk"] img,a[href^="https://clickadilla.com/"],a[href^="https://look.utndln.com/"],[href^="https://mylead.global/stl/"] > img,a[href^="https://www.sheetmusicplus.com/?aff_id="],a[href^="https://go.xlviirdr.com"],a[href^="https://join.virtualtaboo.com/track/"],[class^="amp-ad-"],a[href^="https://www.kingsoffetish.com/tour?partner_id="],div[id^="yandex_ad"],a[href^="https://trk.watchlivesports4k.club/"],div[data-adzone],a[href^="https://k2s.cc/pr/"],a[href^="//wagerprocuratorantiterrorist.com/"],div[id^="ad-gpt-"],a[href^="https://porngames.adult/?SID="],a[href^="https://movie.download-file.org/"],[id^="ad_sky"],a[href^="https://tragency-clesburg.icu/"],[href^="https://clk.right-wing-health.com/"],a[href^="http://www.mrskin.com/tour"],div[id^="js-dfp-"],a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"],div[id^="zergnet-widget"],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,a[href^="http://cam4com.go2cloud.org/aff_c?"],[href^="http://join.rodneymoore.com/"],[href^="http://join.shemalepornstar.com/"],a[href^="https://medleyads.com/"],a[href^="https://avtub.click/assets/link.php"],AMP-AD,div[id^="div-ads-"],a[href^="http://static.fleshlight.com/images/banners/"],a[href^="http://pubads.g.doubleclick.net/"],bottomadblock,a[href^="https://trusted-click-host.com/"],a[href^="https://ads.betfair.com/redirect.aspx?"],[href^="https://go.astutelinks.com/"],a[href^="https://syndication.optimizesrv.com/"],a[href^="https://www.infowarsstore.com/"] > img,div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"],a[href^="https://datingbests.life/"],a[href^="https://go.xxxijmp.com"],a[href^="http://bc.vc/?r="],a[href^="https://dfsdkkka.com/"],a[href*=".flndmyiove.net/"],a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="],[data-ad-manager-id],[href^="http://misslinkvocation.com/"],[href^="https://www.reimageplus.com/"],a[href^="https://chaturbate.jjgirls.com/?track="],a[href^="https://watchmygirlfriend.tv/"],div[id^="ad_position_"],a[href^="https://iactrivago.ampxdirect.com/"],a[href^="https://go.goaserv.com/"],div[id*="MarketGid"],a[href^="https://syndication.dynsrvtbg.com/"],a[href^="//agacelebir.com/"],a[href^="https://camfapr.com/landing/click/"],a[href^="https://go.hpyjmp.com"],div[id^="ad-server-"],a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="],a[data-oburl^="http://paid.outbrain.com/network/redir?"],[data-freestar-ad],a[href^="https://promo-bc.com/"],[id^="chp_ads_block"],a[href^="https://go.xlviiirdr.com"],[href^="https://shrugartisticelder.com"],a[href^="https://engine.phn.doublepimp.com/"],div[id^="adngin-"],a[href^="https://go.goasrv.com/"],div[id^="adspot-"],a[href^="https://track.wg-aff.com"],a[href^="https://track.healthtrader.com/"],[href^="http://go.cm-trk2.com/"],a[href^="https://paid.outbrain.com/network/redir?"],div[data-adunit-path],[data-desktop-ad-id],a[href^="https://cam4com.go2cloud.org/"],[href^="http://globsads.com/"],amp-connatix-player,div[data-adname],a[href^="https://www.awin1.com/cread.php?awinaffid="],div[data-alias="300x250 Ad 2"],a[href^="https://go.247traffic.com/"],[href^="https://detachedbates.com/"],a[href^="https://track.effiliation.com/servlet/effi.click?"] > img,a[href^="https://misspkl.com/"],aside[id^="adrotate_widgets-"],a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"],a[href^="https://www.mypornstarcams.com/landing/click/"],a[href^="https://trk.moviesflix4k.xyz/"],[href^="https://join.girlsoutwest.com/"],div[id^="ads250_250-widget-"],[data-ad-module],div[data-mpu1],div[id^="advads-"],a[href^="https://landing.brazzersnetwork.com/"],a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"],a[href^="https://www.adultempire.com/"][href*="?partner_id="],a[href^="https://go.xlirdr.com"],[data-advadstrackid],a[href^="https://a2.adform.net/"],a[href^="http://d2.zedo.com/"],AD-SLOT,a[href^="http://ads2.williamhill.com/redirect.aspx?"],a[href^="https://engine.blueistheneworanges.com/"],iframe[src^="http://www.adpeepshosted.com/"],a[href^="https://aff-ads.stickywilds.com/"],a[href^="https://go.admjmp.com/"],a[href^="https://mmwebhandler.aff-online.com/"],a[href^="https://a.medfoodhome.com/"],a[href^="http://www.FriendlyDuck.com/"],[href^="https://engine.gettopple.com/"],a[href^="http://bodelen.com/"],a[href^="https://speedsupermarketdonut.com/"],ADS-RIGHT,[id^="section-ad-banner"],a[href^="https://clixtrac.com/"],a[href^="https://a.adtng.com/"],a[href^="https://go.markets.com/visit/?bta="],a[href^="https://go.tmrjmp.com"],a[href^="https://bs.serving-sys.com"],a[href^="https://traffdaq.com/"],a[href^="https://uncensored3d.com/"],a[href^="https://go.dmzjmp.com"],a[href^="https://someperceptionparade.com/"],div[id^="ad-inserter-"],a[href="//rufflycouncil.com/"],aside[id^="advads_ad_widget-"],a[href^="http://go.fpmarkets.com/"],[href^="https://traffserve.com/"],a[href^="https://www.oboom.com/ref/"],div[id^="div-gpt-"],a[href^="https://tracking.gitads.io/"],[href^="https://secure.bmtmicro.com/servlets/"],a[href^="http://trk.mdrtrck.com/"],a[href^="https://refpazkjixes.top/"],a[href^="https://thechleads.pro/"],a[href^="https://cams.imagetwist.com/in/?track="],a[href^="https://lobimax.com/"],a[href^="http://wct.link/"],div[data-insertion],[name^="google_ads_iframe"],a[href^="http://paid.outbrain.com/network/redir?"],a[href^="https://track.adform.net/"],[href^="https://www.hostg.xyz/"] > img,a[href^="https://chaturbate.com/in/?tour="],a[href^="https://ads.cdn.live/"],a[href^="https://join.sexworld3d.com/track/"],a[href^="https://ismlks.com/"],a[href^="https://tupitea.co/"],[href^="http://residenceseeingstanding.com/"],[href^="http://mypillow.com/"] > img,div[data-native-ad],a[href^="http://allaptair.club/"],a[href*=".trust.zone"],[href^="https://www.mypatriotsupply.com/"] > img,[data-dynamic-ads],a[href^="https://mk-cdn.net/"],a[href^="https://www.arthrozene.com/"][href*="?tid="],a[href^="https://fertilitycommand.com/"],a[href^="https://track.ultravpn.com/"],a[href^="https://awecrptjmp.com/"],a[href^="https://landing1.brazzersnetwork.com"],a[href^="http://https://www.get-express-vpn.com/offer/"],div[data-dfp-id],a[href^="https://black77854.com/"],a[href^="https://www.mrskin.com/tour"],a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"],[data-role="tile-ads-module"],a[href*=".engine.adglare.net/"],a[href^="https://static.fleshlight.com/images/banners/"],a[href^="https://vlnk.me/"],[href="https://masstortfinancing.com"] img,a[href^="https://click.a-ads.com/"],div[data-google-query-id],[class^="chp_ads_block"],div[id^="_vdo_ads_player_ai_"],div[data-role="sidebarAd"],div[id^="ad-div-"],div[id^="dfp-slot-"],a[href^="https://frameworkdeserve.com/"],a[href^="https://agacelebir.com/"],a[href^="https://serve.awmdelivery.com/"],[href="https://ourgoldguy.com/contact/"] img,a[href^="https://incisivetrk.cvtr.io/click?"],a[href^="https://reachtrgt.com/"],a[href^="https://myusenet.xyz/"],a[href^="https://twinrdsyn.com/"],[href^="https://istlnkcl.com/"],[href^="https://cpa.10kfreesilver.com/"],a[href^="https://thaudray.com/"],a[href^="https://ndt5.net/"],[href="https://jdrucker.com/gold"] > img,a[href^="https://partners.fxoro.com/click.php?"],a[href^="//chrif8kdstie.com/"],[href^="http://www.fleshlightgirls.com/"],a[href^="https://www.liquidfire.mobi/"],a[href^="https://1free33style.com/"],[href^="https://kingered-banctours.com/"],[href^="http://homemoviestube.com/"],a[href^="https://www.highperformancegate.com/"],a[href^="http://betahit.click/"],div[data-id-advertdfpconf],iframe[id^="google_ads_frame"],[href^="https://affect3dnetwork.com/track/"],a[href^="http://adultgames.xxx/"],app-ad,article.ad,hl-adsense,a[href^="https://banners.livepartners.com/"],a[href^="https://waisheph.com/"],a[href^="https://awentw.com/"],a[href^="http://www.coiwqe.site/"],a[href^="https://loboclick.com"],a[href^="https://join.dreamsexworld.com/"],[href^="http://www.mypillow.com/"] > img,a[href^="https://tour.mrskin.com/"],a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="],a[href^="https://burpee.xyz/"],a[href^="https://www.mrskin.com/account/"],a[href^="//apptjmp.com/"],a[href^="https://aaucwbe.com/"],a[href^="https://go.nordvpn.net/aff"] > img,[href^="https://affiliate.fastcomet.com/"] > img,[href^="http://join.hardcoreshemalevideo.com/"],a[href^="https://www.nudeidols.com/cams/"],[data-css-class="dfp-inarticle"],a[data-oburl^="https://paid.outbrain.com/network/redir?"],a[href^="https://wittered-mainging.com/"],a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img,a[href^="https://spygasm.com/track?"],a[href^="https://www.adskeeper.com"],div[id^="gtm-ad-"],a[href^="https://www.get-express-vpn.com/offer/"],[href^="https://www.cloudways.com/en/?id"],a[href^="https://www.adsexse.com/x/"],div[id^="dfp-ad-"],a[href^="https://t.aslnk.link/"],[href^="https://zone.gotrackier.com/"],a[href^="http://www.onclickmega.com/jump/next.php?"],a[href^="https://creacdn.top-convert.com/"],div[id^="ad_bnr_"],a-ad,a[href^="https://track.clickmoi.xyz/"],[href^="https://v.investologic.co.uk/"],a[href^="https://nutrientassumptionclaims.com/"],[href^="https://stvkr.com/"],div[id^="ad-position-"],a[href^="https://ptapjmp.com/"],a[href^="https://mob1ledev1ces.com/"],a[href^="https://ad.zanox.com/ppc/"] > img,a[href^="https://prf.hn/click/"][href*="/adref:"] > img,a[href^="https://odnxe.lncredlbiedate.com/"],a[href^="https://uncensored.game/"],a[href^="http://www.onwebcam.com/random?t_link="],a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"],div[id^="sticky_ad_"],a[href^="https://www.bebi.com"],a[href^="https://go.xlivrdr.com"],a[href^="https://as.conjectwatson.com/"],[href^="https://track.fiverr.com/visit/"] > img,a[href^="https://www.clicktraceclick.com/"],a[href^="https://reinstandpointdumbest.com/"],[id^="ad-wrap-"],[href^="https://go.4rabettraff.com/"] { display: none !important }</style>
+
+</body></html>

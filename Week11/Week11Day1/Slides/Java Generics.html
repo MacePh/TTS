@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://techtalentsouth.slides.com/techtalentsouth/java-generics?token=4fsZAiSe#/1 -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars reveal-is-ready fonts-are-ready" data-account="" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>Java Generics</title>
+    <meta name="description" content="A presentation created with Slides.">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta property="og:title" content="Java Generics">
+    <meta property="og:description" content="A presentation created with Slides.">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://media.slid.es/thumbnails/f1fb0cd5ef4a21fb8da9edca38ed9c9c/thumb.jpg?1592575160">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/techtalentsouth/java-generics?token=4fsZAiSe">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Java Generics_files/css2" onload="this.onload=null;this.removeAttribute(&#39;media&#39;);" rel="stylesheet" data-application-font="inter">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" data-application-font="inter">
+</noscript>
+
+    <link rel="stylesheet" media="all" href="./Java Generics_files/slides-9486051f6b033e85e64e4e925c2d2d8ccb9a3566a8a0e1f9d5c891e9f959a77e.css">
+    <link rel="stylesheet" media="all" href="./Java Generics_files/deck-consumption-62767a9d5b34b088d2e3f948d9b3154d6bf711dc30aee1b141a69143fbe2613a.css">
+    	<link rel="stylesheet" media="all" href="./Java Generics_files/deck-v2-9096d1ab9031809cd7e0dd8baac906708e581e3b86875ff854417195bd729248.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ScZPr4f/xODKllJWeOm2K1iZSyHoUnF+aNSf0bsborlxJJdSqObATtZFUHQg8r5qNLkroCoo1ZW6KBJM6nU8GA==">
+    <script type="application/javascript" async="" defer="" src="./Java Generics_files/track.js.download"></script><script type="text/javascript" async="" src="./Java Generics_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./Java Generics_files/js"></script>
+<script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    window.slidesMeasurementId = 'G-LWVDH9STBJ';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LWVDH9STBJ', {
+      page_title: 'decks-show'
+    });
+
+  }
+</script>
+
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="Java Generics">
+	<meta name="twitter:description" content="A presentation created with Slides.">
+	<meta name="twitter:image" content="https://media.slid.es/thumbnails/f1fb0cd5ef4a21fb8da9edca38ed9c9c/thumb.jpg?1592575160">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./Java Generics_files/opensans.css"><link rel="stylesheet" href="./Java Generics_files/css"><style type="text/css" media="screen">.uv-icon{box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon .uv-tooltip-container{position:relative}.uv-icon .uv-tooltip-container .uv-icon-tooltip{display:none;position:absolute;height:20px;padding:4px 8px;background-color:#464653;color:white;font-size:12px;border-radius:4px;line-height:18px;font-family:"Open Sans", sans-serif;white-space:nowrap}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left,.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{top:0;bottom:0;margin:auto 10px}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top,.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{transform:translate(-30%);margin:10px auto}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top{bottom:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{top:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left{right:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{left:100%}.uv-icon .uv-tooltip-container:hover .uv-icon-tooltip{display:block}.uv-icon-trigger{display:block;width:39px;height:39px;border:none;padding:0;cursor:pointer;background:none}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;transition:background 200ms}.uv-bottom .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{transition:none !important}.uv-fade{opacity:1;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{transform:translateY(100%)}.uv-slide-left.uv-is-hidden{transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{transform:translateX(100%)}
+</style><script type="text/javascript" src="./Java Generics_files/highlight-0adde8531514527653fdb445e29c1cca3687dc50684c4b8f624246a318dc706a.js.download"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style><script type="text/javascript" src="./Java Generics_files/zoom-e1f94838c054500b9ea32c1cdb27173f7796522bc2af1b0c8efe98c65a4c57b7.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <body style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url(&#39;https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png&#39;)"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue" style="--slide-width:960px; --slide-height:700px; --slide-scale:0.583571;">
+			<div class="reveal slide embedded has-horizontal-slides ready focused" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.583571);">
+					<section data-id="465f8c6eaa986107077473da6be65f58" class="past" style="display: block;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 490px; height: auto;" data-block-id="6b2f362a8de348b26d2062f327af6eb5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Advanced Java Concepts</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="5c8f5cc14e8caa23f95d33c2630257e0" style="min-width: 1px; min-height: 1px; width: 544px; height: 435.071px; left: 208px; top: 88.4645px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1688" data-natural-height="1350" style="" data-lazy-loaded="" src="./Java Generics_files/TTS-Identity-FullColor-HorizontalStack.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5a0ed9490b6e6f83df6d9e9197df3d0c" style="height: auto; min-width: 30px; min-height: 30px; width: 614px; left: 173px; top: 564px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Generics</p>
+</div></div></section><section data-id="10081ea95a6137fb5990e822ba0fc78b" class="present" style="display: block;"><div class="sl-block" data-block-type="text" style="height: auto; width: 825px; left: 68px; top: 5px;" data-block-id="1265d0f0d9de1e323be02e6175aa76a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Java Generics</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7cf9989abd8ffccedebc3e21b5daac2b" style="height: auto; min-width: 30px; min-height: 30px; width: 794px; left: 86px; top: 92px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="97439799-c8ac-6756-913c-ab7d2221d248" data-gramm="true" data-gramm_editor="true">
+<p><strong>Generics </strong>enable programmers to create classes and methods using types (classes and interfaces) as parameters when defining the classes, interfaces, and methods. <strong>Similar to more familiar formal parameters</strong> used in method declarations, type parameters allow you to re-use the same code with different inputs. The difference is that the <strong>inputs to formal parameters are values</strong>, while the <strong>inputs to type parameters are types</strong>.</p>
+
+<p>&nbsp;</p>
+
+<p>Using generics allows for stronger type checks at compile time to generic code and issues errors if the code violates type safety. Fixing compile-time errors is easier than fixing runtime errors, which can be difficult to find.</p>
+
+<p>&nbsp;</p>
+</div></div></section><section data-id="feb2ed393e0f0a01a0f6d095858062a3" hidden="" aria-hidden="true" class="future" style="display: block;">
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 613px; left: 173.5px; top: 78px;" data-name="text-aef74f" data-block-id="fb716d079d22fd7a086c7017646142d8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="f5a23c34-945b-248e-78a0-72e46b80fccf" data-gramm="true" data-gramm_editor="true">
+<p><strong>Generic Methods</strong></p>
+
+<p><span style="font-size:1.0em">With generics, you can write a single method declaration <span style="color:rgb(17, 17, 17)">that can be called with arguments of different types.&nbsp; The compiler will manage each call appropriately, based on the types of the arguments passed.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p>The syntax for a generic method includes a list of <span style="color:#FF0000"><strong>type parameters</strong></span>, inside angle brackets &lt;&gt;, which appears before the method's return type. For static generic methods, the type parameter section must appear before the method's return type.</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align:left"><span style="font-size:1.0em">&nbsp;</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 762px; left: 99px; top: 0px;" data-name="text-00aba7" data-block-id="9a144da0446fa4e8218e3092ea751d99"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Generics</h2>
+</div></div></section><section data-id="3f36993147ab3cd22eb9c652ddf5b86a" hidden="" aria-hidden="true" class="future" style="display: block;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 928px; left: 15px; top: 210px;" data-name="text-fe9d21" data-block-id="603b67a6cfd42b44ef4cc22e1d817911"><div class="sl-block-style" style="z-index: 10;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui" data-gramm_id="733d6703-4cf1-284f-d72c-4a62898243cc" data-gramm="true" data-gramm_editor="true">
+<p><span style="font-size:0.9em">To define Generic Methods: </span></p>
+
+<ul>
+	<li><span style="font-size:0.9em">Generic method declarations have a type parameter section in angle brackets. <strong>&lt;W&gt;</strong></span></li>
+	<li><span style="font-size:0.9em">Type parameter section contains one or more type parameters separated by commas.</span></li>
+	<li><span style="font-size:0.9em">The type parameters can be used to declare the return type and act as placeholders for the types of the arguments passed to the generic method</span></li>
+	<li><span style="font-size:0.9em">A generic method's body is declared like that of any other method, but parameters can only represent reference types, not primitive types (like int, double and char). ​</span></li>
+</ul>
+</div></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 683px; height: 88px; left: 139px; top: 96px;" data-name="code-7c3884" data-block-id="040f60b0627a97a849baebba212e133e"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs"><span class="hljs-comment">// generic method </span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt; W &gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">methodName</span><span class="hljs-params">( W[] parameterName )</span> </span>{
+    <span class="hljs-comment">//method code</span>
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 762px; left: 99px; top: 0px;" data-name="text-00aba7" data-block-id="42bf445c96a41fe6e2e0d589944fd8cc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Generics</h2>
+</div></div></section><section data-id="1fc0d611a9ed825aa16a283d94872583" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 766px; height: 219px; left: 97px; top: 310.5px;" data-name="code-1a4681" data-block-id="d951f1983e935acae16e74838faaf96f"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 134%;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GenericMethodPractice</span> </span>{
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt; W &gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">( W[] arrayIn)</span> </span>{
+      <span class="hljs-keyword">for</span>(W element : arrayIn) {
+         System.out.printf(<span class="hljs-string">"%s "</span>, element);
+      }
+      System.out.println();
+   }
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 816px; left: 72px; top: 108.5px;" data-name="text-d3bbaa" data-block-id="7f60088ce5751f7c0cd36d1844aa9e0a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="39e45310-8262-081a-7bb0-e740474157b0" data-gramm="true" data-gramm_editor="true">
+<p><strong>Create a Generic Method</strong></p>
+
+<p>Let's create a generic method that will read an array and print out its contents.&nbsp; We want to be able to use arrays of any data type.&nbsp; We define the parameter type as &lt;W&gt;.&nbsp; arrayIn will represent an array of any data type through &lt;W&gt;.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 762px; left: 99px; top: 0px;" data-name="text-00aba7" data-block-id="58f6855b2e896f0da9dcecf0abc0512f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Generics</h2>
+</div></div></section><section data-id="efb00b8fc11c22f78aa30ccecd4a883f" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="code" style="width: 688px; height: 359px; left: 112px; top: 96px;" data-name="code-d45b30" data-block-id="5c7c8ae8f319d97659be11548d4dae91"><div class="sl-block-content notranslate" style="z-index: 10;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GenericMethodPractice</span> </span>{
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt; W &gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">( W[] arrayIn)</span> </span>{
+  
+      <span class="hljs-keyword">for</span>(W element : arrayIn) {
+         System.out.printf(<span class="hljs-string">"%s "</span>, element);
+      }
+      System.out.println();
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+
+      Integer[] intArray = { <span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>, <span class="hljs-number">50</span> };
+      String[] stringArray = { <span class="hljs-string">"Java"</span>, <span class="hljs-string">"Ruby"</span>, <span class="hljs-string">"Python"</span>, <span class="hljs-string">"Swift"</span>};
+      Character[] charArray = { <span class="hljs-string">'H'</span>, <span class="hljs-string">'E'</span>, <span class="hljs-string">'L'</span>, <span class="hljs-string">'L'</span>, <span class="hljs-string">'O'</span> };
+
+   }
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 156px; top: 490px;" data-name="text-d041d3" data-block-id="741375e2c5bc29bb1002a2d9e09c547d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="2fd7c5e6-ac85-9017-0b54-7edd3514b7d0" data-gramm="true" data-gramm_editor="true">
+<p>Next, create 3 arrays of different types:&nbsp; Integer, String, and Character</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 762px; left: 80px; top: 0px;" data-name="text-00aba7" data-block-id="81991064201a9e06c97dd1bc8846c87f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Generics</h2>
+</div></div></section><section data-id="cb3a53408f1b3f31fe6b98c2f37e94c1" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="code" style="width: 751px; height: 477px; left: 103px; top: 140px;" data-name="code-38f0b4" data-block-id="b9bbbea83ed9144295f05cfd1d7de0c1"><div class="sl-block-content notranslate" style="z-index: 10; font-size: 96%;" data-highlight-theme="monokai-sublime"><pre class="java"><code style="padding: 14px;" class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GenericMethodPractice</span> </span>{
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt; W &gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">arrayContents</span><span class="hljs-params">( W[] arrayIn)</span> </span>{
+  
+      <span class="hljs-keyword">for</span>(W element : arrayIn) {
+         System.out.printf(<span class="hljs-string">"%s "</span>, element);
+      }
+      System.out.println();
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+      <span class="hljs-comment">// Create 3 arrays of Integer, String and Character data types</span>
+      Integer[] intArray = { <span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>, <span class="hljs-number">50</span> };
+      String[] stringArray = { <span class="hljs-string">"Java"</span>, <span class="hljs-string">"Ruby"</span>, <span class="hljs-string">"Python"</span>, <span class="hljs-string">"Swift"</span>};
+      Character[] charArray = { <span class="hljs-string">'H'</span>, <span class="hljs-string">'E'</span>, <span class="hljs-string">'L'</span>, <span class="hljs-string">'L'</span>, <span class="hljs-string">'O'</span> };
+
+      System.out.println(<span class="hljs-string">"Array integerArray contains:"</span>);
+      arrayContents(intArray);   
+
+      System.out.println(<span class="hljs-string">"\nArray stringArray contains:"</span>);
+      arrayContents(stringArray);   
+
+      System.out.println(<span class="hljs-string">"\nArray characterArray contains:"</span>);
+      arrayContents(charArray); 
+   }   
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 885px; left: 36px; top: 79px;" data-name="text-d6b6ae" data-block-id="b924cf45d3dd27524b2e68a91bb15f63"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:0.9em">Print the contents of each array using the generic method <strong>arrayContents</strong>&nbsp;.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 762px; left: 99px; top: 0px;" data-name="text-00aba7" data-block-id="8fdf4492f2f0ddde352cbe21ad04e697"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Generics</h2>
+</div></div></section><section data-id="d1bf428b497af59032ba1917074e36a6" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="code" style="width: 688px; height: 240px; left: 137px; top: 300px;" data-name="code-ac650a" data-block-id="3a6dc979ce896adf157b1339b6254204"><div class="sl-block-content notranslate" style="z-index: 10;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs">$ javac GenericMethodPractice.java
+$ java GenericMethodPractice
+Array integerArray contains:
+<span class="hljs-number">10</span> <span class="hljs-number">20</span> <span class="hljs-number">30</span> <span class="hljs-number">40</span> <span class="hljs-number">50</span> 
+
+Array stringArray contains:
+Java Ruby Python Swift 
+
+Array characterArray contains:
+H E L L O 
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 121px;" data-name="text-9f03d5" data-block-id="19bd8ee126c92cfe11905e9e9b750ec1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="5aa21fe2-7e20-df91-441d-976bbd457045" data-gramm="true" data-gramm_editor="true">
+<p>Compile the program. The generic method prints the contents of each array, no matter the data type of the array.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 762px; left: 99px; top: 0px;" data-name="text-00aba7" data-block-id="fe97e0c6c33b7a30ee7e1f4b2c6328c2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Generics</h2>
+</div></div></section><section data-id="0decf100dcdd0a44d8ccc8ac0807a39a" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+<div class="sl-block" data-block-type="code" style="width: 611px; height: 153px; left: 174.5px; top: 362px;" data-name="code-1eccb7" data-block-id="7491bf38d905fcedd45d85d7f38d5157"><div class="sl-block-content notranslate" style="z-index: 10;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">greaterThan</span><span class="hljs-params">(T[] numArray, T elem)</span> </span>{
+    <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (T e : numArray)
+        <span class="hljs-keyword">if</span> (e &gt; elem)  
+            ++count;
+    <span class="hljs-keyword">return</span> count;
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 864px; left: 41px; top: 74px;" data-name="text-1f980a" data-block-id="910edb67a6ae3eac35c3b41310010bda"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="2cd2d212-b05d-167b-caf6-96787dfec0a0" data-gramm="true" data-gramm_editor="true">
+<p><strong>Bounded Type Parameters</strong></p>
+
+<p>What if our method does a function that can only use Integer values?&nbsp; For this String, arrays will not work.</p>
+
+<p style="color:rgb(51, 51, 51)">Bounded type parameters are key to the using generic methods containing algorithms. Consider the following method that counts the number of elements in an array T[] that are greater than a specified element <strong>elemt</strong>.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 864px; left: 40px; top: 513px;" data-name="text-d2bec3" data-block-id="5f18e3e5e9123e2d37c574de563f156f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; white-space: normal;" data-gramm_id="ee03d8bb-38ed-e82a-9c6f-96bf97e55272" data-gramm="true" data-gramm_editor="true">
+<p>This does not compile. The <strong>greater than</strong> operator (&gt;) applies only to primitive types such as int, double, long, float, etc. You cannot use the <strong>&gt;</strong> operator to compare objects.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 762px; left: 99px; top: 0px;" data-name="text-00aba7" data-block-id="3780fe95acfc260ad334b31ac6b9d268">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Generics</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 13;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="315779e3c4dc31b41e18858a040a41b2" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 864px; left: 33px; top: 106px;" data-name="text-60eed2" data-block-id="6f02ed8e6aa571aa6288493eeda78009"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Use a type parameter bounded by the <strong>Comparable&lt;T&gt;</strong> interface:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 365px; height: 85px; left: 289px; top: 161px;" data-name="code-e57725" data-block-id="6d3a763d7dbf3509e4d98341af493460"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Comparable</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compareTo</span><span class="hljs-params">(T o)</span></span>;
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 873px; height: 160px; left: 35px; top: 362px;" data-name="code-6f1c6b" data-block-id="90cb314a49ebf58d44a23441acf685e8"><div class="sl-block-content notranslate" style="z-index: 12;" data-highlight-theme="monokai-sublime"><pre class="java"><code style="padding: 10px;" class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T extends Comparable&lt;T&gt;&gt; <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">greaterThan</span><span class="hljs-params">(T[] numArray, T elem)</span> </span>{
+    <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (T e : numArray)
+        <span class="hljs-keyword">if</span> (e.compareTo(elem) &gt; <span class="hljs-number">0</span>)
+            ++count;
+    <span class="hljs-keyword">return</span> count;
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 915px; left: 6px; top: 272px;" data-name="text-14bd8c" data-block-id="f4ccde7d9681e0e1a3d828f9b7a2b2d5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="ce5eae4d-2f6b-b861-0a54-7aba36abbfb2" data-gramm="true" data-gramm_editor="true" dir="ui"><p><span style="text-align:justify">To declare a bounded type parameter, list the type parameter's name, followed by the extends keyword, followed by its upper bound</span></p></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 762px; left: 99px; top: 0px;" data-name="text-00aba7" data-block-id="69eca332fd22a5b725bc3ebfa8e357bc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h2>Generics</h2>
+</div></div></section><section data-id="8b84943e7611a6ab03083115c19bdd58" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 825px; left: 68px; top: 0px;" data-block-id="9693a4b15924f3c08d6864a08e086c76"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Generics</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="37091a30d4f28f6b85fde9b660e87d97" style="height: auto; min-width: 30px; min-height: 30px; width: 893px; left: 27px; top: 89px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="1dfb1c66-b8fd-5393-7dc6-22a9771b5876" data-gramm="true" data-gramm_editor="true">
+<p>Generic class declarations look a lot like non-generic class declarations, except that the class name is followed by a type parameter section.</p>
+
+<p>&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2e0ec1691c6186a3490bff6cf1c8b9d0" style="height: auto; min-width: 30px; min-height: 30px; width: 812px; left: 52px; top: 367px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="8a3f9683-c51a-a9de-815c-9a58cf0d1a1f" data-gramm="true" data-gramm_editor="true">
+<p>The type parameter section of a generic class can have one or more type parameters (<strong>&lt;T&gt;</strong>), separated by commas. These classes are known as <strong>parameterized classes</strong> or <strong>parameterized types</strong> because they accept one or more parameters.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="e796d8d9e01a03eb477a6056cddace1a" style="min-width: 30px; min-height: 30px; width: 500px; height: 73px; left: 230px; top: 233px;"><div class="sl-block-content notranslate" style="z-index: 14;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GenericClass</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+      
+}
+
+   </code></pre></div></div></section><section data-id="a2015b58c5dec6db2a8cb6412450c3f7" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 825px; left: 69px; top: 0px;" data-block-id="bfc0959ac766cc5576641f287e4f1ab6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Generics</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 760px; height: 310px; left: 101px; top: 164px;" data-block-id="533c7e39884c101f8911918b9ebc72a7"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 89%;" data-highlight-theme="monokai-sublime"><pre class="java"><code style="padding: 11px;" class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GenericClass</span>&lt;<span class="hljs-title">G</span>&gt; </span>{
+   G g;
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(G g)</span> </span>{
+      <span class="hljs-keyword">this</span>.g = g;
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> G <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{
+      <span class="hljs-keyword">return</span> g;
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      GenericClass&lt;Boolean&gt; booleanGenericClass = <span class="hljs-keyword">new</span> GenericClass&lt;Boolean&gt;();
+      GenericClass&lt;String&gt; stringGenericClass = <span class="hljs-keyword">new</span> GenericClass&lt;String&gt;();
+   }
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cbda67a1dff74b2e29527f2582754dfc" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 82px; top: 88px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="8a5806e2-61f1-f028-d795-5ae73de6ae53" data-gramm="true" data-gramm_editor="true">
+<p>Create 2 new classes, one boolean ​type, and one string type.</p>
+</div></div></section><section data-id="7ac8cb965a3254422229edd587c0552a" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="height: auto; width: 825px; left: 68px; top: 0px;" data-block-id="be1516aad53fb46c235933cf1e3bd144"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Generics</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 695px; height: 384px; left: 133px; top: 120px;" data-block-id="50e63d0c56e2d2c33260ed0713363345"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 86%;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GenericClass</span>&lt;<span class="hljs-title">G</span>&gt; </span>{
+   G g;
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(G g)</span> </span>{
+      <span class="hljs-keyword">this</span>.g = g;
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> G <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{
+      <span class="hljs-keyword">return</span> g;
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      GenericClass&lt;Boolean&gt; booleanGenericClass = <span class="hljs-keyword">new</span> GenericClass&lt;Boolean&gt;();
+      GenericClass&lt;String&gt; stringGenericClass = <span class="hljs-keyword">new</span> GenericClass&lt;String&gt;();
+    
+      booleanGenericClass.add(<span class="hljs-keyword">new</span> Boolean(<span class="hljs-keyword">true</span>));
+      stringGenericClass.add(<span class="hljs-keyword">new</span> String(<span class="hljs-string">"I'm a string"</span>));
+
+      System.out.printf(<span class="hljs-string">"Boolean Value :%b\n\n"</span>, booleanGenericClass.get());
+      System.out.printf(<span class="hljs-string">"String Value :%s\n"</span>, stringGenericClass.get());
+   }
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 700px; left: 122px; top: 74px;" data-block-id="24c3f66fff58d387418d57ce01ba444c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="3f647d9b-6d3e-df5d-3685-dfead614a062" data-gramm="true" data-gramm_editor="true">
+<p>Use the methods to set the values and print contents.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f43be86e84d55ad0c881b236ee13be74" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 504px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Here's the output:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="a09e02c16e6e31a7534037bb0d791c29" style="min-width: 30px; min-height: 30px; width: 500px; height: 88px; left: 231px; top: 549px;"><div class="sl-block-content notranslate" style="z-index: 15;" data-highlight-theme="monokai-sublime"><pre class="java"><code class="hljs">$ javac genericClass.java
+$ java genericClass
+Boolean Value :<span class="hljs-keyword">true</span>
+String Value :I<span class="hljs-string">'m a string
+</span></code></pre></div></div></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="https://techtalentsouth.slides.com/techtalentsouth/java-generics?token=4fsZAiSe#/1">
+					<span class="slide-number-a">2</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.0833333);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Java Generics Generics enable programmers to create classes and methods using types (classes and interfaces) as parameters when defining the classes, interfaces, and methods. Similar to more familiar formal parameters used in method declarations, type parameters allow you to re-use the same code with different inputs. The difference is that the inputs to formal parameters are values , while the inputs to type parameters are types . Using generics allows for stronger type checks at compile time to generic code and issues errors if the code violates type safety. Fixing compile-time errors is easier than fixing runtime errors, which can be difficult to find. </div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 604.808px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Java Generics</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 644.002px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+			<div class="deck-sharing">
+				<div class="deck-state" data-tooltip="This deck is only visible to people it has been explicitly shared it with" data-tooltip-maxwidth="250">Private</div>
+			</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/techtalentsouth/java-generics/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">Java Generics</h1>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2020-06-19 13:58:45 UTC">3 years ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/techtalentsouth" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description">Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. </p>
+		<ul class="links">
+			
+			 <li><a href="https://twitter.com/techtalentsouth" target="_blank"><span class="icon i-twitter"></span>techtalentsouth</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="https://help.slides.com/">Help</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2022 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":2,"allow_scripts":false,"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":"","deck_templates_mode":null,"default_internal_role":"viewer"},"deck":{"id":1853956,"slug":"java-generics","title":"Java Generics","description":"","width":960,"height":700,"margin":0.05,"visibility":"self","published_at":"2018-06-15T21:38:30.379Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/f1fb0cd5ef4a21fb8da9edca38ed9c9c/thumb.jpg?1592575160","view_count":310,"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":13,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1603134649742,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2021-12-09T13:13:26.768Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1639055602","sanitize_messages":null,"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="./Java Generics_files/deck-consumption-6cb0dabfae7aab87de181e1519116bc15f62efe65c18c46e2a72775c05dc09c7.js.download" defer="defer"></script>
+    	<script src="./Java Generics_files/deck-ad5840235506b1ae9f1911eee7c2c085efa010a566481a17970b4c7b3c037af2.js.download" defer="defer"></script>
+	
+
+
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+  <style>a[href^="https://bestdatinghere.life/"],a[href^="http://bc.vc/?r="],[href^="https://kingered-banctours.com/"],a[href^="https://taghaugh.com/"],[data-desktop-ad-id],a[href^="http://betahit.click/"],a[href^="https://medleyads.com/"],div[data-spotim-slot],a[href^="https://syndication.optimizesrv.com/"],[href^="https://traffserve.com/"],a[href^="https://www.kingsoffetish.com/tour?partner_id="],amp-ad-custom,[id^="section-ad-banner"],a[href^="https://tracking.gitads.io/"],a[data-url^="http://paid.outbrain.com/network/redir?"] + .author,div[id^="ezoic-pub-ad-"],a[href^="https://clickadilla.com/"],a[href^="http://traffic.tc-clicks.com/"],a[href^="https://adjoincomprise.com/"],a[href^="http://hotcandyland.com/partner/"],a[href^="https://creacdn.top-convert.com/"],a[href^="https://t.hrtyj.com/"],a[href^="https://bluedelivery.pro/"],a[href^="//go.xlviiirdr.com"],a[href^="https://a.adtng.com/"],[href^="//ngeoziadiyc4hi2e.com/"],app-advertisement,[href^="https://shiftnetwork.infusionsoft.com/go/"] > img,a[href^="https://t.mobtya.com/"],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,div[data-dfp-id],[data-adblockkey],a[href^="https://waisheph.com/"],a[href^="https://mob1ledev1ces.com/"],[href^="https://freecourseweb.com/"] > .sitefriend,a[href^="https://click.linksynergy.com/fs-bin/"],a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"],a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="],ad-shield-ads,a[href^="https://dooloust.net/"],div[data-adunit],a[href^="https://affpa.top/"],aside[id^="adrotate_widgets-"],a[href^="https://go.tmrjmp.com"],a[href^="https://www.awin1.com/cread.php?awinaffid="],a[href^="https://t.grtyi.com/"],a[href^="http://ads2.williamhill.com/redirect.aspx?"],a[href^="https://s.zlink1.com/"],a[href^="https://earandmarketing.com/"],a[href^="https://incisivetrk.cvtr.io/click?"],div[id^="gpt_ad_"],a[href^="https://adultfriendfinder.com/go/page/landing"],a[href^="https://go.zybrdr.com"],[id^="ad_slider"],a[href^="https://losingoldfry.com/"],a[href^="https://click.dtiserv2.com/"],a-ad,a[href^="https://ad.doubleclick.net/"],a[href^="https://landing1.brazzersnetwork.com"],a[href^="https://trk.watchlivesports4k.club/"],div[id^="advads_"],[href^="https://zone.gotrackier.com/"],[href^="https://www.brighteonstore.com/products/"] img,a[href^="http://deloplen.com/"],a[href^="http://allaptair.club/"],[href^="http://misslinkvocation.com/"],a[href^="https://track.clickmoi.xyz/"],a[href^="//go.eabids.com/"],a[href^="https://vo2.qrlsx.com/"],a[href^="https://www.iyalc.com/"],a[href^="https://www.rabbits.webcam/?id="],a[href^="https://my-movie.club/"],[href^="http://clicks.totemcash.com/"],a[href^="https://lobimax.com/"],a[href^="http://www.onwebcam.com/random?t_link="],a[href^="https://go.julrdr.com/"],a[href^="https://ad.kubiccomps.icu/"],a[data-oburl^="http://paid.outbrain.com/network/redir?"],a[href^="https://join.virtualtaboo.com/track/"],div[id^="adfox_"],[href^="https://www.mystore.com/"] > img,a[href^="https://t.adating.link/"],a[href^="https://t.hrtye.com/"],a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"],[data-mobile-ad-id],a[href^="https://loboclick.com"],a[href^="https://tracking.comfortclick.eu/"],div[id^="gpt-ad-hor"],a[href^="https://www.highperformancegate.com/"],a[href^="https://dfsdkkka.com/"],[href^="https://optimizedelite.com/"] > img,a[href^="https://join.virtuallust3d.com/"],[href^="https://www.restoro.com/"],a[href^="https://cam4com.go2cloud.org/"],a[href^="https://ads.leovegas.com/redirect.aspx?"],a[href^="https://track.afcpatrk.com/"],div[data-adunit-path],a[href^="https://deliver.tf2www.com/"],a[href^="https://ads.betfair.com/redirect.aspx?"],a[href^="https://lnkxt.bannerator.com/"],a[href^="https://adserver.adreactor.com/"],[href^="https://www.reimageplus.com/"],div[class^="Display_displayAd"],a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"],a[href^="https://static.fleshlight.com/images/banners/"],div[id^="div-ads-"],a[href^="http://www.onclickmega.com/jump/next.php?"],div[id*="MarketGid"],[href^="http://www.mypillow.com/"] > img,[href^="https://mystore.com/"] > img,a[href^="https://juicyads.in/"],a[href^="https://geniusdexchange.com/"],div[data-contentexchange-widget],[href^="https://goldcometals.com/clk.trk"],a[href^="https://gohere.pl/"],a[href^="https://azpresearch.club/"],a[data-oburl^="https://paid.outbrain.com/network/redir?"],div[data-id-advertdfpconf],a[href^="https://dialling-abutory.com/"],a[href^="https://meet-sex-here.com/"],a[href^="https://go.xlvirdr.com"],a[href^="https://track.totalav.com/"],a[href^="https://movie.download-file.org/"],a[href^="https://go.markets.com/visit/?bta="],a[href^="https://ad.zanox.com/ppc/"] > img,a[href^="https://oackoubs.com/"],a[href^="//wagerprocuratorantiterrorist.com/"],a[href^="https://financeads.net/tc.php?"],a[href^="https://track.interactivegf.com/"],app-ad,iframe[src^="http://www.adpeepshosted.com/"],div[data-insertion],[href^="https://mylead.global/stl/"] > img,a[href^="https://go.xlviiirdr.com"],a[href^="https://thechleads.pro/"],a[href^="http://affiliates.thrixxx.com/"],a[href^="https://uncensored3d.com/"],a[href^="https://aj1070.online/"],a[href^="https://dishphysics.com/"],a[href^="https://torrentsafeguard.com/?aid="],a[href^="https://iqbroker.com/"][href*="?aff="],a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="],a[href^="https://wittered-mainging.com/"],[href="https://jdrucker.com/gold"] > img,[href^="https://www.mypatriotsupply.com/"] > img,a[href^="https://transfer.xe.com/signup/track/redirect?"],[data-d-ad-id],[href^="https://rapidgator.net/article/premium/ref/"],[onclick^="location.href='http://www.reimageplus.com"],a[href^="https://www.adsexse.com/x/"],a[href^="https://tm-offers.gamingadult.com/"],div[data-ad-targeting],a[href^="https://bestcond1tions.com/"],a[href*="//lkstrck2.com/"],iframe[src^="https://pagead2.googlesyndication.com/"],a[href^="http://pubads.g.doubleclick.net/"],[id^="google_ads_iframe"],[href^="http://www.pingperfect.com/aff.php"],a[href^="https://www.nutaku.net/signup/landing/"],a[href^="https://nutrientassumptionclaims.com/"],a[href^="https://agacelebir.com/"],[href^="https://totlnkcl.com/"],div[id^="yandex_ad"],[href^="https://www.avantlink.com/click.php"] img,a[href^="https://myusenet.xyz/"],div[id^="gtm-ad-"],a[href^="https://aff-ads.stickywilds.com/"],div[id^="sticky_ad_"],div[id^="ads250_250-widget-"],a[data-obtrack^="http://paid.outbrain.com/network/redir?"],a[href^="https://billing.purevpn.com/aff.php"] > img,a[href^="https://www.financeads.net/tc.php?"],a[href^="//chrif8kdstie.com/"],a[href^="https://promo-bc.com/"],a[href^="https://camfapr.com/landing/click/"],a[href^="https://trf.bannerator.com/"],a[href^="https://msecure117.com/"],a[href^="https://ads.cdn.live/"],[href^="https://zstacklife.com/"] img,a[href^="https://datingbests.life/"],[class^="s2nPlayer"],a[href^="https://www.adultempire.com/"][href*="?partner_id="],[href^="https://istlnkcl.com/"],a[href^="https://adsrv4k.com/"],a[href^="https://landing.brazzersnetwork.com/"],a[href^="https://avtub.click/assets/link.php"],topadblock,a[href^="https://go.etoro.com/"] > img,[href^="https://wct.link/"],div[id^="ad_script_"],a[href^="http://pityhostngco2.xyz/"],[href^="https://affect3dnetwork.com/track/"],a[href^="https://go.xlivrdr.com"],a[href^="https://go.skinstrip.net"][href*="?campaignId="],a[href^="http://googleads.g.doubleclick.net/pcs/click"],a[href^="https://aaucwbe.com/"],a[href^="https://www.infowarsstore.com/"] > img,a[href^="https://axdsz.pro/"],a[href^="https://tc.tradetracker.net/"] > img,a[href^="https://moneynow.one/"],a[href*="https://www.sweetdeals.com/"] img,a[href^="https://get2nesoft1.ru/"],div[id^="dfp-ad-"],a[href^="https://traffdaq.com/"],a[href^="https://chaturbate.com/in/?track="],a[href^="https://topoffers.com/"][href*="/?pid="],a[href^="https://click.a-ads.com/"],div[id^="ads300_250-widget-"],a[href^="https://www.brazzersnetwork.com/landing/"],a[href^="https://a.bestcontentoperation.top/"],a[href^="http://https://www.get-express-vpn.com/offer/"],a[href^="https://ovb.im/"],div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"],div[aria-label="Ads"],a[href^="https://engine.phn.doublepimp.com/"],a[href^="http://tour.mrskin.com/"],a[href^="https://track.healthtrader.com/"],a[href^="https://pongidsrunback.com/"],div[data-ad-wrapper],div.fadeInDown[id$="____equal"][class$="____equal"],div[class^="Adstyled__AdWrapper-"],[href^="https://affiliate.fastcomet.com/"] > img,div[id^="taboola-stream-"],a[href*=".flndmyiove.net/"],[href^="http://globsads.com/"],a[href^="https://track.afftck.com/"],a[href^="https://go.gldrdr.com/"],a[href^="https://land.brazzersnetwork.com/landing/"],[href^="http://join.hardcoreshemalevideo.com/"],[href^="http://homemoviestube.com/"],[href^="https://engine.gettopple.com/"],a[href^="https://www.profitablecpmgate.com/"],a[href^="http://go.247traffic.com/"],a[href*=".trust.zone"],a[href^="https://a.bestcontentweb.top/"],a[href^="https://see.kmisln.com/"],a[href^="https://streamate.com/landing/click/"],a[href^="https://speedsupermarketdonut.com/"],amp-connatix-player,div[id^="dfp-slot-"],[href^="http://join.shemalesfromhell.com/"],a[href^="https://playuhd.host/"],[href^="http://join.michelle-austin.com/"],a[href^="https://a.montangop.top/"],a[href^="https://go.ebrokerserve.com/"],a[href^="https://mmwebhandler.aff-online.com/"],a[href^="https://maymooth-stopic.com/"],a[href^="https://gghf.mobi/"],a[href^="https://www.googleadservices.com/pagead/aclk?"],[data-ad-cls],a[href^="https://wantopticalfreelance.com/"],a[href^="//benoopto.com/"],a[href^="http://partners.etoro.com/"],a[href^="https://5hjdbfjfd5.monster/"],hl-adsense,div[id^="adspot-"],a[href^="https://ak.hetaruwg.com/"],[href^="https://awbbjmp.com/"],a[href^="https://m.do.co/c/"] > img,div[id^="advads-"],a[data-redirect^="https://paid.outbrain.com/network/redir?"],a[href^="https://vlnk.me/"],a[href^="https://ad.atdmt.com/"],zeus-ad,a[href^="http://www.mrskin.com/tour"],a[href^="https://go.alxbgo.com/"],[href^="https://mypatriotsupply.com/"] > img,a[href^="https://ptapjmp.com/"],div[id^="js-dfp-"],a[href^="https://watchmygirlfriend.tv/"],ADS-RIGHT,div[class^="kiwi-ad-wrapper"],a[href^="https://www.bang.com/?aff="],a[href^="https://paid.outbrain.com/network/redir?"],a[href^="http://secure.vivid.com/track/"],a[href^="https://www.oboom.com/ref/"],a[href^="https://thaudray.com/"],div[id^="zergnet-widget"],[href^="https://cpa.10kfreesilver.com/"],div[id^="vuukle-ad-"],a[href^="https://go.hpyjmp.com"],a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="],[href^="https://secure.bmtmicro.com/servlets/"],[class^="chp_ads_block"],a[href^="https://affiliate.rusvpn.com/click.php?"],a[href^="https://tour.mrskin.com/"],a[href^="https://www.oneclickroot.com/?tap_a="] > img,a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,div[id*="ScriptRoot"],[href^="http://join.shemalepornstar.com/"],a[href^="https://chaturbate.com/in/?tour="],a[href^="https://www.bet365.com/"][href*="affiliate="],[href^="http://join.trannies-fuck.com/"],a[href^="https://reachtrgt.com/"],a[href^="https://as.conjectwatson.com/"],[data-css-class="dfp-inarticle"],a[href^="https://www.get-express-vpn.com/offer/"],[data-ez-name],div[id^="ad-position-"],div[class^="native-ad-"],a[href^="https://twinrdsyn.com/"],a[href^="https://www.arthrozene.com/"][href*="?tid="],a[href^="http://wct.link/"],a[href*="http://MyPillow.com"] > img,div[id^="div-gpt-"],a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"],a[href^="http://trk.mdrtrck.com/"],a[href^="https://affcpatrk.com/"],[href="https://www.masstortfinancing.com/"] > img,a[href^="https://track.bruceads.com/"],a[href^="//agacelebir.com/"],div[id^="ad-inserter-"],a[href^="https://misspkl.com/"],div[id^="ad-gpt-"],a[href^="https://pl.premium4kflix.website/"],span[id^="ezoic-pub-ad-placeholder-"],[href^="https://track.fiverr.com/visit/"] > img,[data-role="tile-ads-module"],a[href^="https://pb-track.com/"],a[href^="https://aweptjmp.com/"],div[data-mpu1],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"],a[href^="http://tc.tradetracker.net/"] > img,a[href^="https://iac.ampxdirect.com/"],a[href^="https://landing.brazzersplus.com/"],[href^="https://detachedbates.com/"],a[href^="https://www.chngtrack.com/"],a[data-redirect^="http://paid.outbrain.com/network/redir?"],[id^="chp_ads_block"],a[href^="https://go.goaserv.com/"],[data-name="adaptiveConstructorAd"],a[href^="https://adnetwrk.com/"],[href^="https://join.playboyplus.com/track/"],a[href^="http://ad.doubleclick.net/"],a[href^="https://bngpt.com/"],a[href^="https://go.hpyrdr.com/"],ad-desktop-sidebar,a[href^="https://galaxyroms.net/?scr="],a[href^="https://www.bebi.com"],a[href^="https://www.sugarinstant.com/?partner_id="],[name^="google_ads_iframe"],a[href^="https://leg.xyz/?track="],a[href^="https://fertilitycommand.com/"],a[href^="https://ads-for-free.com/click.php?"],a[href^="https://www.vfreecams.com/in/?track="],a[href^="https://tracking.avapartner.com/"],div[id^="ad_bnr_"],div[class^="gpt-ad-hor"],[id^="ad_sky"],a[href="//rufflycouncil.com/"],[data-ad-module],a[href^="https://s.zlink2.com/"],a[href^="https://www.mrskin.com/tour"],a[href^="https://burpee.xyz/"],div[id^="ads300_100-widget-"],a[href^="http://adtrack1.club/"],div[data-role="sidebarAd"],[data-dynamic-ads],AD-SLOT,a[href^="https://track.themadtrcker.com/"],a[href^="https://track.ultravpn.com/"],a[href^="https://1free33style.com/"],a[href^="http://d2.zedo.com/"],a[href^="https://www.sheetmusicplus.com/?aff_id="],bottomadblock,a[href^="https://engine.blueistheneworanges.com/"],a[href^="//pubads.g.doubleclick.net/"],[data-ad-manager-id],div[data-native_ad],a[href^="http://bongacams.com/track?"],a[href^="https://www.privateinternetaccess.com/"] > img,a[href^="https://track.wg-aff.com"],a[href^="https://k2s.cc/pr/"],div[id^="lazyad-"],a[href^="https://tupitea.co/"],div[id^="ad-div-"],div[id^="_vdo_ads_player_ai_"],a[href^="http://rs-stripe.wsj.com/stripe/redirect"],a[data-url^="http://paid.outbrain.com/network/redir?"],a[href^="https://go.dmzjmp.com"],a[href^="https://a-ads.com/"],[href^="https://turtlebids.irauctions.com/"] img,article.ad,[href^="https://www.targetingpartner.com/"],a[href^="https://go.247traffic.com/"],a[href^="https://1startfiledownload1.com/"],a[href^="https://trk.moviesflix4k.xyz/"],a[href^="https://black77854.com/"],[href^="http://join.shemale.xxx/"],[href="https://masstortfinancing.com"] img,a[href^="https://www.jackery.com?aff="] > img,a[href^="https://porngames.adult/?SID="],[href^="https://r.kraken.com/"],[href^="http://mypillow.com/"] > img,guj-ad,a[href^="https://go.goasrv.com/"],a[href^="https://ttf.trmobc.com/"],a[href^="https://www.healthrangerstore.com/"] > img,a[href^="https://adswick.com/"],[href^="https://mypillow.com/"] > img,a[href^="https://cagothie.net/"],a[href^="//thaudray.com/"],a[href^="https://fakelay.com/"],img[src^="https://images.purevpnaffiliates.com"],[href^="http://trafficare.net/"],a[href^="https://go.xxxiijmp.com"],a[href^="https://go.xlirdr.com"],a[href^="https://go.cmrdr.com/"],[href^="http://join.ts-dominopresley.com/"],a[href^="https://syndication.exoclick.com/"],a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"],a[href^="https://www.camsoda.com/enter.php?id="],a[href^="https://pcm.bannerator.com/"],a[href^="//syndication.dynsrvtbg.com/"],a[href*=".engine.adglare.net/"],a[href^="http://affiliate.glbtracker.com/"],[href^="https://cipledecline.buzz/"],a[href^="https://go.currency.com/"],a[href^="https://go.xxxijmp.com"],[href^="https://trackfin.asia/"],a[href^="https://go.admjmp.com/"],a[href^="https://americafirstpolls.com/"],[onclick*="content.ad/"],[data-revive-zoneid],a[href^="http://bodelen.com/"],a[href^="http://cam4com.go2cloud.org/aff_c?"],[href^="https://goldforyourfuture.com/clk.trk"] img,a[href^="https://as.sexad.net/"],a[href^="https://fast-redirecting.com/"],[href^="http://join.rodneymoore.com/"],a[href^="https://clicks.pipaffiliates.com/"],a[href^="http://www.advcashpro.com/aff/"],a[href^="http://enter.anabolic.com/track/"],div[id^="crt-"][style],a[href^="https://www.mypornstarcams.com/landing/click/"],div[id^="rc-widget-"],a[href^="http://adultgames.xxx/"],[href^="https://ilovemyfreedoms.com/landing-"],a[href^="https://prf.hn/click/"][href*="/adref:"] > img,AMP-AD,a[href^="https://www.liquidfire.mobi/"],aside[id^="advads_ad_widget-"],DFP-AD,a[href^="https://a.medfoodhome.com/"],[href^="https://www.hostg.xyz/"] > img,a[href^="https://look.utndln.com/"],a[href^="https://cpartner.bdswiss.com/"],a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"],a[href^="https://go.trackitalltheway.com/"],a[href^="https://deliver.ptgncdn.com/"],a[href^="https://cams.imagetwist.com/in/?track="],a[href^="https://torguard.net/aff.php"] > img,[href^="https://glersakr.com/"],div[class^="s-dfp-"],amp-embed[type="taboola"],a[href^="https://porntubemate.com/"],app-large-ad,a[href^="http://adultfriendfinder.com/go/page/landing"],a[href^="https://awptjmp.com/"],div[data-native-ad],a[href^="http://static.fleshlight.com/images/banners/"],a[href^="https://dianches-inchor.com/"],a[href^="https://serve.awmdelivery.com/"],a[href^="http://intent.bingads.com/"],a[href*=".zlinkm.com/"],a[href^="https://go.xtbaffiliates.com/"],a[href^="https://engine.trackingdesks.com/"],[href="https://ourgoldguy.com/contact/"] img,[href^="https://stvkr.com/"],a[href^="https://ndt5.net/"],a[href^="https://spygasm.com/track?"],display-ads,a[href^="https://funkydaters.com/"],[class^="amp-ad-"],a[href^="https://reinstandpointdumbest.com/"],a[href^="https://prf.hn/click/"][href*="/camref:"] > img,[data-template-type="nativead"],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"],div[id^="google_dfp_"],a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img,a[href^="https://www.passeura.com/"],a[href^="http://adserver.adreactor.com/"],a[href^="https://ads.ad4game.com/"],a[href^="https://explore.findanswersnow.net/"],a[href*=".zlink9.com/"],AD-TRIPLE-BOX,a[href^="https://go.xxxjmp.com"],a[href^="https://banners.livepartners.com/"],a[href^="//apptjmp.com/"],[href^="https://clk.right-wing-health.com/"],[data-advadstrackid],a[href^="https://partners.fxoro.com/click.php?"],a[href^="https://intenseaffiliates.com/redirect/"],a[href^="https://takeallsoft.ru/"],a[href^="https://refpazkjixes.top/"],a[href^="https://go.nordvpn.net/aff"] > img,a[href^="https://natour.naughtyamerica.com/track/"],a[href^="https://tragency-clesburg.icu/"],a[href^="https://odnxe.lncredlbiedate.com/"],div[id^="adngin-"],div[data-ad-placeholder],a[href^="http://www.FriendlyDuck.com/"],a[href^="https://go.xlviirdr.com"],a[href^="https://click.hoolig.app/"],a[href^="http://go.xtbaffiliates.com/"],a[href^="https://www.sweetdeals.com"],a[href^="https://queersodadults.com/"],a[href^="https://www.mrskin.com/account/"],a[href^="https://ausoafab.net/"],a[href^="https://cpmspace.com/"],a[href^="https://bs.serving-sys.com"],a[href^="https://bongacams10.com/track?"],[href^="https://shrugartisticelder.com"],a[href^="https://go.cmtaffiliates.com/"],a[href^="https://t.aslnk.link/"],div[data-content="Advertisement"],a[href^="http://www.gfrevenge.com/landing/"],a[href^="https://frameworkdeserve.com/"],[data-freestar-ad],iframe[id^="google_ads_frame"],[href^="http://www.fleshlightgirls.com/"],a[href^="https://track.adform.net/"],div[id^="ad-server-"],a[href^="//coarsewary.com/"],a[href^="http://adf.ly/?id="],[href^="https://join.girlsoutwest.com/"],a[href^="https://claring-loccelkin.com/"],[href^="https://click2cvs.com/"],[href^="https://www.herbanomic.com/"] > img,gpt-ad,a[href^="https://scurewall.co/"],a[href^="https://offers.refchamp.com/"],div[data-adzone],a[href^="http://click.payserve.com/"],amp-fx-flying-carpet,[href^="https://www.cloudways.com/en/?id"],[href^="http://residenceseeingstanding.com/"],a[href^="https://lead1.pl/"],a[href^="https://awentw.com/"],[class^="div-gpt-ad"],a[href^="https://a2.adform.net/"],a[href^="https://awecrptjmp.com/"],a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://ismlks.com/"],[href^="https://join3.bannedsextapes.com"],[href^="https://go.xlrdr.com"],a[href^="https://traffic.bannerator.com/"],a[href^="https://clixtrac.com/"],[href^="https://infinitytrk.com/"],a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img,a[href^="//lambingsyddir.com/"],a[href^="http://m.hsrve.com/"],div[id^="adrotate_widgets-"],a[href^="https://delivery.porn.com/"],a[href^="http://go.fpmarkets.com/"],a[href^="https://www.onlineusershielder.com/torrent-guard/?"],ark-top-ad,a[href^="https://trusted-click-host.com/"],a[href^="https://www.nudeidols.com/cams/"],[href^="https://antiagingbed.com/discount/"] > img,a[href^="https://albionsoftwares.com/"],a[href^="https://fleshlight.sjv.io/"],[href^="https://noqreport.com/"] > img,a[href^="https://someperceptionparade.com/"],[href^="https://go.4rabettraff.com/"],a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="],[href^="https://v.investologic.co.uk/"],div[id^="ad_position_"],a[href^="http://www.coiwqe.site/"],a[href^="https://join.dreamsexworld.com/"],iframe[src^="http://ad.yieldmanager.com/"],a[href^="//voyeurhit.com/cs/"],a[href^="https://mk-cdn.net/"],a[href^="https://uncensored.game/"],[href^="https://go.affiliatexe.com/"],div[data-alias="300x250 Ad 1"],a[href^="https://bongacams2.com/track?"],a[href^="http://paid.outbrain.com/network/redir?"],a[href^="https://webroutetrk.com/"],[id^="ad-wrap-"],a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"],[href^="http://go.cm-trk2.com/"],a[href^="https://www.adskeeper.com"],a[href^="https://www.clicktraceclick.com/"],a[href^="https://iactrivago.ampxdirect.com/"],[href^="https://www.mypillow.com/"] > img,[href^="https://ad.admitad.com/"],a[href^="https://meet-sexhere.com/"],[href^="https://routewebtk.com/"],a[href^="https://googleads.g.doubleclick.net/pcs/click"],div[data-adname],a[href^="https://itubego.com/video-downloader/?affid="],a[href^="https://meet-to-fuck.com/"],[data-m-ad-id],[data-ad-width],a[href^="https://syndication.dynsrvtbg.com/"],div[data-alias="300x250 Ad 2"],[href^="https://go.astutelinks.com/"],a[href^="https://go.strpjmp.com/"],a[href^="https://chaturbate.jjgirls.com/?track="],a[href^="https://trappist-1d.com/"],display-ad-component,div[data-google-query-id],a[href^="https://adclick.g.doubleclick.net/"],a[href^="https://track.effiliation.com/servlet/effi.click?"] > img,a[href^="https://a.bestcontentfood.top/"],[id^="div-gpt-ad"],a[href^="https://join.sexworld3d.com/track/"],a[href^="https://tracking.trackcasino.co/"] { display: none !important }</style>
+
+</body></html>

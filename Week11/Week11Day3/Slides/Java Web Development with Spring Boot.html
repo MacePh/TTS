@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)https://techtalentsouth.slides.com/techtalentsouth/java-web-development-with-spring-boot?token=OgGjLNNv -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars fonts-are-ready reveal-is-ready" data-account="" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>Java Web Development with Spring Boot</title>
+    <meta name="description" content="Introduction to developing in Java with Spring Boot. ">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta property="og:title" content="Java Web Development with Spring Boot">
+    <meta property="og:description" content="Introduction to developing in Java with Spring Boot. ">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://media.slid.es/thumbnails/d7d786a2578ce79c0de752db787f42a3/thumb.jpg?1606150924">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techtalentsouth.slides.com/techtalentsouth/java-web-development-with-spring-boot?token=OgGjLNNv">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="https://techtalentsouth.slides.com/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Java Web Development with Spring Boot_files/css2" onload="this.onload=null;this.removeAttribute(&#39;media&#39;);" rel="stylesheet" data-application-font="inter">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" data-application-font="inter">
+</noscript>
+
+    <link rel="stylesheet" media="all" href="./Java Web Development with Spring Boot_files/slides-9486051f6b033e85e64e4e925c2d2d8ccb9a3566a8a0e1f9d5c891e9f959a77e.css">
+    <link rel="stylesheet" media="all" href="./Java Web Development with Spring Boot_files/deck-consumption-62767a9d5b34b088d2e3f948d9b3154d6bf711dc30aee1b141a69143fbe2613a.css">
+    	<link rel="stylesheet" media="all" href="./Java Web Development with Spring Boot_files/deck-v2-9096d1ab9031809cd7e0dd8baac906708e581e3b86875ff854417195bd729248.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">.reveal {
+  background-color: #f2f4f4;
+}
+.reveal .slides a {
+  color: #f79027;
+}
+.reveal .slides {
+  font-family: 'Lato';
+  background-image: url('https://s3.amazonaws.com/media-p.slid.es/uploads/264630/images/6249095/slide.png');
+}
+</style>
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="qb7rks3Gt0rJSpJqJqsH5E7VxPNYdzbY6FlsIzppXsaRXDNv4t+z5NWZkEh+sA+lIvWkcpoNkjM6peG+awfAZw==">
+    <script type="application/javascript" async="" defer="" src="./Java Web Development with Spring Boot_files/track.js.download"></script><script type="text/javascript" async="" src="./Java Web Development with Spring Boot_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./Java Web Development with Spring Boot_files/js"></script>
+<script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    window.slidesMeasurementId = 'G-LWVDH9STBJ';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LWVDH9STBJ', {
+      page_title: 'decks-show'
+    });
+
+  }
+</script>
+
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="Java Web Development with Spring Boot">
+	<meta name="twitter:description" content="Introduction to developing in Java with Spring Boot. ">
+	<meta name="twitter:image" content="https://media.slid.es/thumbnails/d7d786a2578ce79c0de752db787f42a3/thumb.jpg?1606150924">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./Java Web Development with Spring Boot_files/opensans.css"><link rel="stylesheet" href="./Java Web Development with Spring Boot_files/css"><style type="text/css" media="screen">.uv-icon{box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon .uv-tooltip-container{position:relative}.uv-icon .uv-tooltip-container .uv-icon-tooltip{display:none;position:absolute;height:20px;padding:4px 8px;background-color:#464653;color:white;font-size:12px;border-radius:4px;line-height:18px;font-family:"Open Sans", sans-serif;white-space:nowrap}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left,.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{top:0;bottom:0;margin:auto 10px}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top,.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{transform:translate(-30%);margin:10px auto}.uv-icon .uv-tooltip-container .uv-icon-tooltip.top{bottom:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.bottom{top:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.left{right:100%}.uv-icon .uv-tooltip-container .uv-icon-tooltip.right{left:100%}.uv-icon .uv-tooltip-container:hover .uv-icon-tooltip{display:block}.uv-icon-trigger{display:block;width:39px;height:39px;border:none;padding:0;cursor:pointer;background:none}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;transition:background 200ms}.uv-bottom .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{transition:none !important}.uv-fade{opacity:1;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{transform:translateY(100%)}.uv-slide-left.uv-is-hidden{transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{transform:translateX(100%)}
+</style><script type="text/javascript" src="./Java Web Development with Spring Boot_files/highlight-0adde8531514527653fdb445e29c1cca3687dc50684c4b8f624246a318dc706a.js.download"></script><style>a, button, .sl-select, .sl-checkbox label, .radio label, .focus-outline { outline: none !important; }</style><script type="text/javascript" src="./Java Web Development with Spring Boot_files/zoom-e1f94838c054500b9ea32c1cdb27173f7796522bc2af1b0c8efe98c65a4c57b7.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+  <body style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-image-or-text">
+      <a href="https://techtalentsouth.slides.com/">
+        <div class="logo-image" style="background-image: url(&#39;https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png&#39;)"></div>
+      </a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-item-anchor" href="https://techtalentsouth.slides.com/users/sign_in">
+              <span class="nav-item-label">Log in</span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-opensans theme-color-silver-blue" style="--slide-width:960px; --slide-height:700px; --slide-scale:0.583571;">
+			<div class="reveal slide embedded has-horizontal-slides ready focused" role="application" data-transition-speed="default" data-background-transition="zoom">
+				<div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.583571);">
+					<section data-id="618fd64a2c3bc4de85dac8506a01cf1b" class="present" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 501.438px; height: auto;" data-block-id="8a3be928c1c9f9747419095adaa36478"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Introduction to Spring Boot&nbsp;</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="c7c15d8e9645e03662a578ef40fc095f" style="min-width: 1px; min-height: 1px; width: 612.681px; height: 490px; left: 171.159px; top: 0px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1688" data-natural-height="1350" style="" data-lazy-loaded="" src="./Java Web Development with Spring Boot_files/newTTSLogo.png"></div></div>
+</section><section data-id="f9918d441a17006038b696e92bb6e332" hidden="" aria-hidden="true" class="future" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="5a9fba0e16dd253fed18c7cc413a1b54"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>
+<strong>What is Spring Boot?</strong><span style="color:#008000"><strong> </strong></span>
+</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="d3bc542e76a7866aa58f9d0b90ffdf07" style="min-width: 1px; min-height: 1px; width: 421.609px; height: 221.129px; left: 269.196px; top: 227.248px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="490" data-natural-height="257" style="" data-lazy-loaded="" src="./Java Web Development with Spring Boot_files/spring-boot-490x257.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0d32d595dfdb5bbe6b9fa1d519e1e747" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 90.4196px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="color:rgb(17, 17, 17)"><strong><span style="color:#008000">Spring Boot</span></strong>&nbsp;is a Platform&nbsp;</p>
+
+<p style="color:rgb(17, 17, 17)">for creating web applications,</p>
+
+<p style="color:rgb(17, 17, 17)">using the <strong>Java</strong>&nbsp;programming language.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d89ae11588da92f8e291aaf9a5f2e514" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 456.57px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="color:rgb(17, 17, 17)">Spring Boot allows us to utilize <strong>Java</strong>&nbsp;in the <strong>Back-End</strong>&nbsp;and <strong>Front-End</strong>,</p>
+
+<p style="color:rgb(17, 17, 17)">and to collect and retrieve data from a database.</p>
+</div></div>
+</section><section data-id="1292a75deb34cd11deb49c24e9436584" hidden="" aria-hidden="true" class="future" style="display: block;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="c3b77f7d506c6797a86c749d41c8373f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2><strong>Why Spring Boot?</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 120.618px;" data-block-id="a5ec976eac12679c4c5058dcef0622f3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Developing web apps with Java is a very daunting task due to the amount of configuration needed to get an app up and running.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="af07320fa06bf0e47e1bc3358457d3f2" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 260px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li>
+<strong>Spring Boot </strong>is a Spring module which provides a RAD (<strong>Rapid Application Development</strong>) feature to the Spring framework.</li>
+	<li>It is used to create <strong>stand alone</strong>&nbsp;Spring based applications that you can run with very little Spring configuration.</li>
+	<li>It values <strong>convention over configuration</strong>, a software design paradigm that means it decreases the effort of developer.</li>
+</ul>
+</div></div></section><section data-id="ad8d35a08a567efc8c2d273b0c80ee48" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="89316e341ffad1ea4f595ca9a1537390"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2><strong>Why Spring Boot?</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8e774c6cd959050bd6e6ec6bca7586f5" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 165.344px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>Create stand-alone Spring applications that can be started using java -jar (Java Archive file).</li>
+	<li>Embed Tomcat, Jetty or Undertow directly. You don't need to deploy web application resource (WAR) files.</li>
+	<li>It provides an <strong>"opinionated"</strong>&nbsp;POM file to simplify your Maven configuration.</li>
+	<li>It automatically configures Spring whenever possible.</li>
+	<li>It provides production-ready features such as metrics, health checks and externalized configuration.</li>
+	<li>Absolutely no code generation and no requirement for XML configuration.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="dfcff1bd82084edeb928ef1b1acb3443" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 102px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><strong>Java web development is easier with Spring Boot!</strong></p>
+</div></div></section><section data-id="d44293b39a924a3b702871415acb2a17" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="628fe20d9bfec4b29bce3b5ec04a731e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" data-gramm_id="ec8903ea-5a3a-2f4f-8dc4-aa8c99bf0620" data-gramm="true" data-gramm_editor="true">
+<h2><strong>Spring Boot Structure</strong></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="8f171b154ad55e9f6e7006656f6c39bb" style="min-width: 1px; min-height: 1px; width: 679px; height: 421px; left: 141px; top: 128px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="635" data-natural-height="394" style="" data-lazy-loaded="" data-src="https://www.javatpoint.com/images/sp/mvc.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6cef49dc065ce5167c5ebb584ef132d8" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 218px; top: 567px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 0.364; font-size: 54%;" data-has-line-height="">
+<p><a href="https://www.javatpoint.com/images/sp/mvc.jpg" target="_blank"><span style="font-size:0.5em">source:</span>&nbsp;</a></p>
+</div></div></section><section data-id="5c918751fbdd5137513991119c509e26" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="f65e3bd79e19fbf781153f26d735c755"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2><strong>Installing the Spring Tool Suite</strong></h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="1a07fd7b2cde7796d52948c75782b428" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 94px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="cdef562e-8377-3996-0d8c-136e2c461355" data-gramm="true" data-gramm_editor="true">
+<p>To begin, let's visit the <a href="https://spring.io/tools" target="_blank">Spring website</a> to download STS (Spring Tool Suite).&nbsp; This is what we will use to develop our applications.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="33cc9e7b02f6bf798a2c7830e5e013e5" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 437.978px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:rgb(52, 48, 45); text-align:start">The </span><span style="color:#008000"><span style="text-align:start"><strong>Spring Tool Suite</strong></span></span><span style="color:rgb(52, 48, 45); text-align:start"> is an Eclipse-based development environment that is customized for developing Spring applications. It provides a ready-to-use environment to implement, debug, run, and deploy Spring applications.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="da5e79c37721c583c385f232d4115a54" style="min-width: 1px; min-height: 1px; width: 213.476px; height: 236.42px; left: 374.762px; top: 183.58px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="214" data-natural-height="237" style="" data-lazy-loaded="" data-src="https://i.pinimg.com/originals/e9/3c/cf/e93ccf5684bc9c1e8fe52858859960bb.png"></div></div></section><section data-id="13952b65ca0171197d4f7a82854a44f7" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="d120d128495b7895158f0e0b599f95aa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2><strong>Start a New Project</strong></h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="4db1db148e69b78a4aa9a4ec3c9d023a" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 86.9573px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="92c844f3-5f68-6319-19ec-6ab8bd94febe" data-gramm="true" data-gramm_editor="true">
+<p>Open STS.&nbsp; Once open, choose <strong>File</strong> -&gt; <strong>New</strong> -&gt; <strong>Spring</strong>&nbsp;<strong>Starter Project</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="b22840b7c2cc83c8646f1d9c2a337704" style="min-width: 1px; min-height: 1px; width: 738.606px; height: 435.043px; left: 110.697px; top: 140px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="2292" data-natural-height="1350" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065087/Screen_Shot_2018-06-26_at_3.49.05_PM.png"></div></div></section><section data-id="06afdcbad18b57ef25c0ff1c687aa5ce" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="86df7867eff34cfd3555c7a0f4d6e1b8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Setting up a New Project</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="80d56c94f8fe9c685af8cb1ab82c77d4" style="height: auto; min-width: 30px; min-height: 30px; width: 480px; left: 480px; top: 90.3442px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Fill out the following fields:</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="80309206ded58806231b24e0f7f2e893" style="min-width: 1px; min-height: 1px; width: 379px; height: 495.785px; left: 50.5px; top: 90.3442px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1032" data-natural-height="1350" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065260/Screen_Shot_2018-06-26_at_5.26.11_PM.png"></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="3d392f67bc4342194e214db819ad8d6a" style="min-width: 4px; min-height: 4px; width: 80px; height: 20px; left: 420px; top: 200px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 80 20"><rect width="80" height="20" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f3071dada10508ee8206599047eb9724" style="height: auto; min-width: 30px; min-height: 30px; width: 480px; left: 480px; top: 160.087px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-gramm_id="e1d18c11-8fe6-bac7-5c30-909d412eb2a1" data-gramm="true" data-gramm_editor="true">
+<ul>
+	<li style="text-align:left">
+<strong>Name:</strong> the eclipse project name</li>
+	<li style="text-align:left">
+<strong>Group:</strong> a group name for your projects</li>
+	<li style="text-align:left">
+<strong>Artifact:</strong> the name of the jar file</li>
+	<li style="text-align:left">
+<strong>Description:</strong> a brief&nbsp; description</li>
+	<li style="text-align:left">
+<strong>Package name:</strong> the java root package name</li>
+</ul>
+</div></div></section><section data-id="89d2db379e062ca667a4669abf63eec8" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="7b0d0cec38bf70fee34ff41e05840b1d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Setting up a New Project</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" data-block-id="e8a786969c8a9d8b408198b52b5070c1" style="min-width: 1px; min-height: 1px; width: 397px; height: 519px; left: 26px; top: 86px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1033" data-natural-height="1350" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065193/Screen_Shot_2018-06-26_at_5.03.56_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ecfaea34e72e464710f9476eabec1f63" style="height: auto; min-width: 30px; min-height: 30px; width: 479.5px; left: 480px; top: 86px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; padding: 11px;">
+<p><span style="font-size:0.9em">Select the dependencies that should be include in the project: </span></p>
+
+<p style="text-align:left"><span style="font-size:0.9em"><strong>DevTools</strong> - These tools make the application development experience a little more pleasant and provide additional development-time features</span></p>
+
+<p style="text-align:left"><span style="font-size:0.9em"><strong>JPA and H2</strong> - <strong>JPA</strong> &nbsp;<span style="text-align:left">makes it easier for our </span><span style="text-align:left">applications that use </span><strong>data</strong><span style="text-align:left">&nbsp;access technologies to access data.&nbsp; </span></span></p>
+
+<p style="text-align:left"><span style="font-size:0.9em"><span style="text-align:left"><strong>H2 </strong></span><span style="text-align:left">stores the data (database).</span></span></p>
+
+<p style="text-align:left"><span style="font-size:0.9em"><strong>Web</strong> - provides the tools needed for our app to interact with the web.</span></p>
+</div></div></section><section data-id="6d4de63691fdcd6a29241404bcf272ab" hidden="" aria-hidden="true" class="future" style="display: none;"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="095824191d37514b66183f1e9b996990"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Explore Your New App</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" data-block-id="3b14ce420c01493ea9f88028be6d5ac1" style="min-width: 1px; min-height: 1px; width: 870.168px; height: 495.247px; left: 44.916px; top: 102.377px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2372" data-natural-height="1350" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065276/Screen_Shot_2018-06-26_at_5.33.02_PM.png"></div></div></section><section data-id="bd9bd856e71b3b1e932cccf6dda91778" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" data-block-id="adad3d791d2c88d14d10df9ad79fdd59" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Interact with the Browser</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="cdb7ace2694b0efd7d9c0596d833cc97" style="min-width: 1px; min-height: 1px; width: 480px; height: 377.705px; left: 0px; top: 210px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="610" data-natural-height="480" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065433/Screen_Shot_2018-06-26_at_6.44.49_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8b028e7b0422138811c8865a4798adaf" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 101px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="color:rgb(17, 17, 17)">Let's allow our app to interact with browser.&nbsp; Navigate to src/main/java/com.tts.myAwesomeProject. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="line" data-block-id="36b159d4f0fe9af8332fa96faac00a80" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 345px; top: 304px;"><div class="sl-block-content" data-line-x1="-37" data-line-y1="220" data-line-x2="98" data-line-y2="220" data-line-color="#cc0000" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 14;" data-line-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="135" height="1" viewBox="-37 220 135 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-26" y1="220.5" x2="98.5" y2="220.5"></line><line class="line-element" stroke="#cc0000" stroke-width="7" x1="-26" y1="220.5" x2="98.5" y2="220.5"></line><polygon fill="#cc0000" transform="translate(-26.5,220) rotate(90)" points="0,10.5 10.5,-10.5 -10.5,-10.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 341.352px;" data-block-id="c8e61df43e1ad27d225d70359377c84e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Right-click on the directory and create a new <strong>folder</strong> called "<strong>controllers</strong>". </p>
+</div></div></section><section data-id="6b4e225d4bbebb425d19cdca58976e8a" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 269px;" data-block-id="8121493626e557315bbb54cccf15a92b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>&nbsp;Next, right-click on the controllers directory and create a <strong>new Java Class</strong> called "<strong>MainController</strong>".</p>
+
+<p>Click finish!</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 480px; height: 516.711px; left: 0px; top: 87.882px; min-width: 1px; min-height: 1px;" data-block-id="5b4db1dfc3961c59542308abd5458611"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1046" data-natural-height="1126" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065448/Screen_Shot_2018-06-26_at_6.56.02_PM.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 488px; top: 446px;" data-block-id="14173dcd679f28d7e38bb22261d00099"><div class="sl-block-content" data-line-x1="-37" data-line-y1="220" data-line-x2="165" data-line-y2="82" data-line-color="#cc0000" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 12;" data-line-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="202" height="138" viewBox="-37 82 202 138"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-27.83006487740097" y1="214.57697501525413" x2="165.5" y2="82.5"></line><line class="line-element" stroke="#cc0000" stroke-width="7" x1="-27.83006487740097" y1="214.57697501525413" x2="165.5" y2="82.5"></line><polygon fill="#cc0000" transform="translate(-28.33006487740097,214.07697501525413) rotate(55.66)" points="0,10.5 10.5,-10.5 -10.5,-10.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-block-id="834fb393a5bc5af8f440e0f1346145ff" data-name="text-5b2928"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Interact with the Browser</h2>
+</div></div></section><section data-id="2b2136088a55c9a7b2fd0b25e9110900" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="e4d0dc2bbc7bd4e7873516b8256d57bd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>MainController</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="a2f980b3911b92c7c9c9158a290e95ac" style="min-width: 30px; min-height: 30px; width: 626.5px; height: 173.129px; left: 141.5px; top: 420px;"><div class="sl-block-content notranslate" style="z-index: 11;" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code style="padding: 18px;" class="hljs"><span class="hljs-keyword">package</span> com.tts.myAwesomeProject.controllers;
+
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainController</span> </span>{
+
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0f29f704cb94f1fe28237e86e1e4665c" style="height: auto; min-width: 30px; min-height: 30px; width: 384px; left: 576px; top: 74px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Just above the MainController class, add the <strong>@RestController</strong>.&nbsp; A red 'x' will appear next to it.&nbsp; Click the 'x' to reveal a dialog box. Click on the import statement.&nbsp; This allows us to output to the browser without a view. &nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="cb490cf5c6e88d5d7af615400e303090" style="min-width: 1px; min-height: 1px; width: 374px; height: 71px; left: 67px; top: 97.5px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="504" data-natural-height="96" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065455/Screen_Shot_2018-06-26_at_6.58.59_PM.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="e51a156f0c53cffb8439aaccb3e5bcaa" style="min-width: 1px; min-height: 1px; width: 508px; height: 200px; left: 0px; top: 187px;"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="874" data-natural-height="344" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065456/Screen_Shot_2018-06-26_at_6.59.12_PM.png"></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 494px; top: 223px;" data-block-id="c048f15c260830b50ed437b0ad91f3b1"><div class="sl-block-content" data-line-x1="14" data-line-y1="169" data-line-x2="90" data-line-y2="177" data-line-color="#cc0000" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 16;" data-line-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="76" height="8" viewBox="14 169 76 8"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="24.942307255674763" y1="170.59919023743944" x2="90.5" y2="177.5"></line><line class="line-element" stroke="#cc0000" stroke-width="7" x1="24.942307255674763" y1="170.59919023743944" x2="90.5" y2="177.5"></line><polygon fill="#cc0000" transform="translate(24.442307255674763,170.09919023743944) rotate(96.009)" points="0,10.5 10.5,-10.5 -10.5,-10.5"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 437px; top: 150px;" data-block-id="2ca12594687fb4aed0ae0577f5970af6"><div class="sl-block-content" data-line-x1="27" data-line-y1="45" data-line-x2="165" data-line-y2="82" data-line-color="#cc0000" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 17;" data-line-width="7px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="138" height="37" viewBox="27 45 138 37"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="37.64179826810363" y1="48.21917779652054" x2="165.5" y2="82.5"></line><line class="line-element" stroke="#cc0000" stroke-width="7" x1="37.64179826810363" y1="48.21917779652054" x2="165.5" y2="82.5"></line><polygon fill="#cc0000" transform="translate(37.14179826810363,47.71917779652054) rotate(105.009)" points="0,10.5 10.5,-10.5 -10.5,-10.5"></polygon></svg></div></div></section><section data-id="47d7d65a62682985411bd484e1503105" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="0db40362e0783ceec7dd3d79c07ccc9b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>MainController</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 106.774px;" data-block-id="551dfab4de255c4552501b2ae29851d4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Next, in the MainController class, add <strong>@RequestMapping("/")</strong>. This tells Spring to come to this method when at the root URL for our applications. &nbsp; Another red 'x' will appear next to it.&nbsp; Click the 'x' to reveal a dialog box. Click on the import statement for @RequestMapping.&nbsp; &nbsp;Finally, add the <strong>home()</strong> method to return <strong>"Hello World"</strong>.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 700px; height: 280px; left: 130px; top: 315.505px;" data-block-id="3e4bdf241b7e0944fe8331dd8daf9bf9"><div class="sl-block-content notranslate" style="z-index: 13;" data-highlight-theme="monokai-sublime"><pre class="java" style="font-size: 16px; line-height: 19px;"><code style="padding: 18px;" class="hljs"><span class="hljs-keyword">package</span> com.tts.myAwesomeProject.controllers;
+
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainController</span> </span>{
+
+	<span class="hljs-meta">@RequestMapping("/")</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">home</span><span class="hljs-params">()</span> </span>{
+		<span class="hljs-keyword">return</span> <span class="hljs-string">"Hello World!"</span>;
+	}
+
+}
+</code></pre></div></div></section><section data-id="27175c7df4779c6fa0800793cbee989e" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 97.9138px;" data-block-id="a15fc0743de944765315798bea0c2914"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><strong><span style="font-size:0.9em">What did we just add?</span></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>@RestController</strong> - a stereotype annotation that provides hints for people reading the code and for Spring that the class plays a specific role. In this case, our class is a web @Controller, so Spring considers it when handling incoming web requests.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>@RequestMapping - </strong> annotation provides “routing” information. It tells Spring that any HTTP request with the " /" path should be mapped to the <strong>home()</strong> method. The @RestController annotation tells Spring to render the resulting string directly back to the caller. In our case, the home method is called and&nbsp; a string is returned.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="30a7236c5083a481f6dea92a41fd07f7" data-name="text-56b0bb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>MainController</h2>
+</div></div></section><section data-id="a43adc22b7c48b8013865d641b21efc7" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="ce9ca46a6f93692b72808026f8f5e097"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Run the Server</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 101.5px;" data-block-id="5dce1db313e3f6ff5b36b7c40f62d587"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>To see our app working in the browser, we have to start the application. Right click on your app and select <strong>Run As</strong> -&gt;<strong> Spring Boot App</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="aeb5cb35beb721482049c653afd4b506" style="min-width: 1px; min-height: 1px; width: 869.877px; height: 335.58px; left: 45.0615px; top: 210px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1322" data-natural-height="510" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065476/Screen_Shot_2018-06-26_at_7.09.33_PM.png"></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="d37756b896be611dc1bdf91d99b559e7" style="min-width: 4px; min-height: 4px; width: 264px; height: 48px; left: 508px; top: 443px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 264 48"><defs><clippath id="shape-mask-1-1542049847997"><rect width="264" height="48" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10"></rect></clippath></defs><rect width="264" height="48" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10" clip-path="url(#shape-mask-1-1542049847997)"></rect></svg></div></div></section><section data-id="ecaefa0229fc024bba3e7654d89acc51" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="158709605a1f1d7d4e8a742413d9a66a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Hello World!</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6983e1cab7608c50d08c968ad9cf87ec" style="height: auto; min-width: 30px; min-height: 30px; width: 470.441px; left: 484.779px; top: 208px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>To see the app running in the browser, open your browser window and navigate to "http://localhost:8080"</p>
+
+<p>&nbsp;</p>
+
+<p>Congratulations!&nbsp; You just wrote your first Spring Boot App!</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="86ca7cfed1f4cd4cb9efd90fbdef69b9" style="min-width: 1px; min-height: 1px; width: 480px; height: 493.802px; left: 0px; top: 102.205px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1252" data-natural-height="1288" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5065481/Screen_Shot_2018-06-26_at_7.12.32_PM.png"></div></div></section><section data-id="9a8e2142b2bde1fa56461757ad446cca" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 912px; left: 34px; top: 0px;" data-block-id="ab2a1ae4be635e64a45e825cb9d24669"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Wait!! What just happened?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 954px; left: 3px; top: 100.312px;" data-block-id="78866daa01e39ab9a54369bc0413adbc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>As you can see, we just wrote an app with very little effort.&nbsp; Sure, it didn't do anything but say "Hello World", however it is a fully functional app!&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Spring Boot provides us with a lot of "magic" when it comes to app development. As we build apps, we will work to de-mystify the process.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="0fbba2b3ca4b8545e6657d6783f6896b" style="min-width: 1px; min-height: 1px; width: 315.86px; height: 252.688px; left: 320px; top: 323.699px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="480" data-natural-height="384" data-lazy-loaded="" data-src="https://media3.giphy.com/media/3o7btN05pfijkhc5VK/giphy.gif"></div></div></section><section data-id="1ea8c75506454b50daa91e00abbc53f1" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="f458c1485fae20c24f9709dcdf3ba056"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Using the Database</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="ae5fdc8ed87dba1d2517a9ca2092685f" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 89.8407px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>One of the dependencies we put into our app is the H2 Java SQL Database.&nbsp; This database uses common SQL statements to create, read, update, delete data.&nbsp; &nbsp;Let's build another app that will allow us to take a look at our database.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="57f8f494e989c373fad500d49ff4202b" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 254.172px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>In STS, select <strong>File</strong>-&gt;<strong>New</strong> -&gt; <strong>Spring Starter Project</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 309px;" data-block-id="19605d479d1e00b62f20f49a5a05000f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><strong>Name:</strong> h2Explore</p>
+
+<p><strong>Group:</strong> com.tts</p>
+
+<p><strong>Artifact:</strong> h2Explore</p>
+
+<p><strong>Description:</strong> Exploring the h2 database</p>
+
+<p><strong>Package name:</strong> com.tts.h2Explore</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="95a3ee8f4b830ee328d0076b5daf2c6b" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 541px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>For dependencies select <strong>Web, DevTools, JPA, and&nbsp; H2</strong></p>
+</div></div></section><section data-id="31116dcd3b93876ac2a6842fecbada34" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="7399294c0fa489c3461fdd9008d28744"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Application Properties</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" data-block-id="4f4ce4b5fd14e72a9f05d4211aa993a6" style="min-width: 1px; min-height: 1px; width: 480px; height: 345.714px; left: 0px; top: 95px;"><div class="sl-block-style" style="z-index: 11; transform: rotate(360deg);"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="672" data-natural-height="484" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5071887/Screen_Shot_2018-06-28_at_2.02.22_PM.png"></div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="355d58ab85695d82fc5670f76765065c" style="height: auto; min-width: 30px; min-height: 30px; width: 470.5px; left: 489.5px; top: 202.857px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>In your project, navigate to&nbsp;</p>
+
+<p><strong>src/main/resources</strong>&nbsp;</p>
+
+<p>to the "<strong>application.properties</strong>" file.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="48f4c74d9a05d0f45c8855438a7c712f" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 466.495px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>The <strong>application.properties</strong> file is where we add any custom configurations for our project.&nbsp; You can find out more about this file by going to the <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html" target="_blank">documentation</a>.</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 264px; height: 48px; left: 80px; top: 232px;" data-block-id="e2fbbec2ec88d86971c14aa866d48d9d"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 264 48"><defs><clippath id="shape-mask-2-1542050160109"><rect width="264" height="48" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10"></rect></clippath></defs><rect width="264" height="48" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10" clip-path="url(#shape-mask-2-1542050160109)"></rect></svg></div></div></section><section data-id="c18cdacb680e47f792a940155742744f" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 959px; left: 1px; top: 0px;" data-block-id="d3abf1fe4b7a3dddb1a8d4a3696e1bec"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Enabling our Database Console</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 959.5px; left: 0.25px; top: 95px;" data-block-id="05bed0fbac2f18cf943081fcfacbf24b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>The database console allows us to see the structure of our database.&nbsp; We are going to add configuration for our H2 database console.&nbsp; Add the following code:&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="62b48b3d255c9f760fdd94e8170e371e" style="min-width: 30px; min-height: 30px; width: 331.788px; height: 51.1294px; left: 310.106px; top: 280px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 13;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs">spring.h2.console.enabled=<span class="hljs-keyword">true</span>
+spring.h2.console.path=/console</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ea506dc2b6e74fa73360a4f37b0d87bf" style="height: auto; min-width: 30px; min-height: 30px; width: 958.75px; left: 1px; top: 379.033px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" dir="ui">
+<p>The first line enables the database console.&nbsp; The second line sets up a path in the browser that will allow us to interact with our database at the path</p>
+
+<p><span style="color:#FF8C00"><strong>http://localhost:8080/console</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d8cb8a56c1c7326a941e4a96e5062e51" style="height: auto; min-width: 30px; min-height: 30px; width: 958.75px; left: 1px; top: 230.828px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><span style="font-size:1.0em">application.properties</span></p>
+</div></div></section><section data-id="95b714ca93e5733c4c718fa555366db9" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="860288b093e3150396e30e7c5c4e0d08"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Setting up the Customer Class</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 90px;" data-block-id="4dd8c1f6ca569508338ba09e77ee4e35"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Our app will simply take customer information and store it in a database table name "Customers" .&nbsp; To begin, we will navigate to</p>
+
+<p><span style="text-align:start">src/main/java/h2Explore/</span><span style="text-align:start"> </span></p>
+
+<p><span style="text-align:start">and</span><span style="text-align:start">&nbsp;</span>create 3 new folders:</p>
+
+<p>&nbsp;<strong>domain</strong>, <strong>controller</strong>, and <strong>repository.</strong>&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="65ccbfdd9f85942eedb09c856f4f3a9e" style="min-width: 1px; min-height: 1px; width: 440px; height: 249.857px; left: 260px; top: 331px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="560" data-natural-height="318" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5072192/Screen_Shot_2018-06-28_at_3.13.48_PM.png"></div></div></section><section data-id="1f3eb2a3b01fc73e777ee43c4ef7a512" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="ed547a936b1a38ff8393bcffa00382a0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Setting up the Customer Class</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 160.483px;" data-block-id="580ef57087d467f473e50f2112343070"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>&nbsp;In the "domain" folder, create a new class called "Customer.java". &nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 447.221px; height: 517.967px; left: 16.3895px; top: 83px; min-width: 1px; min-height: 1px;" data-block-id="c001be1103d5ef80634dfecaa12d5ed2"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1062" data-natural-height="1230" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5072172/Screen_Shot_2018-06-28_at_3.07.16_PM.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 480px; height: 265.304px; left: 480px; top: 287.348px; min-width: 1px; min-height: 1px;" data-block-id="12c8d52401fdcdb8dd74ad6b91553368"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="626" data-natural-height="346" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5072178/Screen_Shot_2018-06-28_at_3.09.32_PM.png"></div></div></section><section data-id="714e673b2827e9d1c51f2c735f56552e" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 958px; left: 1px; top: 0px;" data-block-id="aed4df3809b061c8311fb11f15fd87ca"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Defining the Customer Class</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="cca48f0d8327b4f5c38adfb5e7671a15" style="height: auto; min-width: 30px; min-height: 30px; width: 959px; left: 0px; top: 105.925px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Our customer will have an ID, first name , and last name.&nbsp; The ID will be the primary key for our database records.&nbsp; The key is only used once and creates unique customer records in our database.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="67aa8d5a66c39db1d2bf7cb6620ecd4e" style="min-width: 30px; min-height: 30px; width: 339.5px; height: 154.592px; left: 309.75px; top: 255.849px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 13;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code class="hljs"><span class="hljs-keyword">package</span> com.tts.h2Explore.domain;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> </span>{
+    <span class="hljs-keyword">private</span> Long id;
+    <span class="hljs-keyword">private</span> String firstName;
+    <span class="hljs-keyword">private</span> String lastName;   
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e6e507b904e73b97362e5a2b10ef327d" style="height: auto; min-width: 30px; min-height: 30px; width: 959px; left: 0px; top: 451.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>So far, this all looks familiar from how we defined classes in Java before.&nbsp; Now it's time to put the "magic" of Spring Boot to work!</p>
+</div></div></section><section data-id="27d92cf9bb25ddf4cc633d23ac839b45" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="91e51f33cf93df846d982bc8eb15287d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Creating an Entity</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="16052903940381750460c6572f8a91c1" style="height: auto; min-width: 30px; min-height: 30px; width: 459.618px; left: 480.632px; top: 158px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>To let Spring Boot know that we want to make sure those instances of our Customer class are stored in a database, we make it an Entity by using the @Entity annotation.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="1e447d6024e13327917b877a10770191" style="min-width: 1px; min-height: 1px; width: 407.362px; height: 147.516px; left: 36.319px; top: 435px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="602" data-natural-height="218" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5072702/Screen_Shot_2018-06-28_at_5.50.32_PM.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="d3d5fc0541bde0cf7dc873b984c69966" style="min-width: 1px; min-height: 1px; width: 409.212px; height: 305.988px; left: 27.394px; top: 114.012px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="666" data-natural-height="498" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5072701/Screen_Shot_2018-06-28_at_5.50.14_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9df684600aa66af0b21ffa6fe6025a20" style="height: auto; min-width: 30px; min-height: 30px; width: 420.118px; left: 480.632px; top: 420px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p><span style="color:#000000"><span style="text-align:start">This indicates Customer is a <strong>JPA</strong> entity. I</span><span style="text-align:start">t is assumed that this entity will be mapped to a table named </span>Customer<span style="text-align:start">. </span></span></p>
+</div></div>
+</section><section data-id="a005d8ea0a54fc1e2fff7b74f4edc335" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="af701e8b13b47102f6f6786002bcf122"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Setting up the Primary Key</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 513.927px; height: 267.839px; left: 223.037px; top: 292.161px;" data-block-id="85e90dd8b6b6ae263169eaaae2e3a16b"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 12;"><pre class="java" style="font-size: 16px; line-height: 19px;"><code style="padding: 15px;" class="hljs"><span class="hljs-keyword">package</span> com.tts.h2Explore.domain;
+<span class="hljs-keyword">import</span>.javax.persistence.Entity;
+
+<span class="hljs-meta">@Entity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> </span>{
+    <span class="hljs-keyword">private</span> Long id;
+    <span class="hljs-keyword">private</span> String firstName;
+    <span class="hljs-keyword">private</span> String lastName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Customer</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//@Entity needs a non-argument constructor</span>
+    }
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="24e713580a107fbde9461d8cbe6f1f64" style="height: auto; min-width: 30px; min-height: 30px; width: 950.441px; left: 4.78px; top: 114.677px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>@Entity needs an empty constructor&nbsp; to create a new instance via the persistence framework. Typically, if you don't provide any additional constructors with arguments for the class, you don't need to provide an empty constructor, as Java provides on by default. &nbsp;</p>
+</div></div></section><section data-id="b369a79f97faea73194321ca6061b893" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 536px; height: 467px; left: 12px; top: 112px;" data-block-id="ff97550f22bd3cca5603f52f9f5f2e9a"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 10;"><pre class="java"><code style="padding: 15px;" class="hljs"><span class="hljs-keyword">package</span> com.tts.h2Explore.domain;
+<span class="hljs-keyword">import</span> javax.persistence.Entity;
+<span class="hljs-keyword">import</span> javax.persistence.GeneratedValue;
+<span class="hljs-keyword">import</span> javax.persistence.GenerationType;
+<span class="hljs-keyword">import</span> javax.persistence.Id;
+
+
+<span class="hljs-meta">@Entity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> </span>{
+
+    <span class="hljs-meta">@Id</span>
+    <span class="hljs-meta">@GeneratedValue(strategy=GenerationType.AUTO)</span>
+    <span class="hljs-keyword">private</span> Long id;
+    <span class="hljs-keyword">private</span> String firstName;
+    <span class="hljs-keyword">private</span> String lastName;
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Customer</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//@Entity needs a non-argument constructor</span>
+    }
+
+
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f7f5dc61f98f5987d97c4b92e2c8c4fc" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>Setting up the Primary Key</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a0da1577611ec01ee599146d31365dc6" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 560px; top: 149px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:0.7em">The Customer’s id property is annotated with <span style="color:#008000"><strong>@Id</strong></span> so that JPA will recognize it as the object’s primary key. The id property is also annotated with <span style="color:#008000"><strong>@GeneratedValue</strong></span> to indicate that the ID should be generated automatically.</span></p>
+
+<p><span style="font-size:0.7em">The other two properties, firstName and lastName are left unannotated. It is assumed that they’ll be mapped to columns that share the same name as the properties themselves.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 429px; height: 67px; left: 11px; top: 163px;" data-block-id="54fcfbed1e39d6f4486814d4f6bd1e51"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 429 67"><defs><clippath id="shape-mask-4-1542051302387"><rect width="429" height="67" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10"></rect></clippath></defs><rect width="429" height="67" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10" clip-path="url(#shape-mask-4-1542051302387)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 476px; height: 66px; left: 51px; top: 309px;" data-block-id="8adf9c8b21293015298f702ab2a5e71e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 476 66"><defs><clippath id="shape-mask-5-1542051302393"><rect width="476" height="66" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10"></rect></clippath></defs><rect width="476" height="66" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10" clip-path="url(#shape-mask-5-1542051302393)"></rect></svg></div></div></section><section data-id="2896d4fec87fa189689d0002d416d8e6" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="1defa20f9a0e80efd247de8bd04998fa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Getter and Setter Methods</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 269.5px;" data-block-id="950aca78005498609bb48912e5da771e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:27px">Spring Boot allows us to easily set up getter and setter methods for our attributes.&nbsp; Just select </span></p>
+
+<p><span style="font-size:27px"><strong>Source</strong> -&gt; <strong>Getters and Setters </strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 328.033px; height: 458.915px; left: 80px; top: 131.354px; min-width: 1px; min-height: 1px;" data-block-id="745f34729511a6ecb087472acd6d69a8"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="792" data-natural-height="1108" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5073138/Screen_Shot_2018-06-28_at_9.09.31_PM.png"></div></div></section><section data-id="b65b670659c8fa699cd9087a5942ddb6" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 273px;" data-block-id="9a391c00111a0de74c9da5c9359cbeb4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:27px">Check <strong>firstName</strong> and <strong>lastName</strong>, and click okay. &nbsp;</span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 361.736px; height: 67px; left: 56px; top: 133.812px;" data-block-id="e4053a95fbd04399a69be6789872aad0"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 362 67"><defs><clippath id="shape-mask-8-1542051401415"><rect width="361.736" height="67" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10"></rect></clippath></defs><rect width="361.736" height="67" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10" clip-path="url(#shape-mask-8-1542051401415)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="490346eaf9779f6ef7a0fd11cc43c9d6" style="min-width: 1px; min-height: 1px; width: 368px; height: 455.382px; left: 56px; top: 104.618px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1036" data-natural-height="1282" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5073139/Screen_Shot_2018-06-28_at_9.10.15_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="c2c7a810e299ffab28ca5bb9b9c301e1" data-name="text-1802e3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Getter and Setter Methods</h2>
+</div></div></section><section data-id="14e77956f3203bf57ef6ed5fc327dc48" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 523.01px; height: 481.603px; left: 19.237px; top: 119.063px;" data-block-id="e8fb6dd8c2504089e7c499244623690a"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 10;"><pre class="java"><code style="padding: 15px;" class="hljs"><span class="hljs-comment">//import statements from above</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> </span>{
+<span class="hljs-comment">//attributes from earlier</span>
+
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Customer</span><span class="hljs-params">()</span></span>{
+    
+        <span class="hljs-comment">//@Entity needs a non-argument constructor</span>
+    }
+    
+     <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getFirstName</span><span class="hljs-params">()</span> </span>{
+		<span class="hljs-keyword">return</span> firstName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setFirstName</span><span class="hljs-params">(String firstName)</span> </span>{
+		<span class="hljs-keyword">this</span>.firstName = firstName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getLastName</span><span class="hljs-params">()</span> </span>{
+		<span class="hljs-keyword">return</span> lastName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setLastName</span><span class="hljs-params">(String lastName)</span> </span>{
+		<span class="hljs-keyword">this</span>.lastName = lastName;
+    }
+
+
+}</code></pre></div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 373px; left: 560px; top: 311.5px;" data-block-id="3e755e6e925a293829d409b84270f4ca"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:27px">Place these methods below the constructor.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 469px; height: 293.054px; left: 38.3551px; top: 311.5px;" data-block-id="f9a98a2a428a86e5d8ef0f6891ca543e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#cc0000" data-shape-stroke-width="5"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 469 293"><defs><clippath id="shape-mask-9-1542051420440"><rect width="469" height="293.054" rx="0" ry="0" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10"></rect></clippath></defs><rect width="469" height="293.054" rx="0" ry="0" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#cc0000" stroke-width="10" clip-path="url(#shape-mask-9-1542051420440)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-1802e3" data-block-id="6b70098954309c2bb4b91a804dbc5aff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Getter and Setter Methods</h2>
+</div></div></section><section data-id="bc098a1b1cc35fa34e8e075147beeca0" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="bc9539060edd52da4791120ac8d31aaf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>toString()</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="2fd76bf631056fb7beeb65fbef6a5ec3" style="min-width: 1px; min-height: 1px; width: 277.834px; height: 447.388px; left: 59.543px; top: 98.806px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="662" data-natural-height="1066" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5073179/Screen_Shot_2018-06-28_at_9.22.09_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cb1ce0458dd5ca92398771bb6675568a" style="height: auto; min-width: 30px; min-height: 30px; width: 560px; left: 400px; top: 219px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="text-align:start">The convenient </span>toString()<span style="text-align:start">&nbsp;method will print out the customer’s properties.</span></p>
+
+<p>To add the method</p>
+
+<p><strong>Select Source</strong> -&gt; <strong>Generate toString</strong></p>
+</div></div></section><section data-id="4bf2126850f774565cc2c2e679312f67" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 294.93px;" data-block-id="2a0b0aba01e72c660b64e338e9453270"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Select all the attributes and click "OK".</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="498499a3f6d887f6eb6c492cab8ea9c6" style="min-width: 1px; min-height: 1px; width: 393.213px; height: 501.248px; left: 53.3869px; top: 82.8065px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="990" data-natural-height="1262" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5073180/Screen_Shot_2018-06-28_at_9.23.15_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="eff86dd5f79b8a578a5e4e9fe66e3985" data-name="text-2864a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>toString()</h2>
+</div></div></section><section data-id="0c3f03cb6a5221380ab2f88bc10c1447" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 550px; height: 510.839px; left: 0px; top: 94.5805px;" data-block-id="6ec0e75f78b5858d3651f3ec5defd21c"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 10;"><pre class="java"><code style="padding: 15px;" class="hljs"> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Customer</span><span class="hljs-params">(String firstName, String lastName)</span> </span>{
+        <span class="hljs-keyword">this</span>.firstName = firstName;
+        <span class="hljs-keyword">this</span>.lastName = lastName;
+    }
+
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getFirstName</span><span class="hljs-params">()</span> </span>{
+	<span class="hljs-keyword">return</span> firstName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setFirstName</span><span class="hljs-params">(String firstName)</span> </span>{
+        <span class="hljs-keyword">this</span>.firstName = firstName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getLastName</span><span class="hljs-params">()</span> </span>{
+	<span class="hljs-keyword">return</span> lastName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setLastName</span><span class="hljs-params">(String lastName)</span> </span>{
+        <span class="hljs-keyword">this</span>.lastName = lastName;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Customer [id="</span> + id + <span class="hljs-string">", firstName="</span> 
+        + firstName + <span class="hljs-string">", lastName="</span> + lastName + <span class="hljs-string">"]"</span>;
+    }
+
+	</code></pre></div></div>
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="3e1c9f4f242d692dec4c6b55e205869b" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 560px; top: 254px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>The <span style="color:rgb(17, 17, 17)"><strong>toString()</strong> </span>method is added to the class.&nbsp; We also add a constructor with arguments for our Customer class.&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-2864a4" data-block-id="d887d119ec65cb3373a7e6bd5c108c4e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h2>toString()</h2>
+</div></div></section><section data-id="6516c3f291f78fc7dabab31971ddde8e" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 13px;" data-block-id="813176642d647977be8052f6b558a4b2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Interacting with the Customer Database</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="56869ef04e01dd67f49b88f5db596e79" style="height: auto; min-width: 30px; min-height: 30px; width: 404px; left: 518px; top: 122.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>At this point, we can actually interact with our database.&nbsp; Let's run the program and navigate in the browser to http://localhost:8080/console</p>
+
+<p>which is the URL we set up in the <strong>application.properties </strong>file.</p>
+
+<p>&nbsp;</p>
+
+<p>Click "Test Connection".&nbsp; If all is well, then&nbsp; click "Connect".</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="aec761693cf1f41799ac5e5720ec2921" style="min-width: 1px; min-height: 1px; width: 465.743px; height: 469px; left: 28.6558px; top: 91px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1144" data-natural-height="1152" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5073236/Screen_Shot_2018-06-28_at_9.57.08_PM.png"></div></div></section><section data-id="78a86318889e50d56a5e616d3984144a" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 70px;" data-block-id="ead3766b4249728c7e65cf6a5a9f4931"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>You should see your database listed along the sidebar.&nbsp; The console allows us to test our database by using SQL to add, edit, read and delete records.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 578.991px; height: 416.13px; left: 190.505px; top: 162.592px; min-width: 1px; min-height: 1px;" data-block-id="474231f556b9075a341a2290efba557b"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1806" data-natural-height="1298" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5073241/Screen_Shot_2018-06-28_at_10.00.07_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="ce99552a5723971b1b44fbbd0cbd1b37" data-name="text-a8c5a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3>Interacting with the Customer Database</h3>
+</div></div></section><section data-id="a1acf0c16ddbc58e9a02d5a2473323f5" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 70px;" data-block-id="78a8242db5ca11ad4b4644595e69324a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Let's practice adding a customer, then reading the record.&nbsp; Since we are using the console, we will provide the ID number.&nbsp; Click "Run" after adding the code in the window.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 590.725px; height: 380.646px; left: 184.637px; top: 192px; min-width: 1px; min-height: 1px;" data-block-id="db8cbab6ac6ec252ceff9c5739aaec2b"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1794" data-natural-height="1156" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5073259/Screen_Shot_2018-06-28_at_10.10.25_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-a8c5a4" data-block-id="1c151e2ffc96b5aa52e7c91c501334b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3>Interacting with the Customer Database</h3>
+</div></div></section><section data-id="a556b726c8072a113be0c215cbe3eacc" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="3dc3e3155aa781904d19b0398d0b5522"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3><span style="font-size:1.2em">Interfaces and Repositories</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="5a7238a97caf41dd0d9221f035cd3bce"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Unfortunately, this tool is only meant to test the database.&nbsp; The entries we give are not permanent and will erase when we stop the server. &nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Spring Data JPA&nbsp; uses the JPA to store data in a relational database. A useful feature of Spring is the ability to create repository implementations automatically, at runtime, using a repository interface.</p>
+
+<p>Let's create a repository interface that works with Customer entities.</p>
+</div></div></section><section data-id="a3bb90080afcc2b59b1a1470ed2e6530" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" data-block-id="786cabef8e2c40ec9266e6bd8481a402" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 560px; top: 241.21px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Repositories are Java interfaces.&nbsp; In the repository directory, add a new interface by going to <strong>File</strong> -&gt; <strong>New</strong> -&gt; <strong>Interface </strong></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="32a4a530d4011248599948c0c1f8d7bd" style="min-width: 1px; min-height: 1px; width: 543.669px; height: 475.495px; left: 0px; top: 99.4623px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1260" data-natural-height="1102" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5073283/Screen_Shot_2018-06-28_at_10.18.52_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="595f0d94e0faf42a8cb5e9c8c0c55dba" data-name="text-d50c5c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3><span style="font-size:1.2em">Interfaces and Repositories</span></h3>
+</div></div></section><section data-id="128da71de08ac0eec1f1b0233ea425ad" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 560px; top: 292.5px;" data-block-id="f84d4052d58f3df9978ce4bd31534870"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p>Add the name "CustomerRepository" and click "<strong>Finish</strong>"</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 519.479px; height: 479px; left: 0px; top: 101.484px; min-width: 1px; min-height: 1px;" data-block-id="0a1ced3c620eedb9873fc02e4f61547c"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1078" data-natural-height="994" style="" data-lazy-loaded="" data-src="https://media.slid.es/uploads/264630/images/5073285/Screen_Shot_2018-06-28_at_10.22.49_PM.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-d50c5c" data-block-id="793290c43f7e646042ace004beb59e5f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3><span style="font-size:1.2em">Interfaces and Repositories</span></h3>
+</div></div></section><section data-id="89975c1b8db0030c5181fb7b086c30bc" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 70px;" data-block-id="fe448ede2fbb2004deee02e0d2329a4b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<p><span style="font-size:0.9em">Add the following code to the file and import the necessary classes.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="89e0f6ba5faea25a786ad391437c656b" style="min-width: 30px; min-height: 30px; width: 872px; height: 246.688px; left: 46px; top: 129px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 11; font-size: 114%;"><pre class="java"><code style="padding: 11px;" class="hljs"><span class="hljs-keyword">package</span> com.tts.h2Explore.repository;
+
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> org.springframework.data.repository.CrudRepository;
+<span class="hljs-keyword">import</span> com.tts.h2Explore.domain.Customer;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">CustomerRepository</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CrudRepository</span>&lt;<span class="hljs-title">Customer</span>, <span class="hljs-title">Long</span>&gt; </span>{
+
+    <span class="hljs-function">List&lt;Customer&gt; <span class="hljs-title">findByLastName</span><span class="hljs-params">(String lastName)</span></span>;
+}
+</code></pre></div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="20c875fb8f0865dac1aeef5caebe5d00" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 396px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:0.9em"><strong>CustomerRepository</strong><span style="color:rgb(52, 48, 45); text-align:start">&nbsp;extends the </span><strong>CrudRepository</strong><span style="color:rgb(52, 48, 45); text-align:start"><strong>&nbsp;interface</strong>. The type of entity and ID that it works with (</span>Customer<span style="color:rgb(52, 48, 45); text-align:start">&nbsp;and </span>Long)<span style="color:rgb(52, 48, 45); text-align:start">&nbsp;are specified in the parameters on </span>CrudRepository<span style="color:rgb(52, 48, 45); text-align:start">. By extending </span>CrudRepository<span style="color:rgb(52, 48, 45); text-align:start">, </span><strong>CustomerRepository</strong><span style="color:rgb(52, 48, 45); text-align:start">&nbsp;inherits several methods for working with </span>Customer<span style="color:rgb(52, 48, 45); text-align:start">&nbsp;persistence, which include methods for saving, deleting, and reading </span>Customer<span style="color:rgb(52, 48, 45); text-align:start">&nbsp;entities.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-name="text-d50c5c" data-block-id="70e00908dd8462cd4f0e563d2033c0e4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h3><span style="font-size:1.2em">Interfaces and Repositories</span></h3>
+</div></div></section><section data-id="0fde05c0ce887c32d9a395528262415e" hidden="" aria-hidden="true" class="future" style="display: none;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 954.538px; left: 1px; top: 0px;" data-block-id="3f9d62f53bd0f8caf2a08cfa77aa9675"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><span style="font-size:1.2em">H2ExploreApplication.java</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 727px; height: 340.226px; left: 117.5px; top: 249.887px;" data-block-id="03632e61dd8b8d5cbf12942aa5c65d6f"><div class="sl-block-content notranslate" data-highlight-theme="monokai-sublime" style="z-index: 12; font-size: 86%;"><pre class="java"><code style="padding: 11px;" class="hljs"><span class="hljs-keyword">package</span> com.tts.h2Explore;
+
+<span class="hljs-keyword">import</span> org.slf4j.Logger;
+<span class="hljs-keyword">import</span> org.slf4j.LoggerFactory;
+<span class="hljs-keyword">import</span> org.springframework.boot.CommandLineRunner;
+<span class="hljs-keyword">import</span> org.springframework.boot.SpringApplication;
+<span class="hljs-keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+
+<span class="hljs-keyword">import</span> com.tts.h2Explore.domain.Customer;
+<span class="hljs-keyword">import</span> com.tts.h2Explore.repository.CustomerRepository;
+
+<span class="hljs-meta">@SpringBootApplication</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">H2ExploreApplication</span> </span>{
+	<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger(H2ExploreApplication.class);
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+		SpringApplication.run(H2ExploreApplication.class, args);
+	}
+	<span class="hljs-meta">@Bean</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> CommandLineRunner <span class="hljs-title">demo</span><span class="hljs-params">(CustomerRepository repository)</span> </span>{
+		<span class="hljs-keyword">return</span> (args) -&gt; {
+			<span class="hljs-comment">// save a couple of customers</span>
+			repository.save(<span class="hljs-keyword">new</span> Customer(<span class="hljs-string">"Michael"</span>, <span class="hljs-string">"Smith"</span>));
+			repository.save(<span class="hljs-keyword">new</span> Customer(<span class="hljs-string">"Aaron"</span>, <span class="hljs-string">"Moon"</span>));
+			repository.save(<span class="hljs-keyword">new</span> Customer(<span class="hljs-string">"Kim"</span>, <span class="hljs-string">"Lassiter"</span>));
+			repository.save(<span class="hljs-keyword">new</span> Customer(<span class="hljs-string">"Joan"</span>, <span class="hljs-string">"Daniels"</span>));
+			repository.save(<span class="hljs-keyword">new</span> Customer(<span class="hljs-string">"Eric"</span>, <span class="hljs-string">"Patterson"</span>));
+
+			<span class="hljs-comment">// read all customers</span>
+			log.info(<span class="hljs-string">"Customers found with findAll():"</span>);
+			log.info(<span class="hljs-string">"-------------------------------"</span>);
+			<span class="hljs-keyword">for</span> (Customer customer : repository.findAll()) {
+				log.info(customer.toString());
+			}
+			log.info(<span class="hljs-string">""</span>);
+
+			<span class="hljs-comment">// read an individual customer by ID</span>
+			repository.findById(<span class="hljs-number">1L</span>)
+				.ifPresent(customer -&gt; {
+					log.info(<span class="hljs-string">"Customer found with findById(1L):"</span>);
+					log.info(<span class="hljs-string">"--------------------------------"</span>);
+					log.info(customer.toString());
+					log.info(<span class="hljs-string">""</span>);
+				});
+
+			<span class="hljs-comment">// read customers by last name</span>
+			log.info(<span class="hljs-string">"Customer found with findByLastName('Patterson'):"</span>);
+			log.info(<span class="hljs-string">"--------------------------------------------"</span>);
+			repository.findByLastName(<span class="hljs-string">"Patterson"</span>).forEach(bauer -&gt; {
+				log.info(bauer.toString());
+			});
+			
+			log.info(<span class="hljs-string">""</span>);
+		};
+	}
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="87efe560e948c03652fb4577773d5e20" style="height: auto; min-width: 30px; min-height: 30px; width: 954.038px; left: 1.5px; top: 84.9624px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; font-size: 99%;">
+<p style="text-align:center">Now it's time to add data to the database.&nbsp; We'll create methods that will add Customers to the database when the project runs. Navigate to the file with the name above: src/main/java -&gt; com.tts.h2Explore. Scroll...there's a lot there!&nbsp; Be sure to import where prompted!</p>
+</div></div></section><section data-id="f7d5815d2d1dd8b3c8257c21ebd469d2" hidden="" aria-hidden="true" class="future" style="display: block;">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 916px; left: 22px; top: 70px;" data-block-id="6fd9646f2742a0c072d64e5868b9a845"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
+<p style="text-align:center">What did we just add? &nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 959px; left: 1px; top: 105px;" data-block-id="92cf0a33b3d742352d1045ac3ee745a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">Logger and LoggerFactory allow us to log output to the console</span></li>
+	<li style="text-align:left">
+<span style="font-size:0.7em"><strong>@SpringBootApplication</strong> is a convenience annotation that adds all of the following:</span>
+	<ul>
+		<li>
+		<p><span style="font-size:0.7em"><strong>@Configuration</strong> tags the class as a source of bean definitions for the application context.</span></p>
+		</li>
+		<li>
+		<p><span style="font-size:0.7em"><strong>@EnableAutoConfiguration</strong> tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings.</span></p>
+		</li>
+		<li>
+		<p><span style="font-size:0.7em"><strong>@EnableWebMvc</strong> for a Spring MVC app, which flags the application as a web application.</span></p>
+		</li>
+	</ul>
+	</li>
+	<li style="text-align:left"><span style="font-size:0.7em">@ComponentScan tells Spring to look for other components, configurations, and services in the H2Explore package, allowing it to find the controllers. The main() method uses Spring Boot’s SpringApplication.run() method to launch an application. </span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">The file also includes a main() method that puts the CustomerRepository through a few tests. It retrieves the CustomerRepository from the Spring application context, &nbsp;it saves several Customer objects, it calls findAll() ,findOne() , and findByLastName() </span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 954.538px; left: 1px; top: 0px;" data-block-id="334df87690f43e4dea789625809de985" data-name="text-ecdc05"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3><span style="font-size:1.2em">H2ExploreApplication.java</span></h3>
+</div></div></section><section data-id="8cbba294fbc1056b6792d30bc0c93b6b" hidden="" aria-hidden="true" class="future" style="display: block;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 959px; left: 0px; top: 0px;" data-block-id="bf386e7f3789b087094e12b4b887ff03"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><span style="font-size:1.2em">Run the Program</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="559334b9f6adbe1e99d86009f906daba" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 82.4623px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>If we check the console, we should see the entries we just added to the data base. Notice, the primary key ID was auto generated by SpringBoot!&nbsp;</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="f9e922a8db9838e13140a737208bff9f" style="min-width: 1px; min-height: 1px; width: 808.955px; height: 330.936px; left: 75.5225px; top: 210px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1276" data-natural-height="522" style="" data-lazy-loaded="" src="./Java Web Development with Spring Boot_files/Screen_Shot_2018-06-28_at_11.10.08_PM.png"></div></div></section><section data-id="403a08aeb7b516a57264838a1819b8bb" hidden="" aria-hidden="true" class="future" style="display: block;">
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="3cf92f75a03263a94f4167ab7361614a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><span style="font-size:1.2em">What's Next?</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 451.731px;" data-block-id="1b4075ba96644acd4de02a69bf6225ab"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Congratulations!&nbsp; You've completed the build of 2 applications.&nbsp; Next, we'll look at getting our output from the&nbsp; console to the browser, and getting data from the user.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="8f1990a05026d308779808c0dac70ecd" style="min-width: 1px; min-height: 1px; width: 462px; height: 343px; left: 249px; top: 77px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="498" data-natural-height="370" data-lazy-loaded="" src="./Java Web Development with Spring Boot_files/giphy.gif"></div></div></section>
+				</div>
+					<div id="theme-html-output"></div>
+			<div class="backgrounds"><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="https://techtalentsouth.slides.com/techtalentsouth/java-web-development-with-spring-boot?token=OgGjLNNv#/">
+					<span class="slide-number-a">1</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Introduction to Spring Boot </div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 523.147px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Java Web Development with Spring Boot</h4>
+			<p class="pill-description">By Tech Talent South</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 644.002px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+			<div class="deck-sharing">
+				<div class="deck-state" data-tooltip="This deck is only visible to people it has been explicitly shared it with" data-tooltip-maxwidth="250">Private</div>
+			</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="https://techtalentsouth.slides.com/techtalentsouth/java-web-development-with-spring-boot/fullscreen"><span class="icon i-fullscreen"></span></a>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">Java Web Development with Spring Boot</h1>
+				<p class="description">Introduction to developing in Java with Spring Boot. </p>
+				<ul class="deck-meta">
+					<li data-tooltip="Created date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2018-06-26 16:09:09 UTC">4 years ago</time>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="https://techtalentsouth.slides.com/techtalentsouth" class="username">Tech Talent South</a>
+		</h3>
+		<p class="description">Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. </p>
+		<ul class="links">
+			
+			 <li><a href="https://twitter.com/techtalentsouth" target="_blank"><span class="icon i-twitter"></span>techtalentsouth</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="https://help.slides.com/">Help</a>
+    • <a href="https://techtalentsouth.slides.com/terms?root=true">Terms</a>
+    • <a href="https://techtalentsouth.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2022 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    
+<script>
+	var SLConfig = {"team":{"id":299,"name":"Tech Talent South","slug":"techtalentsouth","logo":"https://s3.amazonaws.com/media-p.slid.es/logos/299/Untitled_design__16_.png","default_theme_id":1458,"user_count":2,"allow_scripts":false,"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":false,"google_domain":"","deck_templates_mode":null,"default_internal_role":"viewer"},"deck":{"id":1283968,"slug":"java-web-development-with-spring-boot","title":"Java Web Development with Spring Boot","description":"Introduction to developing in Java with Spring Boot. ","width":960,"height":700,"margin":0.05,"visibility":"self","published_at":"2019-05-30T20:38:16.153Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/d7d786a2578ce79c0de752db787f42a3/thumb.jpg?1606150924","view_count":3557,"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"zoom","transition":"slide","theme_id":1458,"theme_font":"opensans","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":true,"share_notes":false,"slide_number":true,"slide_count":44,"rtl":false,"version":2,"collaborative":true,"deck_user_editor_limit":null,"data_updated_at":1607102001133,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":null},"theme":{"id":1458,"created_at":"2017-03-26T13:46:57.108Z","updated_at":"2021-12-09T13:13:26.768Z","name":"TTS Default Theme","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/852544233f873bcb8773881d196c7a6c/thumb.jpg?1639055602","sanitize_messages":null,"font_typekit":"","font_google":"Lato","width":960,"height":700},"user":{"id":264630,"username":"techtalentsouth","name":"Tech Talent South","description":"Tech Talent South (TTS) is an approachable and inclusive technical education company which exists to build and connect local tech and entrepreneurial ecosystems. We offer experiences for individuals, corporations, and talent pipeline partners. ","thumbnail_url":"https://www.gravatar.com/avatar/a07888b07a6d01e963042f43ba2d46a5?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":299,"settings":{"id":84945,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="./Java Web Development with Spring Boot_files/deck-consumption-6cb0dabfae7aab87de181e1519116bc15f62efe65c18c46e2a72775c05dc09c7.js.download" defer="defer"></script>
+    	<script src="./Java Web Development with Spring Boot_files/deck-ad5840235506b1ae9f1911eee7c2c085efa010a566481a17970b4c7b3c037af2.js.download" defer="defer"></script>
+	
+
+
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+  <style>[href^="https://r.kraken.com/"],a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"],div[aria-label="Ads"],a[href^="https://ovb.im/"],a[href^="https://uncensored3d.com/"],a[href^="https://black77854.com/"],a[href^="https://5hjdbfjfd5.monster/"],div[class^="native-ad-"],a[href^="https://funkydaters.com/"],a[href^="https://syndication.exoclick.com/"],a[href^="https://affiliate.rusvpn.com/click.php?"],a[href^="https://queersodadults.com/"],div[id^="dfp-ad-"],a[href^="http://click.payserve.com/"],[id^="ad_slider"],[href="https://masstortfinancing.com"] img,a[href^="https://tracking.gitads.io/"],display-ad-component,a[href^="https://click.linksynergy.com/fs-bin/"],[id^="section-ad-banner"],a[href*=".zlinkm.com/"],a[href^="https://track.wg-aff.com"],a[href^="https://go.xtbaffiliates.com/"],a[href^="https://reachtrgt.com/"],a[href^="https://go.xlvirdr.com"],AD-SLOT,a[href^="https://cams.imagetwist.com/in/?track="],[href^="https://www.cloudways.com/en/?id"],a[href^="https://a.bestcontentfood.top/"],[href^="https://v.investologic.co.uk/"],a[href^="https://www.sheetmusicplus.com/?aff_id="],div[class^="Adstyled__AdWrapper-"],a[href^="https://torrentsafeguard.com/?aid="],[href^="https://affiliate.fastcomet.com/"] > img,a[href^="http://affiliate.glbtracker.com/"],a[href^="https://go.skinstrip.net"][href*="?campaignId="],a[href^="http://go.xtbaffiliates.com/"],div[id^="gtm-ad-"],div[id^="sticky_ad_"],div[data-id-advertdfpconf],a[href^="http://trk.mdrtrck.com/"],a[href^="https://track.afcpatrk.com/"],a[href^="http://adultgames.xxx/"],div.fadeInDown[id$="____equal"][class$="____equal"],a[href^="//syndication.dynsrvtbg.com/"],a[href^="https://www.vfreecams.com/in/?track="],a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"],div[id^="dfp-slot-"],[href="https://www.masstortfinancing.com/"] > img,[href^="https://antiagingbed.com/discount/"] > img,a[href^="https://go.currency.com/"],a[href^="https://ad.doubleclick.net/"],a[href^="http://bodelen.com/"],a[href^="https://trk.moviesflix4k.xyz/"],a[href^="https://wantopticalfreelance.com/"],a[href^="https://banners.livepartners.com/"],a[href^="https://pcm.bannerator.com/"],div[data-google-query-id],div[id^="gpt_ad_"],a[href^="https://join.dreamsexworld.com/"],a[href^="http://bc.vc/?r="],[href^="https://turtlebids.irauctions.com/"] img,div[id^="ezoic-pub-ad-"],a[href*=".trust.zone"],[href^="http://www.pingperfect.com/aff.php"],a[href^="https://www.googleadservices.com/pagead/aclk?"],a[href^="https://fakelay.com/"],a[href^="https://speedsupermarketdonut.com/"],[href^="https://shiftnetwork.infusionsoft.com/go/"] > img,a[href^="http://www.advcashpro.com/aff/"],a[href^="https://torguard.net/aff.php"] > img,a[href^="https://odnxe.lncredlbiedate.com/"],a[href^="https://k2s.cc/pr/"],a[href^="https://www.mypornstarcams.com/landing/click/"],a[href^="https://lnkxt.bannerator.com/"],a[href^="https://www.adskeeper.com"],[href^="http://clicks.totemcash.com/"],[href^="http://join.michelle-austin.com/"],a[href^="https://porntubemate.com/"],a[href^="http://www.onwebcam.com/random?t_link="],a[href^="//thaudray.com/"],a[href^="https://clixtrac.com/"],AD-TRIPLE-BOX,a[href^="https://uncensored.game/"],[href^="http://trafficare.net/"],div[id^="rc-widget-"],a[href^="https://t.hrtye.com/"],[href^="https://join.girlsoutwest.com/"],[href^="http://www.fleshlightgirls.com/"],div[class^="gpt-ad-hor"],a[href^="https://ad.zanox.com/ppc/"] > img,a[href^="https://fleshlight.sjv.io/"],a-ad,[href^="https://www.targetingpartner.com/"],[href^="https://glersakr.com/"],a[href^="http://traffic.tc-clicks.com/"],a[href^="https://www.camsoda.com/enter.php?id="],a[href^="http://enter.anabolic.com/track/"],a[href^="https://aj1070.online/"],a[href^="https://azpresearch.club/"],div[id^="ad-position-"],a[href^="https://join.virtualtaboo.com/track/"],a[href^="https://s.zlink2.com/"],a[href^="https://aweptjmp.com/"],[data-m-ad-id],[href^="https://join.playboyplus.com/track/"],a[href^="https://dooloust.net/"],a[href^="https://albionsoftwares.com/"],a[href^="https://join.sexworld3d.com/track/"],a[href^="https://ausoafab.net/"],[href^="https://detachedbates.com/"],[data-adblockkey],a[href^="https://ads.cdn.live/"],a[href^="https://www.privateinternetaccess.com/"] > img,[href^="https://cipledecline.buzz/"],div[id^="ad_script_"],a[href^="https://financeads.net/tc.php?"],a[href^="https://topoffers.com/"][href*="/?pid="],a[href^="https://go.xlviirdr.com"],a[href^="https://nutrientassumptionclaims.com/"],a[href^="https://www.sugarinstant.com/?partner_id="],app-large-ad,a[href^="https://go.247traffic.com/"],a[href^="http://d2.zedo.com/"],a[href^="//chrif8kdstie.com/"],a[href^="http://intent.bingads.com/"],a[href^="https://adsrv4k.com/"],[href^="https://www.reimageplus.com/"],div[class^="kiwi-ad-wrapper"],[href^="https://zstacklife.com/"] img,div[data-mpu1],[href^="https://noqreport.com/"] > img,a[href^="https://www.get-express-vpn.com/offer/"],a[href^="http://wct.link/"],[href^="https://engine.gettopple.com/"],a[href^="https://engine.blueistheneworanges.com/"],a[href^="https://www.brazzersnetwork.com/landing/"],a[href^="https://go.xxxijmp.com"],[id^="chp_ads_block"],a[href^="https://tupitea.co/"],a[href^="//coarsewary.com/"],a[href*="https://www.sweetdeals.com/"] img,guj-ad,[href^="https://goldcometals.com/clk.trk"],a[href^="https://vlnk.me/"],div[id^="ads300_250-widget-"],a[href^="https://ttf.trmobc.com/"],a[href^="//lambingsyddir.com/"],ark-top-ad,[class^="amp-ad-"],div[data-dfp-id],a[href^="https://bongacams2.com/track?"],[onclick^="location.href='http://www.reimageplus.com"],a[href*=".zlink9.com/"],a[href^="https://ak.hetaruwg.com/"],a[href^="https://partners.fxoro.com/click.php?"],a[href^="https://iactrivago.ampxdirect.com/"],[href^="https://mypillow.com/"] > img,[id^="ad_sky"],[href^="https://ilovemyfreedoms.com/landing-"],a[href^="https://galaxyroms.net/?scr="],a[href^="https://geniusdexchange.com/"],a[href^="http://paid.outbrain.com/network/redir?"],a[href^="https://thaudray.com/"],a[href^="https://gohere.pl/"],[href^="http://misslinkvocation.com/"],[href^="https://infinitytrk.com/"],a[href^="https://www.bebi.com"],a[href^="https://wittered-mainging.com/"],a[href^="https://claring-loccelkin.com/"],hl-adsense,a[href^="https://cam4com.go2cloud.org/"],a[href^="https://go.strpjmp.com/"],[href^="https://www.mypillow.com/"] > img,a[href^="https://moneynow.one/"],[href^="https://clk.right-wing-health.com/"],iframe[src^="https://pagead2.googlesyndication.com/"],div[data-adunit-path],[class^="s2nPlayer"],[href^="https://wct.link/"],[href^="https://rapidgator.net/article/premium/ref/"],a[href^="https://delivery.porn.com/"],img[src^="https://images.purevpnaffiliates.com"],div[data-alias="300x250 Ad 1"],a[href^="http://secure.vivid.com/track/"],a[href^="http://static.fleshlight.com/images/banners/"],[href^="https://go.astutelinks.com/"],amp-ad-custom,[onclick*="content.ad/"],a[href^="https://a.adtng.com/"],div[data-ad-wrapper],a[href^="https://tragency-clesburg.icu/"],a[href^="https://dialling-abutory.com/"],a[href^="https://camfapr.com/landing/click/"],a[href^="https://ndt5.net/"],a[href^="https://watchmygirlfriend.tv/"],a[href^="https://oackoubs.com/"],div[id^="adrotate_widgets-"],[href^="https://cpa.10kfreesilver.com/"],app-advertisement,[href^="https://go.affiliatexe.com/"],[data-name="adaptiveConstructorAd"],div[id^="vuukle-ad-"],a[href*=".flndmyiove.net/"],a[href^="https://go.alxbgo.com/"],a[href^="https://www.profitablecpmgate.com/"],a[href^="https://intenseaffiliates.com/redirect/"],a[href^="https://leg.xyz/?track="],a[href^="https://deliver.ptgncdn.com/"],a[href^="https://iac.ampxdirect.com/"],DFP-AD,a[href^="https://engine.phn.doublepimp.com/"],a[href^="https://loboclick.com"],[href^="https://traffserve.com/"],a[href^="https://adjoincomprise.com/"],a[href^="https://go.admjmp.com/"],a[href^="https://www.passeura.com/"],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,a[href^="https://lead1.pl/"],a[href^="https://go.xlviiirdr.com"],app-ad,a[href^="https://my-movie.club/"],a[href^="https://ads.ad4game.com/"],a[href^="https://bluedelivery.pro/"],a[href^="https://track.ultravpn.com/"],[href^="http://mypillow.com/"] > img,[href^="https://go.4rabettraff.com/"],div[id^="ad_position_"],[href^="http://join.shemalesfromhell.com/"],div[id^="ads250_250-widget-"],a[href^="https://www.nutaku.net/signup/landing/"],a[data-obtrack^="http://paid.outbrain.com/network/redir?"],a[href^="https://iqbroker.com/"][href*="?aff="],a[href^="http://ad.doubleclick.net/"],a[href^="http://www.onclickmega.com/jump/next.php?"],a[href^="https://tour.mrskin.com/"],a[href^="https://a2.adform.net/"],zeus-ad,[href^="https://mypatriotsupply.com/"] > img,a[href^="https://www.financeads.net/tc.php?"],a[href^="https://go.etoro.com/"] > img,a[href^="https://as.sexad.net/"],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source,[data-d-ad-id],[href^="https://track.fiverr.com/visit/"] > img,a[href^="https://adswick.com/"],[data-advadstrackid],[href^="https://www.mypatriotsupply.com/"] > img,a[href^="https://chaturbate.jjgirls.com/?track="],a[href^="https://cagothie.net/"],a[href^="https://www.adultempire.com/"][href*="?partner_id="],[href^="http://join.trannies-fuck.com/"],a[href^="https://track.themadtrcker.com/"],a[href^="https://go.hpyjmp.com"],a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="],[href^="http://go.cm-trk2.com/"],a[href^="https://prf.hn/click/"][href*="/camref:"] > img,div[id*="ScriptRoot"],[href^="https://mystore.com/"] > img,a[href^="https://click.a-ads.com/"],a[href^="http://www.gfrevenge.com/landing/"],a[href^="https://tm-offers.gamingadult.com/"],bottomadblock,a[href^="https://track.afftck.com/"],a[href^="http://cam4com.go2cloud.org/aff_c?"],a[href^="https://a.bestcontentoperation.top/"],a[href^="http://betahit.click/"],a[href^="https://go.dmzjmp.com"],amp-embed[type="taboola"],a[href^="https://ismlks.com/"],a[href^="https://www.chngtrack.com/"],a[href^="https://www.clicktraceclick.com/"],a[href^="https://www.highperformancegate.com/"],a[href^="https://clickadilla.com/"],a[href^="https://syndication.optimizesrv.com/"],a[href^="https://prf.hn/click/"][href*="/adref:"] > img,a[href^="https://bs.serving-sys.com"],a[href^="https://reinstandpointdumbest.com/"],a[href^="https://mob1ledev1ces.com/"],a[href^="https://adnetwrk.com/"],[data-revive-zoneid],a[href^="https://look.utndln.com/"],div[data-adunit],a[href^="https://bongacams10.com/track?"],iframe[src^="http://www.adpeepshosted.com/"],[href^="https://www.avantlink.com/click.php"] img,ADS-RIGHT,a[href^="https://tc.tradetracker.net/"] > img,aside[id^="advads_ad_widget-"],[href^="https://trackfin.asia/"],[href^="http://residenceseeingstanding.com/"],a[href^="https://t.mobtya.com/"],a[href^="//voyeurhit.com/cs/"],a[href^="https://www.bang.com/?aff="],[href^="https://click2cvs.com/"],[href^="//ngeoziadiyc4hi2e.com/"],a[href^="https://www.arthrozene.com/"][href*="?tid="],a[href^="https://losingoldfry.com/"],a[href^="https://burpee.xyz/"],a[href^="https://bngpt.com/"],a[href^="https://affcpatrk.com/"],a[href^="https://someperceptionparade.com/"],a[href^="https://earandmarketing.com/"],div[id^="ad-inserter-"],a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img,[name^="google_ads_iframe"],a[href^="https://dishphysics.com/"],amp-fx-flying-carpet,a[href^="https://trf.bannerator.com/"],a[href^="https://tracking.avapartner.com/"],[data-dynamic-ads],a[href^="http://www.mrskin.com/tour"],a[href^="https://go.xlivrdr.com"],a[href^="https://dianches-inchor.com/"],[href^="http://join.shemale.xxx/"],a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="],a[href^="https://takeallsoft.ru/"],a[href^="https://track.clickmoi.xyz/"],div[id^="ad-gpt-"],a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"],div[id^="ad-div-"],[data-ad-module],a[href^="https://track.healthtrader.com/"],a[href^="https://www.adsexse.com/x/"],div[data-content="Advertisement"],div[data-alias="300x250 Ad 2"],a[href^="https://s.zlink1.com/"],a[href*=".engine.adglare.net/"],a[href^="https://www.oneclickroot.com/?tap_a="] > img,a[href^="https://landing.brazzersplus.com/"],a[href^="http://allaptair.club/"],a[href^="https://1free33style.com/"],a[href^="https://tracking.trackcasino.co/"],div[data-spotim-slot],[href^="https://totlnkcl.com/"],a[data-oburl^="http://paid.outbrain.com/network/redir?"],a[href^="https://a-ads.com/"],a[href^="https://juicyads.in/"],a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="],a[href*="//lkstrck2.com/"],a[href^="https://trusted-click-host.com/"],a[href^="https://www.iyalc.com/"],a[href^="https://offers.refchamp.com/"],div[data-adzone],a[href^="https://www.oboom.com/ref/"],a[href^="http://adultfriendfinder.com/go/page/landing"],div[id^="lazyad-"],a[href^="http://hotcandyland.com/partner/"],a[href^="https://m.do.co/c/"] > img,a[href^="https://www.bet365.com/"][href*="affiliate="],a[href^="https://googleads.g.doubleclick.net/pcs/click"],a[href^="http://rs-stripe.wsj.com/stripe/redirect"],a[href^="https://go.gldrdr.com/"],a[href^="https://go.xlirdr.com"],a[href^="http://affiliates.thrixxx.com/"],amp-connatix-player,a[href^="https://chaturbate.com/in/?tour="],a[href^="http://bongacams.com/track?"],div[id^="advads_"],a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"],a[href^="https://track.totalav.com/"],a[href^="https://see.kmisln.com/"],[href^="https://freecourseweb.com/"] > .sitefriend,a[href^="https://pongidsrunback.com/"],[href^="http://join.hardcoreshemalevideo.com/"],[href^="http://join.ts-dominopresley.com/"],[href^="https://join3.bannedsextapes.com"],div[id^="ads300_100-widget-"],div[id^="adspot-"],a[href^="https://mmwebhandler.aff-online.com/"],a[href^="https://landing1.brazzersnetwork.com"],a[href^="https://t.grtyi.com/"],a[href^="https://ads.betfair.com/redirect.aspx?"],a[href^="https://meet-sexhere.com/"],a[href^="http://adserver.adreactor.com/"],[data-css-class="dfp-inarticle"],a[href*="http://MyPillow.com"] > img,div[id^="yandex_ad"],a[href^="https://promo-bc.com/"],a[href^="https://itubego.com/video-downloader/?affid="],[href^="https://www.mystore.com/"] > img,a[href^="http://tc.tradetracker.net/"] > img,a[href^="https://medleyads.com/"],a[href^="https://go.zybrdr.com"],a[href^="https://a.medfoodhome.com/"],a[href^="https://go.xxxjmp.com"],a[href^="http://deloplen.com/"],div[id^="taboola-stream-"],a[href^="http://tour.mrskin.com/"],topadblock,a[href^="https://porngames.adult/?SID="],aside[id^="adrotate_widgets-"],[href^="http://www.mypillow.com/"] > img,a[href^="https://adclick.g.doubleclick.net/"],[data-template-type="nativead"],iframe[src^="http://ad.yieldmanager.com/"],div[id*="MarketGid"],[class^="chp_ads_block"],div[id^="ad-server-"],a[href^="https://static.fleshlight.com/images/banners/"],a[href^="https://www.onlineusershielder.com/torrent-guard/?"],a[href^="https://aff-ads.stickywilds.com/"],a[href^="https://www.jackery.com?aff="] > img,a[href^="https://frameworkdeserve.com/"],a[data-url^="http://paid.outbrain.com/network/redir?"] + .author,a[href^="https://join.virtuallust3d.com/"],a[href^="https://t.hrtyj.com/"],[id^="ad-wrap-"],[href^="https://ad.admitad.com/"],a[href^="https://go.xxxiijmp.com"],a[href^="https://www.mrskin.com/account/"],a[href^="https://www.mrskin.com/tour"],[data-mobile-ad-id],a[href^="//benoopto.com/"],a[href^="https://go.goaserv.com/"],a[href^="https://playuhd.host/"],a[href^="https://awecrptjmp.com/"],gpt-ad,a[href="//rufflycouncil.com/"],a[href^="https://go.ebrokerserve.com/"],a[href^="https://meet-sex-here.com/"],a[href^="https://t.adating.link/"],a[href^="https://pl.premium4kflix.website/"],a[href^="https://billing.purevpn.com/aff.php"] > img,[href^="https://affect3dnetwork.com/track/"],a[href^="https://awptjmp.com/"],div[data-ad-placeholder],a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"],a[href^="https://www.healthrangerstore.com/"] > img,a[href^="https://traffdaq.com/"],a[href^="https://get2nesoft1.ru/"],a[href^="https://ptapjmp.com/"],[href^="https://zone.gotrackier.com/"],div[data-ad-targeting],div[data-adname],a[href^="https://go.trackitalltheway.com/"],[href^="https://www.hostg.xyz/"] > img,a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"],a[href^="https://meet-to-fuck.com/"],a[href^="https://axdsz.pro/"],a[href^="https://a.montangop.top/"],a[href^="https://explore.findanswersnow.net/"],a[href^="https://cpartner.bdswiss.com/"],a[href^="https://refpazkjixes.top/"],a[href^="https://bestcond1tions.com/"],[class^="div-gpt-ad"],a[href^="https://go.julrdr.com/"],a[href^="https://mk-cdn.net/"],a[href^="https://maymooth-stopic.com/"],a[href^="https://go.markets.com/visit/?bta="],a[href^="//go.eabids.com/"],a[href^="https://www.awin1.com/cread.php?awinaffid="],a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"],a[href^="https://www.rabbits.webcam/?id="],a[href^="https://lobimax.com/"],[data-ad-cls],a[href^="https://go.tmrjmp.com"],a[href^="https://ad.atdmt.com/"],a[href^="http://pubads.g.doubleclick.net/"],div[data-contentexchange-widget],a[href^="https://msecure117.com/"],a[href^="https://clicks.pipaffiliates.com/"],[href^="https://kingered-banctours.com/"],span[id^="ezoic-pub-ad-placeholder-"],a[href^="http://adf.ly/?id="],a[href^="https://land.brazzersnetwork.com/landing/"],a[href^="https://spygasm.com/track?"],a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://go.goasrv.com/"],a[href^="https://movie.download-file.org/"],a[href^="https://incisivetrk.cvtr.io/click?"],a[href^="https://thechleads.pro/"],[id^="google_ads_iframe"],a[href^="http://partners.etoro.com/"],[href^="https://stvkr.com/"],[data-ad-manager-id],a[href^="https://trk.watchlivesports4k.club/"],a[href^="https://www.sweetdeals.com"],a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"],a[href^="https://waisheph.com/"],[data-desktop-ad-id],a[href^="//wagerprocuratorantiterrorist.com/"],div[id^="adngin-"],a[href^="https://go.cmrdr.com/"],[href^="https://routewebtk.com/"],a[href^="https://pb-track.com/"],a[href^="https://ads.leovegas.com/redirect.aspx?"],div[id^="div-ads-"],a[href^="http://https://www.get-express-vpn.com/offer/"],a[href^="http://pityhostngco2.xyz/"],ad-desktop-sidebar,[href^="https://optimizedelite.com/"] > img,div[data-native_ad],a[href^="https://adultfriendfinder.com/go/page/landing"],div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"],a[href^="https://avtub.click/assets/link.php"],[href^="https://www.restoro.com/"],a[href^="https://webroutetrk.com/"],div[id^="_vdo_ads_player_ai_"],a[data-url^="http://paid.outbrain.com/network/redir?"],[data-ez-name],[href^="https://goldforyourfuture.com/clk.trk"] img,a[href^="https://dfsdkkka.com/"],a[href^="https://scurewall.co/"],a[href^="https://go.nordvpn.net/aff"] > img,[href^="http://join.rodneymoore.com/"],a[href^="https://landing.brazzersnetwork.com/"],a[href^="https://traffic.bannerator.com/"],div[id^="div-gpt-"],ad-shield-ads,a[href^="https://1startfiledownload1.com/"],div[id^="adfox_"],[href^="https://secure.bmtmicro.com/servlets/"],a[href^="http://googleads.g.doubleclick.net/pcs/click"],a[href^="https://engine.trackingdesks.com/"],a[href^="https://a.bestcontentweb.top/"],[href^="https://www.herbanomic.com/"] > img,a[href^="http://go.fpmarkets.com/"],[href^="https://awbbjmp.com/"],[href^="https://shrugartisticelder.com"],a[href^="https://go.hpyrdr.com/"],a[href^="https://streamate.com/landing/click/"],a[href^="//pubads.g.doubleclick.net/"],[data-freestar-ad],a[href^="https://www.kingsoffetish.com/tour?partner_id="],a[href^="https://misspkl.com/"],div[id^="advads-"],a[href^="https://trappist-1d.com/"],iframe[id^="google_ads_frame"],a[href^="https://deliver.tf2www.com/"],a[href^="https://fast-redirecting.com/"],article.ad,[href^="http://homemoviestube.com/"],a[href^="https://paid.outbrain.com/network/redir?"],a[href^="https://natour.naughtyamerica.com/track/"],a[href^="https://agacelebir.com/"],a[href^="https://cpmspace.com/"],a[href^="https://tracking.comfortclick.eu/"],[href^="http://join.shemalepornstar.com/"],[href^="https://mylead.global/stl/"] > img,a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img,a[href^="https://www.infowarsstore.com/"] > img,display-ads,a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"],div[data-role="sidebarAd"],[href="https://ourgoldguy.com/contact/"] img,a[href^="http://adtrack1.club/"],a[href^="https://track.adform.net/"],a[href^="//agacelebir.com/"],a[href^="https://track.interactivegf.com/"],a[href^="https://ad.kubiccomps.icu/"],div[data-insertion],div[class^="s-dfp-"],div[data-native-ad],a[href^="https://www.liquidfire.mobi/"],div[id^="js-dfp-"],a[href^="https://chaturbate.com/in/?track="],a[data-redirect^="http://paid.outbrain.com/network/redir?"],a[href^="https://vo2.qrlsx.com/"],a[href^="http://www.FriendlyDuck.com/"],a[href^="https://click.hoolig.app/"],a[href^="https://as.conjectwatson.com/"],div[id^="zergnet-widget"],[href="https://jdrucker.com/gold"] > img,a[href^="//go.xlviiirdr.com"],a[href^="https://transfer.xe.com/signup/track/redirect?"],a[href^="https://datingbests.life/"],a[href^="http://ads2.williamhill.com/redirect.aspx?"],a[href^="https://aaucwbe.com/"],a[href^="https://myusenet.xyz/"],a[href^="https://www.nudeidols.com/cams/"],a[href^="//apptjmp.com/"],[href^="http://globsads.com/"],a[href^="https://serve.awmdelivery.com/"],a[href^="http://m.hsrve.com/"],[id^="div-gpt-ad"],a[href^="http://www.coiwqe.site/"],a[href^="https://click.dtiserv2.com/"],div[class^="Display_displayAd"],a[href^="https://fertilitycommand.com/"],div[id^="google_dfp_"],[href^="https://go.xlrdr.com"],a[href^="https://bestdatinghere.life/"],a[href^="https://creacdn.top-convert.com/"],a[data-redirect^="https://paid.outbrain.com/network/redir?"],[href^="https://istlnkcl.com/"],a[href^="https://track.effiliation.com/servlet/effi.click?"] > img,a[href^="https://affpa.top/"],a[href^="https://ads-for-free.com/click.php?"],a[href^="https://syndication.dynsrvtbg.com/"],a[href^="https://taghaugh.com/"],a[href^="https://adserver.adreactor.com/"],a[href^="https://go.cmtaffiliates.com/"],[href^="https://www.brighteonstore.com/products/"] img,a[href^="https://awentw.com/"],a[href^="https://twinrdsyn.com/"],a[href^="https://track.bruceads.com/"],a[href^="http://go.247traffic.com/"],a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="],a[data-oburl^="https://paid.outbrain.com/network/redir?"],[data-ad-width],a[href^="https://gghf.mobi/"],div[id^="ad_bnr_"],a[href^="https://t.aslnk.link/"],AMP-AD,div[id^="gpt-ad-hor"],[data-role="tile-ads-module"],a[href^="https://americafirstpolls.com/"],div[id^="crt-"][style] { display: none !important }</style>
+
+</body></html>

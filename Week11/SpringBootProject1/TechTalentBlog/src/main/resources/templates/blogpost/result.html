@@ -5,6 +5,7 @@
     <title>Blog Site</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/standard.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,6 +26,15 @@
                         <!-- Link to Update -->
                         <!-- Link to Show  -->
                         <!--  Link to Destroy -->
+                        <!-- <form action="#" th:action="@{'/blogposts/{id}'(id=${blog.id})}" th:method="delete"
+                      class="form-horizontal">
+        <div class="form-group">
+            <input type="hidden" name="_method" value="delete"/>
+        <button type="submit" class="btn btn-danger btn-block" th:text="Delete">Delete</button>
+    </div>
+</form> -->
+                        
+                     <!-- Buttons -->
                         <a th:href="@{/}"><button class="btn btn-success">Back To Home Page</button></a>
                         <a th:href="@{/blogposts/new}"><button class="btn btn-primary">Submit a New Blog
                                 Post</button></a>
